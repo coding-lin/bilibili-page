@@ -7,10 +7,10 @@ import './assets/font/iconfont.css'
 import 'swiper/dist/css/swiper.min.css'
 import './modules/rem'
 import 'weui'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <HashRouter>
     <App />
-  </BrowserRouter>
+  </HashRouter>
 )
