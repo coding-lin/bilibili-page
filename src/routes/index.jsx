@@ -1,8 +1,8 @@
 import { lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from '@/pages/Home'
-const Dynamic = lazy(() => import('@/pages/dynamic'))
-const Vip = lazy(() => import('@/pages/vip'))
+const Dynamic = lazy(() => import('@/pages/Dynamic'))
+const Vip = lazy(() => import('@/pages/Vip'))
 const Mine = lazy(() => import('@/pages/Mine'))
 
 const Live = lazy(() => import('@/pages/Home/Live'))
