@@ -10,7 +10,8 @@ export default function Footer(props) {
   return (
     <FooterWrapper>
       <Link to="/home" className={classnames(
-        {active:pathname == '/' || isPathPartlyExisted(pathname)})}>
+        {active:pathname == '/' || isPathPartlyExisted(pathname)}
+      )}>
         <i className='iconfont icon-shouye'></i>
         <span>首页</span>
       </Link>
