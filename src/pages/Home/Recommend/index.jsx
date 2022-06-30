@@ -29,7 +29,7 @@ export default function Recommend(props) {
         {
           videos && videos.map(
             video => (
-              <div className='videos-flex'>
+              <div className='videos-flex' key={video.id}>
                 <Link
                   to={`/recommend/video${video.id}`}
                   key={video.id}
