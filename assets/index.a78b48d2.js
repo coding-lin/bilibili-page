@@ -1,4 +1,4 @@
-import{s as e,j as i,a as n}from"./index.9b87c384.js";const t=e.div`
+import{s as e,j as i,a as n}from"./index.2f4b6a6d.js";const t=e.div`
   
 `,o=e.div`
   display: flex;
