@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   .navbar {
     width: 100%;
     height: 35px;
-    background: #a3c4d3;
+    background: rgb(80, 182, 240);
     border-bottom: 1px solid #ccc;
     .nav-box {
       height: 35px !important;
@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
       border-bottom: 1px solid #ebebeb;
       &.active::after {
         content: "";
-        background-color: rgb(35, 149, 255);
+        background-color: pink;
         width: 0.3rem;
         height: 0.03rem;
         position: absolute;

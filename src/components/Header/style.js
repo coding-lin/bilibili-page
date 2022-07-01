@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.div`
   z-index: 9999;
   display: flex;
   justify-content: space-around;
-  background: #a3c4d3;
+  background: rgb(80, 182, 240);
   a {
     display: flex;
     flex-direction: column;

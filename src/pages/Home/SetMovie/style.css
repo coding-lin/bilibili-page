@@ -6,12 +6,12 @@
 }
 
 .content {
-  height: 220px;
-  color: #ffffff;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 2px;
   font-size: 48px;
   user-select: none;
-}
+  background-size: cover;
+} 
