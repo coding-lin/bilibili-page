@@ -1,4 +1,4 @@
-import{s as l,r as o,a,F as d,j as i,L as p}from"./index.2f4b6a6d.js";import{g as c,S as x,W as m}from"./request.28e37dd5.js";const f=l.div`
+import{s as l,r as o,a,F as d,j as i,L as p}from"./index.ebf3947c.js";import{g as c,S as x,W as m}from"./request.875e60b7.js";const f=l.div`
   width: 98%;
   margin: 4px auto;
   padding-bottom: 44px;
@@ -66,4 +66,4 @@ import{s as l,r as o,a,F as d,j as i,L as p}from"./index.2f4b6a6d.js";import{g a
       }
     }
   }
-`,{Toast:g}=m;function u(){const[t,r]=o.exports.useState(!0),[s,n]=o.exports.useState([]);return o.exports.useEffect(()=>{(async()=>{let{data:e}=await c();n([...e]),r(!1)})()},[]),a(d,{children:[i(x,{}),a(f,{children:[i(g,{show:t,icon:"loading",children:"\u52A0\u8F7D\u4E2D..."}),s&&s.map(e=>i("div",{className:"videos-flex",children:i(p,{to:`/movies/video${e.id}`,children:a("div",{className:"videos-box",children:[a("div",{className:"videos-img",children:[i("img",{src:e.img,alt:""}),a("div",{className:"info",children:[i("i",{className:"iconfont icon-bofangqi-bofangxiaodianshi"}),i("span",{children:e.bofang}),i("i",{className:"iconfont icon-jianyi"}),i("span",{children:e.pinglun}),i("span",{children:e.time})]})]}),i("div",{className:"title",children:i("span",{children:e.title})}),i("div",{className:"up",children:i("span",{children:e.up})})]})},e.id)},e.id))]})]})}export{u as default};
+`,{Toast:g}=m;function u(){const[t,r]=o.exports.useState(!0),[s,n]=o.exports.useState([]);return o.exports.useEffect(()=>{(async()=>{let{data:e}=await c();n([...e]),r(!1)})()},[]),a(d,{children:[i(x,{}),a(f,{children:[i(g,{show:t,icon:"loading",children:"\u52A0\u8F7D\u4E2D..."}),s&&s.map(e=>i("div",{className:"videos-flex",children:i(p,{to:`/campus/video${e.id}`,children:a("div",{className:"videos-box",children:[a("div",{className:"videos-img",children:[i("img",{src:e.img,alt:""}),a("div",{className:"info",children:[i("i",{className:"iconfont icon-bofangqi-bofangxiaodianshi"}),i("span",{children:e.bofang}),i("i",{className:"iconfont icon-jianyi"}),i("span",{children:e.pinglun}),i("span",{children:e.time})]})]}),i("div",{className:"title",children:i("span",{children:e.title})}),i("div",{className:"up",children:i("span",{children:e.up})})]})},e.id)},e.id))]})]})}export{u as default};
