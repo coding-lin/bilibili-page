@@ -3,7 +3,6 @@ import './style.css'
 import { Swiper, Toast } from 'antd-mobile'
 import classnames from 'classnames'
 
-
 export default function SetMovie() {
   const images = [
     'https://dogefs.s3.ladydaily.com/~/source/wallhaven/small/o3/o3wel5.jpg', 
@@ -21,7 +20,6 @@ export default function SetMovie() {
           Toast.show(`你点击了电影 ${index + 1}`)
         }}
       >
-        {/* {index + 1} */}
       </div>
     </Swiper.Item>
   ))
