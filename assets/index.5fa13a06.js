@@ -1,4 +1,4 @@
-import{s as l,r as o,a,F as d,j as i,L as p}from"./index.ebf3947c.js";import{g as c,S as x,W as m}from"./request.875e60b7.js";const f=l.div`
+import{s as l,r as o,a,F as d,j as i,L as p}from"./index.60d67183.js";import{g as c,S as x,W as f}from"./request.34fa031d.js";const m=l.div`
   width: 98%;
   margin: 4px auto;
   padding-bottom: 44px;
@@ -8,7 +8,7 @@ import{s as l,r as o,a,F as d,j as i,L as p}from"./index.ebf3947c.js";import{g a
     width: 50%;
     display: flex;
     .videos-box {
-      height: 200px;
+      height: 176px;
       border-radius: 2px;
       margin-left: 4px;
       margin-right: 5px;
@@ -18,8 +18,8 @@ import{s as l,r as o,a,F as d,j as i,L as p}from"./index.ebf3947c.js";import{g a
       .videos-img {
         img {
           border-radius: 2px;
-          max-width: 100%;
-          height: 140px;
+          width: 100%;
+          height: 100%;
           background-size: cover;
         }
         .info {
@@ -35,12 +35,14 @@ import{s as l,r as o,a,F as d,j as i,L as p}from"./index.ebf3947c.js";import{g a
           z-index: 10;
           padding: 2px;
           border-radius: 2px;
-          background: rgba(20, 20, 20, 0.4);
+          background: rgba(30, 30, 30, 0.36);
           color: #fff;
         }
       }
       .title {
-        font-size: 10px;
+        text-align: left;
+        padding-left: 8px;
+        font-size: 12px;
         font-weight: 400;
         /* 实现标题显示两行，溢出的用省略号表示 */
         text-overflow: ellipsis;
@@ -59,11 +61,12 @@ import{s as l,r as o,a,F as d,j as i,L as p}from"./index.ebf3947c.js";import{g a
         border: 1px solid pink;
         border-radius: 2px;
         position: absolute;
-        left: 2px;
-        bottom: 2px;
-        font-size: 8px;
+        left: 4px;
+        bottom: 4px;
+        font-size: 10px;
         color: #000;
+        font-weight: 500;
       }
     }
   }
-`,{Toast:g}=m;function u(){const[t,r]=o.exports.useState(!0),[s,n]=o.exports.useState([]);return o.exports.useEffect(()=>{(async()=>{let{data:e}=await c();n([...e]),r(!1)})()},[]),a(d,{children:[i(x,{}),a(f,{children:[i(g,{show:t,icon:"loading",children:"\u52A0\u8F7D\u4E2D..."}),s&&s.map(e=>i("div",{className:"videos-flex",children:i(p,{to:`/campus/video${e.id}`,children:a("div",{className:"videos-box",children:[a("div",{className:"videos-img",children:[i("img",{src:e.img,alt:""}),a("div",{className:"info",children:[i("i",{className:"iconfont icon-bofangqi-bofangxiaodianshi"}),i("span",{children:e.bofang}),i("i",{className:"iconfont icon-jianyi"}),i("span",{children:e.pinglun}),i("span",{children:e.time})]})]}),i("div",{className:"title",children:i("span",{children:e.title})}),i("div",{className:"up",children:i("span",{children:e.up})})]})},e.id)},e.id))]})]})}export{u as default};
+`,{Toast:g}=f;function u(){const[s,n]=o.exports.useState(!0),[t,r]=o.exports.useState([]);return o.exports.useEffect(()=>{(async()=>{let{data:e}=await c();r([...e]),n(!1)})()},[]),a(d,{children:[i(x,{}),a(m,{children:[i(g,{show:s,icon:"loading",children:"\u52A0\u8F7D\u4E2D..."}),t&&t.map(e=>i("div",{className:"videos-flex",children:i(p,{to:`/movies/video${e.id}`,children:a("div",{className:"videos-box",children:[a("div",{className:"videos-img",children:[i("img",{src:e.img,alt:""}),a("div",{className:"info",children:[i("i",{className:"iconfont icon-bofangqi-bofangxiaodianshi"}),i("span",{children:e.bofang}),i("i",{className:"iconfont icon-jianyi"}),i("span",{children:e.pinglun}),i("span",{children:e.time})]})]}),i("div",{className:"title",children:i("span",{children:e.title})}),i("div",{className:"up",children:i("span",{children:e.up})})]})},e.id)},e.id))]})]})}export{u as default};
