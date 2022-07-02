@@ -1,4 +1,4 @@
-import{s as e,a as n,F as a,j as i,L as t,P as p}from"./index.931a979a.js";const r=e.div`
+import{s as e,a as n,F as a,j as i,L as t,P as p}from"./index.59e2c4b2.js";const r=e.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
