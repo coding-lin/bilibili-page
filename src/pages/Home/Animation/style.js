@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     width: 50%;
     display: flex;
     .videos-box {
-      height: 200px;
+      height: 176px;
       border-radius: 2px;
       margin-left: 4px;
       margin-right: 5px;
@@ -20,8 +20,8 @@ export const Wrapper = styled.div`
       .videos-img {
         img {
           border-radius: 2px;
-          max-width: 100%;
-          height: 140px;
+          width: 100%;
+          height: 100%;
           background-size: cover;
         }
         .info {
@@ -37,12 +37,14 @@ export const Wrapper = styled.div`
           z-index: 10;
           padding: 2px;
           border-radius: 2px;
-          background: rgba(20, 20, 20, 0.4);
+          background: rgba(30, 30, 30, 0.36);
           color: #fff;
         }
       }
       .title {
-        font-size: 10px;
+        text-align: left;
+        padding-left: 8px;
+        font-size: 12px;
         font-weight: 400;
         /* 实现标题显示两行，溢出的用省略号表示 */
         text-overflow: ellipsis;
@@ -61,10 +63,11 @@ export const Wrapper = styled.div`
         border: 1px solid pink;
         border-radius: 2px;
         position: absolute;
-        left: 2px;
-        bottom: 2px;
-        font-size: 8px;
+        left: 4px;
+        bottom: 4px;
+        font-size: 10px;
         color: #000;
+        font-weight: 500;
       }
     }
   }

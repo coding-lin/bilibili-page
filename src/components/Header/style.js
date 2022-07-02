@@ -31,19 +31,21 @@ export const SearchInput = styled.div`
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 15px;
-  background: rgba(250, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.42);
   display: flex;
   i {
-    padding: 8px;
+    padding-top: 2px;
+    padding-left: 8px;
+    padding-right: 4px;
     flex: 2;
-    font-size: 18px;
+    font-size: 16px;
   }
   input {
     width: 120px;
     flex: 8;
     padding-left: 4px;
     height: 30px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.01);
     border-radius: 14px;
     border: 0;
   }
