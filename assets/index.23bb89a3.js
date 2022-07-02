@@ -1,4 +1,4 @@
-import{s as l,r as a,a as o,F as d,j as i,L as p}from"./index.37b4a61b.js";import{g as c,S as m,W as x}from"./request.38f401e6.js";const f=l.div`
+import{s as l,r as o,a,F as d,j as i,L as p}from"./index.931a979a.js";import{g as c,S as m,W as x}from"./request.22397e97.js";const f=l.div`
   width: 98%;
   margin: 4px auto;
   padding-bottom: 44px;
@@ -70,4 +70,4 @@ import{s as l,r as a,a as o,F as d,j as i,L as p}from"./index.37b4a61b.js";impor
       }
     }
   }
-`,{Toast:g}=x;function w(h){const[s,n]=a.exports.useState(!0),[t,r]=a.exports.useState([]);return a.exports.useEffect(()=>{(async()=>{let{data:e}=await c();r([...e]),n(!1)})()},[]),o(d,{children:[i(m,{}),o(f,{children:[i(g,{show:s,icon:"loading",children:"\u52A0\u8F7D\u4E2D..."}),t&&t.map(e=>i("div",{className:"videos-flex",children:i(p,{to:`/recommend/video${e.id}`,children:o("div",{className:"videos-box",children:[o("div",{className:"videos-img",children:[i("img",{src:e.img,alt:""}),o("div",{className:"info",children:[i("i",{className:"iconfont icon-bofangqi-bofangxiaodianshi"}),i("span",{children:e.bofang}),i("i",{className:"iconfont icon-jianyi"}),i("span",{children:e.pinglun}),i("span",{children:e.time})]})]}),i("div",{className:"title",children:i("span",{children:e.title})}),i("div",{className:"up",children:i("span",{children:e.up})})]})},e.id)},e.id))]})]})}export{w as default};
+`,{Toast:g}=x;function u(){const[s,n]=o.exports.useState(!0),[t,r]=o.exports.useState([]);return o.exports.useEffect(()=>{(async()=>{let{data:e}=await c();r([...e]),n(!1)})()},[]),a(d,{children:[i(m,{}),a(f,{children:[i(g,{show:s,icon:"loading",children:"\u52A0\u8F7D\u4E2D..."}),t&&t.map(e=>i("div",{className:"videos-flex",children:i(p,{to:`/animation/video${e.id}`,children:a("div",{className:"videos-box",children:[a("div",{className:"videos-img",children:[i("img",{src:e.img,alt:""}),a("div",{className:"info",children:[i("i",{className:"iconfont icon-bofangqi-bofangxiaodianshi"}),i("span",{children:e.bofang}),i("i",{className:"iconfont icon-jianyi"}),i("span",{children:e.pinglun}),i("span",{children:e.time})]})]}),i("div",{className:"title",children:i("span",{children:e.title})}),i("div",{className:"up",children:i("span",{children:e.up})})]})},e.id)},e.id))]})]})}export{u as default};
