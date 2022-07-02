@@ -1,5 +1,5 @@
 {
-  "id": "3489481",
+  "id": "3496016",
   "name": "no name",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
@@ -11,6 +11,20 @@
       "font_class": "sousuo",
       "unicode": "e651",
       "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "630094",
+      "name": "向右箭头",
+      "font_class": "xiangyoujiantou",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "1304893",
+      "name": "邮件",
+      "font_class": "youjian",
+      "unicode": "e624",
+      "unicode_decimal": 58916
     },
     {
       "icon_id": "2154996",
@@ -34,6 +48,13 @@
       "unicode_decimal": 58944
     },
     {
+      "icon_id": "6665569",
+      "name": "游戏",
+      "font_class": "airudiantubiaohuizhi-zhuanqu_youxi",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
       "icon_id": "7383189",
       "name": "评论",
       "font_class": "jianyi",
@@ -48,11 +69,11 @@
       "unicode_decimal": 59579
     },
     {
-      "icon_id": "13087827",
-      "name": "动态",
-      "font_class": "dongtai",
-      "unicode": "e7c2",
-      "unicode_decimal": 59330
+      "icon_id": "11813348",
+      "name": "风车",
+      "font_class": "fengche",
+      "unicode": "e625",
+      "unicode_decimal": 58917
     }
   ]
 }

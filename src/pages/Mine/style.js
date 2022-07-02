@@ -4,7 +4,7 @@ export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 80px;
+  height: 90px;
   img {
     margin-top: 18px;
     width: 44px;
@@ -53,30 +53,32 @@ export const Author = styled.div`
 
 export const Icon = styled.div`
   span {
-    font-size: 16px;
-    line-height: 80px;
+    font-size: 15px;
+    line-height: 90px;
   }
   i {
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 90px;
   }
 `
 
 export const Detail = styled.div`
   width: 100%;
+  position: relative;
   display: flex;
   height: 60px;
-  padding-top: 10px;
+  /* margin-top: 10px; */
   justify-content: space-around;
   background-color: #fff;
   div:not(:last-child):after {
     content: '';
     display: inline-block;
     position: absolute;
-    top: 100px;
     margin-left: 64px;
+    top: 14px;
     width: 2px;
-    height: 28px;
-    background: gray;
+    height: 30px;
+    background-color: gray;
   }
   span {
     font-size: 18px;

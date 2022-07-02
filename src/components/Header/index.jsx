@@ -21,11 +21,11 @@ export default function Header() {
         </SearchInput>
 
         <Link to="/dynamic">
-          <i className='iconfont icon-dongtai'></i>
+          <i className='iconfont icon-airudiantubiaohuizhi-zhuanqu_youxi'></i>
         </Link>
 
         <Link to="/vip">
-          <i className='iconfont icon-huiyuan'></i>
+          <i className='iconfont icon-youjian'></i>
         </Link>
       </HeaderWrapper>
       

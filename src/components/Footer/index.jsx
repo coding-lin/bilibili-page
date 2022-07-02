@@ -16,7 +16,7 @@ export default function Footer(props) {
         <span>首页</span>
       </Link>
       <Link to="/dynamic" className={classnames({active:pathname == '/dynamic'})}>
-        <i className='iconfont icon-dongtai'></i>
+        <i className='iconfont icon-fengche'></i>
         <span>动态</span>
       </Link>
       <Link to="/vip" className={classnames({active:pathname == '/vip'})}>

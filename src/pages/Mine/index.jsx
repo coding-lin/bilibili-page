@@ -27,7 +27,7 @@ export default function Mine() {
 
         <Icon>
           <span>空间</span>
-          <i className='iconfont icon-dongtai'></i>
+          <i className='iconfont icon-xiangyoujiantou'></i>
         </Icon>
       </HeaderWrapper>
       <Detail>
