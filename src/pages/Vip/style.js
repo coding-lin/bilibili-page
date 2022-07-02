@@ -1,21 +1,40 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-  
-`
-
 export const HeaderWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  height: 60px;
+  height: 100px;
+  color: #fff;
   background-color: pink;
-  i {
-    font-size: 20px;
-    font-weight: 400;
-    color: aliceblue;
-    &.icon-3 {
-      margin-right: 20px;
+  .title {
+    display: flex;
+    h2 {
+      margin: 2px 10px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    span {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: lighter;
+    }
+    i {
+      margin-top: 10px;
+      font-size: 14px;
     }
   }
+  .search-bar {
+    display: flex;
+    height: 64px;
+    input {
+      margin-top: 20px;
+      margin-left: 10px;
+      width: 320px;
+      height: 30px;
+      border-radius: 14px;
+      padding-left: 10px;
+      border: 0;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  
 `

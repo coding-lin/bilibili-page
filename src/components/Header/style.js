@@ -21,7 +21,7 @@ export const HeaderWrapper = styled.div`
       border-radius: 50%;
     }
     i {
-      font-size: 1.6em;
+      font-size: 20px;
     }
   }
 `
@@ -38,7 +38,6 @@ export const SearchInput = styled.div`
     padding-left: 8px;
     padding-right: 4px;
     flex: 2;
-    font-size: 16px;
   }
   input {
     width: 120px;
