@@ -13,13 +13,13 @@ export const HeaderWrapper = styled.div`
       font-weight: 500;
     }
     span {
-      margin-top: 8px;
-      font-size: 14px;
+      margin-top: 10px;
+      font-size: 12px;
       font-weight: lighter;
     }
     i {
       margin-top: 10px;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   .search-bar {

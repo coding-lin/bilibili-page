@@ -1,4 +1,7 @@
 import axios from 'axios'
 
-export const getVideos = () => 
-  axios.get('https://www.fastmock.site/mock/3f112f6cb2f621fc9c2dd6a14be19f38/beers/videolist')
+export const getVideos = () =>  // 首页视频数据
+  axios.get('https://www.fastmock.site/mock/059647e88be0d33ef58d6ab4bf009dd9/bilibili/videolist')
+
+export const getBanners = () =>  // 会员购 banners 数据
+  axios.get('https://www.fastmock.site/mock/059647e88be0d33ef58d6ab4bf009dd9/bilibili/banners')
