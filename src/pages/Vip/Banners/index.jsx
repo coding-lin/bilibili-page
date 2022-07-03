@@ -20,7 +20,7 @@ export default function Banners({banners}) {
     let items = banners.slice(0, 10);
     return items.map((item) => {
       return (
-        <Link to="/dongman${item.id}" className="swiper-item" key={item.id}>
+        <Link to="/dongman/id" className="swiper-item" key={item.id}>
           <div>
             <p>
               <img src={item.img} />
@@ -36,7 +36,7 @@ export default function Banners({banners}) {
     let items = banners.slice(10);
     return items.map((item) => {
       return (
-        <Link to="/dongman${item.id}" className="swiper-item" key={item.id}>
+        <Link to="/dongman/id" className="swiper-item" key={item.id}>
           <div>
             <p>
               <img src={item.img} />

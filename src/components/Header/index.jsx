@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Pic1 from '@/assets/images/1.jpg'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Tabs } from 'antd-mobile'
 import { HeaderWrapper, SearchInput } from './style'
 
@@ -28,7 +28,6 @@ export default function Header() {
           <i className='iconfont icon-youjian'></i>
         </Link>
       </HeaderWrapper>
-      
     </>
   )
 }

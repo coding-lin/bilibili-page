@@ -1,8 +1,16 @@
 import React, { useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 import Banners from './Banners'
-import { HeaderWrapper } from './style'
+import { HeaderWrapper, ImgTab } from './style'
 import { getBanners } from '@/api/request'
 import WeUI from 'react-weui'
+
+import Img1 from '@/assets/images/shouban.png'
+import Img2 from '@/assets/images/zhoubian.png'
+import Img3 from '@/assets/images/manzhandianying.png'
+import Img4 from '@/assets/images/tushumanhua.png'
+import Img5 from '@/assets/images/shumazhuangbei.png'
+import Img6 from '@/assets/images/ciyuanfushi.png'
 
 const {
   Toast
@@ -34,6 +42,44 @@ export default function Vip() {
       </HeaderWrapper>
       <Toast show={loading} icon="loading">加载中...</Toast>
       <Banners banners={banners} />
+      <ImgTab>
+        <Link to="shouban">
+          <div className='img-tab'>
+            <img src={Img1} />
+            <span>手办</span>
+          </div>
+        </Link>
+        <Link to="zhoubian">
+          <div className='img-tab'>
+            <img src={Img2} />
+            <span>周边</span>
+          </div>
+        </Link>
+        <Link to="manzhandianying">
+          <div className='img-tab'>
+            <img src={Img3} />
+            <span>漫展电影</span>
+          </div>
+        </Link>
+        <Link to="tushumanhua">
+          <div className='img-tab'>
+            <img src={Img4} />
+            <span>图书漫画</span>
+          </div>
+        </Link>
+        <Link to="shumazhuangbei">
+          <div className='img-tab'>
+            <img src={Img5} />
+            <span>数码装备</span>
+          </div>
+        </Link>
+        <Link to="ciyuanfushi">
+          <div className='img-tab'>
+            <img src={Img6} />
+            <span>次元服饰</span>
+          </div>
+        </Link>
+      </ImgTab>
     </div>
   )
 }
