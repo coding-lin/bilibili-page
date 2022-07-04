@@ -1,8 +1,9 @@
 import React, { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import Banners from './Banners'
+import GoodsList from './GoodsList'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
-import { getBanners } from '@/api/request'
+import { getBanners, getGoods } from '@/api/request'
 import WeUI from 'react-weui'
 
 import Img1 from '@/assets/images/shouban.png'
@@ -19,12 +20,15 @@ const {
 export default function Vip() {
   const [loading, setLoading] = useState(true)
   const [banners, setBanners] = useState([])
+  const [goods, setGoods] = useState([])
 
   useEffect(() => {
     (async () => {
       let { data: bannerData } = await getBanners()
+      let { data: goodsData} = await getGoods()
       setLoading(false)
       setBanners(bannerData)
+      setGoods(goodsData)
     })()
   })
 
@@ -82,6 +86,7 @@ export default function Vip() {
             </div>
           </Link>
         </ImgTab>
+        <GoodsList goods={goods}/>
       </Wrapper>
     </div>
   )

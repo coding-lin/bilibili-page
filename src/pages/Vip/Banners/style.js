@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const BannersWrapper = styled.div`
   height: 1.582rem;
+  margin-top: 100px;
   .btn_banners {
     width: 100%;
     height: 50vw;

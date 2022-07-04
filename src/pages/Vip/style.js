@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
   width: 100%;
   height: 100px;
   color: #fff;
@@ -47,7 +52,7 @@ export const HeaderWrapper = styled.div`
 
 export const Wrapper = styled.div`
   width: 100%;
-  background-color: rgba(50, 50, 50, 0.06);;
+  background-color: rgba(50, 50, 50, 0.06);
 `
 
 export const ImgTab = styled.div`
