@@ -38,13 +38,17 @@ export const HeaderWrapper = styled.div`
   }
 `
 
+export const Wrapper = styled.div`
+  width: 100%;
+  background-color: rgba(50, 50, 50, 0.06);;
+`
+
 export const ImgTab = styled.div`
   width: 100%;
   margin-top: 16px;
   height: 68px;
   display: flex;
   justify-content: space-around;
-  background-color: rgba(50, 50, 50, 0.08);
   .img-tab {
     width: 50px;
     height: 50px;

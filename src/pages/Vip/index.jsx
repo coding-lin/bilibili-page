@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import Banners from './Banners'
-import { HeaderWrapper, ImgTab } from './style'
+import { HeaderWrapper, Wrapper, ImgTab } from './style'
 import { getBanners } from '@/api/request'
 import WeUI from 'react-weui'
 
@@ -40,46 +40,48 @@ export default function Vip() {
           <input type="text" placeholder='搜索商品...'/>
         </div>
       </HeaderWrapper>
-      <Toast show={loading} icon="loading">加载中...</Toast>
-      <Banners banners={banners} />
-      <ImgTab>
-        <Link to="shouban">
-          <div className='img-tab'>
-            <img src={Img1} />
-            <span>手办</span>
-          </div>
-        </Link>
-        <Link to="zhoubian">
-          <div className='img-tab'>
-            <img src={Img2} />
-            <span>周边</span>
-          </div>
-        </Link>
-        <Link to="manzhandianying">
-          <div className='img-tab'>
-            <img src={Img3} />
-            <span>漫展电影</span>
-          </div>
-        </Link>
-        <Link to="tushumanhua">
-          <div className='img-tab'>
-            <img src={Img4} />
-            <span>图书漫画</span>
-          </div>
-        </Link>
-        <Link to="shumazhuangbei">
-          <div className='img-tab'>
-            <img src={Img5} />
-            <span>数码装备</span>
-          </div>
-        </Link>
-        <Link to="ciyuanfushi">
-          <div className='img-tab'>
-            <img src={Img6} />
-            <span>次元服饰</span>
-          </div>
-        </Link>
-      </ImgTab>
+      <Wrapper>
+        <Toast show={loading} icon="loading">加载中...</Toast>
+        <Banners banners={banners} />
+        <ImgTab>
+          <Link to="shouban">
+            <div className='img-tab'>
+              <img src={Img1} />
+              <span>手办</span>
+            </div>
+          </Link>
+          <Link to="zhoubian">
+            <div className='img-tab'>
+              <img src={Img2} />
+              <span>周边</span>
+            </div>
+          </Link>
+          <Link to="manzhandianying">
+            <div className='img-tab'>
+              <img src={Img3} />
+              <span>漫展电影</span>
+            </div>
+          </Link>
+          <Link to="tushumanhua">
+            <div className='img-tab'>
+              <img src={Img4} />
+              <span>图书漫画</span>
+            </div>
+          </Link>
+          <Link to="shumazhuangbei">
+            <div className='img-tab'>
+              <img src={Img5} />
+              <span>数码装备</span>
+            </div>
+          </Link>
+          <Link to="ciyuanfushi">
+            <div className='img-tab'>
+              <img src={Img6} />
+              <span>次元服饰</span>
+            </div>
+          </Link>
+        </ImgTab>
+      </Wrapper>
     </div>
   )
 }
