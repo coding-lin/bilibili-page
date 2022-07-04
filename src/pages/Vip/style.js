@@ -24,14 +24,21 @@ export const HeaderWrapper = styled.div`
   }
   .search-bar {
     display: flex;
-    height: 64px;
+    position: relative;
+    height: 64px; 
+    i {
+      position: absolute;
+      color: #000;
+      top: 22px;
+      left: 18px;
+    }
     input {
       margin-top: 20px;
       margin-left: 10px;
       width: 320px;
       height: 30px;
       border-radius: 14px;
-      padding-left: 14px;
+      padding-left: 30px;
       border: 0;
       background-color: rgba(255, 255, 255, 0.5);
     }

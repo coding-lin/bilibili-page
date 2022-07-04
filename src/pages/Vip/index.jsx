@@ -37,6 +37,7 @@ export default function Vip() {
           <i className='iconfont icon-xiangyoujiantou'></i>
         </div>
         <div className="search-bar">
+          <i className='iconfont icon-sousuo'></i>
           <input type="text" placeholder='搜索商品...'/>
         </div>
       </HeaderWrapper>
