@@ -2,20 +2,32 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
-  padding-bottom: 60px;
-  display: flex;
-  flex-wrap: wrap;
   background-color: rgba(50, 50, 50, 0.06);
+  padding-bottom: 54px;
   .container {
-    width: 100%;
-    .good-box {
-      width: 48%;
-      height: 200px;
-      img {
+    column-count: 2;
+    column-gap: 10px;
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+    .good-box { 
+      width: 100%;
+      margin: 10px auto;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      .good-img {
         width: 100%;
-        height: 100%;
-        background-size: cover;
+        border-radius: 4px;
+        img {
+          width: 100%;
+        }
       }
+      .title {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
     }
   }
 `

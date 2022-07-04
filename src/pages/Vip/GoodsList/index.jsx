@@ -7,21 +7,20 @@ export default function GoodsList({goods}) {
   
   return (
     <Wrapper>
-      {
-        goods && goods.map(good => (
-          <div className='container' key={good.id}>
-            <Link
-              to={`/goodlist/good${good.id}`}
-              key={good.id}
-            >
-            <div className="good-box">
-              <img src={good.img} />
+      <div className="container">
+        {
+          goods && goods.map(good => (
+            <div className='good-box' key={good.id}>
+              <div className='good-img'>
+                <img src={good.img} />
+              </div>
+              <div className='title'>
+                <span>{good.title}</span>
+              </div>
             </div>
-            </Link>
-          </div>
-        )
-        )
-      }
+          ))
+        }
+      </div>
     </Wrapper>
   )
 }
