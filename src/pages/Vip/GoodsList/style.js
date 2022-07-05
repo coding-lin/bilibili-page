@@ -70,6 +70,9 @@ export const Wrapper = styled.div`
           i {
             font-size: 20px;
             padding: 4px;
+            &.active {
+              color: red;
+            }
           }
         }   
       }

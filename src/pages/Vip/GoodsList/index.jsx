@@ -1,10 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
 import propTypes from "prop-types";
 import { Wrapper } from './style'
 
 export default function GoodsList({goods}) {
-  
+  const [isColl, setIsColl] = useState(false)
+
+  const changeColl = () => {
+    setIsColl(!isColl)
+  }
+
   return (
     <Wrapper>
       <div className="container">
@@ -25,7 +29,12 @@ export default function GoodsList({goods}) {
               <div className='price_coll'>
                 <span>¥{good.price}</span>
                 <span>
-                  <i className='iconfont icon-aixin3'></i>
+                  <i className={isColl ? 
+                    'iconfont icon-aixin1 active':
+                    'iconfont icon-aixin3'}
+                    onClick={() => changeColl()}
+                  >
+                  </i>
                   {good.collection}
                 </span>
               </div>
