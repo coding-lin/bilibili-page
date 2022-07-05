@@ -1,4 +1,4 @@
-import{s as l,r as a,a as o,F as d,j as i,L as p}from"./index.dc601a86.js";import{S as c}from"./index.71a6f8e9.js";import{b as m,W as f}from"./index.d0d591b8.js";const x=l.div`
+import{s as l,r as a,a as o,F as d,j as i,L as p}from"./index.67a9a3f5.js";import{S as c}from"./index.ba2b2c58.js";import{b as m,W as f}from"./index.4b9a71fd.js";const x=l.div`
   width: 98%;
   margin: 4px auto;
   padding-bottom: 44px;
@@ -70,4 +70,4 @@ import{s as l,r as a,a as o,F as d,j as i,L as p}from"./index.dc601a86.js";impor
       }
     }
   }
-`,{Toast:g}=f;function w(){const[s,r]=a.exports.useState(!0),[t,n]=a.exports.useState([]);return a.exports.useEffect(()=>{(async()=>{let{data:e}=await m();n([...e]),r(!1)})()},[]),o(d,{children:[i(c,{}),o(x,{children:[i(g,{show:s,icon:"loading",children:"\u52A0\u8F7D\u4E2D..."}),t&&t.map(e=>i("div",{className:"videos-flex",children:i(p,{to:`/hot/video${e.id}`,children:o("div",{className:"videos-box",children:[o("div",{className:"videos-img",children:[i("img",{src:e.img,alt:""}),o("div",{className:"info",children:[i("i",{className:"iconfont icon-bofangqi-bofangxiaodianshi"}),i("span",{children:e.bofang}),i("i",{className:"iconfont icon-jianyi"}),i("span",{children:e.pinglun}),i("span",{children:e.time})]})]}),i("div",{className:"title",children:i("span",{children:e.title})}),i("div",{className:"up",children:i("span",{children:e.up})})]})},e.id)},e.id))]})]})}export{w as default};
+`,{Toast:g}=f;function v(h){const[s,r]=a.exports.useState(!0),[t,n]=a.exports.useState([]);return a.exports.useEffect(()=>{(async()=>{let{data:e}=await m();n([...e]),r(!1)})()},[]),o(d,{children:[i(c,{}),o(x,{children:[i(g,{show:s,icon:"loading",children:"\u52A0\u8F7D\u4E2D..."}),t&&t.map(e=>i("div",{className:"videos-flex",children:i(p,{to:`/recommend/video${e.id}`,children:o("div",{className:"videos-box",children:[o("div",{className:"videos-img",children:[i("img",{src:e.img,alt:""}),o("div",{className:"info",children:[i("i",{className:"iconfont icon-bofangqi-bofangxiaodianshi"}),i("span",{children:e.bofang}),i("i",{className:"iconfont icon-jianyi"}),i("span",{children:e.pinglun}),i("span",{children:e.time})]})]}),i("div",{className:"title",children:i("span",{children:e.title})}),i("div",{className:"up",children:i("span",{children:e.up})})]})},e.id)},e.id))]})]})}export{v as default};
