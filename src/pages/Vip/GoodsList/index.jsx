@@ -15,7 +15,16 @@ export default function GoodsList({goods}) {
                 <img src={good.img} />
               </div>
               <div className='title'>
+                <span>{good.info}</span>
                 <span>{good.title}</span>
+              </div>
+              <div className="rank_time">
+                <span>{good.rank}</span>
+                <span>{good.time}</span>
+              </div>
+              <div className='price_coll'>
+                <span>¥{good.price}</span>
+                <span>{good.collection}</span>
               </div>
             </div>
           ))
