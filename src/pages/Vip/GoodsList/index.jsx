@@ -24,7 +24,10 @@ export default function GoodsList({goods}) {
               </div>
               <div className='price_coll'>
                 <span>¥{good.price}</span>
-                <span>{good.collection}</span>
+                <span>
+                  <i className='iconfont icon-aixin3'></i>
+                  {good.collection}
+                </span>
               </div>
             </div>
           ))

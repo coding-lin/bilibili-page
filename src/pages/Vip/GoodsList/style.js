@@ -25,21 +25,22 @@ export const Wrapper = styled.div`
         }
       }
       .title {
+        padding: 2px;
         span:first-child {
           background: rgba(50, 50, 50, 0.1);
           border-radius: 4px;
           font-size: 12px;
-          margin: 2px;
+          padding: 2px;
           padding: 1px;
         }
         span:nth-child(2) {
           font-style: oblique;
-          padding: 2px;
           font-size: 14px;
           font-weight: 600;
         }
       }
       .rank_time {
+        padding: 1px;
         span:first-child {
           background-color: orange;
           border-radius: 4px;
@@ -47,7 +48,7 @@ export const Wrapper = styled.div`
           font-size: 12px;
         }
         span:nth-child(2) {
-          margin-left: 10px;
+          margin-left: 8px;
           font-size: 12px;
           border-radius: 4px;
           padding: 1px;
@@ -57,15 +58,20 @@ export const Wrapper = styled.div`
       .price_coll {
         display: flex;
         justify-content: space-between;
+        padding: 2px;
         span:first-child {
           padding: 8px;
           font-size: 18px;
           font-weight: 600;
         }
         span:nth-child(2) {
-          padding: 10px;
+          padding: 4px;
           font-size: 14px;
-        }
+          i {
+            font-size: 20px;
+            padding: 4px;
+          }
+        }   
       }
     }
   }

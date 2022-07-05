@@ -36,13 +36,29 @@ export default function Vip() {
     <div>
       <HeaderWrapper>
         <div className="title">
-          <h2>会员购</h2>
-          <span>CHE手办原型创作大赛</span>
-          <i className='iconfont icon-xiangyoujiantou'></i>
+          <span>会员购</span>
+          <span>
+            CHE手办原型创作大赛
+            <i className='iconfont icon-xiangyoujiantou'></i>
+          </span>
+          <span>
+            <Link to="store-house">
+              <i className='iconfont icon-24gl-drawer'></i> 
+            </Link>
+            <Link to="shopping-cart">
+              <i className='iconfont icon-gouwuche'></i>
+            </Link>
+            <Link to="vip-center">
+              <i className='iconfont icon-gerenzhongxin'></i>
+            </Link>
+          </span>
         </div>
         <div className="search-bar">
           <i className='iconfont icon-sousuo'></i>
           <input type="text" placeholder='搜索商品...'/>
+          <Link to="all">
+            <i className='iconfont icon-ALL'></i>
+          </Link>
         </div>
       </HeaderWrapper>
       <Wrapper>

@@ -1,0 +1,65 @@
+{
+  "id": "3501370",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "301795",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "321992",
+      "name": "personal-center",
+      "font_class": "gerenzhongxin",
+      "unicode": "e70b",
+      "unicode_decimal": 59147
+    },
+    {
+      "icon_id": "1624379",
+      "name": "ALL",
+      "font_class": "ALL",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "3858842",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "7594796",
+      "name": "24gl-drawer",
+      "font_class": "24gl-drawer",
+      "unicode": "eabc",
+      "unicode_decimal": 60092
+    },
+    {
+      "icon_id": "8288959",
+      "name": "爱心",
+      "font_class": "aixin1",
+      "unicode": "e85c",
+      "unicode_decimal": 59484
+    },
+    {
+      "icon_id": "15416312",
+      "name": "爱心",
+      "font_class": "aixin2",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
+      "icon_id": "19877102",
+      "name": "爱心",
+      "font_class": "aixin3",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    }
+  ]
+}
