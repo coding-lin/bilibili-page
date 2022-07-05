@@ -4,9 +4,10 @@ import { Wrapper } from './style'
 
 export default function GoodsList({goods}) {
   const [isColl, setIsColl] = useState(false)
-
-  const changeColl = () => {
-    setIsColl(!isColl)
+  const [isAddNum, setIsAddNum] = useState(false)
+  
+  const changeColl = (id) => {
+    console.log(id)
   }
 
   return (
@@ -30,9 +31,9 @@ export default function GoodsList({goods}) {
                 <span>¥{good.price}</span>
                 <span>
                   <i className={isColl ? 
-                    'iconfont icon-aixin1 active':
+                    'iconfont icon-aixin1 active' :
                     'iconfont icon-aixin3'}
-                    onClick={() => changeColl()}
+                    onClick={() => changeColl(good.id)}
                   >
                   </i>
                   {good.collection}

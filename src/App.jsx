@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Suspense fallback={<div>loading...</div>}>
-        <RoutesConfig  />
+        <RoutesConfig />
       </Suspense>
       <Footer />
     </div>
