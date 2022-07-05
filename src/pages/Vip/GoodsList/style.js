@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
+  height: 145vh;
   background-color: rgba(50, 50, 50, 0.06);
   padding-bottom: 54px;
   .container {
@@ -12,9 +13,10 @@ export const Wrapper = styled.div`
     margin-right: 8px;
     .good-box { 
       width: 100%;
+      break-inside: avoid;
       margin: 10px auto;
       border-radius: 4px;
-      border: 1px solid #ccc;
+      
       background-color: #fff;
       .good-img {
         width: 100%;
@@ -27,7 +29,6 @@ export const Wrapper = styled.div`
         font-size: 14px;
         font-weight: 500;
       }
-
     }
   }
 `
