@@ -16,12 +16,12 @@ export const Wrapper = styled.div`
       break-inside: avoid;
       margin: 10px auto;
       border-radius: 4px;
-      
+      box-shadow: rgba(255, 255, 255, 0.2) 2px 2px 2px;
       background-color: #fff;
       .good-img {
         width: 100%;
-        border-radius: 4px;
         img {
+          border-radius: 4px;
           width: 100%;
         }
       }
