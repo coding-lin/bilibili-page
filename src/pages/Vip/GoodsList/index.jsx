@@ -4,25 +4,10 @@ import { Wrapper } from './style'
 
 export default function GoodsList({goods}) {
   const [isColl, setIsColl] = useState(false)
-  const [isAddColl, setIsAddColl] = useState(false)
-  
-  const changeColl = (event, id) => {
-    goods && goods.map(item => {
-      if (item.id === id) {
-        // console.log(event.target, id)
-        event.target.className = "iconfont icon-aixin1 active"
-      }
-    })
-  }
 
-  const changeCollNum = (id) => {
-    goods && goods.map(item => {
-      if (item.id === id) {
-        // console.log(event.target, id)
-        item.collection = item.collection + 1
-      }
-    })
-  }
+  // const changeColl = () => {
+  //   setIsColl(!isColl)
+  // }
 
   return (
     <Wrapper>
@@ -44,14 +29,8 @@ export default function GoodsList({goods}) {
               <div className='price_coll'>
                 <span>¥{good.price}</span>
                 <span>
-                  <i className='iconfont icon-aixin3'
-                    onClick={(e) => changeColl(event, good.id)}
-                  >
-                  </i>
-                  {/* {good.collection} */}
-                  <span onClick={() => changeCollNum(good.id)}>
-                    {good.collection}
-                  </span>
+                  <i className='iconfont icon-aixin3'></i>
+                  <span>{good.collection}</span>
                 </span>
               </div>
             </div>

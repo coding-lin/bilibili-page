@@ -66,12 +66,16 @@ export const Wrapper = styled.div`
         }
         span:nth-child(2) {
           padding: 4px;
-          font-size: 14px;
           i {
             font-size: 20px;
-            padding: 4px;
+            &.icon-aixin3 {
+              padding: 2px;
+            }
             &.active {
               color: red;
+            }
+            span {
+              font-size: 14px;
             }
           }
         }   
