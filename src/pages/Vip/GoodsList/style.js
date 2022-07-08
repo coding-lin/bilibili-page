@@ -26,14 +26,13 @@ export const Wrapper = styled.div`
       }
       .title {
         padding: 2px;
-        span:first-child {
+        >span:first-child {
           background: rgba(50, 50, 50, 0.1);
           border-radius: 4px;
           font-size: 12px;
-          padding: 2px;
           padding: 1px;
         }
-        span:nth-child(2) {
+        >span:nth-child(2) {
           font-style: oblique;
           font-size: 14px;
           font-weight: 600;
@@ -41,14 +40,14 @@ export const Wrapper = styled.div`
       }
       .rank_time {
         padding: 1px;
-        span:first-child {
+        >span:first-child {
           background-color: orange;
           border-radius: 4px;
           padding: 1px;
           font-size: 12px;
         }
-        span:nth-child(2) {
-          margin-left: 8px;
+        >span:nth-child(2) {
+          margin-left: 6px;
           font-size: 12px;
           border-radius: 4px;
           padding: 1px;
@@ -59,16 +58,16 @@ export const Wrapper = styled.div`
         display: flex;
         justify-content: space-between;
         padding: 2px;
-        span:first-child {
+        >span:first-child {
           padding: 8px;
           font-size: 18px;
           font-weight: 600;
         }
-        span:nth-child(2) {
+        >span:nth-child(2) {
           padding: 4px;
           i {
             font-size: 20px;
-            &.icon-aixin3 {
+            &.icon-aixin1 {
               padding: 2px;
             }
             &.active {
