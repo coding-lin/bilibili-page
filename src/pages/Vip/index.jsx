@@ -26,9 +26,9 @@ export default function Vip() {
     (async () => {
       let { data: bannerData } = await getBanners()
       let { data: goodsData } = await getGoods()
-      setLoading(false)
       setBanners(bannerData)
       setGoods(goodsData)
+      setLoading(false)
     })()
   })
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   width: 98%;
   margin: 4px auto;
-  padding-bottom: 44px;
+  padding-bottom: 46px;
   display: flex;
   flex-wrap: wrap;
   .videos-flex {
