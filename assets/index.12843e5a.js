@@ -1,1 +1,0 @@
-import{a as o,F as r,j as e}from"./index.c0996e4f.js";import{S as s,V as t}from"./index.d01cc9f3.js";import"./index.71ff9f96.js";function n(){return o(r,{children:[e(s,{}),e(t,{})]})}export{n as default};
