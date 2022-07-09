@@ -25,7 +25,7 @@ const GoodsItem = ({good}) => {
         <span>¥{good.price}</span>
         <span>
           <i
-            className={classnames('iconfont icon-aixin1',{'active': isColl})}
+            className={classnames('iconfont icon-aixin1', {'active': isColl})}
             onClick={() => changeColl()}
           >
           </i>

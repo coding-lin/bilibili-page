@@ -64,20 +64,18 @@ export const Wrapper = styled.div`
           font-weight: 600;
         }
         >span:nth-child(2) {
-          padding: 4px;
+          padding: 8px;
           i {
             font-size: 20px;
-            &.icon-aixin1 {
-              padding: 2px;
-            }
+            padding: 2px;
             &.active {
               color: red;
             }
-            span {
-              font-size: 14px;
-            }
           }
-        }   
+          span {
+            padding: 2px;
+          }
+        }
       }
     }
   }
