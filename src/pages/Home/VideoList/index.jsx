@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Wrapper } from './style'
 import VideoItem from '@/components/VideoItem'
-import { getVideos } from '@/api/request'
+import { getVideosList } from '@/api/request'
 import WeUI from 'react-weui'
 
 const {
@@ -14,7 +14,8 @@ const VideoList = () => {
 
   useEffect(() => {
     (async() => {
-      let { data } = await getVideos()
+      let { data } = await getVideosList()
+      console.log(data);
       setVideos([...data])
       setLoading(false)
     })()

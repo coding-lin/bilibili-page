@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Banners from './Banners'
 import GoodsList from './GoodsList'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
-import { getBanners, getGoods } from '@/api/request'
+import { getBannersList, getGoodsList } from '@/api/request'
 import WeUI from 'react-weui'
 
 import Img1 from '@/assets/images/shouban.png'
@@ -24,9 +24,9 @@ export default function Vip() {
 
   useEffect(() => {
     (async () => {
-      let { data: bannerData } = await getBanners()
-      let { data: goodsData } = await getGoods()
-      setBanners(bannerData)
+      let { data: bannersData } = await getBannersList()
+      let { data: goodsData } = await getGoodsList()
+      setBanners(bannersData)
       setGoods(goodsData)
       setLoading(false)
     })()
