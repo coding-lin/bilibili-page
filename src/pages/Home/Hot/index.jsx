@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import SetMovie from '../SetMovie'
 import { Wrapper } from './style'
-import { getVideos } from '@/api/request'
-import { Link } from 'react-router-dom'
+import VideoItem from '@/components/VideoItem'
 import WeUI from 'react-weui'
+import { getVideos } from '@/api/request'
 
 const {
   Toast
@@ -24,36 +24,12 @@ export default function Recommend() {
   return (
     <>
       <SetMovie />
-      <Wrapper> 
+      <Wrapper>
         <Toast show={loading} icon="loading">加载中...</Toast>
         {
           videos && videos.map(
             video => (
-              <div className='videos-flex' key={video.id}>
-                <Link
-                  to={`/hot/video${video.id}`}
-                  key={video.id}
-                >
-                  <div className='videos-box'>
-                    <div className="videos-img">
-                      <img src={video.img} alt="" />
-                      <div className="info">
-                        <i className='iconfont icon-bofangqi-bofangxiaodianshi'></i>
-                        <span>{video.bofang}</span>
-                        <i className='iconfont icon-jianyi'></i>
-                        <span>{video.pinglun}</span>
-                        <span>{video.time}</span>
-                      </div>
-                    </div>
-                    <div className='title'>
-                      <span>{video.title}</span>
-                    </div>
-                    <div className='up'>
-                      <span>{video.up}</span>
-                    </div>
-                  </div>
-                </Link>
-              </div>
+              <VideoItem key={video.id} video={video} />
             )
           )
         }
