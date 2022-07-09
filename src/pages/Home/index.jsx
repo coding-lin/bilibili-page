@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useNavigate, Outlet } from 'react-router-dom'
-import Header from '@/components/Header'
-import HomeNav from '@/components/HomeNav'
+import Header from './Header'
+import HomeNav from './HomeNav'
 
 export default function Home() {
   const navigate = useNavigate()
