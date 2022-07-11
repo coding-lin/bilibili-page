@@ -4,7 +4,7 @@ import Banners from './Banners'
 import GoodsList from './GoodsList'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
 import { getBannersList, getGoodsList } from '@/api/request'
-import WeUI from 'react-weui'
+import { Skeleton } from 'antd-mobile'
 
 import Img1 from '@/assets/images/shouban.png'
 import Img2 from '@/assets/images/zhoubian.png'
@@ -12,10 +12,6 @@ import Img3 from '@/assets/images/manzhandianying.png'
 import Img4 from '@/assets/images/tushumanhua.png'
 import Img5 from '@/assets/images/shumazhuangbei.png'
 import Img6 from '@/assets/images/ciyuanfushi.png'
-
-const {
-  Toast
-} = WeUI;
 
 export default function Vip() {
   const [loading, setLoading] = useState(true)
@@ -32,37 +28,9 @@ export default function Vip() {
     })()
   })
 
-  return (
-    <div>
-      <HeaderWrapper>
-        <div className="title">
-          <span>会员购</span>
-          <span>
-            CHE手办原型创作大赛
-            <i className='iconfont icon-xiangyoujiantou'></i>
-          </span>
-          <span>
-            <Link to="store-house">
-              <i className='iconfont icon-24gl-drawer'></i> 
-            </Link>
-            <Link to="shopping-cart">
-              <i className='iconfont icon-gouwuche'></i>
-            </Link>
-            <Link to="vip-center">
-              <i className='iconfont icon-gerenzhongxin'></i>
-            </Link>
-          </span>
-        </div>
-        <div className="search-bar">
-          <i className='iconfont icon-sousuo'></i>
-          <input type="text" placeholder='搜索商品...'/>
-          <Link to="all">
-            <i className='iconfont icon-ALL'></i>
-          </Link>
-        </div>
-      </HeaderWrapper>
-      <Wrapper>
-        <Toast show={loading} icon="loading">加载中...</Toast>
+  const renderImg = () => {
+    return (
+      <>
         <Banners banners={banners} />
         <ImgTab>
           <Link to="shouban">
@@ -103,7 +71,42 @@ export default function Vip() {
           </Link>
         </ImgTab>
         <GoodsList goods={goods}/>
+      </>
+    )
+  }
+
+  return (
+    <>
+      <HeaderWrapper>
+        <div className="title">
+          <span>会员购</span>
+          <span>
+            CHE手办原型创作大赛
+            <i className='iconfont icon-xiangyoujiantou'></i>
+          </span>
+          <span>
+            <Link to="store-house">
+              <i className='iconfont icon-24gl-drawer'></i> 
+            </Link>
+            <Link to="shopping-cart">
+              <i className='iconfont icon-gouwuche'></i>
+            </Link>
+            <Link to="vip-center">
+              <i className='iconfont icon-gerenzhongxin'></i>
+            </Link>
+          </span>
+        </div>
+        <div className="search-bar">
+          <i className='iconfont icon-sousuo'></i>
+          <input type="text" placeholder='搜索商品...'/>
+          <Link to="all">
+            <i className='iconfont icon-ALL'></i>
+          </Link>
+        </div>
+      </HeaderWrapper>
+      <Wrapper>
+        { loading ? <Skeleton.Paragraph lineCount={22} animated /> : renderImg() }  
       </Wrapper>
-    </div>
+    </>
   )
 }
