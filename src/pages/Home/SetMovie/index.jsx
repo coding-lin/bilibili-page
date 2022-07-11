@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import './style.css'
 import { Swiper, Toast } from 'antd-mobile'
 import classnames from 'classnames'

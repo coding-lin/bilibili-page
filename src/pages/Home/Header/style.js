@@ -22,6 +22,7 @@ export const HeaderWrapper = styled.div`
     }
     i {
       font-size: 20px;
+      color: #000;
     }
   }
 `

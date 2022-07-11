@@ -17,6 +17,7 @@ export const FooterWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    color: #000;
     &.active {
       color: pink;
     }

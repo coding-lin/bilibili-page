@@ -45,8 +45,8 @@ export const Wrapper = styled.div`
         text-align: left;
         padding-left: 8px;
         font-size: 12px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-weight: 600;
+        font-style: oblique;
+        color: #000;
         /* 实现标题显示两行，溢出的用省略号表示 */
         text-overflow: ellipsis;
         display: -webkit-box;

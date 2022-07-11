@@ -35,6 +35,9 @@ export const BannersWrapper = styled.div`
     width: 100%;
     background-size: cover;
   }
+  .swiper-item div span {
+    color: #000;
+  }
   .swiper-pagination {
     bottom: -6px;
   }

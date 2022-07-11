@@ -13,12 +13,12 @@ export const HeaderWrapper = styled.div`
   .title {
     display: flex;
     justify-content: space-between;
-    span:first-child {
+    >span:first-child {
       padding: 6px;
       font-size: 20px;
       font-weight: 500;
     }
-    span:nth-child(2) {
+    >span:nth-child(2) {
       width: 40%;
       padding: 14px;
       padding-left: 0;
@@ -28,13 +28,14 @@ export const HeaderWrapper = styled.div`
         font-size: 10px;
       }
     }
-    span:nth-child(3) {
+    >span:nth-child(3) {
       display: flex;
       justify-content: space-between;
       width: 36%;
       padding: 8px;
       i {
         font-size: 20px;
+        color: #000;
       }
     }
   }
@@ -54,7 +55,6 @@ export const HeaderWrapper = styled.div`
         font-size: 30px;
         font-weight: 600;
         font-style: oblique;
-        padding-top: 2px;
         padding-left: 8px;
       }
     }
@@ -91,7 +91,7 @@ export const ImgTab = styled.div`
     }
     span {
       font-size: 10px;
-      font-weight: 600;
+      color: #000;
     }
   }
 `
