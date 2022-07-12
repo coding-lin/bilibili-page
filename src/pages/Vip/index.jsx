@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Banners from './Banners'
 import GoodsList from './GoodsList'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
-// import { getBannersList, getGoodsList } from '@/api/request'
 import { Skeleton } from 'antd-mobile'
 import { connect } from 'react-redux'
 import { getBannersList, getGoodsList } from './store/actionCreators'
@@ -24,21 +23,6 @@ const Vip = (props) => {
     getGoodListDispatch()
   }, [])
   
-  // console.log(bannersList)
-  // const [loading, setLoading] = useState(true)
-  // const [banners, setBanners] = useState([])
-  // const [goods, setGoods] = useState([])
-
-  // useEffect(() => {
-  //   (async () => {
-  //     let { data: bannersData } = await getBannersList()
-  //     let { data: goodsData } = await getGoodsList()
-  //     setBanners(bannersData)
-  //     setGoods(goodsData)
-  //     setLoading(false)
-  //   })()
-  // })
-
   const renderImg = () => {
     return (
       <>
@@ -116,7 +100,7 @@ const Vip = (props) => {
         </div>
       </HeaderWrapper>
       <Wrapper>
-        { enterLoading ? <Skeleton.Paragraph lineCount={24} animated /> : renderImg() }  
+        { enterLoading ? <Skeleton.Paragraph lineCount={25} animated /> : renderImg() }  
       </Wrapper>
     </>
   )

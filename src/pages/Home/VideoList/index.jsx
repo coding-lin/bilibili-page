@@ -1,38 +1,60 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
 import { Wrapper } from './style'
+import { Skeleton } from 'antd-mobile'
 import VideoItem from '@/components/VideoItem'
-import { getVideosList } from '@/api/request'
-import WeUI from 'react-weui'
+import { getVideosList } from '../store/actionCreators'
 
-const {
-  Toast
-} = WeUI;
-
-const VideoList = () => {
-  const [videos, setVideos] = useState([])
-  const [loading, setLoading] = useState(true)
+const VideoList = (props) => {
+  const { videosList, enterLoading } = props
+  const { getVideoListDispatch } = props
 
   useEffect(() => {
-    (async() => {
-      let { data } = await getVideosList()
-      // console.log(data);
-      setVideos([...data])
-      setLoading(false)
-    })()
+    getVideoListDispatch()
   }, [])
+
+  const renderVideo = () => {
+    return (
+      <>
+        {
+          videosList && videosList.map(
+            video => (
+              <VideoItem key={video.id} video={video} />
+            )
+          )
+        }
+      </>
+    )
+  }
 
   return (
     <Wrapper>
-      <Toast show={loading} icon="loading">加载中...</Toast>
-      {
-        videos && videos.map(
+      { enterLoading ? (<Skeleton.Paragraph lineCount={25} animated />) : renderVideo() }
+      {/* {
+        videosList && videosList.map(
           video => (
             <VideoItem key={video.id} video={video} />
           )
         )
-      }
+      } */}
     </Wrapper>
   )
 }
 
-export default VideoList
+// state 状态树
+const mapStateToProps = (state) => {
+  return {
+    enterLoading: state.home.enterLoading,
+    videosList: state.home.videosList
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getVideoListDispatch() {
+      dispatch(getVideosList())
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(VideoList))
