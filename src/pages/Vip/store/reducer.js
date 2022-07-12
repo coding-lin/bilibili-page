@@ -8,7 +8,7 @@ const defaultState = {
 
 const reducer = (state=defaultState, action) => {
   switch(action.type) {
-    case actionTypes.CHANGE_ENTER_LOADING:
+    case actionTypes.CHANGE_LOADING:
       return {
         ...state,
         enterLoading: action.data

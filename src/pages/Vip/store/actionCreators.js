@@ -15,8 +15,8 @@ const changeGoodsList = (data) => ({
   data
 })
 
-const changeEnterLoading = (data) => ({
-  type: actionTypes.CHANGE_ENTER_LOADING,
+const changeLoading = (data) => ({
+  type: actionTypes.CHANGE_LOADING,
   data
 })
 
@@ -32,7 +32,7 @@ export const getGoodsList = () => {
   return (dispatch) => {
     getGoodsListRequest().then((data) => {
       dispatch(changeGoodsList(data.data))
-      dispatch(changeEnterLoading(false))
+      dispatch(changeLoading(false))
     })
   }
 }
