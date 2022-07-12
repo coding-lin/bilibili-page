@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import Banners from './Banners'
 import GoodsList from './GoodsList'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
-import { getBannersList, getGoodsList } from '@/api/request'
+// import { getBannersList, getGoodsList } from '@/api/request'
 import { Skeleton } from 'antd-mobile'
+import { connect } from 'react-redux'
+import { getBannersList, getGoodsList } from './store/actionCreators'
 
 import Img1 from '@/assets/images/shouban.png'
 import Img2 from '@/assets/images/zhoubian.png'
@@ -13,25 +15,34 @@ import Img4 from '@/assets/images/tushumanhua.png'
 import Img5 from '@/assets/images/shumazhuangbei.png'
 import Img6 from '@/assets/images/ciyuanfushi.png'
 
-export default function Vip() {
-  const [loading, setLoading] = useState(true)
-  const [banners, setBanners] = useState([])
-  const [goods, setGoods] = useState([])
+const Vip = (props) => {
+  const { bannersList, goodsList, enterLoading } = props
+  const { getBannerListDispatch, getGoodListDispatch } = props
 
   useEffect(() => {
-    (async () => {
-      let { data: bannersData } = await getBannersList()
-      let { data: goodsData } = await getGoodsList()
-      setBanners(bannersData)
-      setGoods(goodsData)
-      setLoading(false)
-    })()
-  })
+    getBannerListDispatch()
+    getGoodListDispatch()
+  }, [])
+  
+  // console.log(bannersList)
+  // const [loading, setLoading] = useState(true)
+  // const [banners, setBanners] = useState([])
+  // const [goods, setGoods] = useState([])
+
+  // useEffect(() => {
+  //   (async () => {
+  //     let { data: bannersData } = await getBannersList()
+  //     let { data: goodsData } = await getGoodsList()
+  //     setBanners(bannersData)
+  //     setGoods(goodsData)
+  //     setLoading(false)
+  //   })()
+  // })
 
   const renderImg = () => {
     return (
       <>
-        <Banners banners={banners} />
+        <Banners bannersList={bannersList} />
         <ImgTab>
           <Link to="shouban">
             <div className='img-tab'>
@@ -70,7 +81,7 @@ export default function Vip() {
             </div>
           </Link>
         </ImgTab>
-        <GoodsList goods={goods}/>
+        <GoodsList goodsList={goodsList}/>
       </>
     )
   }
@@ -105,8 +116,30 @@ export default function Vip() {
         </div>
       </HeaderWrapper>
       <Wrapper>
-        { loading ? <Skeleton.Paragraph lineCount={22} animated /> : renderImg() }  
+        { enterLoading ? <Skeleton.Paragraph lineCount={24} animated /> : renderImg() }  
       </Wrapper>
     </>
   )
 }
+
+// state 状态树
+const mapStateToProps = (state) => {
+  return {
+    enterLoading: state.vip.enterLoading,
+    bannersList: state.vip.bannersList,
+    goodsList: state.vip.goodsList
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getBannerListDispatch() {
+      dispatch(getBannersList())
+    },
+    getGoodListDispatch() {
+      dispatch(getGoodsList())
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(Vip))

@@ -8,10 +8,14 @@ import './assets/font/font-vip/iconfont.css'
 import 'swiper/dist/css/swiper.min.css'
 import './modules/rem'
 import 'weui'
+import store from './store'
+import { Provider } from 'react-redux'
 import { HashRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <HashRouter>
-    <App />
-  </HashRouter>
+  <Provider store={store}>
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </Provider>
 )

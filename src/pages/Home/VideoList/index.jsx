@@ -15,7 +15,7 @@ const VideoList = () => {
   useEffect(() => {
     (async() => {
       let { data } = await getVideosList()
-      console.log(data);
+      // console.log(data);
       setVideos([...data])
       setLoading(false)
     })()

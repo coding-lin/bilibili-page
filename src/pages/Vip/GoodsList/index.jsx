@@ -3,13 +3,13 @@ import propTypes from "prop-types";
 import { Wrapper } from './style'
 import GoodsItem from '@/components/GoodsItem';
 
-export default function GoodsList({goods}) {
+export default function GoodsList({goodsList}) {
   
   return (
     <Wrapper>
       <div className="container">
         {
-          goods && goods.map(good => (
+          goodsList && goodsList.map(good => (
             <GoodsItem key={good.id} good={good} />
           ))
         }
@@ -19,5 +19,5 @@ export default function GoodsList({goods}) {
 }
 
 GoodsList.propTypes = {
-  goods: propTypes.array.isRequired
+  goodsList: propTypes.array.isRequired
 }

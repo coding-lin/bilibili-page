@@ -13,8 +13,8 @@ import axios from 'axios'
 export const getVideosList = () => 
   axios.get('https://www.fastmock.site/mock/059647e88be0d33ef58d6ab4bf009dd9/bilibili/videoslist')
 
-export const getBannersList = () => 
+export const getBannersListRequest = () => 
   axios.get('https://www.fastmock.site/mock/059647e88be0d33ef58d6ab4bf009dd9/bilibili/bannerslist')
 
-export const getGoodsList = () => 
+export const getGoodsListRequest = () => 
   axios.get('https://www.fastmock.site/mock/059647e88be0d33ef58d6ab4bf009dd9/bilibili/goodslist')

@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 import Swiper from "swiper";
 import { Link } from "react-router-dom";
 
-export default function Banners({banners}) {
+export default function Banners({bannersList}) {
   let swiper = null;
   useEffect(() => {
     if (swiper) return;
@@ -17,7 +17,7 @@ export default function Banners({banners}) {
   }, [])
 
   const renderBtnBannersPage1 = () => {
-    let items = banners.slice(0, 10);
+    let items = bannersList.slice(0, 10);
     return items.map((item) => {
       return (
         <Link to="/dongman/id" className="swiper-item" key={item.id}>
@@ -33,7 +33,7 @@ export default function Banners({banners}) {
   }
 
   const renderBtnBannersPage2 = () => {
-    let items = banners.slice(10);
+    let items = bannersList.slice(10);
     return items.map((item) => {
       return (
         <Link to="/dongman/id" className="swiper-item" key={item.id}>
@@ -62,5 +62,5 @@ export default function Banners({banners}) {
 }
 
 Banners.propTypes = {
-  banners: propTypes.array.isRequired
+  bannersList: propTypes.array.isRequired
 }

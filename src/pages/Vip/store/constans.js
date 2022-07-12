@@ -1,2 +1,0 @@
-// export const SET_BANNERS_LIST = 'SET_BANNERS_LIST'
-// export const SET_GOODS_LIST = 'SET_GOODS_LIST'
