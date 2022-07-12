@@ -1,5 +1,7 @@
 import React from 'react'
+import LazyLoad from 'react-lazyload'
 import { Link } from 'react-router-dom'
+import bilibili from './bilibili.jpeg'
 
 const VideoItem = ({video}) => {
 
@@ -11,7 +13,12 @@ const VideoItem = ({video}) => {
       >
         <div className='videos-box'>
           <div className="videos-img">
-            <img src={video.img} alt="" />
+            <LazyLoad
+              placeholder={<img width="100%" 
+              height="100%" src={bilibili}/>}
+            >
+              <img src={video.img} alt="" />
+            </LazyLoad>
             <div className="info">
               <i className='iconfont icon-bofangqi-bofangxiaodianshi'></i>
               <span>{video.bofang}</span>
@@ -32,4 +39,5 @@ const VideoItem = ({video}) => {
   )
 }
 
-export default VideoItem
+// 性能优化  子组件
+export default React.memo(VideoItem)
