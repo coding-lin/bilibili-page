@@ -1,7 +1,7 @@
 import React from 'react'
 import LazyLoad from 'react-lazyload'
 import { Link } from 'react-router-dom'
-import bilibili from './bilibili.jpeg'
+import bilibili from '@/assets/images/bilibili.jpeg'
 
 const VideoItem = ({video}) => {
 
@@ -17,7 +17,7 @@ const VideoItem = ({video}) => {
               placeholder={<img width="100%" 
               height="100%" src={bilibili}/>}
             >
-              <img src={video.img} alt="" />
+              <img src={video.img} />
             </LazyLoad>
             <div className="info">
               <i className='iconfont icon-bofangqi-bofangxiaodianshi'></i>

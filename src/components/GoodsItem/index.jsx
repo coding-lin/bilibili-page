@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
+import LazyLoad from 'react-lazyload'
 import classnames from 'classnames'
+import bilibili from '@/assets/images/bilibili.jpeg'
 
 const GoodsItem = ({good}) => {
   const [isColl, setIsColl] = useState(false)
@@ -11,7 +13,12 @@ const GoodsItem = ({good}) => {
   return (
     <div className="good-box" key={good.id}>
       <div className="good-img">
-        <img src={good.img} />
+        <LazyLoad
+          placeholder={<img width="100%" 
+          height="100%" src={bilibili}/>}
+        >
+          <img src={good.img} />
+        </LazyLoad>
       </div>
       <div className="title">
         <span>{good.info}</span>
@@ -41,4 +48,4 @@ const GoodsItem = ({good}) => {
   )
 }
 
-export default GoodsItem
+export default React.memo(GoodsItem)
