@@ -15,13 +15,13 @@ export const HeaderWrapper = styled.div`
   z-index: 999;
   i {
     float: left;
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 10px;
     line-height: 60px;
   }
   h2 {
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 60px;
   }
