@@ -1,4 +1,4 @@
-import{C as Ae,a as Be,b as Ne,s as se,r as me,j as b,c as O,L as Y,R as ze,d as He,e as Ge,F as we}from"./index.7d976aa3.js";import{g as Xe,a as Ve,p as ke,_ as Ye,b as Fe,S as Re}from"./index.df742c34.js";const qe=e=>({type:Ae,data:e}),We=e=>({type:Be,data:e}),je=e=>({type:Ne,data:e}),_e=()=>e=>{Xe().then(t=>{e(qe(t.data))})},Ke=()=>e=>{Ve().then(t=>{e(We(t.data)),e(je(!1))})},Ue=se.div`
+import{C as Ae,a as Be,b as Ne,s as se,r as me,j as b,c as O,L as Y,R as ze,d as He,e as Ge,F as we}from"./index.3269b30f.js";import{g as Xe,a as Ve,p as ke,_ as Ye,b as Fe,S as Re}from"./index.2d4ab06d.js";const qe=e=>({type:Ae,data:e}),We=e=>({type:Be,data:e}),je=e=>({type:Ne,data:e}),_e=()=>e=>{Xe().then(t=>{e(qe(t.data))})},Ke=()=>e=>{Ve().then(t=>{e(We(t.data)),e(je(!1))})},Ue=se.div`
   height: 1.582rem;
   margin-top: 100px;
   .btn_banners {
@@ -73,8 +73,8 @@ import{C as Ae,a as Be,b as Ne,s as se,r as me,j as b,c as O,L as Y,R as ze,d as
         >span:first-child {
           background: rgba(50, 50, 50, 0.1);
           border-radius: 4px;
-          font-size: 12px;
-          padding: 1px;
+          font-size: 10px;
+          padding: 2px;
         }
         >span:nth-child(2) {
           font-style: oblique;
@@ -83,7 +83,9 @@ import{C as Ae,a as Be,b as Ne,s as se,r as me,j as b,c as O,L as Y,R as ze,d as
         }
       }
       .rank_time {
-        padding: 1px;
+        display: flex;
+        justify-content: space-around;
+        padding: 2px;
         >span:first-child {
           background-color: orange;
           border-radius: 4px;
@@ -91,7 +93,6 @@ import{C as Ae,a as Be,b as Ne,s as se,r as me,j as b,c as O,L as Y,R as ze,d as
           font-size: 12px;
         }
         >span:nth-child(2) {
-          margin-left: 6px;
           font-size: 12px;
           border-radius: 4px;
           padding: 1px;
@@ -123,7 +124,7 @@ import{C as Ae,a as Be,b as Ne,s as se,r as me,j as b,c as O,L as Y,R as ze,d as
       }
     }
   }
-`,ui=({good:e})=>{const[t,s]=me.exports.useState(!1),i=()=>{s(!t)};return O("div",{className:"good-box",children:[b("div",{className:"good-img",children:b(Ye,{placeholder:b("img",{width:"100%",height:"100%",src:Fe}),children:b("img",{src:e.img})})}),O("div",{className:"title",children:[b("span",{children:e.info}),b("span",{children:e.title})]}),O("div",{className:"rank_time",children:[b("span",{children:e.rank}),b("span",{children:e.time})]}),O("div",{className:"price_coll",children:[O("span",{children:["\xA5",e.price]}),O("span",{children:[b("i",{className:He("iconfont",{"icon-aixin3":!t},{"icon-aixin1":t},{active:t}),onClick:()=>i()}),b("span",{children:t?e.collection+1:e.collection})]})]})]},e.id)};var fi=ze.memo(ui);function Oe({goodsList:e}){return b(ci,{children:b("div",{className:"container",children:e&&e.map(t=>b(fi,{good:t},t.id))})})}Oe.propTypes={goodsList:ke.array.isRequired};const hi=se.div`
+`,ui=({good:e})=>{const[t,s]=me.exports.useState(!1),i=()=>{s(!t)};return O("div",{className:"good-box",children:[b("div",{className:"good-img",children:b(Ye,{placeholder:b("img",{width:"100%",height:"100%",src:Fe}),children:b("img",{src:e.img})})}),O("div",{className:"title",children:[e.info?b("span",{children:e.info}):"",b("span",{children:e.title})]}),O("div",{className:"rank_time",children:[e.rank?b("span",{children:e.rank}):"",e.time?b("span",{children:e.time}):""]}),O("div",{className:"price_coll",children:[O("span",{children:["\xA5",e.price]}),O("span",{children:[b("i",{className:He("iconfont",{"icon-aixin3":!t},{"icon-aixin1":t},{active:t}),onClick:()=>i()}),b("span",{children:t?e.collection+1:e.collection})]})]})]},e.id)};var fi=ze.memo(ui);function Oe({goodsList:e}){return b(ci,{children:b("div",{className:"container",children:e&&e.map(t=>b(fi,{good:t},t.id))})})}Oe.propTypes={goodsList:ke.array.isRequired};const hi=se.div`
   position: fixed;
   top: 0;
   left: 0;
