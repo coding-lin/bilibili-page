@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { Skeleton } from 'antd-mobile'
 import { Wrapper, HeaderWrapper, Empty, List } from './style'
 import empty from '@/assets/images/empty.png'
+import GoodsList from '../Vip/GoodsList'
+import { getGoodsList } from '../Vip/store/actionCreators'
 
 const renderEmpty = () => {  // 空状态组件
   return (
@@ -23,26 +27,56 @@ const renderList = () => {  // 购物车商品列表组件
   )
 }
 
-const ShoppingCart = ({goods}) => {
+const ShoppingCart = (props) => {
   const navigate = useNavigate()
+  const { goodsList, enterLoading } = props
+  const { getGoodListDispatch } = props
 
   useEffect(() => {
     navigate(`/shopping-cart`)
   }, [])
 
+  useEffect(() => {
+    getGoodListDispatch()
+  }, [])
+
+  const renderGoods = () => {
+    return (
+      <GoodsList goodsList={goodsList} />
+    )
+  }
+
   return (
     <Wrapper>
       <HeaderWrapper>
         <i 
-          className='iconfont icon-xiangyoujiantou'
+          className='iconfont icon-fanhuijiantou'
           onClick={() => navigate(`/vip`)}
         >
         </i>
         <h2>购物车</h2>
       </HeaderWrapper>
-      { !goods ? renderEmpty() : renderList() }
+      {/* { !goodsList ? renderEmpty() : renderList() } */}
+      { renderEmpty() }
+      { enterLoading ? <Skeleton.Paragraph lineCount={25} animated /> : renderGoods() } 
     </Wrapper>
   )
 }
 
-export default React.memo(ShoppingCart)
+// state 状态树
+const mapStateToProps = (state) => {
+  return {
+    enterLoading: state.vip.enterLoading,
+    goodsList: state.vip.goodsList
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getGoodListDispatch() {
+      dispatch(getGoodsList())
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(ShoppingCart))

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  
+  background-color: rgba(55, 30, 60, 0.1);
 `
 
 export const HeaderWrapper = styled.div`
@@ -12,6 +12,7 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   height: 50px;
   background-color: white;
+  z-index: 999;
   i {
     float: left;
     font-size: 18px;
@@ -29,8 +30,9 @@ export const HeaderWrapper = styled.div`
 export const Empty = styled.div`
   width: 100%;
   margin-top: 50px;
-  background-color: rgba(55, 30, 60, 0.06);
-  border-bottom: 1px solid rgba(50, 50, 50, 0.12);
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(50, 50, 50, 0.08);
   .info {
     position: relative;
     width: 100%;
