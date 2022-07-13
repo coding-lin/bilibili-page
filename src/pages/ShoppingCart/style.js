@@ -10,33 +10,33 @@ export const HeaderWrapper = styled.div`
   left: 0;
   right: 0;
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: white;
   z-index: 999;
   i {
     float: left;
     font-size: 18px;
     margin-left: 10px;
-    line-height: 50px;
+    line-height: 60px;
   }
   h2 {
     text-align: center;
     font-size: 16px;
     font-weight: 600;
-    line-height: 50px;
+    line-height: 60px;
   }
 `
 
 export const Empty = styled.div`
   width: 100%;
-  margin-top: 50px;
+  margin-top: 60px;
   margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid rgba(50, 50, 50, 0.08);
   .info {
     position: relative;
     width: 100%;
-    height: 270px;
+    height: 276px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,11 +57,11 @@ export const Empty = styled.div`
       bottom: -14px;
       left: 50%;
       right: 50%;
-      width: 120px;
-      height: 30px;
-      margin-top: -60px;
-      margin-left: -60px;
-      padding: 4px;
+      width: 110px;
+      height: 26px;
+      margin-top: -55px;
+      margin-left: -55px;
+      padding: 2px;
       border-radius: 14px;
       font-size: 15px;
       background-color: Silver;
