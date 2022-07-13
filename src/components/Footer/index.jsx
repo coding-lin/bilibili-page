@@ -2,10 +2,11 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { FooterWrapper } from './style'
 import classnames from 'classnames'
-import { isPathPartlyExisted } from '@/utils'
+import { isPathPartlyExisted, isPathShoppingCart } from '@/utils'
 
-export default function Footer(props) {
+export default function Footer() {
   const { pathname } = useLocation()
+  if (isPathShoppingCart(pathname)) return
 
   return (
     <FooterWrapper>

@@ -9,6 +9,12 @@ export const isPathPartlyExisted = (path) => {
   if (pathRes[1] && pathRes[1] === 'home') return true
   return false
 }
+
+export const isPathShoppingCart = (path) => {
+  let pathRes = path.split('/')
+  if (pathRes[1] && pathRes[1] === 'shopping-cart') return true
+  return false
+}
 // 防抖函数
 export const debounce = (func, delay) => {
   let timer;
