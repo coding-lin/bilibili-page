@@ -29,8 +29,8 @@ export const Wrapper = styled.div`
         >span:first-child {
           background: rgba(50, 50, 50, 0.1);
           border-radius: 4px;
-          font-size: 12px;
-          padding: 1px;
+          font-size: 10px;
+          padding: 2px;
         }
         >span:nth-child(2) {
           font-style: oblique;
@@ -39,7 +39,9 @@ export const Wrapper = styled.div`
         }
       }
       .rank_time {
-        padding: 1px;
+        display: flex;
+        justify-content: space-around;
+        padding: 2px;
         >span:first-child {
           background-color: orange;
           border-radius: 4px;
@@ -47,7 +49,6 @@ export const Wrapper = styled.div`
           font-size: 12px;
         }
         >span:nth-child(2) {
-          margin-left: 6px;
           font-size: 12px;
           border-radius: 4px;
           padding: 1px;

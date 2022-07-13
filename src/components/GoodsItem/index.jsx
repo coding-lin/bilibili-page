@@ -21,12 +21,12 @@ const GoodsItem = ({good}) => {
         </LazyLoad>
       </div>
       <div className="title">
-        <span>{good.info}</span>
+        {good.info ? <span>{good.info}</span> : ''}
         <span>{good.title}</span>
       </div>
       <div className="rank_time">
-        <span>{good.rank}</span>
-        <span>{good.time}</span>
+        {good.rank ? <span>{good.rank}</span> : ''}
+        {good.time ? <span>{good.time}</span> : ''}
       </div>
       <div className="price_coll">
         <span>¥{good.price}</span>
@@ -48,4 +48,5 @@ const GoodsItem = ({good}) => {
   )
 }
 
+// 性能优化
 export default React.memo(GoodsItem)
