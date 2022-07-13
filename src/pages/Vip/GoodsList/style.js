@@ -36,6 +36,7 @@ export const Wrapper = styled.div`
           font-style: oblique;
           font-size: 14px;
           font-weight: 600;
+          padding: 2px;
         }
       }
       .rank_time {
@@ -65,7 +66,7 @@ export const Wrapper = styled.div`
           font-weight: 600;
         }
         >span:nth-child(2) {
-          padding: 8px;
+          padding: 6px;
           i {
             font-size: 20px;
             padding: 2px;

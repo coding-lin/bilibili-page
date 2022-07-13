@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from '@/pages/Home'
 const Dynamic = lazy(() => import('@/pages/Dynamic'))
 const Vip = lazy(() => import('@/pages/Vip'))
+const ShoppingCart = lazy(() => import('@/pages/ShoppingCart'))
 const Mine = lazy(() => import('@/pages/Mine'))
 
 const Live = lazy(() => import('@/pages/Home/Live'))
@@ -28,6 +29,7 @@ const RoutesConfig = () => {
       </Route>
       <Route path="/dynamic" element={<Dynamic />}></Route>
       <Route path="/vip" element={<Vip />}></Route>
+      <Route path='/shopping-cart' element={<ShoppingCart />}></Route>
       <Route path="/mine" element={<Mine />}></Route>
     </Routes>
   )

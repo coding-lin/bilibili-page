@@ -80,13 +80,13 @@ const Vip = (props) => {
             <i className='iconfont icon-xiangyoujiantou'></i>
           </span>
           <span>
-            <Link to="store-house">
+            <Link to="/store-house">
               <i className='iconfont icon-24gl-drawer'></i> 
             </Link>
-            <Link to="shopping-cart">
+            <Link to="/shopping-cart">
               <i className='iconfont icon-gouwuche'></i>
             </Link>
-            <Link to="vip-center">
+            <Link to="/vip-center">
               <i className='iconfont icon-gerenzhongxin'></i>
             </Link>
           </span>
