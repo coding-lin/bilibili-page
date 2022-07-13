@@ -1,4 +1,4 @@
-import{s as e,c as d,R as g,u,r,a as i,j as t}from"./index.71562139.js";import{S as h}from"./index.c32fe9fe.js";import{G as l,a as x}from"./index.104dd675.js";const m=e.div`
+import{s as e,c as d,R as g,u,r,a as i,j as t}from"./index.0ce581f5.js";import{S as h}from"./index.e2ef9da8.js";import{G as l,a as x}from"./index.589cb864.js";const m=e.div`
   background-color: rgba(55, 30, 60, 0.1);
 `,f=e.div`
   position: fixed;
@@ -11,13 +11,13 @@ import{s as e,c as d,R as g,u,r,a as i,j as t}from"./index.71562139.js";import{S
   z-index: 999;
   i {
     float: left;
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 10px;
     line-height: 60px;
   }
   h2 {
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 60px;
   }
