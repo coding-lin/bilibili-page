@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BannersWrapper = styled.div`
-  height: 1.582rem;
+  height: 1.65rem;
   margin-top: 100px;
   .btn_banners {
     width: 100%;

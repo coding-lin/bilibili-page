@@ -78,7 +78,7 @@ export const Wrapper = styled.div`
 
 export const ImgTab = styled.div`
   width: 100%;
-  margin-top: 16px;
+  margin-top: 8px;
   height: 68px;
   display: flex;
   justify-content: space-around;

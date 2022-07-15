@@ -13,7 +13,8 @@ export const Wrapper = styled.div`
     .good-box { 
       width: 100%;
       break-inside: avoid;
-      margin: 10px auto;
+      /* margin: 10px auto; */
+      margin-bottom: 10px;
       border-radius: 4px;
       box-shadow: rgba(255, 255, 255, 0.2) 2px 2px 2px;
       background-color: #fff;
