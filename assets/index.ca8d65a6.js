@@ -1,4 +1,4 @@
-import{C as r,b as d,d as p,s as c,R as o,r as l,a as e,j as a,e as x}from"./index.0ce581f5.js";import{g as h,a as g,_ as m,b as f,p as u}from"./index.e2ef9da8.js";const b=i=>({type:r,data:i}),y=i=>({type:d,data:i}),N=i=>({type:p,data:i}),C=()=>i=>{h().then(n=>{i(b(n.data))})},z=()=>i=>{g().then(n=>{i(y(n.data)),i(N(!1))})},k=c.div`
+import{C as r,b as d,d as p,s as o,R as c,r as l,a as e,j as a,e as x}from"./index.541bc181.js";import{g as h,a as g,_ as m,b as f,p as u}from"./index.a5c9311a.js";const b=i=>({type:r,data:i}),y=i=>({type:d,data:i}),N=i=>({type:p,data:i}),C=()=>i=>{h().then(n=>{i(b(n.data))})},z=()=>i=>{g().then(n=>{i(y(n.data)),i(N(!1))})},k=o.div`
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   padding-bottom: 54px;
@@ -11,7 +11,8 @@ import{C as r,b as d,d as p,s as c,R as o,r as l,a as e,j as a,e as x}from"./ind
     .good-box { 
       width: 100%;
       break-inside: avoid;
-      margin: 10px auto;
+      /* margin: 10px auto; */
+      margin-bottom: 10px;
       border-radius: 4px;
       box-shadow: rgba(255, 255, 255, 0.2) 2px 2px 2px;
       background-color: #fff;
@@ -79,4 +80,4 @@ import{C as r,b as d,d as p,s as c,R as o,r as l,a as e,j as a,e as x}from"./ind
       }
     }
   }
-`,G=({good:i})=>{const[n,s]=l.exports.useState(!1),t=()=>{s(!n)};return e("div",{className:"good-box",children:[a("div",{className:"good-img",children:a(m,{placeholder:a("img",{width:"100%",height:"100%",src:f}),children:a("img",{src:i.img})})}),e("div",{className:"title",children:[i.info?a("span",{children:i.info}):"",a("span",{children:i.title})]}),e("div",{className:"rank_time",children:[i.rank?a("span",{children:i.rank}):"",i.time?a("span",{children:i.time}):""]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",i.price]}),e("span",{children:[a("i",{className:x("iconfont",{"icon-aixin3":!n},{"icon-aixin1":n},{active:n}),onClick:()=>t()}),a("span",{children:n?i.collection+1:i.collection})]})]})]},i.id)};var v=o.memo(G);function L({goodsList:i}){return a(k,{children:a("div",{className:"container",children:i&&i.map(n=>a(v,{good:n},n.id))})})}L.propTypes={goodsList:u.array.isRequired};export{L as G,z as a,C as g};
+`,G=({good:i})=>{const[n,s]=l.exports.useState(!1),t=()=>{s(!n)};return e("div",{className:"good-box",children:[a("div",{className:"good-img",children:a(m,{placeholder:a("img",{width:"100%",height:"100%",src:f}),children:a("img",{src:i.img})})}),e("div",{className:"title",children:[i.info?a("span",{children:i.info}):"",a("span",{children:i.title})]}),e("div",{className:"rank_time",children:[i.rank?a("span",{children:i.rank}):"",i.time?a("span",{children:i.time}):""]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",i.price]}),e("span",{children:[a("i",{className:x("iconfont",{"icon-aixin3":!n},{"icon-aixin1":n},{active:n}),onClick:()=>t()}),a("span",{children:n?i.collection+1:i.collection})]})]})]},i.id)};var v=c.memo(G);function L({goodsList:i}){return a(k,{children:a("div",{className:"container",children:i&&i.map(n=>a(v,{good:n},n.id))})})}L.propTypes={goodsList:u.array.isRequired};export{L as G,z as a,C as g};
