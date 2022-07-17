@@ -1,12 +1,11 @@
 .wrapper {
   width: 100%;
-  padding: 10px;
-  background: rgba(55, 55, 55, 0.1);
+  padding: 10px 8px;
+  background: rgba(50, 50, 50, 0.06);
 }
 
 .content {
   height: 200px;
-  background: rgba(55, 55, 55, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled from "styled-components"
+import style from '@/assets/global-style'
 
 export const Wrapper = styled.div`
   width: 100%;
-  background: rgba(55, 55, 55, 0.1);
+  background: ${style["background-color"]};
   padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -12,8 +13,8 @@ export const Wrapper = styled.div`
     .videos-box {
       height: 194px;
       border-radius: 2px;
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-left: 8px;
+      margin-right: 8px;
       margin-bottom: 10px;
       background: #fff;
       position: relative;

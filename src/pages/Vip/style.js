@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from "styled-components"
+import style from '@/assets/global-style'
 
 export const HeaderWrapper = styled.div`
   position: fixed;
@@ -66,14 +67,14 @@ export const HeaderWrapper = styled.div`
       border-radius: 14px;
       padding-left: 34px;
       border: 0;
-      background-color: rgba(50, 50, 50, 0.08);
+      background-color: ${style["search_bar-color"]};
     }
   }
 `
 
 export const Wrapper = styled.div`
   width: 100%;
-  background-color: rgba(50, 50, 50, 0.06);
+  background: ${style["background-color"]};
 `
 
 export const ImgTab = styled.div`

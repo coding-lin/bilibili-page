@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import style from '@/assets/global-style'
 
 export const HeaderWrapper = styled.div`
   width: 100%;
@@ -29,7 +30,7 @@ export const SearchInput = styled.div`
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 15px;
-  background: rgba(50, 50, 50, 0.1);
+  background-color: ${style["search_bar-color"]};
   display: flex;
   i {
     padding-top: 2px;
