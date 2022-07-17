@@ -2,6 +2,7 @@ import React from 'react'
 import Pic1 from '@/assets/images/1.jpg'
 import { Link } from 'react-router-dom'
 import { HeaderWrapper, SearchInput } from './style'
+import { Badge, Space } from 'antd-mobile'
 
 export default function Header() {
 
@@ -20,8 +21,12 @@ export default function Header() {
         <Link to="/dynamic">
           <i className='iconfont icon-airudiantubiaohuizhi-zhuanqu_youxi'></i>
         </Link>
-        <Link to="/vip">
-          <i className='iconfont icon-youjian'></i>
+        <Link to="/mail-box">
+          <Space style={{ '--gap': '16px' }}>
+            <Badge content='3'>
+              <i className='iconfont icon-youjian'></i>
+            </Badge>
+          </Space> 
         </Link>
       </HeaderWrapper>
     </>

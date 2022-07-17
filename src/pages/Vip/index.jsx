@@ -94,7 +94,7 @@ const Vip = (props) => {
         <div className="search-bar">
           <i className='iconfont icon-sousuo'></i>
           <input type="text" placeholder='搜索商品...'/>
-          <Link to="all">
+          <Link to="/all">
             <i className='iconfont icon-ALL'></i>
           </Link>
         </div>

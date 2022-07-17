@@ -15,6 +15,13 @@ export const isPathShoppingCart = (path) => {
   if (pathRes[1] && pathRes[1] === 'shopping-cart') return true
   return false
 }
+
+export const isPathMailBox = (path) => {
+  let pathRes = path.split('/')
+  if (pathRes[1] && pathRes[1] === 'mail-box') return true
+  return false
+}
+
 // 防抖函数
 export const debounce = (func, delay) => {
   let timer;
