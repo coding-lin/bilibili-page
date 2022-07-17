@@ -55,13 +55,13 @@ export const HeaderWrapper = styled.div`
         font-size: 30px;
         font-weight: 600;
         font-style: oblique;
-        padding-left: 8px;
+        padding-left: 12px;
       }
     }
     input {
       margin-top: 10px;
       margin-left: 10px;
-      width: 320px;
+      width: 80%;
       height: 30px;
       border-radius: 14px;
       padding-left: 34px;

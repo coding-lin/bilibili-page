@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  position: fixed;
-  z-index: 9999;
-  top: 60px;
+  width: 100%;
+  position: sticky;
+  z-index: 999;
+  top: 0;
   left: 0;
   right: 0;
   .navbar {
     width: 100%;
     height: 35px;
-    background: rgb(80, 182, 240);
+    /* background: rgb(80, 182, 240); */
+    background-color: #fff;
     border-bottom: 1px solid #ccc;
     .nav-box {
       height: 35px !important;

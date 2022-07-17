@@ -1,13 +1,12 @@
 .wrapper {
-  margin-top: 106px;
-  width: 96%;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  background: rgba(55, 55, 55, 0.1);
 }
 
 .content {
   height: 200px;
+  background: rgba(55, 55, 55, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;

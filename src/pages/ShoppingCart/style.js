@@ -14,13 +14,12 @@ export const HeaderWrapper = styled.div`
   background-color: white;
   z-index: 999;
   i {
-    float: left;
+    position: absolute;
     font-size: 20px;
-    margin-left: 10px;
-    line-height: 60px;
+    top: 14px;
+    left: 14px;
   }
   h2 {
-    text-align: center;
     font-size: 18px;
     font-weight: 600;
     line-height: 60px;

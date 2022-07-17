@@ -3,14 +3,11 @@ import styled from 'styled-components'
 export const HeaderWrapper = styled.div`
   width: 100%;
   height: 60px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
+  position: sticky;
+  z-index: 999;
   display: flex;
   justify-content: space-around;
-  background: rgb(80, 182, 240);
+  background-color: #fff;
   a {
     display: flex;
     flex-direction: column;
@@ -32,7 +29,7 @@ export const SearchInput = styled.div`
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(50, 50, 50, 0.1);
   display: flex;
   i {
     padding-top: 2px;

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 98%;
-  margin: 4px auto;
-  padding-bottom: 46px;
+  width: 100%;
+  background: rgba(55, 55, 55, 0.1);
+  padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   .videos-flex {
@@ -12,10 +12,10 @@ export const Wrapper = styled.div`
     .videos-box {
       height: 194px;
       border-radius: 2px;
-      margin-left: 4px;
-      margin-right: 5px;
+      margin-left: 8px;
+      margin-right: 8px;
       margin-bottom: 10px;
-      background-color: rgba(60, 60, 60, 0.1);
+      background: #fff;
       position: relative;
       .videos-img {
         position: relative;
@@ -37,7 +37,7 @@ export const Wrapper = styled.div`
           right: 0;
           padding: 2px;
           border-radius: 2px;
-          background: rgba(30, 30, 30, 0.36);
+          background: rgba(30, 30, 30, 0.45);
           color: #fff;
         }
       }
