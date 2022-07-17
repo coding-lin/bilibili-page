@@ -12,8 +12,8 @@ export const Wrapper = styled.div`
     .videos-box {
       height: 194px;
       border-radius: 2px;
-      margin-left: 8px;
-      margin-right: 8px;
+      margin-left: 10px;
+      margin-right: 10px;
       margin-bottom: 10px;
       background: #fff;
       position: relative;
