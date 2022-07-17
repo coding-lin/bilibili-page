@@ -8,7 +8,8 @@ export const FooterWrapper = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 999;
+  border-top: 1px solid rgba(50, 50, 50, 0.1);
   display: flex;
   a {
     flex: 1;

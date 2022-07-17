@@ -1,5 +1,33 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  /* CSSTransition 过度类型给children  */
+  &.fly-enter,&.fly-appear {
+    opacity: 0;
+    /* 启用GPU加速 */
+    transform: translate3d(100%, 0, 0);
+  }
+  &.fly-enter-active, &.fly-apply-active {
+    opacity: 1;
+    transition: all .3s;
+    transform: translate3d(0, 0, 0);
+  }
+  &.fly-exit {
+    opacity: 1;
+    transform: translate3d(0,0,0)
+  }
+  &.fly-exit-active {
+    opacity: 0;
+    transition: all .3s;
+    transform: translate3d(100%, 0, 0);
+  }
+`
+
 export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-around;
@@ -87,5 +115,12 @@ export const Detail = styled.div`
   p {
     font-size: 14px;
     font-weight: 400;
+  }
+`
+
+export const Img = styled.div`
+  width: 100%;
+  img {
+    width: 100%;
   }
 `
