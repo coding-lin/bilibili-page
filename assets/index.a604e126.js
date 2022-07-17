@@ -1,4 +1,4 @@
-import{s as re,r as Pe,j as E,a as B,L as Y,c as Ie,R as De,F as ve}from"./index.541bc181.js";import{p as Oe,S as Ae}from"./index.a5c9311a.js";import{G as Be,g as He,a as Ne}from"./index.ca8d65a6.js";const Ge=re.div`
+import{s as re,r as Pe,j as E,a as B,L as Y,c as Ie,R as De,F as ve}from"./index.bbb9ee43.js";import{p as Oe,S as Ae}from"./index.458f5025.js";import{G as Be,g as He,a as Ne}from"./index.e92a22ef.js";const Ge=re.div`
   height: 1.65rem;
   margin-top: 100px;
   .btn_banners {
@@ -99,13 +99,13 @@ import{s as re,r as Pe,j as E,a as B,L as Y,c as Ie,R as De,F as ve}from"./index
         font-size: 30px;
         font-weight: 600;
         font-style: oblique;
-        padding-left: 8px;
+        padding-left: 12px;
       }
     }
     input {
       margin-top: 10px;
       margin-left: 10px;
-      width: 320px;
+      width: 80%;
       height: 30px;
       border-radius: 14px;
       padding-left: 34px;
