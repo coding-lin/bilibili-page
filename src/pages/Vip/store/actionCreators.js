@@ -23,7 +23,7 @@ const changeLoading = (data) => ({
 export const getBannersList = () => {
   return (dispatch) => {
     getBannersListRequest().then((data) => {
-      dispatch(changeBannersList(data.data))
+      dispatch(changeBannersList(data))
     })
   }
 }
@@ -31,7 +31,7 @@ export const getBannersList = () => {
 export const getGoodsList = () => {
   return (dispatch) => {
     getGoodsListRequest().then((data) => {
-      dispatch(changeGoodsList(data.data))
+      dispatch(changeGoodsList(data))
       dispatch(changeLoading(false))
     })
   }

@@ -26,6 +26,7 @@ export const HeaderWrapper = styled.div`
       margin-left: -20px;
       font-size: 10px;
       i {
+        color: red;
         font-size: 10px;
       }
     }
