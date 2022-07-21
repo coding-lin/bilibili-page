@@ -1,4 +1,4 @@
-import{s as re,r as Pe,b as E,j as B,L as Y,a as ze,e as De,R as Oe,F as ve}from"./index.ba32717f.js";import{p as Ae,S as Be}from"./bilibili.8e18c158.js";import{G as He,g as Ne,a as Ge}from"./index.88df8cc5.js";const Xe=re.div`
+import{s as re,r as Pe,b as E,j as B,L as Y,a as ze,e as De,R as Oe,F as ve}from"./index.c3c628d1.js";import{p as Ae,S as Be}from"./bilibili.7b2a735f.js";import{G as He,g as Ne,a as Ge}from"./index.97701af9.js";const Xe=re.div`
   height: 1.65rem;
   margin-top: 100px;
   .btn_banners {
@@ -69,6 +69,7 @@ import{s as re,r as Pe,b as E,j as B,L as Y,a as ze,e as De,R as Oe,F as ve}from
       margin-left: -20px;
       font-size: 10px;
       i {
+        color: red;
         font-size: 10px;
       }
     }
