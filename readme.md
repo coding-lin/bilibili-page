@@ -1,4 +1,4 @@
-## React 仿写哔哩哔哩移动端首页页面+会员购页面
+## React + Redux仿写哔哩哔哩移动端首页+会员购页面
 
 bilibili 会员购商品布局方法，使用了 `multi-column` 多栏布局实现瀑布流：
 
@@ -37,7 +37,7 @@ bilibili 会员购商品布局方法，使用了 `multi-column` 多栏布局实�
 ```jsx
 import LazyLoad from 'react-lazyload'
 import bilibili from '@/assets/images/bilibili.jpeg'
-// 图片未加载出来时，使用本地 bilibili 图片占位
+// 当图片未加载出来时，使用本地图片 bilibili 占位
 <LazyLoad
   placeholder={<img width="100%" 
   height="100%" src={bilibili}/>}
