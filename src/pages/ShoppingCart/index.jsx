@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { Skeleton } from 'antd-mobile'
+import { Skeleton, Divider } from 'antd-mobile'
 import { CSSTransition } from 'react-transition-group'
 import { Wrapper, HeaderWrapper, Empty, List } from './style'
 import empty from '@/assets/images/empty.png'
@@ -14,6 +14,9 @@ const renderEmpty = () => {  // 空状态组件
       <div className='info'>
         <img src={empty} />
         <p>购物车空空如也</p>
+        {/* <Divider>
+          <span>你可能还喜欢</span>
+        </Divider> */}
         <span>你可能还喜欢</span>
       </div>
     </Empty>

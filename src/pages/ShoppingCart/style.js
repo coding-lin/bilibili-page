@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  background-color: rgba(55, 30, 60, 0.1);
+  background-color: rgba(120, 120, 120, 0.1);
 `
 
 export const HeaderWrapper = styled.div`
@@ -48,10 +48,10 @@ export const HeaderWrapper = styled.div`
 
 export const Empty = styled.div`
   width: 100%;
+  height: 264px;
   margin-top: 60px;
-  margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(50, 50, 50, 0.08);
+  margin-bottom: 26px;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.06);
   .info {
     position: relative;
     width: 100%;
@@ -73,7 +73,7 @@ export const Empty = styled.div`
     }
     span {
       position: absolute;
-      bottom: -14px;
+      bottom: 0;
       left: 50%;
       right: 50%;
       width: 110px;
@@ -82,7 +82,7 @@ export const Empty = styled.div`
       margin-left: -55px;
       padding: 2px;
       border-radius: 14px;
-      font-size: 15px;
+      font-size: 14px;
       background-color: Silver;
     }
   }
