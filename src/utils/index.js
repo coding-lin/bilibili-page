@@ -10,15 +10,13 @@ export const isPathPartlyExisted = (path) => {
   return false
 }
 
-export const isPathShoppingCart = (path) => {
+export const isPath = (path) => {
   let pathRes = path.split('/')
-  if (pathRes[1] && pathRes[1] === 'shopping-cart') return true
-  return false
-}
-
-export const isPathMailBox = (path) => {
-  let pathRes = path.split('/')
-  if (pathRes[1] && pathRes[1] === 'mail-box') return true
+  if (
+    pathRes[1] === 'shopping-cart' ||
+    pathRes[1] === 'mail-box' ||
+    pathRes[1] === 'search'
+  ) return true
   return false
 }
 

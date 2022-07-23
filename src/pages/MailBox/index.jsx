@@ -13,10 +13,6 @@ const MailBox = () => {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
-    navigate(`/mail-box`)
-  }, [])
-
-  useEffect(() => {
     setShow(true)
   }, [])
 

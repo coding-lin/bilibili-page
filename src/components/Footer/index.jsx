@@ -3,15 +3,13 @@ import { Link, useLocation } from 'react-router-dom'
 import { FooterWrapper } from './style'
 import classnames from 'classnames'
 import { 
-  isPathPartlyExisted, 
-  isPathShoppingCart, 
-  isPathMailBox 
+  isPathPartlyExisted,
+  isPath
 } from '@/utils'
 
 export default function Footer() {
   const { pathname } = useLocation()
-  if (isPathShoppingCart(pathname)) return
-  if (isPathMailBox(pathname)) return
+  if (isPath(pathname)) return
 
   return (
     <FooterWrapper>

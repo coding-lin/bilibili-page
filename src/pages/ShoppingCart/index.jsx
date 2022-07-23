@@ -38,10 +38,6 @@ const ShoppingCart = (props) => {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
-    navigate(`/shopping-cart`)
-  }, [])
-
-  useEffect(() => {
     setShow(true)
     getGoodListDispatch()
   }, [])

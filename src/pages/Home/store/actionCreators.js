@@ -17,7 +17,7 @@ const changeEnterLoading = (data) => ({
 export const getVideosList = () => {
   return (dispatch) => {
     getVideosListRequest().then((data) => {
-      dispatch(changeVideosList(data.data))
+      dispatch(changeVideosList(data))
       dispatch(changeEnterLoading(false))
     })
   }

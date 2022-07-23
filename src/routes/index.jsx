@@ -1,6 +1,7 @@
 import { lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from '@/pages/Home'
+const Search = lazy(() => import('@/pages/Search'))
 const MailBox = lazy(() => import('@/pages/MailBox'))
 const Dynamic = lazy(() => import('@/pages/Dynamic'))
 const Vip = lazy(() => import('@/pages/Vip'))
@@ -28,6 +29,7 @@ const RoutesConfig = () => {
         <Route path="/home/movies" element={<Movies />} />
         <Route path="/home/campus" element={<Campus />} />
       </Route>
+      <Route path="/search" element={<Search />} />  // 首页搜索
       <Route path='/mail-box' element={<MailBox />}></Route>  // 首页邮箱
       <Route path="/dynamic" element={<Dynamic />}></Route>  // 动态
       <Route path="/vip" element={<Vip />}></Route>  // 会员购
