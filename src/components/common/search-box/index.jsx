@@ -1,108 +1,120 @@
-import React, { memo, useState, useEffect, useRef, useMemo } from 'react';
-import styled from 'styled-components';
-import style from '@/assets/global-style';
-import { debounce } from '@/utils';
+import React, { useState, useEffect, useRef, useMemo } from "react";
+import styled from "styled-components";
+import style from "@/assets/global-style";
+import { useNavigate } from "react-router-dom";
+import { debounce } from "@/utils";
 
-const SearchBoxWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 0.3rem;
-    padding-right: 1rem;
-    height: 2rem;
-    background: ${style["theme-color"]};
-    .icon-back{
-        font-size: 1.2rem;
-        color: ${style["font-color-light"]};
-    }
-    .box {
-        flex: 1;
-        margin: 0 0.25rem;
-        line-height: 0.9rem;
-        background:${style["theme-color"]};
-        color: ${style["highlight-background-color"]};
-        font-size: ${style["font-size-m"]};
-        outline: none;
-        border: none;
-        border-bottom: 1px solid ${style["border-color"]};
-        &::placeholder{
-            color: ${style["font-color-light"]};
-        }
-    }
-    .icon-delete{
-        font-size: 16px;
-        color: ${style["background-color"]};
-    }
-`
+export const HeaderWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  height: 62px;
+  span {
+    line-height: 62px;
+  }
+`;
+
+export const SearchInput = styled.div`
+  position: relative;
+  width: 80%;
+  margin: 16px;
+  border-radius: 15px;
+  background-color: ${style["search_bar-color"]};
+  display: flex;
+  >i:first-child {
+    position: absolute;
+    top: 2px;
+    left: 8px;
+  }
+  >i:last-child {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+  }
+  input {
+    width: 120px;
+    flex: 8;
+    padding-left: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 14px;
+    border: 0;
+  }
+`;
 
 const SearchBox = (props) => {
-    const queryRef = useRef();
-    // console.log(queryRef, '///')
-    // 解构父组件props时， 分两部分， 
-    // 读props
-    // 方法
-    const { newQuery } = props;
-    const { handleQuery, back } = props;
-    const [query, setQuery] = useState('');
-    // 父组件传过来的函数封装一下
-    // 优化再升级
-    // useMomo 可以缓存 上一次函数计算的结果 
-    let handleQueryDebounce =  useMemo(() => {
-        return debounce(handleQuery, 500)
-    }, [handleQuery])
+  const navigate = useNavigate()
+  const queryRef = useRef();
+  // console.log(queryRef, '///')
+  // 解构父组件props时， 分两部分，
+  // 读props
+  // 方法
+  const { newQuery } = props;
+  const { handleQuery, back } = props;
+  const [query, setQuery] = useState("");
+  // 父组件传过来的函数封装一下
+  // 优化再升级
+  // useMomo 可以缓存 上一次函数计算的结果
+  let handleQueryDebounce = useMemo(() => {
+    return debounce(handleQuery, 500);
+  }, [handleQuery]);
 
-    // mount 
-    useEffect(() => {
-        // console.log(queryRef)
-        // 挂载后
-        queryRef.current.focus();
-    }, [])
-    // 使用useEffect 去更新 
-    useEffect(() => {
-        //query 更新
-        // console.log(queryRef)
-        // let curQuery = query
-        handleQueryDebounce(query)
-    }, [query])
+  // mount
+  useEffect(() => {
+    // console.log(queryRef)
+    // 挂载后
+    queryRef.current.focus();
+  }, []);
+  // 使用useEffect 去更新
+  useEffect(() => {
+    //query 更新
+    // console.log(queryRef)
+    // let curQuery = query
+    handleQueryDebounce(query);
+  }, [query]);
 
-    useEffect(() => {
-        // mount 时候 执行 父组件  newQuery -> input query 
-        let curQuery = query;
-        if (newQuery !== query) {
-            curQuery = newQuery;
-            queryRef.current.value = newQuery;
-        }
-        setQuery(curQuery)
-        // newQuery 更新时执行
-    }, [newQuery])
-
-    const clearQuery = () => {
-        setQuery('');
-        queryRef.current.value = "";
-        queryRef.current.focus();
+  useEffect(() => {
+    // mount 时候 执行 父组件  newQuery -> input query
+    let curQuery = query;
+    if (newQuery !== query) {
+      curQuery = newQuery;
+      queryRef.current.value = newQuery;
     }
-    const handleChange = (e) => {
-        let val = e.currentTarget.value
-        setQuery(val)
-    }
-    const  displayStyle = query?{display:'block'}: {display: 'none'};
+    setQuery(curQuery);
+    // newQuery 更新时执行
+  }, [newQuery]);
 
-    return (
-        <SearchBoxWrapper>
-            <i className="iconfont icon-back" onClick={() => back()}>&#xe655;</i>
-            <input type="text" className='box'
-             placeholder='搜索歌曲、歌手、专辑' 
-             ref={queryRef}
-             onChange={handleChange}
-             />
-            <i 
-                className="iconfont icon-delete" 
-                style={displayStyle}
-                onClick={clearQuery}
-            >&#xe600;</i>
-        </SearchBoxWrapper>
-    )
-}
+  const clearQuery = () => {
+    setQuery("");
+    queryRef.current.value = "";
+    queryRef.current.focus();
+  };
 
-export default memo(SearchBox)
+  const handleChange = (e) => {
+    let val = e.currentTarget.value;
+    setQuery(val);
+  };
+
+  const displayStyle = query ? { display: "block" } : { display: "none" };
+
+  return (
+    <HeaderWrapper>
+      <SearchInput>
+        <i className="iconfont icon-sousuo"></i>
+        <input
+          type="text"
+          placeholder="请输入搜索内容"
+          ref={queryRef}
+          onChange={handleChange}
+        />
+        <i 
+          className="iconfont icon-shanchu" 
+          style={displayStyle}
+          onClick={clearQuery}
+        ></i>
+      </SearchInput>
+      <span onClick={() => navigate(-1)}>取消</span>
+    </HeaderWrapper>
+  );
+};
+
+export default React.memo(SearchBox);
