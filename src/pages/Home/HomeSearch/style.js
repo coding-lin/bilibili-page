@@ -66,3 +66,31 @@ export const SearchInput = styled.div`
     border: 0;
   }
 `
+
+export const FindWrapper = styled.div`
+  width: 100%;
+  .title {
+    margin: 6px;
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    span {
+      margin-right: 12px;
+    }
+  }
+  .desc {
+    margin: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    span {
+      background: rgba(55, 55, 55, 0.1);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  }
+`
