@@ -5,6 +5,7 @@ const HomeSearch = lazy(() => import('@/pages/Home/HomeSearch'))
 const MailBox = lazy(() => import('@/pages/MailBox'))
 const Dynamic = lazy(() => import('@/pages/Dynamic'))
 const Vip = lazy(() => import('@/pages/Vip'))
+const VipSearch = lazy(() => import('@/pages/Vip/VipSearch'))
 const ShoppingCart = lazy(() => import('@/pages/ShoppingCart'))
 const Mine = lazy(() => import('@/pages/Mine'))
 
@@ -33,6 +34,7 @@ const RoutesConfig = () => {
       <Route path='/mail-box' element={<MailBox />}></Route>  // 首页邮箱
       <Route path="/dynamic" element={<Dynamic />}></Route>  // 动态
       <Route path="/vip" element={<Vip />}></Route>  // 会员购
+      <Route path="/vipsearch" element={<VipSearch />}></Route>  // 会员购搜索页面
       <Route path='/shopping-cart' element={<ShoppingCart />}></Route>  // 会员购购物车
       <Route path="/mine" element={<Mine />}></Route>  // 我的
     </Routes>

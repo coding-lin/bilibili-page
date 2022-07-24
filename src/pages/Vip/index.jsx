@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Banners from './Banners'
 import GoodsList from './GoodsList'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
@@ -15,6 +15,7 @@ import Img5 from '@/assets/images/shumazhuangbei.png'
 import Img6 from '@/assets/images/ciyuanfushi.png'
 
 const Vip = (props) => {
+  const navigate = useNavigate()
   const { bannersList, goodsList, enterLoading } = props
   const { getBannerListDispatch, getGoodListDispatch } = props
 
@@ -91,7 +92,10 @@ const Vip = (props) => {
             </Link>
           </span>
         </div>
-        <div className="search-bar">
+        <div 
+          className="search-bar"
+          onClick={() => navigate(`/vipsearch`)}
+        >
           <i className='iconfont icon-sousuo'></i>
           <input type="text" placeholder='搜索商品...'/>
           <Link to="/all">

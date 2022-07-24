@@ -15,7 +15,8 @@ export const isPath = (path) => {
   if (
     pathRes[1] === 'shopping-cart' ||
     pathRes[1] === 'mail-box' ||
-    pathRes[1] === 'search'
+    pathRes[1] === 'search' ||
+    pathRes[1] === 'vipsearch'
   ) return true
   return false
 }
