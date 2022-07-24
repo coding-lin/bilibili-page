@@ -1,4 +1,4 @@
-import{S as E,a as C,U as N,s as a,b as h,R as f,j as s,c as e,r,d as k,e as F,u as Q,F as T}from"./index.6450a8b9.js";import{g as $,b as B}from"./bilibili.fb5bc7b0.js";import{C as j}from"./CSSTransition.3ff548eb.js";const R=t=>({type:C,data:t}),b=t=>({type:E,data:t}),W=()=>t=>{$().then(i=>{t(R(i)),t(b(!1))})},q=N`
+import{S as E,a as C,U as N,s as a,b as h,R as f,j as s,c as e,r,d as k,e as F,u as Q,F as T}from"./index.de11590e.js";import{g as $,b as B}from"./bilibili.06180b99.js";import{C as j}from"./CSSTransition.670801fe.js";const R=t=>({type:C,data:t}),b=t=>({type:E,data:t}),W=()=>t=>{$().then(i=>{t(R(i)),t(b(!1))})},q=N`
   0%, 100% {
     transform: scale(0.0);
   }
@@ -136,6 +136,7 @@ import{S as E,a as C,U as N,s as a,b as h,R as f,j as s,c as e,r,d as k,e as F,u
   overflow: hidden;
   border-top: 1px solid ${h["border-color"]};
 `,X=a.div`
+  position: relative;
   height: 82px;
   box-sizing: border-box;
   display: flex;
@@ -146,8 +147,9 @@ import{S as E,a as C,U as N,s as a,b as h,R as f,j as s,c as e,r,d as k,e as F,u
     width: 80px;
     height: 80px;
   }
-  .title {
-    margin: 10px;
+  .time {
+    position: absolute;
+    left: 288px;
   }
 `,Y=a.div`
   position: fixed;
@@ -158,4 +160,4 @@ import{S as E,a as C,U as N,s as a,b as h,R as f,j as s,c as e,r,d as k,e as F,u
   width: 100%;
   height: 100%;
   margin: auto;
-`,Z=t=>{const i=Q(),{enterLoading:d,suggestList:u}=t,{changeEnterLoadingDispatch:l,getSuggestListDispatch:p}=t,[o,x]=r.exports.useState(""),[m,y]=r.exports.useState(!1),[c,g]=r.exports.useState(!0);r.exports.useEffect(()=>{y(!0)},[]);const v=n=>{x(n)},S=()=>{g(!c)};r.exports.useEffect(()=>{o.trim()&&(l(!0),p(o))},[o]);const w=n=>{i(`/suggest/${n}`)},L=()=>s(T,{children:[e("h3",{style:{float:"left",margin:"10px"},children:"\u89C6\u9891\u5217\u8868"}),e(V,{children:u.filter(n=>n.title.indexOf(o)!=-1).map(n=>s(X,{className:"item",onClick:()=>w(n.id),children:[e("img",{src:B}),e("span",{children:n.title})]},n.id))})]}),D=()=>e(K,{children:s("div",{className:"info",children:[e("img",{src:A}),e("span",{children:"\u6CA1\u6709\u641C\u5230\u7ED3\u679C..."})]})});return e(j,{in:m,timeout:300,appear:!0,classNames:"fly",unmountOnExit:!0,children:s(P,{children:[s(H,{children:[e(z,{newQuery:o,handleQuery:v}),e("span",{onClick:()=>i(-1),children:"\u53D6\u6D88"})]}),s(M,{children:[s("div",{className:"title",children:[e("h2",{children:"\u641C\u7D22\u53D1\u73B0"}),e("span",{onClick:()=>S(),children:c?"\u9690\u85CF":"\u663E\u793A"})]}),s("div",{className:"desc",style:c?{display:""}:{display:"none"},children:[e("span",{children:"\u767D\u77F3\u8309\u8389\u5948"}),e("span",{children:"\u5468\u6770\u4F26\u65B0\u4E13\u8F91"}),e("span",{children:"\u5C0F\u84DD\u84DD"}),e("span",{children:"v5 wbg"})]})]}),e(J,{show:o,children:u.filter(n=>n.title.indexOf(o)!=-1).length>0?L():D()}),d&&e(Y,{children:e(G,{})})]})})},ee=t=>({enterLoading:t.search.enterLoading,suggestList:t.search.suggestList}),te=t=>({changeEnterLoadingDispatch(i){t(b(i))},getSuggestListDispatch(i){t(W())}});var se=F(ee,te)(f.memo(Z));export{se as default};
+`,Z=t=>{const i=Q(),{enterLoading:d,suggestList:u}=t,{changeEnterLoadingDispatch:l,getSuggestListDispatch:p}=t,[o,x]=r.exports.useState(""),[m,y]=r.exports.useState(!1),[c,g]=r.exports.useState(!0);r.exports.useEffect(()=>{y(!0)},[]);const v=n=>{x(n)},S=()=>{g(!c)};r.exports.useEffect(()=>{o.trim()&&(l(!0),p(o))},[o]);const w=n=>{i(`/suggest/${n}`)},L=()=>s(T,{children:[e("h3",{style:{float:"left",margin:"10px"},children:"\u89C6\u9891\u5217\u8868"}),e(V,{children:u.filter(n=>n.title.indexOf(o)!=-1).map(n=>s(X,{className:"item",onClick:()=>w(n.id),children:[e("img",{src:B}),e("span",{className:"title",children:n.title}),e("span",{className:"time",children:n.time})]},n.id))})]}),D=()=>e(K,{children:s("div",{className:"info",children:[e("img",{src:A}),e("span",{children:"\u6CA1\u6709\u641C\u5230\u7ED3\u679C..."})]})});return e(j,{in:m,timeout:300,appear:!0,classNames:"fly",unmountOnExit:!0,children:s(P,{children:[s(H,{children:[e(z,{newQuery:o,handleQuery:v}),e("span",{onClick:()=>i(-1),children:"\u53D6\u6D88"})]}),s(M,{children:[s("div",{className:"title",children:[e("h2",{children:"\u641C\u7D22\u53D1\u73B0"}),e("span",{onClick:()=>S(),children:c?"\u9690\u85CF":"\u663E\u793A"})]}),s("div",{className:"desc",style:c?{display:""}:{display:"none"},children:[e("span",{children:"\u767D\u77F3\u8309\u8389\u5948"}),e("span",{children:"\u5468\u6770\u4F26\u65B0\u4E13\u8F91"}),e("span",{children:"\u5C0F\u84DD\u84DD"}),e("span",{children:"v5 wbg"})]})]}),e(J,{show:o,children:u.filter(n=>n.title.indexOf(o)!=-1).length>0?L():D()}),d&&e(Y,{children:e(G,{})})]})})},ee=t=>({enterLoading:t.search.enterLoading,suggestList:t.search.suggestList}),te=t=>({changeEnterLoadingDispatch(i){t(b(i))},getSuggestListDispatch(i){t(W())}});var se=F(ee,te)(f.memo(Z));export{se as default};
