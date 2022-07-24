@@ -1,17 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import styled from "styled-components";
 import style from "@/assets/global-style";
-import { useNavigate } from "react-router-dom";
 import { debounce } from "@/utils";
-
-export const HeaderWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  height: 62px;
-  span {
-    line-height: 62px;
-  }
-`;
 
 export const SearchInput = styled.div`
   position: relative;
@@ -42,14 +32,13 @@ export const SearchInput = styled.div`
 `;
 
 const SearchBox = (props) => {
-  const navigate = useNavigate()
   const queryRef = useRef();
   // console.log(queryRef, '///')
   // 解构父组件props时， 分两部分，
   // 读props
   // 方法
   const { newQuery } = props;
-  const { handleQuery, back } = props;
+  const { handleQuery } = props;
   const [query, setQuery] = useState("");
   // 父组件传过来的函数封装一下
   // 优化再升级
@@ -97,23 +86,20 @@ const SearchBox = (props) => {
   const displayStyle = query ? { display: "block" } : { display: "none" };
 
   return (
-    <HeaderWrapper>
-      <SearchInput>
-        <i className="iconfont icon-sousuo"></i>
-        <input
-          type="text"
-          placeholder="请输入搜索内容"
-          ref={queryRef}
-          onChange={handleChange}
-        />
-        <i 
-          className="iconfont icon-shanchu" 
-          style={displayStyle}
-          onClick={clearQuery}
-        ></i>
-      </SearchInput>
-      <span onClick={() => navigate(-1)}>取消</span>
-    </HeaderWrapper>
+    <SearchInput>
+      <i className="iconfont icon-sousuo"></i>
+      <input
+        type="text"
+        placeholder="请输入搜索内容"
+        ref={queryRef}
+        onChange={handleChange}
+      />
+      <i 
+        className="iconfont icon-shanchu" 
+        style={displayStyle}
+        onClick={clearQuery}
+      ></i>
+    </SearchInput>
   );
 };
 
