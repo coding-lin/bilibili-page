@@ -44,29 +44,6 @@ export const HeaderWrapper = styled.div`
   }
 `
 
-export const SearchInput = styled.div`
-  position: relative;
-  width: 80%;
-  margin: 16px;
-  border-radius: 15px;
-  background-color: ${style["search_bar-color"]};
-  display: flex;
-  i {
-    position: absolute;
-    top: 2px;
-    left: 8px;
-  }
-  input {
-    width: 120px;
-    flex: 8;
-    padding-left: 30px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.01);
-    border-radius: 14px;
-    border: 0;
-  }
-`
-
 export const FindWrapper = styled.div`
   width: 100%;
   .title {
@@ -93,4 +70,61 @@ export const FindWrapper = styled.div`
       border-radius: 4px;
     }
   }
+`
+
+export const SuggestWrapper = styled.div`
+  
+`
+
+export const Empty = styled.div`
+  width: 100%;
+  margin-top: 20px;
+  .info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    img {
+      width: 68%;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+`
+
+export const List = styled.div`
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  overflow: hidden;
+  border-top: 1px solid ${style["border-color"]};
+`
+
+export const ListItem = styled.div`
+  height: 82px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid ${style["border-color"]};
+  img {
+    width: 80px;
+    height: 80px;
+  }
+  .title {
+    margin: 10px;
+  }
+`
+
+export const EnterLoading = styled.div`
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
 `

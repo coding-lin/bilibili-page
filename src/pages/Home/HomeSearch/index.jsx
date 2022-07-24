@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from "react"
 import { CSSTransition } from 'react-transition-group'
 import { useNavigate } from "react-router-dom"
-// import SearchBox from '@/components/common/search-box'
-import { Wrapper, HeaderWrapper, SearchInput, FindWrapper } from './style'
+import Scroll from '@/components/common/Scroll'
+import Loading from '@/components/common/loading'
+import { forceCheck } from 'react-lazyload'
+import SearchBox from '@/components/common/search-box'
+import bilibili from '@/assets/images/bilibili.jpeg'
+import NothingImg from '@/assets/images/nothing.png'
+import { Wrapper, HeaderWrapper, FindWrapper, SuggestWrapper, Empty, List, ListItem, EnterLoading } from './style'
+import { connect } from "react-redux"
+import { changeEnterLoading, getSuggestList } from './store/actionCreators'
 
-const HomeSearch = () => {
+const HomeSearch = (props) => {
   const navigate = useNavigate()
+  const { enterLoading, suggestList } = props
+  const { changeEnterLoadingDispatch, getSuggestListDispatch } = props
+  const [query, setQuery] = useState('')
   const [show, setShow] = useState(false)
   const [showDesc, setShowDesc] = useState(true)
 
@@ -13,12 +23,60 @@ const HomeSearch = () => {
     setShow(true)
   }, [])
 
+  const handleQuery = (q) => {
+    setQuery(q)
+  }
+
   const isDisplay = () => {
     setShowDesc(!showDesc)
   }
 
-  const renderVideos = () => {
+  useEffect(() => {
+    if (query.trim()) {
+      changeEnterLoadingDispatch(true)
+      getSuggestListDispatch(query)
+    }
+  }, [query])
 
+  const gotoSuggest = (id) => {
+    navigate(`/suggest/${id}`)
+  }
+
+  const renderSuggestList = () => {
+    return (
+      <>
+        <h3 style={{"float": "left", "margin": "10px"}}>视频列表</h3>
+        <List> 
+        {
+          suggestList.filter(item => 
+            item.title.indexOf(query) != -1
+          ).map(item => {
+            return (
+              <ListItem 
+                className="item" 
+                key={item.id} 
+                onClick={() => gotoSuggest(item.id)}
+              >
+                <img src={bilibili} />
+                <span>{item.title}</span>
+              </ListItem>
+            )
+          })
+        }
+        </List>
+      </>
+    )
+  }
+
+  const EmptyWrapper = () => {
+    return (
+      <Empty>
+        <div className='info'>
+          <img src={NothingImg} />
+          <span>没有搜到结果...</span>
+        </div>
+      </Empty>
+    )
   }
 
   return (
@@ -31,12 +89,10 @@ const HomeSearch = () => {
     >
       <Wrapper>
         <HeaderWrapper>
-          <SearchInput>
-            <a>
-              <i className='iconfont icon-sousuo'></i>
-            </a>
-            <input type="text" placeholder='请输入搜索内容' />
-          </SearchInput>
+          <SearchBox
+            newQuery={query}
+            handleQuery={handleQuery}>
+          </SearchBox>
           <span onClick={() => navigate(-1)}>取消</span>
         </HeaderWrapper>
         <FindWrapper>
@@ -56,10 +112,42 @@ const HomeSearch = () => {
             <span>v5 wbg</span>
           </div>
         </FindWrapper>
+        <SuggestWrapper show={query}>
+          
+          <Scroll onScroll={forceCheck}>
+            { enterLoading && <EnterLoading><Loading></Loading></EnterLoading> }
+            {
+              suggestList.filter(
+                item => item.title.indexOf(query) != -1
+              ).length > 0
+              ?
+                renderSuggestList()
+              :
+                EmptyWrapper()
+            }
+          </Scroll>
+        </SuggestWrapper>
         
       </Wrapper>
     </CSSTransition>
   )
 }
 
-export default HomeSearch
+const mapStateToProps = (state) => {
+  return {
+    enterLoading: state.search.enterLoading,
+    suggestList: state.search.suggestList
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeEnterLoadingDispatch(data) {
+      dispatch(changeEnterLoading(data))
+    },
+    getSuggestListDispatch(query) {
+      dispatch(getSuggestList(query))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(HomeSearch))
