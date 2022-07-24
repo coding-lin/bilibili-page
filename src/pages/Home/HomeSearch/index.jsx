@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { CSSTransition } from 'react-transition-group'
 import { useNavigate } from "react-router-dom"
-import Scroll from '@/components/common/Scroll'
 import Loading from '@/components/common/loading'
-import { forceCheck } from 'react-lazyload'
 import SearchBox from '@/components/common/search-box'
 import bilibili from '@/assets/images/bilibili.jpeg'
 import NothingImg from '@/assets/images/nothing.png'
@@ -113,21 +111,17 @@ const HomeSearch = (props) => {
           </div>
         </FindWrapper>
         <SuggestWrapper show={query}>
-          
-          <Scroll onScroll={forceCheck}>
-            { enterLoading && <EnterLoading><Loading></Loading></EnterLoading> }
-            {
-              suggestList.filter(
-                item => item.title.indexOf(query) != -1
-              ).length > 0
-              ?
-                renderSuggestList()
-              :
-                EmptyWrapper()
-            }
-          </Scroll>
+          {
+            suggestList.filter(
+              item => item.title.indexOf(query) != -1
+            ).length > 0
+            ?
+              renderSuggestList()
+            :
+              EmptyWrapper()
+          }
         </SuggestWrapper>
-        
+        { enterLoading && <EnterLoading><Loading></Loading></EnterLoading> }
       </Wrapper>
     </CSSTransition>
   )
