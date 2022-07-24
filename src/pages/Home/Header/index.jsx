@@ -2,7 +2,6 @@ import React from 'react'
 import Pic1 from '@/assets/images/1.jpg'
 import { useNavigate, Link } from 'react-router-dom'
 import { HeaderWrapper, SearchInput } from './style'
-import { Badge, Space } from 'antd-mobile'
 
 export default function Header() {
   const navigate = useNavigate()
@@ -23,11 +22,7 @@ export default function Header() {
           <i className='iconfont icon-airudiantubiaohuizhi-zhuanqu_youxi'></i>
         </Link>
         <Link to="/mail-box">
-          <Space style={{ '--gap': '16px' }}>
-            <Badge content='3'>
-              <i className='iconfont icon-youjian'></i>
-            </Badge>
-          </Space> 
+          <i className='iconfont icon-youjian'></i>    
         </Link>
       </HeaderWrapper>
     </>
