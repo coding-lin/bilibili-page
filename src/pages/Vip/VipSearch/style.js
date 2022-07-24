@@ -3,10 +3,15 @@ import style from '@/assets/global-style'
 
 export const Container = styled.div`
   width: 100%;
-  background: #fff;
 `
 
 export const HeaderWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #fff;
   display: flex;
   width: 100%;
   height: 62px;
@@ -17,7 +22,8 @@ export const HeaderWrapper = styled.div`
 
 export const Empty = styled.div`
   width: 100%;
-  margin-top: 20px;
+  background: #fff;
+  margin-top: 72px;
   .info {
     width: 100%;
     display: flex;
@@ -33,7 +39,9 @@ export const Empty = styled.div`
 `
 
 export const GoodsWrapper = styled.div`
-
+  width: 100;
+  margin-top: 62px;
+  background: ${style["background-color"]};
 `
 
 export const EnterLoading = styled.div`

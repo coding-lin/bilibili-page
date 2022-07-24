@@ -71,15 +71,15 @@ const VipSearch = (props) => {
         <span onClick={() => navigate(-1)}>取消</span>
       </HeaderWrapper>
       <GoodsWrapper show={query}>
-          {
-            goodsList.filter(
-              item => item.title.indexOf(query) != -1
-            ).length > 0
-            ?
-              renderGoodsList()
-            :
-              EmptyWrapper()
-          }
+        {
+          goodsList.filter(
+            item => item.title.indexOf(query) != -1
+          ).length > 0
+          ?
+            renderGoodsList()
+          :
+            EmptyWrapper()
+        }
         </GoodsWrapper>
         { enterLoading && <EnterLoading><Loading></Loading></EnterLoading> }
     </Container>
