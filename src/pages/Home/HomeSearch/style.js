@@ -103,6 +103,7 @@ export const List = styled.div`
 `
 
 export const ListItem = styled.div`
+  position: relative;
   height: 82px;
   box-sizing: border-box;
   display: flex;
@@ -113,8 +114,9 @@ export const ListItem = styled.div`
     width: 80px;
     height: 80px;
   }
-  .title {
-    margin: 10px;
+  .time {
+    position: absolute;
+    left: 288px;
   }
 `
 
