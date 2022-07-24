@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Wrapper, HeaderWrapper, ImgTab, Clearance, List } from './styles'
 
 import Img1 from '@/assets/images/huifu.png'
@@ -9,7 +9,6 @@ import Img3 from '@/assets/images/getzan.png'
 import Img4 from '@/assets/images/xitongtongzhi.png'
 
 const MailBox = () => {
-  const navigate = useNavigate()
   const [show, setShow] = useState(false)
 
   useEffect(() => {

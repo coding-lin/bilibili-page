@@ -17,6 +17,7 @@ export const HeaderWrapper = styled.div`
   border-bottom: 1px solid rgba(50, 50, 50, 0.08);
   i {
     font-size: 20px;
+    color: #000;
     position: absolute;
     top: 14px;
     left: 14px;
