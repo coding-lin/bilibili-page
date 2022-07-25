@@ -1,3 +1,15 @@
+## 项目启动
+
+- git clone https://github.com/gemini-hjl/bilibili-page.git
+
+- npm i   由于有些包的版本过高，可能会安装失败
+
+- 安装淘宝镜像  npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+- 再使用 cnpm i
+
+- npm run dev
+
 ## React + Redux仿写哔哩哔哩移动端首页+会员购页面
 
 bilibili 会员购商品布局方法，使用了 `multi-column` 多栏布局实现瀑布流：
