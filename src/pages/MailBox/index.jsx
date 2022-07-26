@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { CSSTransition } from 'react-transition-group'
 import { Link, useNavigate } from 'react-router-dom'
 import { Wrapper, HeaderWrapper, ImgTab, Clearance, List } from './styles'
 
@@ -10,30 +9,17 @@ import Img4 from '@/assets/images/xitongtongzhi.png'
 
 const MailBox = () => {
   const navigate = useNavigate()
-  const [show, setShow] = useState(false)
-
-  useEffect(() => {
-    setShow(true)
-  }, [])
 
   return (
     <Wrapper>
-      <CSSTransition
-        in={show}
-        timeout={300}
-        appear={true}
-        classNames="fly"
-        unmountOnExit
-      >
-        <HeaderWrapper>
-          <i 
-            className='iconfont icon-xiangzuojiantou'
-            onClick={() => navigate(`/home`)}
-          >
-          </i>
-          <span>消息</span>
-        </HeaderWrapper> 
-      </CSSTransition>
+      <HeaderWrapper>
+        <i 
+          className='iconfont icon-xiangzuojiantou'
+          onClick={() => navigate(-1)}
+        >
+        </i>
+        <span>消息</span>
+      </HeaderWrapper> 
       <ImgTab>
         <Link to="huifu">
           <div className='img-tab'>
