@@ -34,7 +34,7 @@ const VipSearch = (props) => {
   const renderGoodsList = () => {
     return (
       <Wrapper>
-        <h3 style={{"margin": "5px"}}>商品列表</h3>
+        <h3 style={{paddingTop:"10px"}}>商品列表</h3>
         <div className="container">
         {
           goodsList.filter(good => 
