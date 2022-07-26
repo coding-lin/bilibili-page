@@ -21,10 +21,6 @@ const HomeSearch = (props) => {
     setShow(true)
   }, [])
 
-  const searchBack = () => {
-    setShow(false)
-  }
-
   const handleQuery = (q) => {
     setQuery(q)
   }
@@ -107,7 +103,7 @@ const HomeSearch = (props) => {
   return (
     <CSSTransition
       in={show}
-      timeout={500}
+      timeout={300}
       appear={true}
       classNames="fly"
       unmountOnExit
@@ -118,7 +114,7 @@ const HomeSearch = (props) => {
             newQuery={query}
             handleQuery={handleQuery}>
           </SearchBox>
-          <span onClick={() => [navigate(-1), searchBack()]}>取消</span>
+          <span onClick={() => navigate(-1)}>取消</span>
         </HeaderWrapper>
         <FindWrapper show={!query}>
           { renderHotKey() }
