@@ -21,6 +21,10 @@ const HomeSearch = (props) => {
     setShow(true)
   }, [])
 
+  const searchBack = () => {
+    setShow(false)
+  }
+
   const handleQuery = (q) => {
     setQuery(q)
   }
@@ -40,10 +44,32 @@ const HomeSearch = (props) => {
     navigate(`/suggest/${id}`)
   }
 
+  const renderHotKey = () => {
+    return (
+      <>
+        <div className="title">
+          <h2>搜索发现</h2>
+          <span onClick={() => isDisplay()}>
+            { showDesc ? '隐藏' : '显示' }
+          </span>
+        </div>
+        <div 
+          className="desc"
+          style={showDesc ? {display: ''} : {display: 'none'}}
+        >
+          <span>白石茉莉奈</span>
+          <span>周杰伦新专辑</span>
+          <span>小蓝蓝</span>
+          <span>v5 wbg</span>
+        </div>
+      </>
+    )
+  }
+
   const renderSuggestList = () => {
     return (
       <>
-        <h3 style={{"float": "left", "margin": "10px"}}>视频列表</h3>
+        <h3 style={{float:"left", margin:"10px"}}>视频列表</h3>
         <List> 
         {
           suggestList.filter(item => 
@@ -81,7 +107,7 @@ const HomeSearch = (props) => {
   return (
     <CSSTransition
       in={show}
-      timeout={300}
+      timeout={500}
       appear={true}
       classNames="fly"
       unmountOnExit
@@ -92,24 +118,10 @@ const HomeSearch = (props) => {
             newQuery={query}
             handleQuery={handleQuery}>
           </SearchBox>
-          <span onClick={() => navigate(-1)}>取消</span>
+          <span onClick={() => [navigate(-1), searchBack()]}>取消</span>
         </HeaderWrapper>
-        <FindWrapper>
-          <div className="title">
-            <h2>搜索发现</h2>
-            <span onClick={() => isDisplay()}>
-              { showDesc ? '隐藏' : '显示' }
-            </span>
-          </div>
-          <div 
-            className="desc"
-            style={showDesc ? {display: ''} : {display: 'none'}}
-          >
-            <span>白石茉莉奈</span>
-            <span>周杰伦新专辑</span>
-            <span>小蓝蓝</span>
-            <span>v5 wbg</span>
-          </div>
+        <FindWrapper show={!query}>
+          { renderHotKey() }
         </FindWrapper>
         <SuggestWrapper show={query}>
           {
