@@ -14,11 +14,6 @@ const VipSearch = (props) => {
   const { enterLoading, goodsList } = props
   const { changeEnterLoadingDispatch, getGoodsListDispatch } = props
   const [query, setQuery] = useState('')
-  const [show, setShow] = useState(false)
-
-  useEffect(() => {
-    setShow(true)
-  }, [])
 
   const handleQuery = (q) => {
     setQuery(q)
@@ -70,7 +65,7 @@ const VipSearch = (props) => {
         </SearchBox>
         <span onClick={() => navigate(-1)}>取消</span>
       </HeaderWrapper>
-      <GoodsWrapper show={query}>
+      <GoodsWrapper>
         {
           goodsList.filter(
             item => item.title.indexOf(query) != -1
@@ -80,8 +75,8 @@ const VipSearch = (props) => {
           :
             EmptyWrapper()
         }
-        </GoodsWrapper>
-        { enterLoading && <EnterLoading><Loading></Loading></EnterLoading> }
+      </GoodsWrapper>
+      { enterLoading && <EnterLoading><Loading></Loading></EnterLoading> }
     </Container>
   )
 }
