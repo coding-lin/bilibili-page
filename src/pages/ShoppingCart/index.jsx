@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { Skeleton } from 'antd-mobile'
-import { CSSTransition } from 'react-transition-group'
 import { Wrapper, HeaderWrapper, Empty, List } from './style'
 import empty from '@/assets/images/empty.png'
 import GoodsList from '../Vip/GoodsList'
@@ -32,10 +31,8 @@ const ShoppingCart = (props) => {
   const navigate = useNavigate()
   const { goodsList, enterLoading } = props
   const { getGoodListDispatch } = props
-  const [show, setShow] = useState(false)
 
   useEffect(() => {
-    setShow(true)
     getGoodListDispatch()
   }, [])
 
@@ -47,22 +44,14 @@ const ShoppingCart = (props) => {
 
   return (
     <Wrapper>
-      <CSSTransition
-        in={show}
-        timeout={300}
-        appear={true}
-        classNames="fly"
-        unmountOnExit
-      >
-        <HeaderWrapper>
-          <i 
-            className='iconfont icon-fanhuijiantou'
-            onClick={() => navigate(`/vip`)}
-          >
-          </i>
-          <h2>购物车</h2>
-        </HeaderWrapper>
-      </CSSTransition>
+      <HeaderWrapper>
+        <i 
+          className='iconfont icon-fanhuijiantou'
+          onClick={() => navigate(-1)}
+        >
+        </i>
+        <h2>购物车</h2>
+      </HeaderWrapper>
       {/* { !goodsList ? renderEmpty() : renderList() } */}
       { renderEmpty() }
       { enterLoading ? <Skeleton.Paragraph lineCount={25} animated /> : renderGoods() } 
