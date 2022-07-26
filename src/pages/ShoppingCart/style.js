@@ -18,7 +18,6 @@ export const HeaderWrapper = styled.div`
     font-size: 20px;
     top: 14px;
     left: 14px;
-    color: #000;
   }
   h2 {
     font-size: 18px;
