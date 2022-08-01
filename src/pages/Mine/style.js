@@ -98,13 +98,23 @@ export const Detail = styled.div`
   /* margin-top: 10px; */
   justify-content: space-around;
   background-color: #fff;
-  div:not(:last-child):after {
+  div:first-child:after {
     content: '';
     display: inline-block;
     position: absolute;
-    margin-left: 64px;
+    left: 33%;
     top: 14px;
-    width: 2px;
+    width: 1px;
+    height: 30px;
+    background-color: gray;
+  }
+  div:nth-child(2):after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 66%;
+    top: 14px;
+    width: 1px;
     height: 30px;
     background-color: gray;
   }
