@@ -67,13 +67,13 @@ const VipSearch = (props) => {
       </HeaderWrapper>
       <GoodsWrapper>
         {
-          goodsList.filter(
+          query && (goodsList.filter(
             item => item.title.indexOf(query) != -1
           ).length > 0
           ?
             renderGoodsList()
           :
-            EmptyWrapper()
+            EmptyWrapper())
         }
       </GoodsWrapper>
       { enterLoading && <EnterLoading><Loading></Loading></EnterLoading> }
