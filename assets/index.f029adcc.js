@@ -1,4 +1,4 @@
-import{s as n,r as t,j as i,d as e,L as s,P as o}from"./index.2db3913f.js";import{C as p}from"./CSSTransition.a7a5763d.js";const l=n.div`
+import{s as t,r as n,j as i,d as e,L as s,P as o}from"./index.95fb09a8.js";import{C as p}from"./CSSTransition.3c86a330.js";const l=t.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -24,7 +24,7 @@ import{s as n,r as t,j as i,d as e,L as s,P as o}from"./index.2db3913f.js";impor
     transition: all .3s;
     transform: translate3d(100%, 0, 0);
   }
-`,d=n.div`
+`,d=t.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -35,7 +35,7 @@ import{s as n,r as t,j as i,d as e,L as s,P as o}from"./index.2db3913f.js";impor
     height: 44px;
     border-radius: 50%;
   }
-`,c=n.div`
+`,c=t.div`
   width: 40%;
   height: 40px;
   margin-top: 8px;
@@ -71,7 +71,7 @@ import{s as n,r as t,j as i,d as e,L as s,P as o}from"./index.2db3913f.js";impor
       padding-left: 6px;
     }
   }
-`,h=n.div`
+`,h=t.div`
   span {
     font-size: 15px;
     line-height: 90px;
@@ -80,7 +80,7 @@ import{s as n,r as t,j as i,d as e,L as s,P as o}from"./index.2db3913f.js";impor
     font-size: 16px;
     line-height: 90px;
   }
-`,f=n.div`
+`,f=t.div`
   width: 100%;
   position: relative;
   display: flex;
@@ -88,13 +88,23 @@ import{s as n,r as t,j as i,d as e,L as s,P as o}from"./index.2db3913f.js";impor
   /* margin-top: 10px; */
   justify-content: space-around;
   background-color: #fff;
-  div:not(:last-child):after {
+  div:first-child:after {
     content: '';
     display: inline-block;
     position: absolute;
-    margin-left: 64px;
+    left: 33%;
     top: 14px;
-    width: 2px;
+    width: 1px;
+    height: 30px;
+    background-color: gray;
+  }
+  div:nth-child(2):after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 66%;
+    top: 14px;
+    width: 1px;
     height: 30px;
     background-color: gray;
   }
@@ -106,9 +116,9 @@ import{s as n,r as t,j as i,d as e,L as s,P as o}from"./index.2db3913f.js";impor
     font-size: 14px;
     font-weight: 400;
   }
-`,x=n.div`
+`,x=t.div`
   width: 100%;
   img {
     width: 100%;
   }
-`;var u="./assets/bigvip.8f696188.png";function v(){const[a,r]=t.exports.useState(!1);return t.exports.useEffect(()=>{r(!0)},[]),i(p,{in:a,timeout:300,appear:!0,classNames:"fly",unmountOnExit:!0,children:e(l,{children:[e(d,{children:[i(s,{to:"/mine",children:i("img",{src:o})}),e(c,{children:[e("div",{className:"author-name",children:[i("span",{children:"dafenqi616"}),i("span",{className:"level",children:"Lv4"})]}),i("div",{className:"is-vip",children:i("span",{children:"\u6B63\u5F0F\u4F1A\u5458"})}),e("div",{className:"property",children:[i("span",{children:"B\u5E01: 0.0"}),i("span",{children:"\u786C\u5E01: 470"})]})]}),e(h,{children:[i("span",{children:"\u7A7A\u95F4"}),i("i",{className:"iconfont icon-xiangyoujiantou"})]})]}),e(f,{children:[e("div",{children:[i("span",{className:"data",children:"1"}),i("p",{children:"\u52A8\u6001"})]}),e("div",{children:[i("span",{children:"30"}),i("p",{children:"\u5173\u6CE8"})]}),e("div",{children:[i("span",{children:"0"}),i("p",{children:"\u7C89\u4E1D"})]})]}),i(x,{children:i("img",{src:u})})]})})}export{v as default};
+`;var u="./assets/bigvip.8f696188.png";function v(){const[a,r]=n.exports.useState(!1);return n.exports.useEffect(()=>{r(!0)},[]),i(p,{in:a,timeout:300,appear:!0,classNames:"fly",unmountOnExit:!0,children:e(l,{children:[e(d,{children:[i(s,{to:"/mine",children:i("img",{src:o})}),e(c,{children:[e("div",{className:"author-name",children:[i("span",{children:"dafenqi616"}),i("span",{className:"level",children:"Lv4"})]}),i("div",{className:"is-vip",children:i("span",{children:"\u6B63\u5F0F\u4F1A\u5458"})}),e("div",{className:"property",children:[i("span",{children:"B\u5E01: 0.0"}),i("span",{children:"\u786C\u5E01: 470"})]})]}),e(h,{children:[i("span",{children:"\u7A7A\u95F4"}),i("i",{className:"iconfont icon-xiangyoujiantou"})]})]}),e(f,{children:[e("div",{children:[i("span",{className:"data",children:"1"}),i("p",{children:"\u52A8\u6001"})]}),e("div",{children:[i("span",{children:"30"}),i("p",{children:"\u5173\u6CE8"})]}),e("div",{children:[i("span",{children:"0"}),i("p",{children:"\u7C89\u4E1D"})]})]}),i(x,{children:i("img",{src:u})})]})})}export{v as default};
