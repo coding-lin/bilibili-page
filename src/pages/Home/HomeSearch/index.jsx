@@ -68,9 +68,7 @@ const HomeSearch = (props) => {
         <h3 style={{float:"left", margin:"10px"}}>视频列表</h3>
         <List> 
         {
-          suggestList.filter(item => 
-            item.title.indexOf(query) != -1
-          ).map(item => {
+          suggestList.map(item => {
             return (
               <ListItem 
                 className="item" 
@@ -117,17 +115,17 @@ const HomeSearch = (props) => {
           <span onClick={() => navigate(-1)}>取消</span>
         </HeaderWrapper>
         <FindWrapper show={!query}>
-          { renderHotKey() }
+          { !query && renderHotKey() }
         </FindWrapper>
         <SuggestWrapper show={query}>
           {
-            suggestList.filter(
+            query && (suggestList.filter(
               item => item.title.indexOf(query) != -1
             ).length > 0
             ?
               renderSuggestList()
             :
-              EmptyWrapper()
+              EmptyWrapper())
           }
         </SuggestWrapper>
         { enterLoading && <EnterLoading><Loading></Loading></EnterLoading> }
