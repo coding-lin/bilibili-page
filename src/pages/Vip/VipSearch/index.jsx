@@ -32,9 +32,7 @@ const VipSearch = (props) => {
         <h3 style={{paddingTop:"10px"}}>商品列表</h3>
         <div className="container">
         {
-          goodsList.filter(good => 
-            good.title.indexOf(query) != -1
-          ).map(good => {
+          goodsList.map(good => {
             return (
               <GoodsItem key={good.id} good={good} />
             )
