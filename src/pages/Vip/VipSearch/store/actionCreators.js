@@ -14,10 +14,11 @@ export const changeEnterLoading = (data) => ({
   data
 })
 
-export const getGoodsList = () => {
+export const getGoodsList = (query) => {
     return (dispatch) => {
       getGoodsListRequest().then((data) => {
-        dispatch(changeGoodsList(data))
+        let res = data.filter(item => item.title.indexOf(query) != -1)
+        dispatch(changeGoodsList(res))
         dispatch(changeEnterLoading(false))
       })
     }
