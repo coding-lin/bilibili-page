@@ -23,12 +23,12 @@ const RoutesConfig = () => {
       <Route path="/" element={<Home />}></Route>  // 首页
       <Route path="/home" element={<Home />} >
         {/* 二级路由 */}
-        <Route path="/home/live" element={<Live />} />
-        <Route path="/home/recommend" element={<Recommend />} />
-        <Route path="/home/hot" element={<Hot />} />
-        <Route path="/home/animation" element={<Animation />} />
-        <Route path="/home/movies" element={<Movies />} />
-        <Route path="/home/campus" element={<Campus />} />
+        <Route path="/home/live" element={<Live />} />  // 直播
+        <Route path="/home/recommend" element={<Recommend />} />  // 推荐
+        <Route path="/home/hot" element={<Hot />} />  // 热门
+        <Route path="/home/animation" element={<Animation />} />  // 动画
+        <Route path="/home/movies" element={<Movies />} />  // 影视
+        <Route path="/home/campus" element={<Campus />} />  // 校园
       </Route>
       <Route path="/search" element={<HomeSearch />} />  // 首页搜索
       <Route path='/mail-box' element={<MailBox />}></Route>  // 首页邮箱
