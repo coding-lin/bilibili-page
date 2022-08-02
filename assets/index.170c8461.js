@@ -1,4 +1,4 @@
-import{n as x,o as L,s as r,b as y,c as v,R as E,u as G,r as p,d as a,j as e}from"./index.74f1084c.js";import{S as D,N as S,L as w}from"./nothing.af0134b3.js";import{c as N}from"./bilibili.8f203974.js";import{W as T,G as b}from"./index.0103db73.js";import"./index.10f5ec2f.js";const C=t=>({type:L,data:t}),h=t=>({type:x,data:t}),k=t=>i=>{N().then(d=>{let s=d.filter(c=>c.title.indexOf(t)!=-1);i(C(s)),i(h(!1))})},O=r.div`
+import{n as x,o as L,s as r,b as y,c as v,R as E,u as G,r as p,d as a,j as e}from"./index.0e9d1be1.js";import{S as D,N as S,L as w}from"./nothing.5b6afabd.js";import{c as N}from"./bilibili.f22fa459.js";import{W as T,G as b}from"./index.f7df50d3.js";import"./index.61a5f7d4.js";const C=t=>({type:L,data:t}),h=t=>({type:x,data:t}),k=t=>i=>{N().then(d=>{let s=d.filter(c=>c.title.indexOf(t)!=-1);i(C(s)),i(h(!1))})},O=r.div`
   width: 100%;
 `,W=r.div`
   position: fixed;
