@@ -22,7 +22,7 @@ const VideoItem = ({video}) => {
             <div className="info">
               <i className='iconfont icon-bofangqi-bofangxiaodianshi'></i>
               <span>{video.bofang}</span>
-              <i className='iconfont icon-jianyi'></i>
+              <i className='iconfont icon-pinglun'></i>
               <span>{video.pinglun}</span>
               <span>{video.time}</span>
             </div>
