@@ -1,14 +1,15 @@
 ## 项目启动
 
-- git clone https://github.com/gemini-hjl/bilibili-page.git
+- `git clone https://github.com/gemini-hjl/bilibili-page.git`
 
-- npm i   由于有些包的版本过高，可能会安装失败
+- `npm i` 
+  由于有些包的版本过高，可能会安装失败
 
-- 安装淘宝镜像  npm install -g cnpm --registry=https://registry.npm.taobao.org
+- 先安装淘宝镜像  `npm install -g cnpm --registry=https://registry.npm.taobao.org`
 
-- 再使用 cnpm i
+- 再使用 `cnpm i`
 
-- npm run dev
+- 最后 `npm run dev`
 
 ## React + Redux仿写哔哩哔哩移动端首页+会员购页面
 
@@ -64,4 +65,11 @@ import bilibili from '@/assets/images/bilibili.jpeg'
 
   2. 手写懒加载功能
 
-  3. 全局 `rem` 适配
+  3. 全局 `rem` 移动端适配
+    - 在 `src` 下添加文件 `rem.js`
+    - 在 `global-style.js` 中添加：
+    ```js
+    export const px2rem = (px) => {
+      return `${px / 20}rem`
+    }
+    ```
