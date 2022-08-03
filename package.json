@@ -21,13 +21,11 @@
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "react-transition-group": "^4.4.2",
-    "react-weui": "^1.2.3",
     "redux": "^4.2.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.5",
-    "swiper": "^4.5.0",
-    "weui": "^2.5.9"
+    "swiper": "^4.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
