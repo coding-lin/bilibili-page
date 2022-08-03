@@ -3,7 +3,7 @@ import { px2rem } from '@/assets/global-style'
 
 export const Wrapper = styled.div`
   .video-box {
-    padding: ${px2rem(5)};
+    margin: ${px2rem(5)};
     border-radius: ${px2rem(2)};
     .video-img {
       position: relative;
@@ -22,10 +22,10 @@ export const Wrapper = styled.div`
         display: flex;
         justify-content: space-around;
         i {
-          font-size: ${px2rem(18)};
+          font-size: ${px2rem(17)};
         }
         span {
-          font-size: ${px2rem(13)};
+          font-size: ${px2rem(12)};
         }
       }
     }
