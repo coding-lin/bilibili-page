@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from "styled-components"
+import { px2rem } from '@/assets/global-style'
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -9,13 +10,12 @@ export const Wrapper = styled.div`
   right: 0;
   .navbar {
     width: 100%;
-    height: 35px;
-    /* background: rgb(80, 182, 240); */
+    height: ${px2rem(35)};
     background-color: #fff;
-    border-bottom: 1px solid #ccc;
+    border-bottom: ${px2rem(1)} solid #ccc;
     .nav-box {
-      height: 35px !important;
-      line-height: 35px !important;
+      height: ${px2rem(35)} !important;
+      line-height: ${px2rem(35)} !important;
     }
     .nav-item {
       width: auto !important;
@@ -24,14 +24,15 @@ export const Wrapper = styled.div`
       flex: 1;
       text-align: center;
       justify-content: center;
-      font-size: 0.16rem;
+      font-size: ${px2rem(15)};
       color: #000;
-      border-bottom: 1px solid #ebebeb;
+      border-bottom: ${px2rem(1)} solid #ebebeb;
       &.active::after {
         content: "";
         background-color: pink;
-        width: 0.3rem;
-        height: 0.03rem;
+        width: ${px2rem(32)};
+        height: ${px2rem(3)};
+        border-radius: ${px2rem(2)};
         position: absolute;
         bottom: 0;
         left: 0;

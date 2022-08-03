@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import style from '@/assets/global-style'
+import style, { px2rem } from '@/assets/global-style'
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -8,46 +8,45 @@ export const Wrapper = styled.div`
 export const HeaderWrapper = styled.div`
   position: fixed;
   width: 100%;
-  height: 60px;
+  height: ${px2rem(60)};
   background: #fff;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  border-bottom: 1px solid rgba(50, 50, 50, 0.08);
+  border-bottom: ${px2rem(1)} solid rgba(50, 50, 50, 0.08);
   i {
-    font-size: 20px;
+    font-size: ${px2rem(20)};
     position: absolute;
-    top: 14px;
-    left: 14px;
+    top: ${px2rem(20)};
+    left: ${px2rem(14)};
   }
   span {
     float: left;
-    font-size: 18px;
+    font-size: ${px2rem(18)};
     font-weight: 600;
-    margin-left: 50px;
-    line-height: 60px;
+    margin-left: ${px2rem(50)};
+    line-height: ${px2rem(60)};
   }
 `
 
 export const ImgTab = styled.div`
   width: 100%;
-  margin-top: 61px;
-  padding-bottom: 20px;
-  height: 78px;
+  margin-top: ${px2rem(62)};
+  height: ${px2rem(75)};
   display: flex;
   justify-content: space-around;
-  border-bottom: 1px solid rgba(50, 50, 50, 0.08);
+  border-bottom: ${px2rem(1)} solid rgba(50, 50, 50, 0.08);
   .img-tab {
-    margin: 2px;
-    width: 50px;
-    height: 50px;
+    margin: ${px2rem(2)};
+    width: ${px2rem(48)};
+    height: ${px2rem(44)};
     img {
-      width: 110%;
+      width: 100%;
       height: 100%;
     }
     span {
-      font-size: 12px;
+      font-size: ${px2rem(12)};
       color: #000;
     }
   }
@@ -55,21 +54,21 @@ export const ImgTab = styled.div`
 
 export const Clearance = styled.div`
   width: 100%;
-  height: 12px;
+  height: ${px2rem(12)};
   background: ${style['background-color']};
 `
 
 export const List = styled.div`
   width: 100%;
   background: #fff;
-  height: 40px;
-  border-top: 1px solid rgba(50, 50, 50, 0.08);
-  border-bottom: 1px solid rgba(50, 50, 50, 0.08);
+  height: ${px2rem(40)};
+  border-top: ${px2rem(1)} solid rgba(50, 50, 50, 0.08);
+  border-bottom: ${px2rem(1)} solid rgba(50, 50, 50, 0.08);
   span {
-    font-size: 18px;
+    font-size: ${px2rem(16)};
     color: #000;
-    line-height: 40px;
+    line-height: ${px2rem(40)};
     float: left;
-    margin-left: 10px;
+    margin-left: ${px2rem(10)};
   }
 `

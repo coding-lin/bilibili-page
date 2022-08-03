@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import style from '@/assets/global-style'
+import style, { px2rem } from '@/assets/global-style'
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -38,36 +38,39 @@ export const Wrapper = styled.div`
 export const HeaderWrapper = styled.div`
   display: flex;
   width: 100%;
-  height: 62px;
+  height: ${px2rem(62)};
   span {
-    line-height: 62px;
+    font-size: ${px2rem(14)};
+    line-height: ${px2rem(62)};
   }
 `
 
 export const FindWrapper = styled.div`
   width: 100%;
   .title {
-    margin: 6px;
+    margin: ${px2rem(6)};
     display: flex;
     justify-content: space-between;
     h2 {
-      font-size: 15px;
+      font-size: ${px2rem(15)};
       font-weight: 600;
-      margin-left: 10px;
+      margin-left: ${px2rem(10)};
     }
     span {
-      margin-right: 12px;
+      font-size: ${px2rem(14)};
+      margin-right: ${px2rem(12)};
     }
   }
   .desc {
-    margin: 14px;
+    margin: ${px2rem(14)};
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     span {
       background: rgba(55, 55, 55, 0.1);
-      padding: 4px 8px;
-      border-radius: 4px;
+      font-size: ${px2rem(14)};
+      padding: ${px2rem(4)} ${px2rem(8)};
+      border-radius: ${px2rem(4)};
     }
   }
 `
@@ -78,7 +81,7 @@ export const SuggestWrapper = styled.div`
 
 export const Empty = styled.div`
   width: 100%;
-  margin-top: 20px;
+  margin-top: ${px2rem(20)};
   .info {
     width: 100%;
     display: flex;
@@ -86,8 +89,8 @@ export const Empty = styled.div`
     justify-content: center;
     text-align: center;
     img {
-      width: 68%;
-      height: 100%;
+      width: ${px2rem(255)};
+      height: ${px2rem(120)};
       margin: 0 auto;
     }
   }
@@ -96,27 +99,27 @@ export const Empty = styled.div`
 export const List = styled.div`
   width: 100%;
   display: flex;
-  margin-top: 30px;
+  margin-top: ${px2rem(30)};
   flex-direction: column;
   overflow: hidden;
-  border-top: 1px solid ${style["border-color"]};
+  border-top: ${px2rem(1)} solid ${style["border-color"]};
 `
 
 export const ListItem = styled.div`
   position: relative;
-  height: 82px;
+  height: ${px2rem(82)};
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: 1px solid ${style["border-color"]};
+  border-bottom: ${px2rem(1)} solid ${style["border-color"]};
   img {
-    width: 80px;
-    height: 80px;
+    width: ${px2rem(80)};
+    height: ${px2rem(80)};
   }
   .time {
     position: absolute;
-    left: 288px;
+    left: 78%;
   }
 `
 

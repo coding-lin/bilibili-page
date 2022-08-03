@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import style from '@/assets/global-style'
+import style, { px2rem } from '@/assets/global-style'
 
 export const HeaderWrapper = styled.div`
   width: 100%;
-  height: 60px;
+  height: ${px2rem(60)};
   position: sticky;
   z-index: 999;
   display: flex;
@@ -14,12 +14,12 @@ export const HeaderWrapper = styled.div`
     flex-direction: column;
     justify-content: space-around;
     img {
-      width: 42px;
-      height: 42px;
+      width: ${px2rem(42)};
+      height: ${px2rem(42)};
       border-radius: 50%;
     }
     i {
-      font-size: 20px;
+      font-size: ${px2rem(20)};
       color: #000;
     }
   }
@@ -27,24 +27,25 @@ export const HeaderWrapper = styled.div`
 
 export const SearchInput = styled.div`
   width: 40%;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 15px;
+  margin-top: ${px2rem(15)};
+  margin-bottom: ${px2rem(15)};
+  border-radius: ${px2rem(15)};
   background-color: ${style["search_bar-color"]};
   display: flex;
   i {
-    padding-top: 2px;
-    padding-left: 8px;
-    padding-right: 4px;
+    padding-top: ${px2rem(4)};
+    padding-left: ${px2rem(10)};
+    padding-right: ${px2rem(4)};
     flex: 2;
   }
   input {
-    width: 120px;
+    width: ${px2rem(120)};
     flex: 8;
-    padding-left: 4px;
-    height: 30px;
+    font-size: ${px2rem(12)};
+    padding-left: ${px2rem(2)};
+    height: ${px2rem(30)};
     background: rgba(255, 255, 255, 0.01);
-    border-radius: 14px;
+    border-radius: ${px2rem(14)};
     border: 0;
   }
 `

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import style from '@/assets/global-style'
+import style, { px2rem } from '@/assets/global-style'
 
 export const Container = styled.div`
   width: 100%;
@@ -14,16 +14,17 @@ export const HeaderWrapper = styled.div`
   background: #fff;
   display: flex;
   width: 100%;
-  height: 62px;
+  height: ${px2rem(62)};
   span {
-    line-height: 62px;
+    font-size: ${px2rem(14)};
+    line-height: ${px2rem(62)};
   }
 `
 
 export const Empty = styled.div`
   width: 100%;
   background: #fff;
-  margin-top: 72px;
+  margin-top: ${px2rem(72)};
   .info {
     width: 100%;
     display: flex;
@@ -31,8 +32,8 @@ export const Empty = styled.div`
     justify-content: center;
     text-align: center;
     img {
-      width: 68%;
-      height: 100%;
+      width: ${px2rem(255)};
+      height: ${px2rem(120)};
       margin: 0 auto;
     }
   }
@@ -40,7 +41,7 @@ export const Empty = styled.div`
 
 export const GoodsWrapper = styled.div`
   width: 100;
-  margin-top: 62px;
+  margin-top: ${px2rem(62)};
   background: ${style["background-color"]};
 `
 

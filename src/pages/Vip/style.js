@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import style from '@/assets/global-style'
+import style, { px2rem } from '@/assets/global-style'
 
 export const HeaderWrapper = styled.div`
   position: fixed;
@@ -8,65 +8,68 @@ export const HeaderWrapper = styled.div`
   right: 0;
   z-index: 9999;
   width: 100%;
-  height: 100px;
+  height: ${px2rem(94)};
   color: #000;
   background-color: #fff;
   .title {
+    height: ${px2rem(44)};
     display: flex;
     justify-content: space-between;
     >span:first-child {
-      padding: 6px;
-      font-size: 20px;
+      padding: ${px2rem(6)};
+      font-size: ${px2rem(20)};
       font-weight: 500;
     }
     >span:nth-child(2) {
       width: 40%;
-      padding: 14px;
+      padding: ${px2rem(14)};
       padding-left: 0;
-      margin-left: -20px;
-      font-size: 10px;
+      margin-left: ${px2rem(-20)};
+      font-size: ${px2rem(10)};
       i {
         color: red;
-        font-size: 10px;
+        font-size: ${px2rem(10)};
       }
     }
     >span:nth-child(3) {
       display: flex;
       justify-content: space-between;
       width: 36%;
-      padding: 8px;
+      padding: ${px2rem(8)};
       i {
-        font-size: 20px;
+        font-size: ${px2rem(20)};
         color: #000;
+        line-height: ${px2rem(28)};
       }
     }
   }
   .search-bar {
     display: flex;
     position: relative;
-    height: 52px; 
+    height: ${px2rem(50)};
     i {
       color: #000;
       &.icon-sousuo {
         position: absolute;
-        font-size: 16px;
-        top: 12px;
-        left: 20px;
+        font-size: ${px2rem(18)};
+        top: ${px2rem(15)};
+        left: ${px2rem(18)};
       }
       &.icon-ALL {
-        font-size: 30px;
+        position: absolute;
+        font-size: ${px2rem(30)};
         font-weight: 600;
-        font-style: oblique;
-        padding-left: 12px;
+        padding-top: ${px2rem(10)};
+        padding-left: ${px2rem(4)};
       }
     }
     input {
-      margin-top: 10px;
-      margin-left: 10px;
+      font-size: ${px2rem(14)};
+      margin: ${px2rem(10)};
       width: 80%;
-      height: 30px;
-      border-radius: 14px;
-      padding-left: 34px;
+      height: ${px2rem(30)};
+      border-radius: ${px2rem(14)};
+      padding-left: ${px2rem(34)};
       border: 0;
       background-color: ${style["search_bar-color"]};
     }
@@ -80,19 +83,18 @@ export const Wrapper = styled.div`
 
 export const ImgTab = styled.div`
   width: 100%;
-  margin-top: 8px;
-  height: 68px;
+  height: ${px2rem(68)};
   display: flex;
   justify-content: space-around;
   .img-tab {
-    width: 50px;
-    height: 50px;
+    width: ${px2rem(50)};
+    height: ${px2rem(50)};
     img {
       width: 100%;
       height: 100%;
     }
     span {
-      font-size: 10px;
+      font-size: ${px2rem(12)};
       color: #000;
     }
   }

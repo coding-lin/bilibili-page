@@ -1,11 +1,12 @@
-import styled from "styled-components";
+import styled from "styled-components"
+import { px2rem } from '@/assets/global-style'
 
 export const BannersWrapper = styled.div`
-  height: 1.65rem;
-  margin-top: 100px;
+  height: ${px2rem(160)};
+  margin-top: ${px2rem(94)};
   .btn_banners {
     width: 100%;
-    height: 50vw;
+    height: ${px2rem(50)};
     background: #fff;
   }
   .swiper-slide {
@@ -23,11 +24,11 @@ export const BannersWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 3vw;
+    margin-top: ${px2rem(10)};
   }
   .swiper-item div p {
-    height: 14vw;
-    width: 14vw;
+    height: ${px2rem(50)};
+    width: ${px2rem(50)};
     background: pink;
   }
   .swiper-item div img {
@@ -39,11 +40,12 @@ export const BannersWrapper = styled.div`
     color: #000;
   }
   .swiper-pagination {
-    bottom: -6px;
+    height: ${px2rem(18)};
+    bottom: ${px2rem(-6)};
   }
   .swiper-pagination-bullet {
     border-radius: 50%;
-    width: 6px;
-    height: 6px;
+    width: ${px2rem(6)};
+    height: ${px2rem(6)};
   }
 `

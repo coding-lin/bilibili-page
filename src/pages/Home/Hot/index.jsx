@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Skeleton } from 'antd-mobile'
-import SetMovie from '../SetMovie'
+import SetMovie from '@/components/SetMovie'
 import VideoList from '../VideoList'
 import { getVideosList } from '../store/actionCreators'
 

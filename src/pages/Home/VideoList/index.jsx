@@ -6,13 +6,15 @@ const VideoList = ({videosList}) => {
 
   return (
     <Wrapper>
-      {
-        videosList && videosList.map(
-          video => (
-            <VideoItem key={video.id} video={video} />
+      <div className="container">
+        {
+          videosList && videosList.map(
+            video => (
+              <VideoItem key={video.id} video={video} />
+            )
           )
-        )
-      }
+        }
+      </div>
     </Wrapper>
   )
 }

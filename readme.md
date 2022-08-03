@@ -63,3 +63,5 @@ import bilibili from '@/assets/images/bilibili.jpeg'
   1. 手写骨架屏
 
   2. 手写懒加载功能
+
+  3. 全局 `rem` 适配

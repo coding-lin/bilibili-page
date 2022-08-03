@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { px2rem } from '@/assets/global-style'
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -32,61 +33,62 @@ export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 90px;
+  height: ${px2rem(90)};
   img {
-    margin-top: 18px;
-    width: 44px;
-    height: 44px;
+    margin-top: ${px2rem(18)};
+    width: ${px2rem(54)};
+    height: ${px2rem(54)};
     border-radius: 50%;
   }
 `
 
 export const Author = styled.div`
   width: 40%;
-  height: 40px;
-  margin-top: 8px;
+  height: ${px2rem(40)};
+  margin-top: ${px2rem(8)};
   display: flex;
   flex-direction: column;
   .author-name {
-    font-size: 16px;
+    font-size: ${px2rem(16)};
     span {
-      padding-left: 6px;
+      padding-left: ${px2rem(6)};
       &.level {
-        /* background-color: orange; */
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: ${px2rem(18)};
+        font-family: sans-serif;
         font-weight: 600;
         color: orange;
       }
     }
   }
   .is-vip {
-    margin-top: 4px;
+    margin-top: ${px2rem(4)};
     span {
-      font-size: 12px;
+      font-size: ${px2rem(12)};
       font-weight: 300;
-      padding: 2px;
-      border-radius: 2px;
-      border: 2px solid pink;
+      padding: ${px2rem(2)};
+      border-radius: ${px2rem(2)};
+      border: ${px2rem(2)} solid pink;
     }
   }
   .property {
-    margin-top: 4px;
+    margin-top: ${px2rem(4)};
     flex-direction: row;
     span {
-      padding-left: 6px;
+      font-size: ${px2rem(13)};
+      padding-left: ${px2rem(6)};
     }
   }
 `
 
 export const Icon = styled.div`
   span {
-    font-size: 15px;
-    line-height: 90px;
+    padding: ${px2rem(2)};
+    font-size: ${px2rem(15)};
+    line-height: ${px2rem(90)};
   }
   i {
-    font-size: 16px;
-    line-height: 90px;
+    font-size: ${px2rem(15)};
+    line-height: ${px2rem(90)};
   }
 `
 
@@ -94,8 +96,7 @@ export const Detail = styled.div`
   width: 100%;
   position: relative;
   display: flex;
-  height: 60px;
-  /* margin-top: 10px; */
+  height: ${px2rem(60)};
   justify-content: space-around;
   background-color: #fff;
   div:first-child:after {
@@ -103,9 +104,9 @@ export const Detail = styled.div`
     display: inline-block;
     position: absolute;
     left: 33%;
-    top: 14px;
-    width: 1px;
-    height: 30px;
+    top: ${px2rem(14)};
+    width: ${px2rem(1)};
+    height: ${px2rem(30)};
     background-color: gray;
   }
   div:nth-child(2):after {
@@ -113,18 +114,16 @@ export const Detail = styled.div`
     display: inline-block;
     position: absolute;
     left: 66%;
-    top: 14px;
-    width: 1px;
-    height: 30px;
+    top: ${px2rem(14)};
+    width: ${px2rem(1)};
+    height: ${px2rem(30)};
     background-color: gray;
   }
   span {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: ${px2rem(18)};
   }
   p {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: ${px2rem(14)};
   }
 `
 
