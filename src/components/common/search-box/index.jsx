@@ -1,35 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import styled from "styled-components";
-import style from "@/assets/global-style";
 import { debounce } from "@/utils";
-
-export const SearchInput = styled.div`
-  position: relative;
-  width: 80%;
-  margin: 16px;
-  border-radius: 15px;
-  background-color: ${style["search_bar-color"]};
-  display: flex;
-  >i:first-child {
-    position: absolute;
-    top: 2px;
-    left: 8px;
-  }
-  >i:last-child {
-    position: absolute;
-    top: 2px;
-    right: 10px;
-  }
-  input {
-    width: 120px;
-    flex: 8;
-    padding-left: 30px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.01);
-    border-radius: 14px;
-    border: 0;
-  }
-`;
+import { SearchInput } from './style'
 
 const SearchBox = (props) => {
   const queryRef = useRef();
