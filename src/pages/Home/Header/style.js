@@ -33,7 +33,7 @@ export const SearchInput = styled.div`
   background-color: ${style["search_bar-color"]};
   display: flex;
   i {
-    padding-top: ${px2rem(4)};
+    padding-top: ${px2rem(5)};
     padding-left: ${px2rem(10)};
     padding-right: ${px2rem(4)};
     flex: 2;
