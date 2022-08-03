@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import style from '@/assets/global-style';
+import style, { px2rem } from '@/assets/global-style';
 
 const loading = keyframes`
   0%, 100% {
@@ -15,8 +15,8 @@ const LoadingWrapper = styled.div`
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       margin: auto;
-      width: 60px;
-      height: 60px;
+      width: ${px2rem(60)};
+      height: ${px2rem(60)};
       opacity: 0.6;
       border-radius: 50%;
       background-color: ${style["loading-color"]};
