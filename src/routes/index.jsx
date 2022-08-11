@@ -1,5 +1,5 @@
 import { lazy } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from '@/pages/Home'
 const HomeSearch = lazy(() => import('@/pages/Home/HomeSearch'))
 const MailBox = lazy(() => import('@/pages/MailBox'))
@@ -20,7 +20,9 @@ const RoutesConfig = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />}></Route>  // 首页
+      {/* redirect 重定向 */}
+      <Route path="/" element={<Navigate to="/home" replace={true}/>} />
+      <Route path="/home" element={<Navigate to="/home/recommend" replace={true}/>} />
       <Route path="/home" element={<Home />} >
         {/* 二级路由 */}
         <Route path="/home/live" element={<Live />} />  // 直播
