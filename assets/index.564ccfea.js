@@ -1,4 +1,4 @@
-import{s as le,p as M,r as ze,j as E,d as H,L as F,b as ke,c as Oe,R as Ae,u as Be,F as we}from"./index.97c6d8ba.js";import{p as He}from"./index.5cea83bb.js";import{g as Ne,a as Ge,G as Xe}from"./index.6441d658.js";import{S as Ve}from"./index.5991594c.js";import"./bilibili.2ac417a6.js";import"./index.172f8169.js";const Ye=le.div`
+import{s as le,p as M,r as ze,j as E,d as H,L as F,b as ke,c as Oe,R as Ae,u as Be,F as we}from"./index.859f336c.js";import{p as He}from"./index.14a4ffbc.js";import{g as Ne,a as Ge,G as Xe}from"./index.5a4ff3d9.js";import{S as Ve}from"./index.18f74f8b.js";import"./bilibili.beb5f011.js";import"./index.bae753aa.js";const Ye=le.div`
   height: ${M(160)};
   margin-top: ${M(94)};
   .btn_banners {
@@ -65,7 +65,7 @@ import{s as le,p as M,r as ze,j as E,d as H,L as F,b as ke,c as Oe,R as Ae,u as 
       font-weight: 500;
     }
     > span:nth-child(2) {
-      width: 40%;
+      /* width: 40%; */
       padding: ${M(14)};
       padding-left: 0;
       margin-left: ${M(-20)};
