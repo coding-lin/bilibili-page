@@ -21,7 +21,7 @@ export const HeaderWrapper = styled.div`
       font-weight: 500;
     }
     > span:nth-child(2) {
-      width: 40%;
+      /* width: 40%; */
       padding: ${px2rem(14)};
       padding-left: 0;
       margin-left: ${px2rem(-20)};
