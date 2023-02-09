@@ -1,4 +1,4 @@
-import{s as e,p as t,c as p,R as g,u as h,r as u,d as n,j as o}from"./index.11baac69.js";import{S as l}from"./index.896cf82b.js";import{G as m,a as f}from"./index.0b9e27d3.js";import"./bilibili.c6ea199c.js";import"./index.af55b928.js";import"./index.fd27f173.js";const $=e.div`
+import{s as e,p as t,c as p,R as g,u as h,r as u,d as n,j as o}from"./index.4f73175a.js";import{S as l}from"./index.7710a501.js";import{a as m,G as f}from"./index.ab431b0f.js";import"./bilibili.491df666.js";import"./index.cd398bde.js";import"./index.0b6bc19c.js";const $=e.div`
   background-color: rgba(120, 120, 120, 0.1);
 `,b=e.div`
   position: fixed;
@@ -62,4 +62,4 @@ import{s as e,p as t,c as p,R as g,u as h,r as u,d as n,j as o}from"./index.11ba
   }
 `;e.div`
   
-`;var x="./assets/empty.3071a740.png";const L=()=>o(v,{children:n("div",{className:"info",children:[o("img",{src:x}),o("p",{children:"\u8D2D\u7269\u8F66\u7A7A\u7A7A\u5982\u4E5F"}),o("span",{children:"\u4F60\u53EF\u80FD\u8FD8\u559C\u6B22"})]})}),D=i=>{const r=h(),{goodsList:s,enterLoading:a}=i,{getGoodListDispatch:d}=i;u.exports.useEffect(()=>{d()},[]);const c=()=>o(m,{goodsList:s});return n($,{children:[n(b,{children:[o("i",{className:"iconfont icon-fanhuijiantou",onClick:()=>r(-1)}),o("h2",{children:"\u8D2D\u7269\u8F66"})]}),L(),a?o(l.Paragraph,{lineCount:25,animated:!0}):c()]})},y=i=>({enterLoading:i.vip.enterLoading,goodsList:i.vip.goodsList}),F=i=>({getGoodListDispatch(){i(f())}});var S=p(y,F)(g.memo(D));export{S as default};
+`;var x="./assets/empty.3071a740.png";const L=()=>o(v,{children:n("div",{className:"info",children:[o("img",{src:x}),o("p",{children:"\u8D2D\u7269\u8F66\u7A7A\u7A7A\u5982\u4E5F"}),o("span",{children:"\u4F60\u53EF\u80FD\u8FD8\u559C\u6B22"})]})}),D=i=>{const r=h(),{goodsList:s,enterLoading:a}=i,{getGoodListDispatch:d}=i;u.exports.useEffect(()=>{d()},[]);const c=()=>o(f,{goodsList:s});return n($,{children:[n(b,{children:[o("i",{className:"iconfont icon-fanhuijiantou",onClick:()=>r(-1)}),o("h2",{children:"\u8D2D\u7269\u8F66"})]}),L(),a?o(l.Paragraph,{lineCount:25,animated:!0}):c()]})},y=i=>({enterLoading:i.vip.enterLoading,goodsList:i.vip.goodsList}),F=i=>({getGoodListDispatch(){i(m())}});var S=p(y,F)(g.memo(D));export{S as default};
