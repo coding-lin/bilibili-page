@@ -1,4 +1,4 @@
-import{s as r,p as i,R as c,r as l,j as n,d as e,l as o}from"./index.4f73175a.js";import{_ as p}from"./index.cd398bde.js";import{b as h}from"./bilibili.491df666.js";const u=r.div`
+import{s as r,p as i,R as c,r as l,j as n,d as e,l as o}from"./index.97c6d8ba.js";import{_ as p}from"./index.5cea83bb.js";import{b as m}from"./bilibili.2ac417a6.js";const u=r.div`
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   padding-bottom: ${i(54)};
@@ -9,8 +9,8 @@ import{s as r,p as i,R as c,r as l,j as n,d as e,l as o}from"./index.4f73175a.js
     margin-left: ${i(8)};
     margin-right: ${i(8)};
   }
-`,m=r.div`
-  .good-box { 
+`,h=r.div`
+  .good-box {
     width: 100%;
     break-inside: avoid;
     margin-bottom: ${i(10)};
@@ -26,13 +26,14 @@ import{s as r,p as i,R as c,r as l,j as n,d as e,l as o}from"./index.4f73175a.js
     }
     .title {
       padding: ${i(2)};
-      >span:first-child {
+      > span:first-child {
         background: rgba(50, 50, 50, 0.1);
         border-radius: ${i(4)};
-        font-size: ${i(10)};
+        font-size: ${i(12)};
+        transform: scale(0.83);
         padding: ${i(2)};
       }
-      >span:nth-child(2) {
+      > span:nth-child(2) {
         font-style: oblique;
         font-size: ${i(14)};
         font-weight: 600;
@@ -43,13 +44,13 @@ import{s as r,p as i,R as c,r as l,j as n,d as e,l as o}from"./index.4f73175a.js
       display: flex;
       justify-content: space-around;
       padding: ${i(2)};
-      >span:first-child {
+      > span:first-child {
         background-color: orange;
         border-radius: ${i(4)};
         padding: ${i(1)};
         font-size: ${i(12)};
       }
-      >span:nth-child(2) {
+      > span:nth-child(2) {
         font-size: ${i(12)};
         border-radius: ${i(4)};
         padding: ${i(1)};
@@ -60,12 +61,12 @@ import{s as r,p as i,R as c,r as l,j as n,d as e,l as o}from"./index.4f73175a.js
       display: flex;
       justify-content: space-between;
       padding: ${i(2)};
-      >span:first-child {
+      > span:first-child {
         padding: ${i(8)};
         font-size: ${i(18)};
         font-weight: 600;
       }
-      >span:nth-child(2) {
+      > span:nth-child(2) {
         padding: ${i(6)};
         i {
           font-size: ${i(20)};
@@ -80,4 +81,4 @@ import{s as r,p as i,R as c,r as l,j as n,d as e,l as o}from"./index.4f73175a.js
       }
     }
   }
-`,$=({good:a})=>{const[s,d]=l.exports.useState(!1),t=()=>{d(!s)};return n(m,{children:e("div",{className:"good-box",children:[n("div",{className:"good-img",children:n(p,{placeholder:n("img",{width:"100%",height:"100%",src:h}),children:n("img",{src:a.img})})}),e("div",{className:"title",children:[a.info?n("span",{children:a.info}):"",n("span",{children:a.title})]}),e("div",{className:"rank_time",children:[a.rank?n("span",{children:a.rank}):"",a.time?n("span",{children:a.time}):""]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",a.price]}),e("span",{children:[n("i",{className:o("iconfont",{"icon-aixin3":!s},{"icon-aixin1":s},{active:s}),onClick:()=>t()}),n("span",{children:s?a.collection+1:a.collection})]})]})]},a.id)})};var x=c.memo($);export{x as G,u as W};
+`,$=({good:a})=>{const[s,d]=l.exports.useState(!1),t=()=>{d(!s)};return n(h,{children:e("div",{className:"good-box",children:[n("div",{className:"good-img",children:n(p,{placeholder:n("img",{width:"100%",height:"100%",src:m}),children:n("img",{src:a.img})})}),e("div",{className:"title",children:[a.info?n("span",{children:a.info}):"",n("span",{children:a.title})]}),e("div",{className:"rank_time",children:[a.rank?n("span",{children:a.rank}):"",a.time?n("span",{children:a.time}):""]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",a.price]}),e("span",{children:[n("i",{className:o("iconfont",{"icon-aixin3":!s},{"icon-aixin1":s},{active:s}),onClick:()=>t()}),n("span",{children:s?a.collection+1:a.collection})]})]})]},a.id)})};var x=c.memo($);export{x as G,u as W};
