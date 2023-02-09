@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import style, { px2rem } from '@/assets/global-style'
+import styled from "styled-components";
+import style, { px2rem } from "@/assets/global-style";
 
 export const HeaderWrapper = styled.div`
   position: fixed;
@@ -15,23 +15,25 @@ export const HeaderWrapper = styled.div`
     height: ${px2rem(44)};
     display: flex;
     justify-content: space-between;
-    >span:first-child {
+    > span:first-child {
       padding: ${px2rem(6)};
       font-size: ${px2rem(20)};
       font-weight: 500;
     }
-    >span:nth-child(2) {
+    > span:nth-child(2) {
       width: 40%;
       padding: ${px2rem(14)};
       padding-left: 0;
       margin-left: ${px2rem(-20)};
-      font-size: ${px2rem(10)};
+      font-size: ${px2rem(12)};
+      transform: scale(0.83);
       i {
         color: red;
-        font-size: ${px2rem(10)};
+        font-size: ${px2rem(12)};
+        transform: scale(0.83);
       }
     }
-    >span:nth-child(3) {
+    > span:nth-child(3) {
       display: flex;
       justify-content: space-between;
       width: 36%;
@@ -74,12 +76,12 @@ export const HeaderWrapper = styled.div`
       background-color: ${style["search_bar-color"]};
     }
   }
-`
+`;
 
 export const Wrapper = styled.div`
   width: 100%;
   background: ${style["background-color"]};
-`
+`;
 
 export const ImgTab = styled.div`
   width: 100%;
@@ -98,4 +100,4 @@ export const ImgTab = styled.div`
       color: #000;
     }
   }
-`
+`;

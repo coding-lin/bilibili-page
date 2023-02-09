@@ -1,8 +1,8 @@
-import styled from "styled-components"
-import { px2rem } from '@/assets/global-style'
+import styled from "styled-components";
+import { px2rem } from "@/assets/global-style";
 
 export const Wrapper = styled.div`
-  .good-box { 
+  .good-box {
     width: 100%;
     break-inside: avoid;
     margin-bottom: ${px2rem(10)};
@@ -18,13 +18,14 @@ export const Wrapper = styled.div`
     }
     .title {
       padding: ${px2rem(2)};
-      >span:first-child {
+      > span:first-child {
         background: rgba(50, 50, 50, 0.1);
         border-radius: ${px2rem(4)};
-        font-size: ${px2rem(10)};
+        font-size: ${px2rem(12)};
+        transform: scale(0.83);
         padding: ${px2rem(2)};
       }
-      >span:nth-child(2) {
+      > span:nth-child(2) {
         font-style: oblique;
         font-size: ${px2rem(14)};
         font-weight: 600;
@@ -35,13 +36,13 @@ export const Wrapper = styled.div`
       display: flex;
       justify-content: space-around;
       padding: ${px2rem(2)};
-      >span:first-child {
+      > span:first-child {
         background-color: orange;
         border-radius: ${px2rem(4)};
         padding: ${px2rem(1)};
         font-size: ${px2rem(12)};
       }
-      >span:nth-child(2) {
+      > span:nth-child(2) {
         font-size: ${px2rem(12)};
         border-radius: ${px2rem(4)};
         padding: ${px2rem(1)};
@@ -52,12 +53,12 @@ export const Wrapper = styled.div`
       display: flex;
       justify-content: space-between;
       padding: ${px2rem(2)};
-      >span:first-child {
+      > span:first-child {
         padding: ${px2rem(8)};
         font-size: ${px2rem(18)};
         font-weight: 600;
       }
-      >span:nth-child(2) {
+      > span:nth-child(2) {
         padding: ${px2rem(6)};
         i {
           font-size: ${px2rem(20)};
@@ -72,4 +73,4 @@ export const Wrapper = styled.div`
       }
     }
   }
-`
+`;
