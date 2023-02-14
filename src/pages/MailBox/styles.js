@@ -14,7 +14,7 @@ export const HeaderWrapper = styled.div`
   left: 0;
   right: 0;
   z-index: 999;
-  border-bottom: ${px2rem(1)} solid rgba(50, 50, 50, 0.08);
+  border-bottom: ${px2rem(1)} solid rgba(50, 50, 50, 0.25);
   i {
     font-size: ${px2rem(20)};
     position: absolute;
@@ -38,14 +38,14 @@ export const ImgTab = styled.div`
   justify-content: space-around;
   border-bottom: ${px2rem(1)} solid rgba(50, 50, 50, 0.08);
   .img-tab {
-    margin: ${px2rem(2)};
-    width: ${px2rem(48)};
-    height: ${px2rem(44)};
+    width: ${px2rem(50)};
+    height: ${px2rem(50)};
     img {
       width: 100%;
       height: 100%;
     }
     span {
+      width: ${px2rem(50)};
       font-size: ${px2rem(12)};
       color: #000;
     }
