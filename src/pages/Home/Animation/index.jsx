@@ -24,7 +24,7 @@ const Animation = (props) => {
 
   return (
     <>
-      { enterLoading ? (<Skeleton.Paragraph lineCount={25} animated />) : renderVideo() }
+      { enterLoading ? (<Skeleton.Paragraph lineCount={30} animated />) : renderVideo() }
     </>
   )
 }

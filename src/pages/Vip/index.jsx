@@ -104,7 +104,7 @@ const Vip = (props) => {
         </div>
       </HeaderWrapper>
       <Wrapper>
-        { enterLoading ? <Skeleton.Paragraph lineCount={25} animated /> : renderImg() }  
+        { enterLoading ? <Skeleton.Paragraph lineCount={30} animated /> : renderImg() }  
       </Wrapper>
     </>
   )

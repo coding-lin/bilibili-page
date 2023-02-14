@@ -54,7 +54,7 @@ const ShoppingCart = (props) => {
       </HeaderWrapper>
       {/* { !goodsList ? renderEmpty() : renderList() } */}
       { renderEmpty() }
-      { enterLoading ? <Skeleton.Paragraph lineCount={25} animated /> : renderGoods() } 
+      { enterLoading ? <Skeleton.Paragraph lineCount={30} animated /> : renderGoods() } 
     </Wrapper>
   )
 }
