@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom"
 import Loading from '@/components/common/loading'
 import SearchBox from '@/components/common/search-box'
 import bilibili from '@/assets/images/bilibili.jpeg'
-import NothingImg from '@/assets/images/nothing.png'
 import { Wrapper, HeaderWrapper, FindWrapper, SuggestWrapper, Empty, List, ListItem, EnterLoading } from './style'
 import { connect } from "react-redux"
 import { changeEnterLoading, getSuggestList } from './store/actionCreators'
@@ -91,7 +90,7 @@ const HomeSearch = (props) => {
     return (
       <Empty>
         <div className='info'>
-          <img src={NothingImg} />
+          <img src="https://img-blog.csdnimg.cn/53cda7776f754b569ea079303a6c524c.png" />
           <span>没有搜到结果...</span>
         </div>
       </Empty>

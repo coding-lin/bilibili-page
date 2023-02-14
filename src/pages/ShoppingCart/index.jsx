@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { Skeleton } from 'antd-mobile'
 import { Wrapper, HeaderWrapper, Empty, List } from './style'
-import empty from '@/assets/images/empty.png'
 import GoodsList from '../Vip/GoodsList'
 import { getGoodsList } from '../Vip/store/actionCreators'
 
@@ -11,7 +10,7 @@ const renderEmpty = () => {  // 空状态组件
   return (
     <Empty>
       <div className='info'>
-        <img src={empty} />
+        <img src="https://img-blog.csdnimg.cn/0ce10301028a4da282eb8a9eee3bbd8b.png" />
         <p>购物车空空如也</p>
         <span>你可能还喜欢</span>
       </div>

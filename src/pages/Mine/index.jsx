@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Pic1 from '@/assets/images/1.jpg'
 import { Link } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
 import { Wrapper, HeaderWrapper, Author, Icon, Detail, Img } from './style'
-import bigVip from '@/assets/images/bigvip.png' 
 
 export default function Mine() {
   const [show, setShow] = useState(false)
@@ -23,7 +21,7 @@ export default function Mine() {
       <Wrapper>
         <HeaderWrapper>
           <Link to="/mine">
-            <img src={Pic1}/>
+            <img src="https://img-blog.csdnimg.cn/9ae699d84c764d2593ee5bed74976b77.jpeg" />
           </Link>
           <Author>
             <div className='author-name'>
@@ -58,7 +56,7 @@ export default function Mine() {
           </div>
         </Detail>
         <Img>
-          <img src={bigVip} />
+          <img src="https://img-blog.csdnimg.cn/13d2d42411f7407cb0cbfc95176d9500.png" />
         </Img>
       </Wrapper>
     </CSSTransition>

@@ -3,7 +3,6 @@ import { connect } from "react-redux"
 import Loading from '@/components/common/loading'
 import SearchBox from '@/components/common/search-box'
 import { useNavigate } from 'react-router-dom'
-import NothingImg from '@/assets/images/nothing.png'
 import { Container, HeaderWrapper, Empty, GoodsWrapper, EnterLoading } from './style'
 import { changeEnterLoading, getGoodsList } from './store/actionCreators'
 import { Wrapper } from '@/pages/Vip/GoodsList/style'
@@ -47,7 +46,7 @@ const VipSearch = (props) => {
     return (
       <Empty>
         <div className='info'>
-          <img src={NothingImg} />
+          <img src="https://img-blog.csdnimg.cn/53cda7776f754b569ea079303a6c524c.png" />
           <span>没有搜到商品...</span>
         </div>
       </Empty>

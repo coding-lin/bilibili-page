@@ -7,13 +7,6 @@ import { Skeleton } from 'antd-mobile'
 import { connect } from 'react-redux'
 import { getBannersList, getGoodsList } from './store/actionCreators'
 
-import Img1 from '@/assets/images/shouban.png'
-import Img2 from '@/assets/images/zhoubian.png'
-import Img3 from '@/assets/images/manzhandianying.png'
-import Img4 from '@/assets/images/tushumanhua.png'
-import Img5 from '@/assets/images/shumazhuangbei.png'
-import Img6 from '@/assets/images/ciyuanfushi.png'
-
 const Vip = (props) => {
   const navigate = useNavigate()
   const { bannersList, goodsList, enterLoading } = props
@@ -31,37 +24,37 @@ const Vip = (props) => {
         <ImgTab>
           <Link to="shouban">
             <div className='img-tab'>
-              <img src={Img1} />
+              <img src="https://img-blog.csdnimg.cn/e832687f91fd4dfdaa19b0635662401d.png" />
               <span>手办</span>
             </div>
           </Link>
           <Link to="zhoubian">
             <div className='img-tab'>
-              <img src={Img2} />
+              <img src="https://img-blog.csdnimg.cn/3c38c1993009445f8940960ad595e6c7.png" />
               <span>周边</span>
             </div>
           </Link>
           <Link to="manzhandianying">
             <div className='img-tab'>
-              <img src={Img3} />
+              <img src="https://img-blog.csdnimg.cn/d85137ad41544c85b13ab1a838f2ba78.png" />
               <span>漫展电影</span>
             </div>
           </Link>
           <Link to="tushumanhua">
             <div className='img-tab'>
-              <img src={Img4} />
+              <img src="https://img-blog.csdnimg.cn/051f4bc79a0d4123a34858aa111180ea.png" />
               <span>图书漫画</span>
             </div>
           </Link>
           <Link to="shumazhuangbei">
             <div className='img-tab'>
-              <img src={Img5} />
+              <img src="https://img-blog.csdnimg.cn/3a1fdf010b2d48ef81b280cc87bc0032.png" />
               <span>数码装备</span>
             </div>
           </Link>
           <Link to="ciyuanfushi">
             <div className='img-tab'>
-              <img src={Img6} />
+              <img src="https://img-blog.csdnimg.cn/838f23c27b62485b87605577ef049713.png" />
               <span>次元服饰</span>
             </div>
           </Link>
