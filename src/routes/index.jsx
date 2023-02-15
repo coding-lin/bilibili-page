@@ -1,6 +1,7 @@
 import { lazy } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from '@/pages/Home'
+import NotFound from '@/pages/NotFound'
 const HomeSearch = lazy(() => import('@/pages/Home/HomeSearch'))
 const MailBox = lazy(() => import('@/pages/MailBox'))
 const Dynamic = lazy(() => import('@/pages/Dynamic'))
@@ -39,6 +40,7 @@ const RoutesConfig = () => {
       <Route path="/vipsearch" element={<VipSearch />}></Route>  // 会员购搜索页面
       <Route path='/shopping-cart' element={<ShoppingCart />}></Route>  // 会员购购物车
       <Route path="/mine" element={<Mine />}></Route>  // 我的
+      <Route path="*" element={<NotFound />}></Route>  // 404
     </Routes>
   )
 }
