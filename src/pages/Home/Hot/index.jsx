@@ -14,14 +14,10 @@ const Hot = (props) => {
     getVideoListDispatch()
   }, [])
 
-  const renderMovie = () => <SetMovie />
-
-  const renderVideo = () => <VideoList videosList={videosList} />
-
   return (
     <>
-      { enterLoading ? (<Skeleton animated className='movie' />) : renderMovie() }
-      { enterLoading ? (<Skeleton.Paragraph lineCount={20} animated />) : renderVideo() }
+      { enterLoading ? <Skeleton animated className='movie' /> : <SetMovie /> }
+      { enterLoading ? <Skeleton.Paragraph lineCount={20} animated /> : <VideoList videosList={videosList} /> }
     </>
   )
 }
