@@ -4,6 +4,7 @@ import { Skeleton } from 'antd-mobile'
 import SetMovie from '@/components/SetMovie'
 import VideoList from '../VideoList'
 import { getVideosList } from '../store/actionCreators'
+import '@/assets/styles/index.scss'
 
 const Recommend = (props) => {
   const { videosList, enterLoading } = props
@@ -13,18 +14,14 @@ const Recommend = (props) => {
     getVideoListDispatch()
   }, [])
 
-  const renderVideo = () => {
-    return (
-      <>
-        <SetMovie />
-        <VideoList videosList={videosList} />
-      </>
-    )
-  }
+  const renderMovie = () => <SetMovie />
+
+  const renderVideo = () => <VideoList videosList={videosList} />
 
   return (
     <>
-      { enterLoading ? (<Skeleton.Paragraph lineCount={30} animated />) : renderVideo() }
+      { enterLoading ? (<Skeleton animated className='movie' />) : renderMovie() }
+      { enterLoading ? (<Skeleton.Paragraph lineCount={20} animated />) : renderVideo() }
     </>
   )
 }
