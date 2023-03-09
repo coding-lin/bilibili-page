@@ -1,4 +1,4 @@
-import{s as e,p as t,c as g,R as p,u as h,r as u,d as n,j as i}from"./index.8f621ef8.js";import{S as l}from"./index.c2022831.js";import{a as m,G as f}from"./index.9e9fac5f.js";import"./bilibili.250404e7.js";import"./index.f97456e5.js";import"./index.0a22d707.js";const $=e.div`
+import{s as e,p as t,c as p,R as h,u,r as g,d as n,j as o}from"./index.3e008df0.js";import{S as l}from"./index.e4f9f999.js";import{a as m,G as f}from"./index.bf5b1232.js";import"./bilibili.63d36b3a.js";import"./index.d890454f.js";import"./index.d029c0ec.js";const $=e.div`
   background-color: rgba(120, 120, 120, 0.1);
 `,b=e.div`
   position: fixed;
@@ -62,4 +62,4 @@ import{s as e,p as t,c as g,R as p,u as h,r as u,d as n,j as i}from"./index.8f62
   }
 `;e.div`
   
-`;const x=()=>i(v,{children:n("div",{className:"info",children:[i("img",{src:"https://img-blog.csdnimg.cn/0ce10301028a4da282eb8a9eee3bbd8b.png"}),i("p",{children:"\u8D2D\u7269\u8F66\u7A7A\u7A7A\u5982\u4E5F"}),i("span",{children:"\u4F60\u53EF\u80FD\u8FD8\u559C\u6B22"})]})}),L=o=>{const r=h(),{goodsList:s,enterLoading:a}=o,{getGoodListDispatch:d}=o;u.exports.useEffect(()=>{d()},[]);const c=()=>i(f,{goodsList:s});return n($,{children:[n(b,{children:[i("i",{className:"iconfont icon-fanhuijiantou",onClick:()=>r(-1)}),i("h2",{children:"\u8D2D\u7269\u8F66"})]}),x(),a?i(l.Paragraph,{lineCount:30,animated:!0}):c()]})},D=o=>({enterLoading:o.vip.enterLoading,goodsList:o.vip.goodsList}),F=o=>({getGoodListDispatch(){o(m())}});var E=g(D,F)(p.memo(L));export{E as default};
+`;const x=()=>o(v,{children:n("div",{className:"info",children:[o("img",{src:"https://s2.xptou.com/2023/03/10/640a02953a7de.png"}),o("p",{children:"\u8D2D\u7269\u8F66\u7A7A\u7A7A\u5982\u4E5F"}),o("span",{children:"\u4F60\u53EF\u80FD\u8FD8\u559C\u6B22"})]})}),L=i=>{const r=u(),{goodsList:s,enterLoading:a}=i,{getGoodListDispatch:d}=i;g.exports.useEffect(()=>{d()},[]);const c=()=>o(f,{goodsList:s});return n($,{children:[n(b,{children:[o("i",{className:"iconfont icon-fanhuijiantou",onClick:()=>r(-1)}),o("h2",{children:"\u8D2D\u7269\u8F66"})]}),x(),a?o(l.Paragraph,{lineCount:30,animated:!0}):c()]})},D=i=>({enterLoading:i.vip.enterLoading,goodsList:i.vip.goodsList}),F=i=>({getGoodListDispatch(){i(m())}});var E=p(D,F)(h.memo(L));export{E as default};
