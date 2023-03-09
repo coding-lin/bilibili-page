@@ -9,7 +9,7 @@ export default function Header() {
     <>
       <HeaderWrapper>
         <Link to="/mine">
-          <img src="https://img-blog.csdnimg.cn/9ae699d84c764d2593ee5bed74976b77.jpeg" />
+          <img src="https://s2.xptou.com/2023/03/09/640a00d322ee3.jpeg" />
         </Link>
         <SearchInput onClick={() => navigate("/search")}>
           <a>
