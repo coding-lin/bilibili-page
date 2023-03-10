@@ -32,7 +32,7 @@ const GoodsItem = ({good}) => {
         </div>
         <div className="price_coll">
           <span>¥{good.price}</span>
-          <span>
+          <div className="coll_num">
             <i
               className={classnames(
                 'iconfont', 
@@ -41,10 +41,9 @@ const GoodsItem = ({good}) => {
                 {'active': isColl}
               )}
               onClick={() => changeColl()}
-            >
-            </i>
+            />
             <span>{isColl ? good.collection + 1 : good.collection}</span>
-          </span>
+          </div>
         </div>
       </div>
     </Wrapper>

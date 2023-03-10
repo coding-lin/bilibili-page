@@ -56,19 +56,21 @@ export const Wrapper = styled.div`
       > span:first-child {
         padding: ${px2rem(8)};
         font-size: ${px2rem(18)};
-        font-weight: 600;
+        font-weight: bold;
       }
-      > span:nth-child(2) {
-        padding: ${px2rem(6)};
+      .coll_num {
+        padding-right: ${px2rem(5)};
+        padding-top:${px2rem(8)};
         i {
-          font-size: ${px2rem(20)};
-          padding: ${px2rem(2)};
+          font-size: ${px2rem(18)};
+          margin-top: ${px2rem(2)};
           &.active {
             color: red;
           }
         }
         span {
-          padding: ${px2rem(2)};
+          font-size: ${px2rem(16)};
+          padding-left: ${px2rem(2)};
         }
       }
     }
