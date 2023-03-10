@@ -18,25 +18,25 @@ const MailBox = () => {
       <ImgTab>
         <Link to="huifu">
           <div className='img-tab'>
-            <img src="https://img-blog.csdnimg.cn/e115f843f24e4346a76a2fcd4a29f2fb.png" />
+            <img src="https://s2.xptou.com/2023/03/10/640aa6442e4cf.png" />
             <span>回复我的</span>
           </div>
         </Link>
         <Link to="@me">
           <div className='img-tab'>
-            <img src="https://img-blog.csdnimg.cn/1a300e4637b044d09b5ed4141daf441d.png" />
+            <img src="https://s2.xptou.com/2023/03/10/640aa66763828.png" />
             <span>@我</span>
           </div>
         </Link>
         <Link to="getzan">
           <div className='img-tab'>
-            <img src="https://img-blog.csdnimg.cn/33b47241529541c883c51e7dcbd0128a.png" />
+            <img src="https://s2.xptou.com/2023/03/10/640aa68784544.png" />
             <span>收到的赞</span>
           </div>
         </Link>
         <Link to="xitongtongzhi">
           <div className='img-tab'>
-            <img src="https://img-blog.csdnimg.cn/f7506e190723451482def5ef209f05aa.png" />
+            <img src="https://s2.xptou.com/2023/03/10/640aa6a478853.png" />
             <span>系统通知</span>
           </div>
         </Link>
