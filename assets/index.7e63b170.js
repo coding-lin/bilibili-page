@@ -1,4 +1,4 @@
-import{s as r,p as i,R as c,r as l,j as n,d as e,l as o}from"./index.144ea4a3.js";import{_ as p}from"./index.31475147.js";import{b as m}from"./bilibili.5451eba9.js";const u=r.div`
+import{s as r,p as i,R as l,r as o,j as n,d as e,l as c}from"./index.37b7ebec.js";import{_ as p}from"./index.aeea749d.js";import{b as m}from"./bilibili.22bcf819.js";const u=r.div`
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   padding-bottom: ${i(54)};
@@ -64,21 +64,23 @@ import{s as r,p as i,R as c,r as l,j as n,d as e,l as o}from"./index.144ea4a3.js
       > span:first-child {
         padding: ${i(8)};
         font-size: ${i(18)};
-        font-weight: 600;
+        font-weight: bold;
       }
-      > span:nth-child(2) {
-        padding: ${i(6)};
+      .coll_num {
+        padding-right: ${i(5)};
+        padding-top:${i(8)};
         i {
-          font-size: ${i(20)};
-          padding: ${i(2)};
+          font-size: ${i(18)};
+          margin-top: ${i(2)};
           &.active {
             color: red;
           }
         }
         span {
-          padding: ${i(2)};
+          font-size: ${i(16)};
+          padding-left: ${i(2)};
         }
       }
     }
   }
-`,$=({good:a})=>{const[s,d]=l.exports.useState(!1),t=()=>{d(!s)};return n(h,{children:e("div",{className:"good-box",children:[n("div",{className:"good-img",children:n(p,{placeholder:n("img",{width:"100%",height:"100%",src:m}),children:n("img",{src:a.img})})}),e("div",{className:"title",children:[a.info?n("span",{children:a.info}):"",n("span",{children:a.title})]}),e("div",{className:"rank_time",children:[a.rank?n("span",{children:a.rank}):"",a.time?n("span",{children:a.time}):""]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",a.price]}),e("span",{children:[n("i",{className:o("iconfont",{"icon-aixin3":!s},{"icon-aixin1":s},{active:s}),onClick:()=>t()}),n("span",{children:s?a.collection+1:a.collection})]})]})]},a.id)})};var x=c.memo($);export{x as G,u as W};
+`,$=({good:a})=>{const[s,t]=o.exports.useState(!1),d=()=>{t(!s)};return n(h,{children:e("div",{className:"good-box",children:[n("div",{className:"good-img",children:n(p,{placeholder:n("img",{width:"100%",height:"100%",src:m}),children:n("img",{src:a.img})})}),e("div",{className:"title",children:[a.info?n("span",{children:a.info}):"",n("span",{children:a.title})]}),e("div",{className:"rank_time",children:[a.rank?n("span",{children:a.rank}):"",a.time?n("span",{children:a.time}):""]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",a.price]}),e("div",{className:"coll_num",children:[n("i",{className:c("iconfont",{"icon-aixin3":!s},{"icon-aixin1":s},{active:s}),onClick:()=>d()}),n("span",{children:s?a.collection+1:a.collection})]})]})]},a.id)})};var x=l.memo($);export{x as G,u as W};
