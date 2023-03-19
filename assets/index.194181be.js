@@ -1,4 +1,4 @@
-import{s as n,p as i,r as a,j as t,d as e,L as o}from"./index.e03f2702.js";import{C as l}from"./CSSTransition.c710c6fd.js";const d=n.div`
+import{s as t,p as i,r as a,j as e,d as n,L as o}from"./index.bf321cea.js";import{C as l}from"./CSSTransition.f58eb068.js";const d=t.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -24,7 +24,7 @@ import{s as n,p as i,r as a,j as t,d as e,L as o}from"./index.e03f2702.js";impor
     transition: all .3s;
     transform: translate3d(100%, 0, 0);
   }
-`,c=n.div`
+`,c=t.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -35,7 +35,7 @@ import{s as n,p as i,r as a,j as t,d as e,L as o}from"./index.e03f2702.js";impor
     height: ${i(54)};
     border-radius: 50%;
   }
-`,p=n.div`
+`,p=t.div`
   width: 40%;
   height: ${i(40)};
   margin-top: ${i(8)};
@@ -71,7 +71,7 @@ import{s as n,p as i,r as a,j as t,d as e,L as o}from"./index.e03f2702.js";impor
       padding-left: ${i(6)};
     }
   }
-`,h=n.div`
+`,h=t.div`
   span {
     padding: ${i(2)};
     font-size: ${i(15)};
@@ -81,7 +81,7 @@ import{s as n,p as i,r as a,j as t,d as e,L as o}from"./index.e03f2702.js";impor
     font-size: ${i(15)};
     line-height: ${i(90)};
   }
-`,f=n.div`
+`,f=t.div`
   width: 100%;
   position: relative;
   display: flex;
@@ -114,9 +114,9 @@ import{s as n,p as i,r as a,j as t,d as e,L as o}from"./index.e03f2702.js";impor
   p {
     font-size: ${i(14)};
   }
-`,u=n.div`
+`,u=t.div`
   width: 100%;
   img {
     width: 100%;
   }
-`;function $(){const[r,s]=a.exports.useState(!1);return a.exports.useEffect(()=>{s(!0)},[]),t(l,{in:r,timeout:300,appear:!0,classNames:"fly",unmountOnExit:!0,children:e(d,{children:[e(c,{children:[t(o,{to:"/mine",children:t("img",{src:"https://s2.xptou.com/2023/03/09/640a00d322ee3.jpeg"})}),e(p,{children:[e("div",{className:"author-name",children:[t("span",{children:"dafenqi616"}),t("span",{className:"level",children:"Lv4"})]}),t("div",{className:"is-vip",children:t("span",{children:"\u6B63\u5F0F\u4F1A\u5458"})}),e("div",{className:"property",children:[t("span",{children:"B\u5E01: 0.0"}),t("span",{children:"\u786C\u5E01: 470"})]})]}),e(h,{children:[t("span",{children:"\u7A7A\u95F4"}),t("i",{className:"iconfont icon-xiangyoujiantou"})]})]}),e(f,{children:[e("div",{children:[t("span",{className:"data",children:"1"}),t("p",{children:"\u52A8\u6001"})]}),e("div",{children:[t("span",{children:"30"}),t("p",{children:"\u5173\u6CE8"})]}),e("div",{children:[t("span",{children:"0"}),t("p",{children:"\u7C89\u4E1D"})]})]}),t(u,{children:t("img",{src:"https://s2.xptou.com/2023/03/09/640a015112c5a.png"})})]})})}export{$ as default};
+`;function $(){const[r,s]=a.exports.useState(!1);return a.exports.useEffect(()=>{s(!0)},[]),e(l,{in:r,timeout:300,appear:!0,classNames:"fly",unmountOnExit:!0,children:n(d,{children:[n(c,{children:[e(o,{to:"/mine",children:e("img",{src:"https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ef6e2d626.jpeg"})}),n(p,{children:[n("div",{className:"author-name",children:[e("span",{children:"dafenqi616"}),e("span",{className:"level",children:"Lv4"})]}),e("div",{className:"is-vip",children:e("span",{children:"\u6B63\u5F0F\u4F1A\u5458"})}),n("div",{className:"property",children:[e("span",{children:"B\u5E01: 0.0"}),e("span",{children:"\u786C\u5E01: 470"})]})]}),n(h,{children:[e("span",{children:"\u7A7A\u95F4"}),e("i",{className:"iconfont icon-xiangyoujiantou"})]})]}),n(f,{children:[n("div",{children:[e("span",{className:"data",children:"1"}),e("p",{children:"\u52A8\u6001"})]}),n("div",{children:[e("span",{children:"30"}),e("p",{children:"\u5173\u6CE8"})]}),n("div",{children:[e("span",{children:"0"}),e("p",{children:"\u7C89\u4E1D"})]})]}),e(u,{children:e("img",{src:"https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416efc82bb64.png"})})]})})}export{$ as default};
