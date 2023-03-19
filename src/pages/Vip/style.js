@@ -16,32 +16,19 @@ export const HeaderWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     > span:first-child {
-      padding: ${px2rem(6)};
-      font-size: ${px2rem(20)};
-      font-weight: 500;
+      padding: ${px2rem(10)};
+      font-size: ${px2rem(16)};
+      font-weight: bold;
     }
-    > span:nth-child(2) {
-      /* width: 40%; */
-      padding: ${px2rem(14)};
-      padding-left: 0;
-      margin-left: ${px2rem(-20)};
-      font-size: ${px2rem(12)};
-      transform: scale(0.83);
-      i {
-        color: red;
-        font-size: ${px2rem(12)};
-        transform: scale(0.83);
-      }
-    }
-    > span:nth-child(3) {
+    > span:last-child {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+      align-items: center;
       width: 36%;
       padding: ${px2rem(8)};
       i {
-        font-size: ${px2rem(20)};
+        font-size: ${px2rem(18)};
         color: #000;
-        line-height: ${px2rem(28)};
       }
     }
   }

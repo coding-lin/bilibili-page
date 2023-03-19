@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Banners from './Banners'
 import GoodsList from './GoodsList'
+import TextSwiper from './TextSwiper'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
 import { Skeleton } from 'antd-mobile'
 import { connect } from 'react-redux'
@@ -69,10 +70,7 @@ const Vip = (props) => {
       <HeaderWrapper>
         <div className="title">
           <span>会员购</span>
-          <span>
-            CHE手办原型创作大赛
-            <i className='iconfont icon-xiangyoujiantou'></i>
-          </span>
+          <TextSwiper/>
           <span>
             <Link to="/store-house">
               <i className='iconfont icon-24gl-drawer'></i> 
