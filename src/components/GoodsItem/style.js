@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
         background-color: skyblue;
       }
       span {
-        padding: ${px2rem(4)};
+        padding: ${px2rem(2)};
         font-size: ${px2rem(12)};
       }
     }
