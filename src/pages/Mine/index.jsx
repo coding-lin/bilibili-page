@@ -21,7 +21,7 @@ export default function Mine() {
       <Wrapper>
         <HeaderWrapper>
           <Link to="/mine">
-            <img src="https://s2.xptou.com/2023/03/09/640a00d322ee3.jpeg" />
+            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ef6e2d626.jpeg" />
           </Link>
           <Author>
             <div className='author-name'>
@@ -56,7 +56,7 @@ export default function Mine() {
           </div>
         </Detail>
         <Img>
-          <img src="https://s2.xptou.com/2023/03/09/640a015112c5a.png" />
+          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416efc82bb64.png" />
         </Img>
       </Wrapper>
     </CSSTransition>

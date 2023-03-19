@@ -24,37 +24,37 @@ const Vip = (props) => {
         <ImgTab>
           <Link to="shouban">
             <div className='img-tab'>
-              <img src="https://s2.xptou.com/2023/03/10/640aa4a5ef1c4.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e64d8.png" />
               <span>手办</span>
             </div>
           </Link>
           <Link to="zhoubian">
             <div className='img-tab'>
-              <img src="https://s2.xptou.com/2023/03/10/640aa4fe718cb.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e9b1f.png" />
               <span>周边</span>
             </div>
           </Link>
           <Link to="manzhandianying">
             <div className='img-tab'>
-              <img src="https://s2.xptou.com/2023/03/10/640aa52a3ee1f.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e6c70.png" />
               <span>漫展电影</span>
             </div>
           </Link>
           <Link to="tushumanhua">
             <div className='img-tab'>
-              <img src="https://s2.xptou.com/2023/03/10/640aa54d315b2.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e57fe.png" />
               <span>图书漫画</span>
             </div>
           </Link>
           <Link to="shumazhuangbei">
             <div className='img-tab'>
-              <img src="https://s2.xptou.com/2023/03/10/640aa586da215.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e9ce2.png" />
               <span>数码装备</span>
             </div>
           </Link>
           <Link to="ciyuanfushi">
             <div className='img-tab'>
-              <img src="https://s2.xptou.com/2023/03/10/640aa5a905ff0.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e7140.png" />
               <span>次元服饰</span>
             </div>
           </Link>

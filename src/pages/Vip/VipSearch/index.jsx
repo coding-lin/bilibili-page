@@ -46,7 +46,7 @@ const VipSearch = (props) => {
     return (
       <Empty>
         <div className='info'>
-          <img src="https://s2.xptou.com/2023/03/09/640a01f189bec.png" />
+          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f016ae5c9.png" />
           <span>没有搜到商品...</span>
         </div>
       </Empty>

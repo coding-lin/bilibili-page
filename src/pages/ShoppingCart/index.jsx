@@ -10,19 +10,11 @@ const renderEmpty = () => {  // 空状态组件
   return (
     <Empty>
       <div className='info'>
-        <img src="https://s2.xptou.com/2023/03/10/640a02953a7de.png" />
+        <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f061dc214.png" />
         <p>购物车空空如也</p>
         <span>你可能还喜欢</span>
       </div>
     </Empty>
-  )
-}
-
-const renderList = () => {  // 购物车商品列表组件
-  return (
-    <List>
-      
-    </List>
   )
 }
 
@@ -51,7 +43,6 @@ const ShoppingCart = (props) => {
         </i>
         <h2>购物车</h2>
       </HeaderWrapper>
-      {/* { !goodsList ? renderEmpty() : renderList() } */}
       { renderEmpty() }
       { enterLoading ? <Skeleton.Paragraph lineCount={30} animated /> : renderGoods() } 
     </Wrapper>
