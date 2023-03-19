@@ -27,8 +27,12 @@ const GoodsItem = ({good}) => {
           <span>{good.title}</span>
         </div>
         <div className="rank_time">
-          {good.rank ? <span>{good.rank}</span> : ''}
-          {good.time ? <span>{good.time}</span> : ''}
+          <div className="rank">
+            {good.rank ? <span>{good.rank}</span> : ''}
+          </div>
+          <div className="time">
+            {good.time ? <span>{good.time}</span> : ''}
+          </div>
         </div>
         <div className="price_coll">
           <span>¥{good.price}</span>

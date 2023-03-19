@@ -35,18 +35,15 @@ export const Wrapper = styled.div`
     .rank_time {
       display: flex;
       justify-content: space-around;
-      padding: ${px2rem(2)};
-      > span:first-child {
+      .rank {
         background-color: orange;
-        border-radius: ${px2rem(4)};
-        padding: ${px2rem(1)};
-        font-size: ${px2rem(12)};
       }
-      > span:nth-child(2) {
-        font-size: ${px2rem(12)};
-        border-radius: ${px2rem(4)};
-        padding: ${px2rem(1)};
+      .time {
         background-color: skyblue;
+      }
+      span {
+        padding: ${px2rem(4)};
+        font-size: ${px2rem(12)};
       }
     }
     .price_coll {
@@ -60,7 +57,7 @@ export const Wrapper = styled.div`
       }
       .coll_num {
         padding-right: ${px2rem(5)};
-        padding-top:${px2rem(8)};
+        padding-top: ${px2rem(8)};
         i {
           font-size: ${px2rem(18)};
           margin-top: ${px2rem(2)};
