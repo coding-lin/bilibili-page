@@ -1,4 +1,4 @@
-import{s as r,p as i,R as c,r as d,j as a,d as e,l as o}from"./index.4ee80991.js";import{_ as m}from"./index.08f98c20.js";import{b as p}from"./bilibili.74d742dd.js";const u=r.div`
+import{s as r,p as i,R as c,r as d,j as a,d as e,l as o}from"./index.e03f2702.js";import{_ as m}from"./index.7883637e.js";import{b as p}from"./bilibili.063eb136.js";const u=r.div`
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   padding-bottom: ${i(54)};
@@ -50,7 +50,7 @@ import{s as r,p as i,R as c,r as d,j as a,d as e,l as o}from"./index.4ee80991.js
         background-color: skyblue;
       }
       span {
-        padding: ${i(4)};
+        padding: ${i(2)};
         font-size: ${i(12)};
       }
     }
