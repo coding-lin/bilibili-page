@@ -1,1 +1,0 @@
-import{f as s}from"./index.c9a2013c.js";const e=()=>s.get("/videoslist"),i=()=>s.get("/suggestlist"),g=()=>s.get("/bannerslist"),o=()=>s.get("/goodslist");var a="./assets/bilibili.9eef3f00.jpeg";export{g as a,a as b,o as c,e as d,i as g};
