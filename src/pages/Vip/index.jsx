@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Banners from './Banners'
 import GoodsList from './GoodsList'
-import TextSwiper from './TextSwiper'
+import TextSwiper from '@/components/common/text-swiper'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
 import { Skeleton } from 'antd-mobile'
 import { connect } from 'react-redux'
@@ -17,6 +17,12 @@ const Vip = (props) => {
     getBannerListDispatch()
     getGoodListDispatch()
   }, [])
+
+  const textList = [
+    {id: 1, name: 'CHE手办原型创作大赛 >'},
+    {id: 2, name: '官方直营 正品保证'},
+    {id: 3, name: 'CHE手办原型创作大赛 >'}
+  ]
   
   const renderImg = () => {
     return (
@@ -70,7 +76,7 @@ const Vip = (props) => {
       <HeaderWrapper>
         <div className="title">
           <span>会员购</span>
-          <TextSwiper/>
+          <TextSwiper data={textList} />
           <span>
             <Link to="/store-house">
               <i className='iconfont icon-24gl-drawer'></i> 
