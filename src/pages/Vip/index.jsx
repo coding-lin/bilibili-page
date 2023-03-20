@@ -109,9 +109,7 @@ const Vip = (props) => {
           <div className="search-text">
             <TextSwiper data={searchList} />
           </div>
-          <Link to="/all">
-            <i className='iconfont icon-ALL'></i>
-          </Link>
+          <i className='iconfont icon-ALL'></i>
         </div>
       </HeaderWrapper>
       <Wrapper>

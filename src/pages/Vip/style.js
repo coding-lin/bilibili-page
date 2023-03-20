@@ -41,11 +41,10 @@ export const HeaderWrapper = styled.div`
       &.icon-sousuo {
         position: absolute;
         font-size: ${px2rem(18)};
-        top: ${px2rem(15)};
+        top: ${px2rem(16)};
         left: ${px2rem(18)};
       }
       &.icon-ALL {
-        position: absolute;
         font-size: ${px2rem(30)};
         font-weight: 600;
         line-height: ${px2rem(50)};
