@@ -48,19 +48,22 @@ export const HeaderWrapper = styled.div`
         position: absolute;
         font-size: ${px2rem(30)};
         font-weight: 600;
-        padding-top: ${px2rem(10)};
-        padding-left: ${px2rem(4)};
+        line-height: ${px2rem(50)};
+        padding-left: ${px2rem(8)};
       }
     }
     input {
-      font-size: ${px2rem(14)};
       margin: ${px2rem(10)};
       width: 80%;
       height: ${px2rem(30)};
       border-radius: ${px2rem(14)};
-      padding-left: ${px2rem(34)};
       border: 0;
       background-color: ${style["search_bar-color"]};
+    }
+    .search-text {
+      position: absolute;
+      left: ${px2rem(48)};
+      top: ${px2rem(10)};
     }
   }
 `;

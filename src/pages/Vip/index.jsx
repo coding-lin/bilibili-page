@@ -23,6 +23,17 @@ const Vip = (props) => {
     {id: 2, name: '官方直营 正品保证'},
     {id: 3, name: 'CHE手办原型创作大赛 >'}
   ]
+
+  const searchList = [
+    {id: 1, name: '耳机'},
+    {id: 2, name: '碧蓝航线'},
+    {id: 3, name: '租借女友'},
+    {id: 4, name: '路人女主'},
+    {id: 5, name: '洛天依'},
+    {id: 6, name: '天官赐福'},
+    {id: 7, name: '英雄联盟'},
+    {id: 8, name: '耳机'},
+  ]
   
   const renderImg = () => {
     return (
@@ -94,7 +105,10 @@ const Vip = (props) => {
           onClick={() => navigate(`/vipsearch`)}
         >
           <i className='iconfont icon-sousuo'></i>
-          <input type="text" placeholder='搜索商品...'/>
+          <input type="text" />
+          <div className="search-text">
+            <TextSwiper data={searchList} />
+          </div>
           <Link to="/all">
             <i className='iconfont icon-ALL'></i>
           </Link>
