@@ -70,6 +70,11 @@ export const HeaderWrapper = styled.div`
 export const Wrapper = styled.div`
   width: 100%;
   background: ${style["background-color"]};
+  .img {
+    width: 100%;
+    height: ${px2rem(228)};
+    margin-top: ${px2rem(94)};
+  }
 `;
 
 export const ImgTab = styled.div`

@@ -77,7 +77,6 @@ const Vip = (props) => {
             </div>
           </Link>
         </ImgTab>
-        <GoodsList goodsList={goodsList}/>
       </>
     )
   }
@@ -113,7 +112,8 @@ const Vip = (props) => {
         </div>
       </HeaderWrapper>
       <Wrapper>
-        { enterLoading ? <Skeleton.Paragraph lineCount={30} animated /> : renderImg() }  
+        { enterLoading ? <Skeleton animated className='img' /> : renderImg() }
+        { enterLoading ? <Skeleton.Paragraph lineCount={20} animated /> : <GoodsList goodsList={goodsList} /> }
       </Wrapper>
     </>
   )
