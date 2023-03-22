@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import LazyLoad from 'react-lazyload'
 import classnames from 'classnames'
-import bilibili from '@/assets/images/bilibili.jpeg'
+import bilibili from '@/assets/images/vip.gif'
 import { Wrapper } from './style'
 
 const GoodsItem = ({good}) => {

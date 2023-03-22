@@ -1,6 +1,6 @@
 import React from 'react'
 import LazyLoad from 'react-lazyload'
-import bilibili from '@/assets/images/bilibili.jpeg'
+import bilibili from '@/assets/images/bilibili.gif'
 import { Wrapper } from './style'
 
 const VideoItem = ({video}) => {
