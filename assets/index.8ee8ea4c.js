@@ -1,4 +1,4 @@
-import{s as r,p as i,R as c,r as d,j as a,d as e,l as o}from"./index.063325b1.js";import{_ as p}from"./index.1bdb3b9a.js";const b=r.div`
+import{s as r,p as i,R as c,r as d,j as a,d as e,l as o}from"./index.952ae5c2.js";import{_ as m}from"./index.32bb0cbc.js";import{b as p}from"./bilibili.03841b80.js";const u=r.div`
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   padding-bottom: ${i(54)};
@@ -9,7 +9,7 @@ import{s as r,p as i,R as c,r as d,j as a,d as e,l as o}from"./index.063325b1.js
     margin-left: ${i(8)};
     margin-right: ${i(8)};
   }
-`;var m="./assets/vip.e7186988.gif";const h=r.div`
+`,h=r.div`
   .good-box {
     width: 100%;
     break-inside: avoid;
@@ -80,4 +80,4 @@ import{s as r,p as i,R as c,r as d,j as a,d as e,l as o}from"./index.063325b1.js
       }
     }
   }
-`,g=({good:n})=>{const[s,t]=d.exports.useState(!1),l=()=>{t(!s)};return a(h,{children:e("div",{className:"good-box",children:[a("div",{className:"good-img",children:a(p,{placeholder:a("img",{width:"100%",height:"100%",src:m}),children:a("img",{src:n.img})})}),e("div",{className:"title",children:[n.info?a("span",{children:n.info}):"",a("span",{children:n.title})]}),e("div",{className:"rank_time",children:[a("div",{className:"rank",children:n.rank?a("span",{children:n.rank}):""}),a("div",{className:"time",children:n.time?a("span",{children:n.time}):""})]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",n.price]}),e("div",{className:"coll_num",children:[a("i",{className:o("iconfont",{"icon-aixin3":!s},{"icon-aixin1":s},{active:s}),onClick:()=>l()}),a("span",{children:s?n.collection+1:n.collection})]})]})]},n.id)})};var u=c.memo(g);export{u as G,b as W};
+`,g=({good:n})=>{const[s,t]=d.exports.useState(!1),l=()=>{t(!s)};return a(h,{children:e("div",{className:"good-box",children:[a("div",{className:"good-img",children:a(m,{placeholder:a("img",{width:"100%",height:"100%",src:p}),children:a("img",{src:n.img})})}),e("div",{className:"title",children:[n.info?a("span",{children:n.info}):"",a("span",{children:n.title})]}),e("div",{className:"rank_time",children:[a("div",{className:"rank",children:n.rank?a("span",{children:n.rank}):""}),a("div",{className:"time",children:n.time?a("span",{children:n.time}):""})]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",n.price]}),e("div",{className:"coll_num",children:[a("i",{className:o("iconfont",{"icon-aixin3":!s},{"icon-aixin1":s},{active:s}),onClick:()=>l()}),a("span",{children:s?n.collection+1:n.collection})]})]})]},n.id)})};var k=c.memo(g);export{k as G,u as W};

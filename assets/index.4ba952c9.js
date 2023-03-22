@@ -1,4 +1,4 @@
-import{s as e,p as t,c as p,R as h,u,r as g,d as n,j as i}from"./index.063325b1.js";import{S as l}from"./index.44e2ad87.js";import{a as m,G as f}from"./index.508bd787.js";import"./request.4eacab47.js";import"./index.1bdb3b9a.js";import"./index.9385410d.js";const $=e.div`
+import{s as e,p as t,c as p,R as h,u,r as g,d as n,j as i}from"./index.952ae5c2.js";import{S as l}from"./index.8e43b5df.js";import{a as m,G as f}from"./index.dbf06e7b.js";import"./request.8de268d9.js";import"./index.32bb0cbc.js";import"./index.8ee8ea4c.js";import"./bilibili.03841b80.js";const $=e.div`
   background-color: rgba(120, 120, 120, 0.1);
 `,b=e.div`
   position: fixed;
@@ -62,4 +62,4 @@ import{s as e,p as t,c as p,R as h,u,r as g,d as n,j as i}from"./index.063325b1.
   }
 `;e.div`
   
-`;const x=()=>i(v,{children:n("div",{className:"info",children:[i("img",{src:"https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f061dc214.png"}),i("p",{children:"\u8D2D\u7269\u8F66\u7A7A\u7A7A\u5982\u4E5F"}),i("span",{children:"\u4F60\u53EF\u80FD\u8FD8\u559C\u6B22"})]})}),L=o=>{const r=u(),{goodsList:s,enterLoading:a}=o,{getGoodListDispatch:d}=o;g.exports.useEffect(()=>{d()},[]);const c=()=>i(f,{goodsList:s});return n($,{children:[n(b,{children:[i("i",{className:"iconfont icon-fanhuijiantou",onClick:()=>r(-1)}),i("h2",{children:"\u8D2D\u7269\u8F66"})]}),x(),a?i(l.Paragraph,{lineCount:30,animated:!0}):c()]})},D=o=>({enterLoading:o.vip.enterLoading,goodsList:o.vip.goodsList}),F=o=>({getGoodListDispatch(){o(m())}});var E=p(D,F)(h.memo(L));export{E as default};
+`;const x=()=>i(v,{children:n("div",{className:"info",children:[i("img",{src:"https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f061dc214.png"}),i("p",{children:"\u8D2D\u7269\u8F66\u7A7A\u7A7A\u5982\u4E5F"}),i("span",{children:"\u4F60\u53EF\u80FD\u8FD8\u559C\u6B22"})]})}),L=o=>{const r=u(),{goodsList:s,enterLoading:a}=o,{getGoodListDispatch:d}=o;g.exports.useEffect(()=>{d()},[]);const c=()=>i(f,{goodsList:s});return n($,{children:[n(b,{children:[i("i",{className:"iconfont icon-fanhuijiantou",onClick:()=>r(-1)}),i("h2",{children:"\u8D2D\u7269\u8F66"})]}),x(),a?i(l.Paragraph,{lineCount:30,animated:!0}):c()]})},D=o=>({enterLoading:o.vip.enterLoading,goodsList:o.vip.goodsList}),F=o=>({getGoodListDispatch(){o(m())}});var S=p(D,F)(h.memo(L));export{S as default};
