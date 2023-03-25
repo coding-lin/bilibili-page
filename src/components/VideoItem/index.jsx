@@ -10,10 +10,15 @@ const VideoItem = ({video}) => {
       <div className="video-box" key={video.id}>
         <div className="video-img">
           <LazyLoad
-            placeholder={<img width="100%" 
-            height="100%" src={bilibili}/>}
+            placeholder={
+            <img 
+              width="100%" 
+              height="100%" 
+              src={bilibili} 
+              alt=""
+            />}
           >
-            <img src={video.img} width="100%" height="100%" />
+            <img src={video.img} />
           </LazyLoad>
           <div className="data">
             <i className='iconfont icon-bofangqi-bofangxiaodianshi'></i>

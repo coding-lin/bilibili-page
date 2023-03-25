@@ -8,6 +8,8 @@ export const Wrapper = styled.div`
     .video-img {
       position: relative;
       img {
+        width: 100%;
+        height: 100%;
         border-radius: ${px2rem(2)};
       }
       .data {

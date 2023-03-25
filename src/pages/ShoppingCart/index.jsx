@@ -10,7 +10,7 @@ const renderEmpty = () => {  // 空状态组件
   return (
     <Empty>
       <div className='info'>
-        <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f061dc214.png" />
+        <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f061dc214.png" alt="" />
         <p>购物车空空如也</p>
         <span>你可能还喜欢</span>
       </div>

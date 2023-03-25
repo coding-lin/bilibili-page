@@ -23,7 +23,7 @@ export default function Banners({bannersList}) {
         <Link to="/dongman/id" className="swiper-item" key={item.id}>
           <div>
             <p>
-              <img src={item.img} />
+              <img src={item.img} alt="" />
             </p>
             <span>{item.title}</span>
           </div>
@@ -39,7 +39,7 @@ export default function Banners({bannersList}) {
         <Link to="/dongman/id" className="swiper-item" key={item.id}>
           <div>
             <p>
-              <img src={item.img} />
+              <img src={item.img} alt="" />
             </p>
             <span>{item.title}</span>
           </div>

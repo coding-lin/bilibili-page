@@ -42,37 +42,37 @@ const Vip = (props) => {
         <ImgTab>
           <Link to="shouban">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e64d8.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e64d8.png" alt="" />
               <span>手办</span>
             </div>
           </Link>
           <Link to="zhoubian">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e9b1f.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e9b1f.png" alt="" />
               <span>周边</span>
             </div>
           </Link>
           <Link to="manzhandianying">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e6c70.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e6c70.png" alt="" />
               <span>漫展电影</span>
             </div>
           </Link>
           <Link to="tushumanhua">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e57fe.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e57fe.png" alt="" />
               <span>图书漫画</span>
             </div>
           </Link>
           <Link to="shumazhuangbei">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e9ce2.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e9ce2.png" alt="" />
               <span>数码装备</span>
             </div>
           </Link>
           <Link to="ciyuanfushi">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e7140.png" />
+              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e7140.png" alt="" />
               <span>次元服饰</span>
             </div>
           </Link>

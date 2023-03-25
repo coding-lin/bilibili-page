@@ -16,8 +16,13 @@ const GoodsItem = ({good}) => {
       <div className="good-box" key={good.id}>
         <div className="good-img">
           <LazyLoad
-            placeholder={<img width="100%" 
-            height="100%" src={bilibili}/>}
+            placeholder={
+            <img
+              width="100%"
+              height="100%"
+              src={bilibili}
+              alt=""
+            />}
           >
             <img src={good.img} />
           </LazyLoad>

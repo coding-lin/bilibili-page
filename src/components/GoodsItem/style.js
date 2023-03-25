@@ -9,12 +9,10 @@ export const Wrapper = styled.div`
     border-radius: ${px2rem(4)};
     box-shadow: rgba(255, 255, 255, 0.2) ${px2rem(2)} ${px2rem(2)} ${px2rem(2)};
     background-color: #fff;
-    .good-img {
+    img {
       width: 100%;
-      img {
-        border-radius: ${px2rem(4)};
-        width: 100%;
-      }
+      height: 100%;
+      border-radius: ${px2rem(4)};
     }
     .title {
       padding: ${px2rem(2)};

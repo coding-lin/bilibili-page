@@ -74,7 +74,7 @@ const HomeSearch = (props) => {
                 key={item.id} 
                 onClick={() => gotoSuggest(item.id)}
               >
-                <img src={bilibili} />
+                <img src={bilibili} alt="" />
                 <span className="title">{item.title}</span>
                 <span className="time">{item.time}</span>
               </ListItem>
