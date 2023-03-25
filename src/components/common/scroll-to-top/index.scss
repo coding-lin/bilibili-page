@@ -1,0 +1,20 @@
+.to-top {
+  position: fixed;
+  right: 1.8rem;
+  bottom: 8rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.80;
+  z-index: 99;
+  i {
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transform: rotate(90deg);
+    color: rgb(104, 99, 99);
+  }
+}

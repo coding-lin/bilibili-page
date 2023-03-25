@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import Banners from './Banners'
 import GoodsList from './GoodsList'
 import TextSwiper from '@/components/common/text-swiper'
+import ScrollToTop from '@/components/common/scroll-to-top'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
 import { Skeleton } from 'antd-mobile'
 import { connect } from 'react-redux'
@@ -114,6 +115,7 @@ const Vip = (props) => {
       <Wrapper>
         { enterLoading ? <Skeleton animated className='img' /> : renderImg() }
         { enterLoading ? <Skeleton.Paragraph lineCount={20} animated /> : <GoodsList goodsList={goodsList} /> }
+        <ScrollToTop />
       </Wrapper>
     </>
   )

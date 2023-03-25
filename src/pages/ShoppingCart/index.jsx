@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { Skeleton } from 'antd-mobile'
 import { Wrapper, HeaderWrapper, Empty, List } from './style'
 import GoodsList from '../Vip/GoodsList'
+import ScrollToTop from '@/components/common/scroll-to-top'
 import { getGoodsList } from '../Vip/store/actionCreators'
 
 const renderEmpty = () => {  // 空状态组件
@@ -44,7 +45,8 @@ const ShoppingCart = (props) => {
         <h2>购物车</h2>
       </HeaderWrapper>
       { renderEmpty() }
-      { enterLoading ? <Skeleton.Paragraph lineCount={30} animated /> : renderGoods() } 
+      { enterLoading ? <Skeleton.Paragraph lineCount={30} animated /> : renderGoods() }
+      <ScrollToTop />
     </Wrapper>
   )
 }
