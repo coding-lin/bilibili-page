@@ -47,8 +47,10 @@
 ```jsx
 import LazyLoad from "react-lazyload";
 import bilibili from "@/assets/images/bilibili.jpeg";
-// 当图片未加载出来时，使用本地图片 bilibili 占位
-<LazyLoad placeholder={<img width="100%" height="100%" src={bilibili} />}>
+// 当图片未加载出来时，使用本地图片进行占位
+<LazyLoad
+  placeholder={<img width="100%" height="100%" src={bilibili} alt="" />}
+>
   <img src={good.img} />
 </LazyLoad>;
 ```
@@ -64,9 +66,9 @@ import bilibili from "@/assets/images/bilibili.jpeg";
 
 ### 性能优化
 
-1. 手写骨架屏(待实现)
+1. 首屏加载使用动态骨架屏
 
-2. 手写懒加载功能(待实现)
+2. 实现静态资源懒加载
 
 3. 全局样式风格文件
 
