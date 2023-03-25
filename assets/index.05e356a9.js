@@ -1,4 +1,4 @@
-import{s as r,p as i,R as c,r as d,j as a,d as e,l as o}from"./index.7e108915.js";import{_ as m}from"./index.97949a54.js";import{b as p}from"./bilibili.03841b80.js";const u=r.div`
+import{s as r,p as i,R as c,r as d,j as a,d as e,l as o}from"./index.18b9fb92.js";import{_ as m}from"./index.aa22432c.js";import{b as p}from"./bilibili.03841b80.js";const u=r.div`
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   padding-bottom: ${i(54)};
@@ -17,10 +17,13 @@ import{s as r,p as i,R as c,r as d,j as a,d as e,l as o}from"./index.7e108915.js
     border-radius: ${i(4)};
     box-shadow: rgba(255, 255, 255, 0.2) ${i(2)} ${i(2)} ${i(2)};
     background-color: #fff;
-    img {
+    .good-img{
       width: 100%;
-      height: 100%;
-      border-radius: ${i(4)};
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: ${i(4)};
+      }
     }
     .title {
       padding: ${i(2)};
@@ -78,4 +81,4 @@ import{s as r,p as i,R as c,r as d,j as a,d as e,l as o}from"./index.7e108915.js
       }
     }
   }
-`,$=({good:n})=>{const[s,t]=d.exports.useState(!1),l=()=>{t(!s)};return a(h,{children:e("div",{className:"good-box",children:[a("div",{className:"good-img",children:a(m,{placeholder:a("img",{width:"100%",height:"100%",src:p,alt:""}),children:a("img",{src:n.img})})}),e("div",{className:"title",children:[n.info?a("span",{children:n.info}):"",a("span",{children:n.title})]}),e("div",{className:"rank_time",children:[a("div",{className:"rank",children:n.rank?a("span",{children:n.rank}):""}),a("div",{className:"time",children:n.time?a("span",{children:n.time}):""})]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",n.price]}),e("div",{className:"coll_num",children:[a("i",{className:o("iconfont",{"icon-aixin3":!s},{"icon-aixin1":s},{active:s}),onClick:()=>l()}),a("span",{children:s?n.collection+1:n.collection})]})]})]},n.id)})};var k=c.memo($);export{k as G,u as W};
+`,g=({good:n})=>{const[s,t]=d.exports.useState(!1),l=()=>{t(!s)};return a(h,{children:e("div",{className:"good-box",children:[a("div",{className:"good-img",children:a(m,{placeholder:a("img",{width:"100%",height:"100%",src:p,alt:""}),children:a("img",{src:n.img})})}),e("div",{className:"title",children:[n.info?a("span",{children:n.info}):"",a("span",{children:n.title})]}),e("div",{className:"rank_time",children:[a("div",{className:"rank",children:n.rank?a("span",{children:n.rank}):""}),a("div",{className:"time",children:n.time?a("span",{children:n.time}):""})]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",n.price]}),e("div",{className:"coll_num",children:[a("i",{className:o("iconfont",{"icon-aixin3":!s},{"icon-aixin1":s},{active:s}),onClick:()=>l()}),a("span",{children:s?n.collection+1:n.collection})]})]})]},n.id)})};var k=c.memo(g);export{k as G,u as W};
