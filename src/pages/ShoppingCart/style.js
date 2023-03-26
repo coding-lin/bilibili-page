@@ -68,7 +68,3 @@ export const Empty = styled.div`
     }
   }
 `
-
-export const List = styled.div`
-  
-`

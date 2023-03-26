@@ -133,3 +133,18 @@ export const Img = styled.div`
     width: 100%;
   }
 `
+
+export const Container = styled.div`
+  width: 100%;
+  margin-top: ${px2rem(10)};
+  display: flex;
+  justify-content: space-around;
+  .img-tab {
+    width: ${px2rem(58)};
+    height: ${px2rem(58)};
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+`
