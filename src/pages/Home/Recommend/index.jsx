@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
-import { Skeleton } from 'antd-mobile'
+import { Skeleton, InfiniteScroll, DotLoading } from 'antd-mobile'
+import { sleep } from 'antd-mobile/es/utils/sleep'
 import SetMovie from '@/components/SetMovie'
 import VideoList from '../VideoList'
+import ScrollToTop from '@/components/common/scroll-to-top'
 import { getVideosList } from '../store/actionCreators'
 import '@/assets/styles/index.scss'
 
 const Recommend = (props) => {
+  const [hasMore, setHasMore] = useState(true)
+  const [videoData, setVideoData] = useState([])
   const { videosList, enterLoading } = props
   const { getVideoListDispatch } = props
 
@@ -14,10 +18,50 @@ const Recommend = (props) => {
     getVideoListDispatch()
   }, [])
 
+  async function mockRequest() {
+    let count = 0;
+    if (count >= 5) return [];
+    await sleep(1000);
+    count++;
+    return videosList;
+  }
+
+  async function loadMore() {
+    const append = await mockRequest()
+    setVideoData(val => [...val, ...append])
+    setHasMore(append.length > 0)
+  }
+
+  const InfiniteScrollContent = ({ hasMore }) => {
+    return (
+      <>
+        {hasMore ? (
+          <div style={{marginBottom: '2.5rem'}}>
+            <span>一大波信息向你飞奔过来~</span>
+            <DotLoading />
+          </div>
+        ) : (
+          <div style={{marginBottom: '2.5rem'}}>
+            <span>--- 我是有底线的 ---</span>
+          </div>
+        )}
+      </>
+    )
+  }
+
   return (
     <>
       { enterLoading ? <Skeleton animated className='movie' /> : <SetMovie /> }
-      { enterLoading ? <Skeleton.Paragraph lineCount={20} animated /> : <VideoList videosList={videosList} /> }
+      { enterLoading ? 
+        <Skeleton.Paragraph lineCount={20} animated /> : 
+        <>
+          <VideoList videoData={videoData} />
+          <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
+            <InfiniteScrollContent hasMore={hasMore} />
+          </InfiniteScroll>
+        </>
+      }
+      <ScrollToTop />
     </>
   )
 }

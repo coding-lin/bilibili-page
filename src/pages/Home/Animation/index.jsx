@@ -17,7 +17,7 @@ const Animation = (props) => {
   return (
     <>
       { enterLoading ? <Skeleton animated className='movie' /> : <SetMovie /> }
-      { enterLoading ? <Skeleton.Paragraph lineCount={20} animated /> : <VideoList videosList={videosList} /> }
+      { enterLoading ? <Skeleton.Paragraph lineCount={20} animated /> : <VideoList videoData={videosList} /> }
     </>
   )
 }

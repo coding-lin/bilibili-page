@@ -2,15 +2,15 @@ import React from 'react'
 import { Wrapper } from './style'
 import VideoItem from '@/components/VideoItem'
 
-const VideoList = ({videosList}) => {
+const VideoList = ({videoData}) => {
 
   return (
     <Wrapper>
       <div className="container">
         {
-          videosList && videosList.map(
-            video => (
-              <VideoItem key={video.id} video={video} />
+          videoData && videoData.map(
+            (video, index) => (
+              <VideoItem key={index} video={video} />
             )
           )
         }
