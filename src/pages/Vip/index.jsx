@@ -5,12 +5,14 @@ import GoodsList from './GoodsList'
 import TextSwiper from '@/components/common/text-swiper'
 import ScrollToTop from '@/components/common/scroll-to-top'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
-import { Skeleton, PullToRefresh, Toast } from 'antd-mobile'
+import { Skeleton, PullToRefresh, Toast, InfiniteScroll, DotLoading } from 'antd-mobile'
 import { sleep } from 'antd-mobile/es/utils/sleep'
 import { connect } from 'react-redux'
 import { getBannersList, getGoodsList } from './store/actionCreators'
 
 const Vip = (props) => {
+  const [hasMore, setHasMore] = useState(true)
+  const [goodData, setGoodData] = useState([])
   const navigate = useNavigate()
   const { bannersList, goodsList, enterLoading } = props
   const { getBannerListDispatch, getGoodListDispatch } = props
@@ -39,6 +41,7 @@ const Vip = (props) => {
   
   async function doRefresh() {
     await sleep(1000)
+    setGoodData([...new Set(goodData)])
     Toast.show('刷新成功')
   }
 
@@ -47,6 +50,37 @@ const Vip = (props) => {
     canRelease: '松开吧',
     refreshing: '玩命加载中...',
     complete: '好啦',
+  }
+
+  async function mockRequest() {
+    let count = 0;
+    if (count >= 5) return [];
+    await sleep(1000);
+    count++;
+    return goodsList;
+  }
+
+  async function loadMore() {
+    const append = await mockRequest()
+    setGoodData(val => [...val, ...append])
+    setHasMore(append.length > 0)
+  }
+
+  const InfiniteScrollContent = ({ hasMore }) => {
+    return (
+      <>
+        {hasMore ? (
+          <div style={{marginBottom: '2.5rem'}}>
+            <span>一大波信息向你飞奔过来~</span>
+            <DotLoading />
+          </div>
+        ) : (
+          <div style={{marginBottom: '2.5rem'}}>
+            <span>--- 我是有底线的 ---</span>
+          </div>
+        )}
+      </>
+    )
   }
 
   const renderImg = () => {
@@ -133,7 +167,10 @@ const Vip = (props) => {
             onRefresh={doRefresh}
             renderText={status => <div>{statusRecord[status]}</div>}
           >
-            <GoodsList goodsList={goodsList} />
+            <GoodsList goodData={goodData} />
+            <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
+              <InfiniteScrollContent hasMore={hasMore} />
+            </InfiniteScroll>
           </PullToRefresh>
         }
         <ScrollToTop />
