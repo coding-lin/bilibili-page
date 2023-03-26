@@ -1,1 +1,0 @@
-import{u as s,j as a,d as i}from"./index.be744900.js";const c=()=>{const e=s();return a("div",{className:"wrapper",children:i("div",{className:"header",children:[a("i",{className:"iconfont icon-fanhuijiantou",onClick:()=>e(-1)}),a("h2",{children:"\u6211\u7684\u6536\u85CF"})]})})};export{c as default};
