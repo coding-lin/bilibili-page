@@ -5,7 +5,8 @@ import GoodsList from './GoodsList'
 import TextSwiper from '@/components/common/text-swiper'
 import ScrollToTop from '@/components/common/scroll-to-top'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
-import { Skeleton } from 'antd-mobile'
+import { Skeleton, PullToRefresh, Toast } from 'antd-mobile'
+import { sleep } from 'antd-mobile/es/utils/sleep'
 import { connect } from 'react-redux'
 import { getBannersList, getGoodsList } from './store/actionCreators'
 
@@ -36,6 +37,11 @@ const Vip = (props) => {
     {id: 8, name: '耳机'},
   ]
   
+  async function doRefresh() {
+    await sleep(1000)
+    Toast.show('刷新成功')
+  }
+
   const renderImg = () => {
     return (
       <>
@@ -113,9 +119,11 @@ const Vip = (props) => {
         </div>
       </HeaderWrapper>
       <Wrapper>
-        { enterLoading ? <Skeleton animated className='img' /> : renderImg() }
-        { enterLoading ? <Skeleton.Paragraph lineCount={20} animated /> : <GoodsList goodsList={goodsList} /> }
-        <ScrollToTop />
+        <PullToRefresh onRefresh={doRefresh}>
+          { enterLoading ? <Skeleton animated className='img' /> : renderImg() }
+          { enterLoading ? <Skeleton.Paragraph lineCount={20} animated /> : <GoodsList goodsList={goodsList} /> }
+          <ScrollToTop />
+        </PullToRefresh>
       </Wrapper>
     </>
   )
