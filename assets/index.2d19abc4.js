@@ -1,6 +1,6 @@
-import{s as e,p as t,c as p,R as h,u,r as g,d as n,j as o}from"./index.011662f2.js";import{S as l}from"./index.56e45396.js";import{S as m,a as f,G as $}from"./index.52092157.js";import"./request.0e3327cd.js";import"./index.8b6c5294.js";import"./index.05a3a4f9.js";import"./bilibili.03841b80.js";const b=e.div`
+import{s as n,p as t,c as p,R as h,u,r as g,d as e,j as o}from"./index.48fe92f1.js";import{S as l}from"./index.a5f1aae0.js";import{S as m,a as f,G as $}from"./index.59924162.js";import"./request.206345d8.js";import"./index.3bb624ca.js";import"./index.b3d83f51.js";import"./bilibili.03841b80.js";const b=n.div`
   background-color: rgba(120, 120, 120, 0.1);
-`,v=e.div`
+`,v=n.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -20,7 +20,7 @@ import{s as e,p as t,c as p,R as h,u,r as g,d as n,j as o}from"./index.011662f2.
     font-weight: 600;
     line-height: ${t(60)};
   }
-`,x=e.div`
+`,x=n.div`
   width: 100%;
   height: ${t(264)};
   margin-top: ${t(60)};
@@ -60,6 +60,4 @@ import{s as e,p as t,c as p,R as h,u,r as g,d as n,j as o}from"./index.011662f2.
       background-color: Silver;
     }
   }
-`;e.div`
-  
-`;const L=()=>o(x,{children:n("div",{className:"info",children:[o("img",{src:"https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f061dc214.png",alt:""}),o("p",{children:"\u8D2D\u7269\u8F66\u7A7A\u7A7A\u5982\u4E5F"}),o("span",{children:"\u4F60\u53EF\u80FD\u8FD8\u559C\u6B22"})]})}),D=i=>{const r=u(),{goodsList:s,enterLoading:a}=i,{getGoodListDispatch:d}=i;g.exports.useEffect(()=>{d()},[]);const c=()=>o($,{goodsList:s});return n(b,{children:[n(v,{children:[o("i",{className:"iconfont icon-fanhuijiantou",onClick:()=>r(-1)}),o("h2",{children:"\u8D2D\u7269\u8F66"})]}),L(),a?o(l.Paragraph,{lineCount:30,animated:!0}):c(),o(m,{})]})},F=i=>({enterLoading:i.vip.enterLoading,goodsList:i.vip.goodsList}),S=i=>({getGoodListDispatch(){i(f())}});var A=p(F,S)(h.memo(D));export{A as default};
+`,L=()=>o(x,{children:e("div",{className:"info",children:[o("img",{src:"https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f061dc214.png",alt:""}),o("p",{children:"\u8D2D\u7269\u8F66\u7A7A\u7A7A\u5982\u4E5F"}),o("span",{children:"\u4F60\u53EF\u80FD\u8FD8\u559C\u6B22"})]})}),D=i=>{const r=u(),{goodsList:s,enterLoading:a}=i,{getGoodListDispatch:d}=i;g.exports.useEffect(()=>{d()},[]);const c=()=>o($,{goodsList:s});return e(b,{children:[e(v,{children:[o("i",{className:"iconfont icon-fanhuijiantou",onClick:()=>r(-1)}),o("h2",{children:"\u8D2D\u7269\u8F66"})]}),L(),a?o(l.Paragraph,{lineCount:30,animated:!0}):c(),o(m,{})]})},F=i=>({enterLoading:i.vip.enterLoading,goodsList:i.vip.goodsList}),S=i=>({getGoodListDispatch(){i(f())}});var A=p(F,S)(h.memo(D));export{A as default};
