@@ -5,16 +5,12 @@ import "./index.scss";
 const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
 
-  const backToTopHandle = () => {
-    document.documentElement.scrollTo({
-      left: 0,
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   const handleScroll = debounce(() => {
-    const scrollTop = document.documentElement.scrollTop;
+    const scrollTop =
+      window.pageYOffset ||
+      document.body.scrollTop ||
+      document.documentElement.scrollTop ||
+      0;
     if (scrollTop > 2000) {
       setVisible(true);
     } else {
@@ -30,7 +26,7 @@ const ScrollToTop = () => {
   return (
     <>
       {visible && (
-        <div className="to-top" onClick={backToTopHandle}>
+        <div className="to-top" onClick={() => window.scrollTo(0, 0)}>
           <i className="iconfont icon-fanhuijiantou"></i>
         </div>
       )}

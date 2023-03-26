@@ -62,7 +62,20 @@ import bilibili from "@/assets/images/bilibili.jpeg";
    > `multi-column` 布局中子元素的排列顺序是先从上往下再从左至右的，子元素中使用 `margin-top` 会出现两列顶部不能对齐的情况，使用 `margin-bottom` 既能顶部对齐，也能让元素之间不粘连，更具美感。
 
 2. 收藏某件商品时，将所有商品收藏，解决方法：
+
    > 把商品组件进行单独封装作为子组件，父组件将 good 传递给子组件，子组件拿到单独的 id，在进行之后的操作时，就不会对其它的子组件造成影响。
+
+3. 回顶组件在微信上不能正常显示(scrollTop 在浏览器中的兼容问题)
+
+解决方法：
+
+```js
+const scrollTop =
+  window.pageYOffset || // Safari
+  document.body.scrollTop || // IE6/7/8
+  document.documentElement.scrollTop || // 标准
+  0;
+```
 
 ### 性能优化
 
