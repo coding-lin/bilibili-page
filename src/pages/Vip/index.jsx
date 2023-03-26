@@ -42,6 +42,13 @@ const Vip = (props) => {
     Toast.show('刷新成功')
   }
 
+  const statusRecord = {
+    pulling: '用力拉',
+    canRelease: '松开吧',
+    refreshing: '玩命加载中...',
+    complete: '好啦',
+  }
+
   const renderImg = () => {
     return (
       <>
@@ -119,11 +126,17 @@ const Vip = (props) => {
         </div>
       </HeaderWrapper>
       <Wrapper>
-        <PullToRefresh onRefresh={doRefresh}>
-          { enterLoading ? <Skeleton animated className='img' /> : renderImg() }
-          { enterLoading ? <Skeleton.Paragraph lineCount={20} animated /> : <GoodsList goodsList={goodsList} /> }
-          <ScrollToTop />
-        </PullToRefresh>
+        { enterLoading ? <Skeleton animated className='img' /> : renderImg() }
+        { enterLoading ? 
+          <Skeleton.Paragraph lineCount={20} animated /> : 
+          <PullToRefresh 
+            onRefresh={doRefresh}
+            renderText={status => <div>{statusRecord[status]}</div>}
+          >
+            <GoodsList goodsList={goodsList} />
+          </PullToRefresh>
+        }
+        <ScrollToTop />
       </Wrapper>
     </>
   )
