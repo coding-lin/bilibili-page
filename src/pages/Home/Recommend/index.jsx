@@ -7,10 +7,12 @@ import VideoList from '../VideoList'
 import ScrollToTop from '@/components/common/scroll-to-top'
 import { getVideosList } from '../store/actionCreators'
 import '@/assets/styles/index.scss'
+import './index.scss'
 
 const Recommend = (props) => {
   const [hasMore, setHasMore] = useState(true)
   const [videoData, setVideoData] = useState([])
+  const [count, setCount] = useState(0)
   const { videosList, enterLoading } = props
   const { getVideoListDispatch } = props
 
@@ -18,11 +20,10 @@ const Recommend = (props) => {
     getVideoListDispatch()
   }, [])
 
-  async function mockRequest() {
-    let count = 0;
+  async function mockRequest() {  
     if (count >= 5) return [];
     await sleep(1000);
-    count++;
+    setCount(count => count + 1);
     return videosList;
   }
 
@@ -37,12 +38,12 @@ const Recommend = (props) => {
       <>
         {hasMore ? (
           <div style={{marginBottom: '2.5rem'}}>
-            <span>一大波信息向你飞奔过来~</span>
+            <span style={{fontSize: '0.7rem'}}>一大波信息向你飞奔过来~</span>
             <DotLoading />
           </div>
         ) : (
           <div style={{marginBottom: '2.5rem'}}>
-            <span>--- 我是有底线的 ---</span>
+            <span style={{fontSize: '0.7rem'}}>--- 我是有底线的 ---</span>
           </div>
         )}
       </>
@@ -56,7 +57,7 @@ const Recommend = (props) => {
         <Skeleton.Paragraph lineCount={20} animated /> : 
         <>
           <VideoList videoData={videoData} />
-          <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
+          <InfiniteScroll loadMore={loadMore} hasMore={hasMore} className="recommend">
             <InfiniteScrollContent hasMore={hasMore} />
           </InfiniteScroll>
         </>

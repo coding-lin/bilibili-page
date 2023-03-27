@@ -23,6 +23,7 @@ const renderEmpty = () => {
 const ShoppingCart = (props) => {
   const [hasMore, setHasMore] = useState(true)
   const [goodData, setGoodData] = useState([])
+  const [count, setCount] = useState(0)
   const navigate = useNavigate()
   const { goodsList, enterLoading } = props
   const { getGoodListDispatch } = props
@@ -44,11 +45,10 @@ const ShoppingCart = (props) => {
     complete: '好啦',
   }
 
-  async function mockRequest() {
-    let count = 0;
+  async function mockRequest() {  
     if (count >= 5) return [];
     await sleep(1000);
-    count++;
+    setCount(count => count + 1);
     return goodsList;
   }
 

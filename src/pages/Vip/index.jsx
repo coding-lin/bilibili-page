@@ -13,6 +13,7 @@ import { getBannersList, getGoodsList } from './store/actionCreators'
 const Vip = (props) => {
   const [hasMore, setHasMore] = useState(true)
   const [goodData, setGoodData] = useState([])
+  const [count, setCount] = useState(0)
   const navigate = useNavigate()
   const { bannersList, goodsList, enterLoading } = props
   const { getBannerListDispatch, getGoodListDispatch } = props
@@ -52,11 +53,10 @@ const Vip = (props) => {
     complete: '好啦',
   }
 
-  async function mockRequest() {
-    let count = 0;
+  async function mockRequest() {  
     if (count >= 5) return [];
     await sleep(1000);
-    count++;
+    setCount(count => count + 1);
     return goodsList;
   }
 
@@ -71,12 +71,12 @@ const Vip = (props) => {
       <>
         {hasMore ? (
           <div style={{marginBottom: '2.5rem'}}>
-            <span>一大波信息向你飞奔过来~</span>
+            <span style={{fontSize: '0.7rem'}}>一大波信息向你飞奔过来~</span>
             <DotLoading />
           </div>
         ) : (
           <div style={{marginBottom: '2.5rem'}}>
-            <span>--- 我是有底线的 ---</span>
+            <span style={{fontSize: '0.7rem'}}>--- 我是有底线的 ---</span>
           </div>
         )}
       </>
