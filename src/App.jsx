@@ -1,5 +1,5 @@
-import { useState, Suspense } from 'react'
-import './App.css'
+import { Suspense } from 'react'
+import './app.scss'
 import Footer from './components/Footer'
 import RoutesConfig from './routes'
 
