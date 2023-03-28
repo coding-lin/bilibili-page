@@ -9,6 +9,7 @@ import { Skeleton, PullToRefresh, Toast, InfiniteScroll, DotLoading } from 'antd
 import { sleep } from 'antd-mobile/es/utils/sleep'
 import { connect } from 'react-redux'
 import { getBannersList, getGoodsList } from './store/actionCreators'
+import { textList, searchList, statusRecord } from '@/config'
 
 const Vip = (props) => {
   const [hasMore, setHasMore] = useState(true)
@@ -23,34 +24,10 @@ const Vip = (props) => {
     getGoodListDispatch()
   }, [])
 
-  const textList = [
-    {id: 1, name: 'CHE手办原型创作大赛 >'},
-    {id: 2, name: '官方直营 正品保证'},
-    {id: 3, name: 'CHE手办原型创作大赛 >'}
-  ]
-
-  const searchList = [
-    {id: 1, name: '耳机'},
-    {id: 2, name: '碧蓝航线'},
-    {id: 3, name: '租借女友'},
-    {id: 4, name: '路人女主'},
-    {id: 5, name: '洛天依'},
-    {id: 6, name: '天官赐福'},
-    {id: 7, name: '英雄联盟'},
-    {id: 8, name: '耳机'},
-  ]
-  
   async function doRefresh() {
     await sleep(1000)
     setGoodData([...new Set(goodData)])
     Toast.show('刷新成功')
-  }
-
-  const statusRecord = {
-    pulling: '用力拉',
-    canRelease: '松开吧',
-    refreshing: '玩命加载中...',
-    complete: '好啦',
   }
 
   async function mockRequest() {  
@@ -70,13 +47,13 @@ const Vip = (props) => {
     return (
       <>
         {hasMore ? (
-          <div style={{marginBottom: '2.5rem'}}>
-            <span style={{fontSize: '0.7rem'}}>一大波信息向你飞奔过来~</span>
+          <div style={{ marginBottom: "2.5rem" }}>
+            <span style={{ fontSize: "0.7rem" }}>一大波信息向你飞奔过来~</span>
             <DotLoading />
           </div>
         ) : (
-          <div style={{marginBottom: '2.5rem'}}>
-            <span style={{fontSize: '0.7rem'}}>--- 我是有底线的 ---</span>
+          <div style={{ marginBottom: "2.5rem" }}>
+            <span style={{ fontSize: "0.7rem" }}>--- 我是有底线的 ---</span>
           </div>
         )}
       </>

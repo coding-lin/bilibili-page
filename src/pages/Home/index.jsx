@@ -4,18 +4,12 @@ import { PullToRefresh, Toast } from 'antd-mobile'
 import { sleep } from 'antd-mobile/es/utils/sleep'
 import Header from './Header'
 import HomeNav from './HomeNav'
+import { statusRecord } from '@/config'
 
 export default function Home() {
   async function doRefresh() {
     await sleep(1000)
     Toast.show('刷新成功')
-  }
-  
-  const statusRecord = {
-    pulling: '用力拉',
-    canRelease: '松开吧',
-    refreshing: '玩命加载中...',
-    complete: '好啦',
   }
 
   return (

@@ -7,6 +7,7 @@ import { Container, HeaderWrapper, Empty, GoodsWrapper, EnterLoading } from './s
 import { changeEnterLoading, getGoodsList } from './store/actionCreators'
 import { Wrapper } from '@/pages/Vip/GoodsList/style'
 import GoodsItem from '@/components/GoodsItem'
+import { empty } from '@/config'
 
 const VipSearch = (props) => {
   const navigate = useNavigate()
@@ -46,7 +47,7 @@ const VipSearch = (props) => {
     return (
       <Empty>
         <div className='info'>
-          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f016ae5c9.png" alt="" />
+          <img src={empty} alt="" />
           <span>没有搜到商品...</span>
         </div>
       </Empty>

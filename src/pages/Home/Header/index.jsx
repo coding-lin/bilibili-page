@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate, Link } from 'react-router-dom'
+import { avatar } from '@/config'
 import { HeaderWrapper, SearchInput } from './style'
 
 export default function Header() {
@@ -9,7 +10,7 @@ export default function Header() {
     <>
       <HeaderWrapper>
         <Link to="/mine">
-          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/22/641aefb80e38e.gif" alt="" />
+          <img src={avatar} alt="" />
         </Link>
         <SearchInput onClick={() => navigate("/search")}>
           <a>

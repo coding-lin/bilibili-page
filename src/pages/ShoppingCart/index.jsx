@@ -7,6 +7,7 @@ import { Wrapper, HeaderWrapper, Empty } from './style'
 import GoodsList from '../Vip/GoodsList'
 import ScrollToTop from '@/components/common/scroll-to-top'
 import { getGoodsList } from '../Vip/store/actionCreators'
+import { statusRecord } from '@/config'
 
 const renderEmpty = () => {
   return (
@@ -36,13 +37,6 @@ const ShoppingCart = (props) => {
     await sleep(1000)
     setGoodData([...new Set(goodData)])
     Toast.show('刷新成功')
-  }
-
-  const statusRecord = {
-    pulling: '用力拉',
-    canRelease: '松开吧',
-    refreshing: '玩命加载中...',
-    complete: '好啦',
   }
 
   async function mockRequest() {  
