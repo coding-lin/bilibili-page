@@ -3,6 +3,7 @@ import { px2rem } from '@/assets/global-style'
 
 export const Wrapper = styled.div`
   width: 100%;
+  padding-bottom: ${px2rem(20)};
   background: rgba(255, 255, 255, 0.1);
   .container {
     column-count: 2;
@@ -14,6 +15,5 @@ export const Wrapper = styled.div`
   .adm-infinite-scroll {
     height: 0;
     background: rgba(255, 255, 255, 0.1);
-    margin-bottom: 2.5rem;
   }
 `
