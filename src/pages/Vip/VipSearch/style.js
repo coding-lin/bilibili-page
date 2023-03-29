@@ -23,6 +23,7 @@ export const HeaderWrapper = styled.div`
 
 export const Empty = styled.div`
   width: 100%;
+  min-height: 100vh;
   background: #fff;
   margin-top: ${px2rem(72)};
   .info {
@@ -40,7 +41,8 @@ export const Empty = styled.div`
 `
 
 export const GoodsWrapper = styled.div`
-  width: 100;
+  width: 100%;
+  min-height: 100vh;
   margin-top: ${px2rem(62)};
   background: ${style["background-color"]};
 `

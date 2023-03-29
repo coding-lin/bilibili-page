@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { px2rem } from '@/assets/global-style'
 
 export const Wrapper = styled.div`
+  min-height: 100vh;
   background-color: rgba(120, 120, 120, 0.1);
 `
 

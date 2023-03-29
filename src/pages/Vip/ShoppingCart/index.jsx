@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom'
 import { Skeleton, PullToRefresh, Toast, InfiniteScroll, DotLoading } from 'antd-mobile'
 import { sleep } from 'antd-mobile/es/utils/sleep'
 import { Wrapper, HeaderWrapper, Empty } from './style'
-import GoodsList from '../Vip/GoodsList'
+import GoodsList from '../GoodsList'
 import ScrollToTop from '@/components/common/scroll-to-top'
-import { getGoodsList } from '../Vip/store/actionCreators'
+import { getGoodsList } from '../store/actionCreators'
 import { statusRecord } from '@/config'
 
 const renderEmpty = () => {
@@ -56,13 +56,13 @@ const ShoppingCart = (props) => {
     return (
       <>
         {hasMore ? (
-          <div style={{marginBottom: '2.5rem'}}>
-            <span>一大波信息向你飞奔过来~</span>
+          <div style={{ marginBottom: "2.5rem" }}>
+            <span style={{ fontSize: "0.7rem" }}>一大波信息向你飞奔过来~</span>
             <DotLoading />
           </div>
         ) : (
-          <div style={{marginBottom: '2.5rem'}}>
-            <span>--- 我是有底线的 ---</span>
+          <div style={{ marginBottom: "2.5rem" }}>
+            <span style={{ fontSize: "0.7rem" }}>--- 我是有底线的 ---</span>
           </div>
         )}
       </>

@@ -3,11 +3,11 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from '@/pages/Home'
 import NotFound from '@/pages/NotFound'
 const HomeSearch = lazy(() => import('@/pages/Home/HomeSearch'))
-const MailBox = lazy(() => import('@/pages/MailBox'))
+const MailBox = lazy(() => import('@/pages/Home/MailBox'))
 const Dynamic = lazy(() => import('@/pages/Dynamic'))
 const Vip = lazy(() => import('@/pages/Vip'))
 const VipSearch = lazy(() => import('@/pages/Vip/VipSearch'))
-const ShoppingCart = lazy(() => import('@/pages/ShoppingCart'))
+const ShoppingCart = lazy(() => import('@/pages/Vip/ShoppingCart'))
 const Mine = lazy(() => import('@/pages/Mine'))
 const Collect = lazy(() => import('@/pages/Mine/Collect'))
 
