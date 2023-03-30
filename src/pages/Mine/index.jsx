@@ -44,15 +44,15 @@ export default function Mine() {
         </Link>
         <Detail>
           <div>
-            <span>1</span>
+            <span>4</span>
             <p>动态</p>
           </div>
           <div>
-            <span>30</span>
+            <span>34</span>
             <p>关注</p>
           </div>
           <div>
-            <span>0</span>
+            <span>1</span>
             <p>粉丝</p>
           </div>
         </Detail>

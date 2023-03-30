@@ -52,3 +52,47 @@ export const images = [
     img: "https://dogefs.s3.ladydaily.com/~/source/wallhaven/small/o3/o3edql.jpg",
   },
 ];
+
+// 我的空间分享图标
+export const linkList = [
+  {
+    id: 1,
+    name: "微信",
+    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64258f7bdf210.png",
+  },
+  {
+    id: 2,
+    name: "朋友圈",
+    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64258f7bdf280.png",
+  },
+  {
+    id: 3,
+    name: "QQ",
+    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64258f7be7e99.png",
+  },
+  {
+    id: 4,
+    name: "QQ空间",
+    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64258f7be4350.png",
+  },
+  {
+    id: 5,
+    name: "图片分享",
+    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64258f7be0b66.png",
+  },
+  {
+    id: 6,
+    name: "微博",
+    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64259165829b6.png",
+  },
+  {
+    id: 7,
+    name: "复制链接",
+    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64259165827d4.png",
+  },
+  {
+    id: 8,
+    name: "更多",
+    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/642591657ee21.png",
+  },
+];

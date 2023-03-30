@@ -9,19 +9,26 @@
     height: 3rem;
     background: #fff;
     z-index: 999;
-    border-bottom: 0.05rem solid rgba(20, 20, 20, 0.2);
+    border-bottom: 0.05rem solid #eeeeee;
     i {
       position: absolute;
       top: 1rem;
       left: 0.9rem;
       font-size: 1rem;
     }
-    h2 {
+    span {
       position: absolute;
-      left: 3rem;
+      left: 2.8rem;
       font-size: 0.8rem;
-      font-weight: bold;
       line-height: 3rem;
     }
+  }
+  .adm-tabs {
+    margin-top: 3.05rem;
+    --active-line-color: rgb(244, 125, 145);
+  }
+  .adm-tabs-tab-active {
+    color: #000;
+    font-weight: 500;
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Tabs } from "antd-mobile";
 import "./index.scss";
 
 const Collect = () => {
@@ -11,8 +12,16 @@ const Collect = () => {
           className="iconfont icon-fanhuijiantou"
           onClick={() => navigate(-1)}
         />
-        <h2>我的收藏</h2>
+        <span>我的收藏</span>
       </div>
+      <Tabs defaultActiveKey="goods">
+        <Tabs.Tab title="视频" key="videos">
+          视频
+        </Tabs.Tab>
+        <Tabs.Tab title="商品" key="goods">
+          商品
+        </Tabs.Tab>
+      </Tabs>
     </div>
   );
 };
