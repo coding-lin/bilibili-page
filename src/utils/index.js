@@ -17,7 +17,8 @@ export const isPath = (path) => {
     pathRes[1] === 'mail-box' ||
     pathRes[1] === 'search' ||
     pathRes[1] === 'vipsearch' ||
-    pathRes[1] === 'collect'
+    pathRes[1] === 'collect' ||
+    pathRes[1] === 'space'
   ) return true
   return false
 }

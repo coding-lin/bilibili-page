@@ -20,31 +20,31 @@ export default function Mine() {
       unmountOnExit
     >
       <Wrapper>
-        <HeaderWrapper>
-          <Link to="/mine">
+        <Link to="/space">
+          <HeaderWrapper>
             <img src={avatar} alt="" />
-          </Link>
-          <Author>
-            <div className='author-name'>
-              <span>dafenqi616</span>
-              <span className='level'>Lv4</span>
-            </div>
-            <div className='is-vip'>
-              <span>正式会员</span>
-            </div>
-            <div className='property'>
-              <span>B币: 0.0</span>
-              <span>硬币: 470</span>
-            </div>
-          </Author>
-          <Icon>
-            <span>空间</span>
-            <i className='iconfont icon-xiangyoujiantou'></i>
-          </Icon>
-        </HeaderWrapper>
+            <Author>
+              <div className='author-name'>
+                <span>dafenqi616</span>
+                <span className='level'>Lv4</span>
+              </div>
+              <div className='is-vip'>
+                <span>正式会员</span>
+              </div>
+              <div className='property'>
+                <span>B币: 0.0</span>
+                <span>硬币: 470</span>
+              </div>
+            </Author>
+            <Icon>
+              <span>空间</span>
+              <i className='iconfont icon-xiangyoujiantou'></i>
+            </Icon>
+          </HeaderWrapper>
+        </Link>
         <Detail>
           <div>
-            <span className='data'>1</span>
+            <span>1</span>
             <p>动态</p>
           </div>
           <div>

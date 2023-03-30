@@ -1,0 +1,116 @@
+.bg-img {
+  position: relative;
+  height: 9.4rem;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.back-icon {
+  position: absolute;
+  top: 1.6rem;
+  left: 0.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+  .iconfont {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.55rem;
+    color: #fff;
+    font-size: 0.95rem;
+  }
+}
+.sousuo-icon {
+  position: absolute;
+  top: 1.6rem;
+  right: 2.9rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+  .iconfont {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.35rem;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+}
+.info {
+  width: 100%;
+  height: 9rem;
+  background: #fff;
+  .avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    left: 1.5rem;
+    top: 8.2rem;
+    border-radius: 50%;
+    z-index: 100;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  .detail {
+    position: relative;
+    width: 9rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 8rem;
+    color: #000;
+    div:first-child:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 33%;
+      top: 0.8rem;
+      width: 0.01rem;
+      height: 1rem;
+      background-color: #000;
+    }
+    div:nth-child(2):after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 66%;
+      top: 0.8rem;
+      width: 0.1rem;
+      height: 1rem;
+      background-color: #000;
+    }
+    span {
+      font-size: 0.85rem;
+    }
+    p {
+      font-size: 0.6rem;
+    }
+  }
+  .edit {
+    width: 9.5rem;
+    height: 1.8rem;
+    margin-left: 7.65rem;
+    margin-top: 0.1rem;
+    border-radius: 0.15rem;
+    border: 0.1rem solid rgb(247, 163, 163);
+    line-height: 1.65rem;
+    text-align: center;
+    span {
+      font-size: 0.7rem;
+      color: #000;
+    }
+  }
+}
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(50,50,50,0.06)
+}
