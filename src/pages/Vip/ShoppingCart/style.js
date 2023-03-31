@@ -65,7 +65,7 @@ export const Empty = styled.div`
       margin-left: ${px2rem(-55)};
       border-radius: ${px2rem(14)};
       font-size: ${px2rem(14)};
-      background-color: Silver;
+      background-color: rgba(227, 229, 231);
     }
   }
 `

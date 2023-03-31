@@ -1,5 +1,7 @@
-.wrapper {
+.collect-container {
   width: 100%;
+  background: rgb(241, 242, 244);
+  min-height: 100vh;
   .header {
     position: fixed;
     top: 0;
@@ -25,10 +27,51 @@
   }
   .adm-tabs {
     margin-top: 3.05rem;
-    --active-line-color: rgb(244, 125, 145);
+    background-color: #fff;
+    --active-line-color: rgb(255, 93, 146);
+  }
+  .adm-tabs-content {
+    margin: 0;
+    padding: 0;
+    background: rgb(241, 242, 244);
   }
   .adm-tabs-tab-active {
     color: #000;
     font-weight: 500;
+  }
+}
+.nothing {
+  position: relative;
+  width: 100%;
+  height: 13.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 0.05rem solid rgba(200, 200, 200, 0.36);
+  img {
+    width: 7.6rem;
+    height: 8.25rem;
+    margin: 0 auto;
+  }
+  p {
+    font-size: 0.7rem;
+    left: -50%;
+    right: -50%;
+    bottom: 1.8rem;
+  }
+  span {
+    position: absolute;
+    bottom: -0.7rem;
+    left: 50%;
+    right: 50%;
+    width: 5.5rem;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    margin-top: -2.75rem;
+    margin-left: -2.75rem;
+    border-radius: 0.7rem;
+    font-size: 0.7rem;
+    background-color: rgba(227, 229, 231);
   }
 }

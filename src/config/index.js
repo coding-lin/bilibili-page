@@ -6,6 +6,10 @@ export const avatar =
 export const empty =
   "https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f016ae5c9.png";
 
+// 购物车收藏为空图片
+export const nothing =
+  "https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f061dc214.png";
+
 // 会员购页面轮播文字
 export const textList = [
   { id: 1, name: "CHE手办原型创作大赛 >" },

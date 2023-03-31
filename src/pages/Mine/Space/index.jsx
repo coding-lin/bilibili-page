@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Tabs, Popup, Toast } from "antd-mobile";
+import { Tabs, Popup, Toast, ImageViewer } from "antd-mobile";
 import { MoreOutline } from "antd-mobile-icons";
 import { avatar, linkList } from "@/config";
 import "./index.scss";
@@ -8,6 +8,8 @@ import "./index.scss";
 const Space = () => {
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
+  const [showImage, setShowImage] = useState(false);
+  const [showDetail, setShowDetail] = useState(false);
 
   return (
     <>
@@ -17,9 +19,21 @@ const Space = () => {
           onClick={() => navigate(-1)}
         />
       </div>
-      <div className="sousuo-icon" onClick={() => Toast.show("功能待完善")}>
+      <div
+        className="sousuo-icon"
+        onClick={() => {
+          setShowImage(true);
+        }}
+      >
         <i className="iconfont icon-sousuo" />
       </div>
+      <ImageViewer
+        image="https://img01.anzhiy.cn/useruploads/113/2023/03/31/642688586e8a9.jpg"
+        visible={showImage}
+        onClose={() => {
+          setShowImage(false);
+        }}
+      />
       <MoreOutline
         className="share"
         onClick={() => {
@@ -67,7 +81,17 @@ const Space = () => {
             src="https://img01.anzhiy.cn/useruploads/113/2023/03/30/64259ca543116.png"
             alt=""
           />
+          <span onClick={() => setShowDetail(!showDetail)}>
+            {showDetail ? "收起" : "详情"}
+          </span>
         </div>
+        {showDetail ? (
+          <div className="details">
+            <span>热爱生活 记得快乐</span>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
       <Tabs defaultActiveKey="home">
         <Tabs.Tab title="主页" key="home">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
+import { Toast } from 'antd-mobile'
 import { avatar } from '@/config'
 import { Wrapper, HeaderWrapper, Author, Icon, Detail, Img, Container } from './style'
 
@@ -60,26 +61,20 @@ export default function Mine() {
           <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416efc82bb64.png" alt="" />
         </Img>
         <Container>
-          <Link to="/cache">
-            <div className="img-tab">
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b5d8e.png" alt="" />
-            </div>
-          </Link>
-          <Link to="/history">
-            <div className="img-tab">
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b648a.png" alt="" />
-            </div>
-          </Link>
+          <div className="img-tab" onClick={() => Toast.show('功能待实现')}>
+            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b5d8e.png" alt="" />
+          </div>
+          <div className="img-tab" onClick={() => Toast.show('功能待实现')}>
+            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b648a.png" alt="" />
+          </div>
           <Link to="/collect">
             <div className="img-tab">
               <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b5dd2.png" alt="" />
             </div>
           </Link>
-          <Link to="/wait">
-            <div className="img-tab">
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b621e.png" alt="" />
-            </div>
-          </Link>
+          <div className="img-tab" onClick={() => Toast.show('功能待实现')}>
+            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b621e.png" alt="" />
+          </div>
         </Container>
       </Wrapper>
     </CSSTransition>
