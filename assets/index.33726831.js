@@ -1,1 +1,0 @@
-import{r}from"./index.effba7ee.js";var a=function(t){return function(n,o){var e=r.exports.useRef(!1);t(function(){return function(){e.current=!1}},[]),t(function(){if(!e.current)e.current=!0;else return n()},o)}},u=!!(typeof window!="undefined"&&window.document&&window.document.createElement),f=u,c=f?r.exports.useLayoutEffect:r.exports.useEffect,i=c;export{a as c,i as u};
