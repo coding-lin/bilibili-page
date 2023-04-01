@@ -1,4 +1,4 @@
-import{s as r,p as i,R as c,r as d,j as a,d as e,A as o}from"./index.86ebb8f3.js";import{_ as m}from"./index.b6a23e78.js";import{b as p}from"./bilibili.03841b80.js";const u=r.div`
+import{s as d,p as i,r as g,j as a,d as e,y as p}from"./index.c27d7abc.js";import{_ as m}from"./index.4b4a2164.js";import{b as h}from"./bilibili.03841b80.js";const k=d.div`
   width: 100%;
   padding-bottom: ${i(20)};
   background: rgba(255, 255, 255, 0.1);
@@ -13,7 +13,7 @@ import{s as r,p as i,R as c,r as d,j as a,d as e,A as o}from"./index.86ebb8f3.js
     height: 0;
     background: rgba(255, 255, 255, 0.1);
   }
-`,h=r.div`
+`,f=d.div`
   .good-box {
     width: 100%;
     break-inside: avoid;
@@ -85,4 +85,4 @@ import{s as r,p as i,R as c,r as d,j as a,d as e,A as o}from"./index.86ebb8f3.js
       }
     }
   }
-`,g=({good:n})=>{const[s,t]=d.exports.useState(!1),l=()=>{t(!s)};return a(h,{children:e("div",{className:"good-box",children:[a("div",{className:"good-img",children:a(m,{placeholder:a("img",{width:"100%",height:"100%",src:p,alt:""}),children:a("img",{src:n.img})})}),e("div",{className:"title",children:[n.info?a("span",{children:n.info}):"",a("span",{children:n.title})]}),e("div",{className:"rank_time",children:[a("div",{className:"rank",children:n.rank?a("span",{children:n.rank}):""}),a("div",{className:"time",children:n.time?a("span",{children:n.time}):""})]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",n.price]}),e("div",{className:"coll_num",children:[a("i",{className:o("iconfont",{"icon-aixin3":!s},{"icon-aixin1":s},{active:s}),onClick:()=>l()}),a("span",{children:s?n.collection+1:n.collection})]})]})]},n.id)})};var k=c.memo(g);export{k as G,u as W};
+`,v=s=>{const{good:n,addDispatch:r}=s,[o,t]=g.exports.useState(!1),c=l=>{t(!o),r(l)};return a(f,{children:e("div",{className:"good-box",children:[a("div",{className:"good-img",children:a(m,{placeholder:a("img",{width:"100%",height:"100%",src:h,alt:""}),children:a("img",{src:n.img,alt:""})})}),e("div",{className:"title",children:[n.info?a("span",{children:n.info}):"",a("span",{children:n.title})]}),e("div",{className:"rank_time",children:[a("div",{className:"rank",children:n.rank?a("span",{children:n.rank}):""}),a("div",{className:"time",children:n.time?a("span",{children:n.time}):""})]}),e("div",{className:"price_coll",children:[e("span",{children:["\xA5",n.price]}),e("div",{className:"coll_num",children:[a("i",{className:p("iconfont",{"icon-aixin1":o},{"icon-aixin3":!o},{active:o}),onClick:()=>c(n.id)}),a("span",{children:o?n.collection+1:n.collection})]})]})]})})};export{v as G,k as W};

@@ -1,0 +1,1 @@
+import{C as e,B as o,D as n,E as a}from"./index.c27d7abc.js";import{a as r,b as L}from"./request.bba7462e.js";const c=t=>({type:e,data:t}),G=t=>({type:o,data:t}),g=t=>({type:n,data:t}),d=t=>({type:a,id:t}),_=()=>t=>{r().then(s=>{t(c(s))})},p=()=>t=>{L().then(s=>{t(G(s)),t(g(!1))})},A=t=>s=>{s(d(t))};export{p as a,A as b,_ as g};
