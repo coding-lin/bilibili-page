@@ -3,14 +3,14 @@ import propTypes from "prop-types";
 import { Wrapper } from './style'
 import GoodsItem from '@/components/GoodsItem';
 
-export default function GoodsList({goodData}) {
+export default function GoodsList({ goodData, addDispatch }) {
   
   return (
     <Wrapper>
       <div className="container">
         {
-          goodData && goodData.map((good, index) => (
-            <GoodsItem key={index} good={good} />
+          goodData && goodData.map(good => (
+            <GoodsItem key={good.id} good={good} addDispatch={addDispatch} />
           ))
         }
       </div>

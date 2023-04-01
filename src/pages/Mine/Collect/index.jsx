@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Tabs, Toast, PullToRefresh } from "antd-mobile";
 import { sleep } from "antd-mobile/es/utils/sleep";
+import { getGoodsList } from "@/pages/Vip/store/actionCreators";
+import { connect } from "react-redux";
 import { statusRecord, nothing } from "@/config";
 import "./index.scss";
 
@@ -24,8 +26,16 @@ async function doRefresh() {
   Toast.show("刷新成功");
 }
 
-const Collect = () => {
+const Collect = (props) => {
+  const { goodsList, enterLoading, collectGoodsList } = props;
+  const { getGoodListDispatch } = props;
   const navigate = useNavigate();
+  console.log(collectGoodsList);
+
+  useEffect(() => {
+    getGoodListDispatch();
+  }, []);
+
   return (
     <div className="collect-container">
       <div className="header">
@@ -52,4 +62,20 @@ const Collect = () => {
   );
 };
 
-export default Collect;
+const mapStateToProps = (state) => {
+  return {
+    enterLoading: state.vip.enterLoading,
+    goodsList: state.vip.goodsList,
+    collectGoodsList: state.vip.collectGoodsList,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getGoodListDispatch() {
+      dispatch(getGoodsList());
+    },
+  };
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(React.memo(Collect));

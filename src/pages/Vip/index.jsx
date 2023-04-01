@@ -8,7 +8,7 @@ import { HeaderWrapper, Wrapper, ImgTab } from './style'
 import { Skeleton, PullToRefresh, Toast, InfiniteScroll, DotLoading } from 'antd-mobile'
 import { sleep } from 'antd-mobile/es/utils/sleep'
 import { connect } from 'react-redux'
-import { getBannersList, getGoodsList } from './store/actionCreators'
+import { getBannersList, getGoodsList, addCollectGoods } from './store/actionCreators'
 import { textList, searchList, statusRecord } from '@/config'
 
 const Vip = (props) => {
@@ -17,7 +17,7 @@ const Vip = (props) => {
   const [count, setCount] = useState(0)
   const navigate = useNavigate()
   const { bannersList, goodsList, enterLoading } = props
-  const { getBannerListDispatch, getGoodListDispatch } = props
+  const { getBannerListDispatch, getGoodListDispatch, addDispatch } = props
 
   useEffect(() => {
     getBannerListDispatch()
@@ -34,7 +34,16 @@ const Vip = (props) => {
     if (count >= 5) return [];
     await sleep(1000);
     setCount(count => count + 1);
-    return goodsList;
+    return goodsList.map(item => {
+      if (count >= 1) {
+        return {
+          ...item,
+          id: item.id = item.id + goodsList.length  
+        }
+      } else {
+        return {...item}
+      }
+    });
   }
 
   async function loadMore() {
@@ -144,7 +153,7 @@ const Vip = (props) => {
             onRefresh={doRefresh}
             renderText={status => <div>{statusRecord[status]}</div>}
           >
-            <GoodsList goodData={goodData} />
+            <GoodsList goodData={goodData} addDispatch={addDispatch} />
             <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
               <InfiniteScrollContent hasMore={hasMore} />
             </InfiniteScroll>
@@ -172,6 +181,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     getGoodListDispatch() {
       dispatch(getGoodsList())
+    },
+    addDispatch(id) {
+      dispatch(addCollectGoods(id))
     }
   }
 }

@@ -4,16 +4,18 @@ import classnames from 'classnames'
 import bilibili from '@/assets/images/bilibili.jpeg'
 import { Wrapper } from './style'
 
-const GoodsItem = ({good}) => {
-  const [isColl, setIsColl] = useState(false)
+const GoodsItem = (props) => {
+  const { good, addDispatch } = props;
+  const [ isLike, setIsLike ] = useState(false);
 
-  const changeColl = () => {
-    setIsColl(!isColl)
+  const changeLike = (id) => {
+    setIsLike(!isLike);
+    addDispatch(id);
   }
 
   return (
     <Wrapper>
-      <div className="good-box" key={good.id}>
+      <div className="good-box">
         <div className="good-img">
           <LazyLoad
             placeholder={
@@ -24,7 +26,7 @@ const GoodsItem = ({good}) => {
               alt=""
             />}
           >
-            <img src={good.img} />
+            <img src={good.img} alt="" />
           </LazyLoad>
         </div>
         <div className="title">
@@ -45,13 +47,13 @@ const GoodsItem = ({good}) => {
             <i
               className={classnames(
                 'iconfont', 
-                {'icon-aixin3': !isColl}, 
-                {'icon-aixin1': isColl}, 
-                {'active': isColl}
+                {'icon-aixin1': isLike},
+                {'icon-aixin3': !isLike},
+                {'active': isLike}
               )}
-              onClick={() => changeColl()}
+              onClick={() => changeLike(good.id)}
             />
-            <span>{isColl ? good.collection + 1 : good.collection}</span>
+            <span>{isLike ? good.collection + 1 : good.collection}</span>
           </div>
         </div>
       </div>
@@ -59,5 +61,4 @@ const GoodsItem = ({good}) => {
   )
 }
 
-// 性能优化
-export default React.memo(GoodsItem)
+export default GoodsItem

@@ -20,6 +20,16 @@ const changeLoading = (data) => ({
   data
 })
 
+const addCollect = (id) => ({
+  type: actionTypes.ADD_COLLECT_GOODS,
+  id
+})
+
+const delCollect = (id) => ({
+  type: actionTypes.DEL_COLLECT_GOODS,
+  id
+})
+
 export const getBannersList = () => {
   return (dispatch) => {
     getBannersListRequest().then((data) => {
@@ -34,5 +44,17 @@ export const getGoodsList = () => {
       dispatch(changeGoodsList(data))
       dispatch(changeLoading(false))
     })
+  }
+}
+
+export const addCollectGoods = (id) => {
+  return (dispatch) => {
+    dispatch(addCollect(id))
+  }
+}
+
+export const delCollectGoods = (id) => {
+  return (dispatch) => {
+    dispatch(delCollect(id))
   }
 }
