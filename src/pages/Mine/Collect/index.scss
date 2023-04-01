@@ -2,6 +2,7 @@
   width: 100%;
   background: rgb(241, 242, 244);
   min-height: 100vh;
+  padding-bottom: 0.5rem;
   .header {
     position: fixed;
     top: 0;
@@ -31,8 +32,7 @@
     --active-line-color: rgb(255, 93, 146);
   }
   .adm-tabs-content {
-    margin: 0;
-    padding: 0;
+    padding: 0.1rem;
     background: rgb(241, 242, 244);
   }
   .adm-tabs-tab-active {

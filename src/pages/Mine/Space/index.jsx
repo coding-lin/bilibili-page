@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Tabs, Popup, Toast, ImageViewer } from "antd-mobile";
+import { Tabs, Toast, ImageViewer } from "antd-mobile";
 import { MoreOutline } from "antd-mobile-icons";
-import { avatar, linkList } from "@/config";
+import SharePopup from "@/components/SharePopup";
+import { avatar } from "@/config";
 import "./index.scss";
 
 const Space = () => {
@@ -107,33 +108,7 @@ const Space = () => {
           收藏
         </Tabs.Tab>
       </Tabs>
-      <Popup
-        visible={visible}
-        onMaskClick={() => {
-          setVisible(false);
-        }}
-        bodyStyle={{ height: "30vh" }}
-      >
-        <div className="link">
-          <span>分享</span>
-          <div className="icon-container">
-            {linkList.map((item) => (
-              <div key={item.id} className="icon">
-                <img src={item.icon} alt="" />
-                <p>{item.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div
-          className="bottom"
-          onClick={() => {
-            setVisible(false);
-          }}
-        >
-          <span>取消</span>
-        </div>
-      </Popup>
+      <SharePopup visible={visible} setVisible={setVisible} />
     </>
   );
 };
