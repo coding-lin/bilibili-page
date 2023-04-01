@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Popup } from "antd-mobile";
+import { Popup, Toast } from "antd-mobile";
 import SharePopup from "@/components/SharePopup";
 import { MoreOutline } from "antd-mobile-icons";
 import "./index.scss";
 
-const CollectGoods = ({ data }) => {
+const CollectGoods = ({ data, delDispatch }) => {
   const [visible, setVisible] = useState(false);
   const [share, setShare] = useState(false);
 
@@ -13,6 +13,12 @@ const CollectGoods = ({ data }) => {
     setVisible(false);
     setShare(true);
   };
+
+  const cancleColl = (id) => {
+    delDispatch(id);
+    Toast.show('取消成功');
+    setVisible(false);
+  }
 
   return (
     <div className="coll-container">
@@ -52,7 +58,7 @@ const CollectGoods = ({ data }) => {
         <div className="share-btn" onClick={shareClick}>
           <span>分享</span>
         </div>
-        <div className="cancle-coll">
+        <div className="cancle-coll" onClick={() => cancleColl(data.id)}>
           <span>取消收藏</span>
         </div>
         <div

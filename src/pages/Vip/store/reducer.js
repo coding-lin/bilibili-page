@@ -36,8 +36,10 @@ const reducer = (state=defaultState, action) => {
         collectGoodsList: addGoodsList,
       }
     case actionTypes.DEL_COLLECT_GOODS:
+      let delGoodsList = state.collectGoodsList.filter(item => item.id !== action.id);
       return {
-        
+        ...state,
+        collectGoodsList: delGoodsList,
       }
     default:
       return state;

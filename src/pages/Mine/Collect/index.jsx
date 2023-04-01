@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Tabs } from "antd-mobile";
-import { getGoodsList } from "@/pages/Vip/store/actionCreators";
+import { getGoodsList, delCollectGoods } from "@/pages/Vip/store/actionCreators";
 import CollectGoods from "@/components/CollectGoods";
 import { connect } from "react-redux";
 import { nothing } from "@/config";
@@ -21,7 +21,7 @@ const Empty = () => {
 
 const Collect = (props) => {
   const { goodsList, enterLoading, collectGoodsList } = props;
-  const { getGoodListDispatch } = props;
+  const { getGoodListDispatch, delDispatch } = props;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -42,10 +42,14 @@ const Collect = (props) => {
           <CollectVideos />
         </Tabs.Tab>
         <Tabs.Tab title="商品" key="goods">
-          {collectGoodsList ? (
+          {collectGoodsList.length > 0 ? (
             <>
               {collectGoodsList.map((item, index) => (
-                <CollectGoods key={index} data={item} />
+                <CollectGoods
+                  key={index}
+                  data={item}
+                  delDispatch={delDispatch}
+                />
               ))}
             </>
           ) : (
@@ -69,6 +73,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getGoodListDispatch() {
       dispatch(getGoodsList());
+    },
+    delDispatch(id) {
+      dispatch(delCollectGoods(id));
     },
   };
 };
