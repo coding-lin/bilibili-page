@@ -5,6 +5,7 @@ import SearchBox from '@/components/common/search-box'
 import { useNavigate } from 'react-router-dom'
 import { Container, HeaderWrapper, Empty, GoodsWrapper, EnterLoading } from './style'
 import { changeEnterLoading, getGoodsList } from './store/actionCreators'
+import { addCollectGoods } from '../store/actionCreators'
 import { Wrapper } from '@/pages/Vip/GoodsList/style'
 import GoodsItem from '@/components/GoodsItem'
 import { empty } from '@/config'
@@ -12,7 +13,7 @@ import { empty } from '@/config'
 const VipSearch = (props) => {
   const navigate = useNavigate()
   const { enterLoading, goodsList } = props
-  const { changeEnterLoadingDispatch, getGoodsListDispatch } = props
+  const { changeEnterLoadingDispatch, getGoodsListDispatch, addDispatch } = props
   const [query, setQuery] = useState('')
 
   const handleQuery = (q) => {
@@ -34,7 +35,7 @@ const VipSearch = (props) => {
         {
           goodsList.map(good => {
             return (
-              <GoodsItem key={good.id} good={good} />
+              <GoodsItem key={good.id} good={good} addDispatch={addDispatch} />
             )
           })
         }
@@ -92,6 +93,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     getGoodsListDispatch(query) {
       dispatch(getGoodsList(query))
+    },
+    addDispatch(id) {
+      dispatch(addCollectGoods(id))
     }
   }
 }

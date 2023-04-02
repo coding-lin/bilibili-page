@@ -6,7 +6,7 @@ import { sleep } from 'antd-mobile/es/utils/sleep'
 import { Wrapper, HeaderWrapper, Empty } from './style'
 import GoodsList from '../GoodsList'
 import ScrollToTop from '@/components/common/scroll-to-top'
-import { getGoodsList } from '../store/actionCreators'
+import { getGoodsList, addCollectGoods } from '../store/actionCreators'
 import { statusRecord, nothing } from '@/config'
 
 const renderEmpty = () => {
@@ -27,7 +27,7 @@ const ShoppingCart = (props) => {
   const [count, setCount] = useState(0)
   const navigate = useNavigate()
   const { goodsList, enterLoading } = props
-  const { getGoodListDispatch } = props
+  const { getGoodListDispatch, addDispatch } = props
 
   useEffect(() => {
     getGoodListDispatch()
@@ -85,7 +85,7 @@ const ShoppingCart = (props) => {
           onRefresh={doRefresh}
           renderText={status => <div>{statusRecord[status]}</div>}
         >
-          <GoodsList goodData={goodData} />
+          <GoodsList goodData={goodData} addDispatch={addDispatch} />
           <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
             <InfiniteScrollContent hasMore={hasMore} />
           </InfiniteScroll>
@@ -108,6 +108,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getGoodListDispatch() {
       dispatch(getGoodsList())
+    },
+    addDispatch(id) {
+      dispatch(addCollectGoods(id))
     }
   }
 }
