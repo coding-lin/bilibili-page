@@ -60,6 +60,14 @@ export const Wrapper = styled.div`
         bottom: ${px2rem(4)};
         left: ${px2rem(4)};
       }
+      .video-pop {
+        position: absolute;
+        bottom: ${px2rem(8)};
+        right: ${px2rem(6)};
+        font-size: ${px2rem(18)};
+        color: rgb(159, 157, 159);
+        transform: rotate(90deg);
+      }
     }
   }
 `

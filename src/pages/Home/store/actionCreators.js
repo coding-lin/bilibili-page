@@ -14,11 +14,22 @@ const changeEnterLoading = (data) => ({
   data
 })
 
+const addVideos = (id) => ({
+  type: actionTypes.ADD_WAIT_VIDEOS,
+  id
+})
+
 export const getVideosList = () => {
   return (dispatch) => {
     getVideosListRequest().then((data) => {
       dispatch(changeVideosList(data))
       dispatch(changeEnterLoading(false))
     })
+  }
+}
+
+export const addWaitVideos = (id) => {
+  return (dispatch) => {
+    dispatch(addVideos(id))
   }
 }

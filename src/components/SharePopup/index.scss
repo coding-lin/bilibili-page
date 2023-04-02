@@ -1,13 +1,13 @@
 .link {
-  margin-top: 2.7vh;
+  margin-top: 0.9rem;
   border-bottom: 0.05rem solid rgba(0, 0, 0, 0.15);
   span {
-    margin-left: 3vh;
-    font-size: 2.1vh;
+    margin-left: 1rem;
+    font-size: 0.7rem;
     color: #000;
   }
   .icon-container {
-    height: 15.6vh;
+    height: 5.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,16 +15,16 @@
     overflow-y: hidden;
     text-align: center;
     .icon {
-      width: 10.5vh;
-      height: 10.5vh;
-      padding: 0.9vh;
+      width: 3.5rem;
+      height: 3.5rem;
+      padding: 0.3rem;
       img {
         width: 100%;
       }
       p {
-        width: 10.5vh;
-        padding-right: 1.8vh;
-        font-size: 1.8vh;
+        width: 3.5rem;
+        padding-right: 0.6rem;
+        font-size: 0.6rem;
         color: #000;
       }
     }
@@ -35,11 +35,11 @@
 }
 .bottom {
   width: 100%;
-  height: 9vh;
+  height: 3rem;
+  line-height: 3rem;
   text-align: center;
-  line-height: 9vh;
   span {
-    font-size: 2.7vh;
+    font-size: 0.9rem;
     color: #000;
   }
 }

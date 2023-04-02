@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LazyLoad from 'react-lazyload'
 import bilibili from '@/assets/images/bilibili.gif'
+import { Popup, Toast } from "antd-mobile"
+import { MoreOutline, ClockCircleOutline } from "antd-mobile-icons"
 import { Wrapper } from './style'
+import './index.scss'
 
-const VideoItem = ({video}) => {
+const VideoItem = ({video, addDispatch}) => {
+  const [visible, setVisible] = useState(false)
+
+  const addVideo = (id) => {
+    addDispatch(id)
+    Toast.show('添加成功')
+    setVisible(false)
+  }
 
   return (
     <Wrapper>
@@ -35,8 +45,29 @@ const VideoItem = ({video}) => {
           <div className='up'>
             {video.up}
           </div>
+          <MoreOutline
+            className="video-pop"
+            onClick={() => {
+              setVisible(true)
+            }}
+          />
         </div>
       </div>
+      <Popup
+        visible={visible}
+        onMaskClick={() => {
+          setVisible(false)
+        }}
+        bodyStyle={{ height: "5rem" }}
+      >
+        <div className="add-wait" onClick={() => addVideo(video.id)}>
+          <ClockCircleOutline className='wait-icon' />
+          <span>添加至稍后再看</span>
+        </div>
+        <div className="video-pop-bottom" onClick={() => setVisible(false)}>
+          <span>取消</span>
+        </div>
+      </Popup>
     </Wrapper>
   )
 }

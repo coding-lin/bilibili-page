@@ -1,7 +1,9 @@
 import * as actionTypes from './constants'
+import { unique } from '@/utils'
 
 const defaultState = {
   videosList: [],
+  waitVideosList: [],
   enterLoading: true
 }
 
@@ -16,6 +18,17 @@ const reducer = (state=defaultState, action) => {
       return {
         ...state,
         videosList: action.data
+      }
+    case actionTypes.ADD_WAIT_VIDEOS:
+      let addVideosList = state.waitVideosList;
+      state.videosList.map(item => {
+        if (item.id === action.id) {
+          addVideosList.unshift(item);
+        }
+      })
+      return {
+        ...state,
+        waitVideosList: unique(addVideosList)
       }
     default:
       return state;

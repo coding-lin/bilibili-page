@@ -11,7 +11,7 @@ const SharePopup = ({visible, setVisible}) => {
       onMaskClick={() => {
         setVisible(false);
       }}
-      bodyStyle={{ height: "30vh" }}
+      bodyStyle={{ height: "10rem" }}
     >
       <div className="link">
         <span>分享</span>

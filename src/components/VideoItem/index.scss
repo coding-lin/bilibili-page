@@ -1,0 +1,25 @@
+.add-wait {
+  position: relative;
+  height: 2.45rem;
+  line-height: 2.45rem;
+  border-bottom: 0.05rem solid #eee;
+  .wait-icon {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.4rem;
+    font-size: 0.85rem;
+  }
+  span {
+    padding-left: 1.5rem;
+    font-size: 0.75rem;
+  }
+}
+.video-pop-bottom {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  span {
+    color: #000;
+    font-size: 0.75rem;
+  }
+}
