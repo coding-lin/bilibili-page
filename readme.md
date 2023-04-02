@@ -8,7 +8,7 @@
 
 - `yarn start`
 
-## React + Redux 仿写哔哩哔哩移动端首页+会员购页面
+## React + Redux 仿哔哩哔哩 App 首页+会员购页面+我的页面
 
 ### 亮眼之处
 
@@ -53,6 +53,22 @@ import bilibili from "@/assets/images/bilibili.jpeg";
 >
   <img src={good.img} />
 </LazyLoad>;
+```
+
+三、添加首页视频以及收藏会员购商品时对数组对象进行去重操作，去重函数如下：
+
+```js
+export function unique(tempArr) {
+  let result = [];
+  let obj = {};
+  for (let i = 0; i < tempArr.length; i++) {
+    if (!obj[tempArr[i].id]) {
+      result.push(tempArr[i]);
+      obj[tempArr[i].id] = true;
+    }
+  }
+  return result;
+}
 ```
 
 ### 遇到的问题及解决方法
