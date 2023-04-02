@@ -44,9 +44,9 @@ const Collect = (props) => {
         <Tabs.Tab title="商品" key="goods">
           {collectGoodsList.length > 0 ? (
             <>
-              {collectGoodsList.map((item, index) => (
+              {collectGoodsList.map((item) => (
                 <CollectGoods
-                  key={index}
+                  key={item.id}
                   data={item}
                   delDispatch={delDispatch}
                 />

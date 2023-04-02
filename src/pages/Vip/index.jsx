@@ -26,7 +26,6 @@ const Vip = (props) => {
 
   async function doRefresh() {
     await sleep(1000)
-    setGoodData([...new Set(goodData)])
     Toast.show('刷新成功')
   }
 

@@ -36,3 +36,16 @@ export const debounce = (func, delay) => {
       }, delay);
   };
 };
+
+// 数组对象去重
+export function unique(tempArr) {
+  let result = [];
+  let obj = {};
+  for (let i = 0; i < tempArr.length; i++) {
+    if (!obj[tempArr[i].id]) {
+      result.push(tempArr[i]);
+      obj[tempArr[i].id] = true;
+    };
+  };
+  return result;
+};

@@ -53,7 +53,7 @@ const CollectGoods = ({ data, delDispatch }) => {
         onMaskClick={() => {
           setVisible(false);
         }}
-        bodyStyle={{ height: "7rem" }}
+        bodyStyle={{ height: "7.6rem" }}
       >
         <div className="share-btn" onClick={shareClick}>
           <span>分享</span>

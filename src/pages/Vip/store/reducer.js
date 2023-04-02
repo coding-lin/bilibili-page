@@ -1,4 +1,5 @@
 import * as actionTypes from './constants'
+import { unique } from '@/utils'
 
 const defaultState = {
   bannersList: [],
@@ -27,13 +28,13 @@ const reducer = (state=defaultState, action) => {
     case actionTypes.ADD_COLLECT_GOODS:
       let addGoodsList = state.collectGoodsList;
       state.goodsList.map(item => {
-        if (item.id === action.id && addGoodsList.indexOf(item) === -1) {
+        if (item.id === action.id) {
           addGoodsList.unshift(item);
         }
       })
       return {
         ...state,
-        collectGoodsList: addGoodsList,
+        collectGoodsList: unique(addGoodsList),
       }
     case actionTypes.DEL_COLLECT_GOODS:
       let delGoodsList = state.collectGoodsList.filter(item => item.id !== action.id);
