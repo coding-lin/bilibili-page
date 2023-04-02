@@ -30,6 +30,12 @@ const reducer = (state=defaultState, action) => {
         ...state,
         waitVideosList: unique(addVideosList)
       }
+    case actionTypes.DEL_WAIT_VIDEOS:
+      let delVideosList = state.waitVideosList.filter(item => item.id !== action.id);
+      return {
+        ...state,
+        waitVideosList: delVideosList
+      }
     default:
       return state;
   }

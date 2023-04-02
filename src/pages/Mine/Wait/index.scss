@@ -1,6 +1,7 @@
 .wait-wrapper {
   width: 100%;
   min-height: 100vh;
+  background: rgb(240, 241, 243);
   .wait-header {
     position: fixed;
     left: 0;
@@ -23,4 +24,23 @@
       line-height: 3rem;
     }
   }
+  .wait-container {
+    margin-top: 3rem;
+    padding-top: 0.1rem;
+    .wait-nothing {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6.5rem;
+      height: 7rem;
+      img {
+        width: 100%;
+      }
+      p {
+        font-size: 0.6rem;
+      }
+    }
+  }
+  
 }
