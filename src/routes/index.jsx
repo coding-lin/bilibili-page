@@ -11,6 +11,7 @@ const ShoppingCart = lazy(() => import('@/pages/Vip/ShoppingCart'))
 const Mine = lazy(() => import('@/pages/Mine'))
 const Collect = lazy(() => import('@/pages/Mine/Collect'))
 const Space = lazy(() => import('@/pages/Mine/Space'))
+const Wait = lazy(() => import('@/pages/Mine/Wait'))
 
 const Live = lazy(() => import('@/pages/Home/Live'))
 const Recommend = lazy(() => import('@/pages/Home/Recommend'))
@@ -43,6 +44,7 @@ const RoutesConfig = () => {
       <Route path='/shopping-cart' element={<ShoppingCart />}></Route>  // 会员购购物车
       <Route path="/mine" element={<Mine />}></Route>  // 我的
       <Route path='/collect' element={<Collect />}></Route>  // 我的收藏
+      <Route path='/wait' element={<Wait />}></Route>  // 稍后再看
       <Route path='/space' element={<Space />}></Route>  // 我的空间
       <Route path="*" element={<NotFound />}></Route>  // 404
     </Routes>
