@@ -1,4 +1,4 @@
-import{S as C,a as N,s as o,p as t,b as h,c as T,R as F,u as j,r as l,j as e,d as a,F as g,e as z}from"./index.c7438542.js";import{S as k,L as W}from"./index.b70cbb57.js";import{b as G}from"./bilibili.03841b80.js";import{g as O}from"./request.a6c382be.js";import{C as R}from"./CSSTransition.22d16078.js";const _=i=>({type:N,data:i}),f=i=>({type:C,data:i}),A=i=>n=>{O().then(d=>{let c=d.filter(u=>u.title.indexOf(i)!=-1);n(_(c)),n(f(!1))})},B=o.div`
+import{S as C,a as N,s as o,p as t,b as h,c as T,R as F,u as j,r as l,j as e,d as a,F as g,e as z}from"./index.5bf6a9d8.js";import{S as k,L as W}from"./index.fe51e60d.js";import{b as G}from"./bilibili.03841b80.js";import{g as O}from"./request.5d8a1104.js";import{C as R}from"./CSSTransition.a5bca4f4.js";const _=i=>({type:N,data:i}),f=i=>({type:C,data:i}),A=i=>n=>{O().then(d=>{let c=d.filter(u=>u.title.indexOf(i)!=-1);n(_(c)),n(f(!1))})},B=o.div`
   position: fixed;
   top: 0;
   left: 0;

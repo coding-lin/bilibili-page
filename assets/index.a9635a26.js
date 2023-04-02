@@ -1,0 +1,1 @@
+import{r}from"./index.5bf6a9d8.js";var a=function(t){return function(n,o){var e=r.exports.useRef(!1);t(function(){return function(){e.current=!1}},[]),t(function(){if(!e.current)e.current=!0;else return n()},o)}},u=!!(typeof window!="undefined"&&window.document&&window.document.createElement),f=u,s=f?r.exports.useLayoutEffect:r.exports.useEffect,i=s;export{a as c,f as i,i as u};
