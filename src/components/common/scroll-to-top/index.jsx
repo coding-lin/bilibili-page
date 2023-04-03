@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { debounce } from "@/utils";
 import "./index.scss";
 
-const ScrollToTop = () => {
+const ScrollToTop = ({top}) => {
   const [visible, setVisible] = useState(false);
 
   const handleScroll = debounce(() => {
@@ -11,7 +11,7 @@ const ScrollToTop = () => {
       document.body.scrollTop ||
       document.documentElement.scrollTop ||
       0;
-    if (scrollTop > 2000) {
+    if (scrollTop > top) {
       setVisible(true);
     } else {
       setVisible(false);

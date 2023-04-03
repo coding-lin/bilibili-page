@@ -91,7 +91,7 @@ const ShoppingCart = (props) => {
           </InfiniteScroll>
         </PullToRefresh>
       }
-      <ScrollToTop />
+      <ScrollToTop top={2000} />
     </Wrapper>
   )
 }
