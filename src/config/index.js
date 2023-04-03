@@ -10,6 +10,10 @@ export const empty =
 export const nothing =
   "https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f061dc214.png";
 
+// 稍后再看为空图片
+export const waitEmpty =
+  "https://img01.anzhiy.cn/useruploads/113/2023/04/03/642a5fc0148b7.png";
+
 // 会员购页面轮播文字
 export const textList = [
   { id: 1, name: "CHE手办原型创作大赛 >" },

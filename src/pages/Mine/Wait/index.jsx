@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { connect } from 'react-redux';
 import WaitVideos from "@/components/WaitVideos";
 import { delWaitVideos } from "@/pages/Home/store/actionCreators";
-import { nothing } from "@/config";
+import { waitEmpty } from "@/config";
 import "./index.scss";
 
 const Empty = () => {
   return (
     <div className="wait-nothing">
-      <img src={nothing} alt="" />
+      <img src={waitEmpty} alt="" />
       <p>这里还什么都没有呢~</p>
     </div>
   )

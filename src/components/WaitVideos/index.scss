@@ -2,7 +2,8 @@
   position: relative;
   width: 95%;
   height: 5.2rem;
-  margin: 0.3rem auto;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
   border-radius: 0.3rem;
   background-color: #fff;
   .wv-img {
@@ -16,8 +17,8 @@
   }
   .wv-time {
     position: absolute;
-    bottom: 0.3rem;
-    left: 6rem;
+    bottom: 0.2rem;
+    right: 10.4rem;
     background: rgba(50, 50, 50, 0.5);
     border-radius: 0.15rem;
     padding: 0.05rem 0.15rem;
@@ -59,12 +60,12 @@
     .data-bofang {
       position: absolute;
       left: 8.4rem;
-      bottom: 0.4rem;
+      bottom: 0.25rem;
     }
     .data-pinglun {
       position: absolute;
       right: 3rem;
-      bottom: 0.4rem;
+      bottom: 0.25rem;
     }
     i {
       font-size: 0.65rem;
@@ -77,7 +78,7 @@
   .wv-pop {
     position: absolute;
     right: 0.5rem;
-    bottom: 0.5rem;
+    bottom: 0.3rem;
     font-size: 1rem;
     color: rgb(186, 186, 186);
     transform: rotate(90deg);

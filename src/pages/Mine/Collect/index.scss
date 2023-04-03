@@ -1,6 +1,7 @@
 .collect-container {
   width: 100%;
   background: rgb(241, 242, 244);
+  margin-top: 5rem;
   min-height: 100vh;
   padding-bottom: 0.5rem;
   .header {
@@ -38,6 +39,14 @@
   .adm-tabs-tab-active {
     color: #000;
     font-weight: 500;
+  }
+  .adm-tabs-tab-list {
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 99;
   }
 }
 .nothing {

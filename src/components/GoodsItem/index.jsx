@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import LazyLoad from 'react-lazyload'
+import { Toast } from "antd-mobile"
 import classnames from 'classnames'
 import bilibili from '@/assets/images/bilibili.jpeg'
 import { Wrapper } from './style'
@@ -11,6 +12,7 @@ const GoodsItem = (props) => {
   const changeLike = (id) => {
     setIsLike(!isLike);
     addDispatch(id);
+    Toast.show('收藏成功');
   }
 
   return (
