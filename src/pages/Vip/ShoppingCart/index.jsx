@@ -6,7 +6,7 @@ import { sleep } from 'antd-mobile/es/utils/sleep'
 import { Wrapper, HeaderWrapper, Empty } from './style'
 import GoodsList from '../GoodsList'
 import ScrollToTop from '@/components/common/scroll-to-top'
-import { getGoodsList, addCollectGoods } from '../store/actionCreators'
+import { getGoodsList, addCollectGoods, delCollectGoods } from '../store/actionCreators'
 import { statusRecord, empty } from '@/config'
 
 const renderEmpty = () => {
@@ -27,7 +27,7 @@ const ShoppingCart = (props) => {
   const [count, setCount] = useState(0)
   const navigate = useNavigate()
   const { goodsList, enterLoading } = props
-  const { getGoodListDispatch, addDispatch } = props
+  const { getGoodListDispatch, addDispatch, delDispatch } = props
 
   useEffect(() => {
     getGoodListDispatch()
@@ -85,7 +85,7 @@ const ShoppingCart = (props) => {
           onRefresh={doRefresh}
           renderText={status => <div>{statusRecord[status]}</div>}
         >
-          <GoodsList goodData={goodData} addDispatch={addDispatch} />
+          <GoodsList goodData={goodData} addDispatch={addDispatch} delDispatch={delDispatch} />
           <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
             <InfiniteScrollContent hasMore={hasMore} />
           </InfiniteScroll>
@@ -111,6 +111,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     addDispatch(id) {
       dispatch(addCollectGoods(id))
+    },
+    delDispatch(id) {
+      dispatch(delCollectGoods(id))
     }
   }
 }
