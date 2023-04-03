@@ -7,7 +7,7 @@ import bilibili from '@/assets/images/bilibili.jpeg'
 import { Wrapper, HeaderWrapper, FindWrapper, SuggestWrapper, Empty, List, ListItem, EnterLoading } from './style'
 import { connect } from "react-redux"
 import { changeEnterLoading, getSuggestList } from './store/actionCreators'
-import { empty } from "@/config"
+import { searchNull } from "@/config"
 
 const HomeSearch = (props) => {
   const navigate = useNavigate()
@@ -91,7 +91,7 @@ const HomeSearch = (props) => {
     return (
       <Empty>
         <div className='info'>
-          <img src={empty} alt="" />
+          <img src={searchNull} alt="" />
           <span>没有搜到结果...</span>
         </div>
       </Empty>

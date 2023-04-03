@@ -3,15 +3,11 @@ export const avatar =
   "https://img01.anzhiy.cn/useruploads/113/2023/03/22/641aefb80e38e.gif";
 
 // 搜索为空图片
-export const empty =
+export const searchNull =
   "https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f016ae5c9.png";
 
-// 购物车收藏为空图片
-export const nothing =
-  "https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f061dc214.png";
-
-// 稍后再看为空图片
-export const waitEmpty =
+// 购物车及商品收藏为空图片
+export const empty =
   "https://img01.anzhiy.cn/useruploads/113/2023/04/03/642a5fc0148b7.png";
 
 // 会员购页面轮播文字

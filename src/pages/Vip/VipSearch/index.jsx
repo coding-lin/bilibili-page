@@ -8,7 +8,7 @@ import { changeEnterLoading, getGoodsList } from './store/actionCreators'
 import { addCollectGoods } from '../store/actionCreators'
 import { Wrapper } from '@/pages/Vip/GoodsList/style'
 import GoodsItem from '@/components/GoodsItem'
-import { empty } from '@/config'
+import { searchNull } from '@/config'
 
 const VipSearch = (props) => {
   const navigate = useNavigate()
@@ -48,7 +48,7 @@ const VipSearch = (props) => {
     return (
       <Empty>
         <div className='info'>
-          <img src={empty} alt="" />
+          <img src={searchNull} alt="" />
           <span>没有搜到商品...</span>
         </div>
       </Empty>

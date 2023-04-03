@@ -7,13 +7,13 @@ import { Wrapper, HeaderWrapper, Empty } from './style'
 import GoodsList from '../GoodsList'
 import ScrollToTop from '@/components/common/scroll-to-top'
 import { getGoodsList, addCollectGoods } from '../store/actionCreators'
-import { statusRecord, nothing } from '@/config'
+import { statusRecord, empty } from '@/config'
 
 const renderEmpty = () => {
   return (
     <Empty>
       <div className='info'>
-        <img src={nothing} alt="" />
+        <img src={empty} alt="" />
         <p>购物车空空如也</p>
         <span>你可能还喜欢</span>
       </div>

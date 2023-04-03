@@ -4,7 +4,7 @@ import { Tabs } from "antd-mobile";
 import { getGoodsList, delCollectGoods } from "@/pages/Vip/store/actionCreators";
 import CollectGoods from "@/components/CollectGoods";
 import { connect } from "react-redux";
-import { nothing } from "@/config";
+import { empty } from "@/config";
 import "./index.scss";
 
 const CollectVideos = () => <Empty />;
@@ -12,7 +12,7 @@ const CollectVideos = () => <Empty />;
 const Empty = () => {
   return (
     <div className="nothing">
-      <img src={nothing} alt="" />
+      <img src={empty} alt="" />
       <p>╮(╯﹏╰）╭再怎么找也没有啦</p>
       <span>你可能还喜欢</span>
     </div>
