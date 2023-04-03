@@ -6,13 +6,18 @@ import bilibili from '@/assets/images/bilibili.jpeg'
 import { Wrapper } from './style'
 
 const GoodsItem = (props) => {
-  const { good, addDispatch } = props;
-  const [ isLike, setIsLike ] = useState(false);
+  const { good, addDispatch, delDispatch } = props
+  const [ isLike, setIsLike ] = useState(false)
 
-  const changeLike = (id) => {
-    setIsLike(!isLike);
-    addDispatch(id);
-    Toast.show('收藏成功');
+  const addColl = (id) => {
+    setIsLike(true)
+    addDispatch(id)
+    Toast.show('收藏成功')
+  }
+
+  const delColl = (id) => {
+    setIsLike(false)
+    delDispatch(id)
   }
 
   return (
@@ -46,15 +51,10 @@ const GoodsItem = (props) => {
         <div className="price_coll">
           <span>¥{good.price}</span>
           <div className="coll_num">
-            <i
-              className={classnames(
-                'iconfont', 
-                {'icon-aixin1': isLike},
-                {'icon-aixin3': !isLike},
-                {'active': isLike}
-              )}
-              onClick={() => changeLike(good.id)}
-            />
+            {isLike ? 
+              <i className={classnames('iconfont','icon-aixin1','active')} onClick={() => delColl(good.id)} /> : 
+              <i className={classnames('iconfont','icon-aixin3')} onClick={() => addColl(good.id)} />
+            }
             <span>{isLike ? good.collection + 1 : good.collection}</span>
           </div>
         </div>

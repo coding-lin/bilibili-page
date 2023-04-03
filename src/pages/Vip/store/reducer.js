@@ -29,6 +29,8 @@ const reducer = (state=defaultState, action) => {
       let addGoodsList = state.collectGoodsList;
       state.goodsList.map(item => {
         if (item.id === action.id) {
+          item.like = true;
+          item.collection = item.collection + 1;
           addGoodsList.unshift(item);
         }
       })
