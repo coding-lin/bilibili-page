@@ -1,1 +1,0 @@
-import{ad as t,ae as a,af as o,ag as d}from"./index.80aecb08.js";import{c as n}from"./request.29a0a352.js";const i=e=>({type:t,data:e}),r=e=>({type:a,data:e}),V=e=>({type:o,id:e}),c=e=>({type:d,id:e}),g=()=>e=>{n().then(s=>{e(i(s)),e(r(!1))})},D=e=>s=>{s(V(e))},I=e=>s=>{s(c(e))};export{D as a,I as d,g};
