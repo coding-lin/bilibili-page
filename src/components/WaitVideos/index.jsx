@@ -6,9 +6,12 @@ import './index.scss'
 const WaitVideos = ({data, delDispatch}) => {
   const [visible, setVisible] = useState(false)
 
-  const delWaitVideos = (id) => {
-    delDispatch(id)
-    Toast.show('删除成功')
+  const delWaitVideos = async (id) => {
+    await delDispatch(id)
+    Toast.show({
+      content: '删除成功',
+      position: 'bottom',
+    })
     setVisible(false)
   }
 

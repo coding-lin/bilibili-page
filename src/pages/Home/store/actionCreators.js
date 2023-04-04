@@ -24,6 +24,11 @@ const delVideos = (id) => ({
   id
 })
 
+const delVideos_ = (data) => ({
+  type: actionTypes.DEL_ALL_VIDEOS,
+  data
+})
+
 export const getVideosList = () => {
   return (dispatch) => {
     getVideosListRequest().then((data) => {
@@ -42,5 +47,11 @@ export const addWaitVideos = (id) => {
 export const delWaitVideos = (id) => {
   return (dispatch) => {
     dispatch(delVideos(id))
+  }
+}
+
+export const delAllVideos = (data) => {
+  return (dispatch) => {
+    dispatch(delVideos_(data))
   }
 }

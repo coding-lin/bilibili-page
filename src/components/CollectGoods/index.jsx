@@ -14,9 +14,12 @@ const CollectGoods = ({ data, delDispatch }) => {
     setShare(true);
   };
 
-  const cancleColl = (id) => {
-    delDispatch(id);
-    Toast.show('取消成功');
+  const cancleColl = async (id) => {
+    await delDispatch(id);
+    Toast.show({
+      content: '取消收藏成功',
+      position: 'bottom',
+    });
     setVisible(false);
   }
 

@@ -36,6 +36,12 @@ const reducer = (state=defaultState, action) => {
         ...state,
         waitVideosList: delVideosList
       }
+    case actionTypes.DEL_ALL_VIDEOS:
+      let newVideosList = [];
+      return {
+        ...state,
+        waitVideosList: newVideosList
+      }
     default:
       return state;
   }

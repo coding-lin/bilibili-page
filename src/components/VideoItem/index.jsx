@@ -9,9 +9,12 @@ import './index.scss'
 const VideoItem = ({video, addDispatch}) => {
   const [visible, setVisible] = useState(false)
 
-  const addVideo = (id) => {
-    addDispatch(id)
-    Toast.show('添加成功')
+  const addVideo = async (id) => {
+    await addDispatch(id)
+    Toast.show({
+      content: '添加成功',
+      position: 'bottom',
+    })
     setVisible(false)
   }
 

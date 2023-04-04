@@ -9,10 +9,13 @@ const GoodsItem = (props) => {
   const { good, addDispatch, delDispatch } = props
   const [ isLike, setIsLike ] = useState(false)
 
-  const addColl = (id) => {
+  const addColl = async (id) => {
     setIsLike(true)
-    addDispatch(id)
-    Toast.show('收藏成功')
+    await addDispatch(id)
+    Toast.show({
+      content: '收藏成功',
+      position: 'bottom',
+    })
   }
 
   const delColl = (id) => {

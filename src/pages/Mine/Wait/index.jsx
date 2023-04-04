@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { connect } from 'react-redux';
 import WaitVideos from "@/components/WaitVideos";
-import { Popup, Toast } from "antd-mobile";
+import { Popup, Dialog, Toast } from "antd-mobile";
 import { MoreOutline, UnorderedListOutline, CloseCircleOutline } from "antd-mobile-icons";
-import { delWaitVideos } from "@/pages/Home/store/actionCreators";
+import { delWaitVideos, delAllVideos } from "@/pages/Home/store/actionCreators";
 import { empty } from "@/config";
 import "./index.scss";
 
@@ -18,7 +18,7 @@ const Empty = () => {
 }
 
 const Wait = (props) => {
-  const { waitVideosList, delDispatch } = props;
+  const { waitVideosList, delDispatch, delAllDispatch } = props;
   const [visible, setVisible] = useState(false);
   const navigate = useNavigate();
 
@@ -63,7 +63,22 @@ const Wait = (props) => {
           <UnorderedListOutline className="manage-icon" />
           <span>管理视频</span>
         </div>
-        <div className="wait-pop-del">
+        <div className="wait-pop-del" 
+          onClick={() =>
+            Dialog.confirm({
+              content: '确定移除吗？',
+              closeOnMaskClick: true,
+              onConfirm: async () => {
+                await delAllDispatch()
+                Toast.show({
+                  content: '移除成功',
+                  position: 'bottom',
+                })
+                setVisible(false)
+              },
+            })
+          }
+        >
           <CloseCircleOutline className="del-icon" />
           <span>一键移除视频</span>
         </div>
@@ -86,6 +101,9 @@ const mapDispatchToProps = (dispatch) => {
     delDispatch(id) {
       dispatch(delWaitVideos(id));
     },
+    delAllDispatch() {
+      dispatch(delAllVideos())
+    }
   };
 };
 
