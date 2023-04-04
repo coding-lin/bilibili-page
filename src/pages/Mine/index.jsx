@@ -23,45 +23,47 @@ export default function Mine() {
       unmountOnExit
     >
       <Wrapper>
-        <Link to="/mine/space">
-          <HeaderWrapper>
-            <img src={avatar} alt="" />
-            <Author>
-              <div className='author-name'>
-                <span>dafenqi616</span>
-                <span className='level'>Lv4</span>
-              </div>
-              <div className='is-vip'>
-                <span>正式会员</span>
-              </div>
-              <div className='property'>
-                <span>B币: 0.0</span>
-                <span>硬币: 650</span>
-              </div>
-            </Author>
-            <Icon>
-              <span>空间</span>
-              <i className='iconfont icon-xiangyoujiantou'></i>
-            </Icon>
-          </HeaderWrapper>
-        </Link>
-        <EditSOutline className='edit-icon' onClick={() => navigate('/mine/edit')} />
-        <Detail>
-          <div>
-            <span>4</span>
-            <p>动态</p>
-          </div>
-          <div>
-            <span>34</span>
-            <p>关注</p>
-          </div>
-          <div>
-            <span>1</span>
-            <p>粉丝</p>
-          </div>
-        </Detail>
+        <div className="bg-wrapper">
+          <Link to="/mine/space">
+            <HeaderWrapper>
+              <img src={avatar} alt="" />
+              <Author>
+                <div className='author-name'>
+                  <span>dafenqi616</span>
+                  <span className='level'>Lv4</span>
+                </div>
+                <div className='is-vip'>
+                  <span>正式会员</span>
+                </div>
+                <div className='property'>
+                  <span>B币: 0.0</span>
+                  <span>硬币: 650</span>
+                </div>
+              </Author>
+              <Icon>
+                <span>空间</span>
+                <i className='iconfont icon-xiangyoujiantou'></i>
+              </Icon>
+            </HeaderWrapper>
+          </Link>
+          <EditSOutline className='edit-icon' onClick={() => navigate('/mine/edit')} />
+          <Detail>
+            <div>
+              <span>4</span>
+              <p>动态</p>
+            </div>
+            <div>
+              <span>34</span>
+              <p>关注</p>
+            </div>
+            <div>
+              <span>1</span>
+              <p>粉丝</p>
+            </div>
+          </Detail>
+        </div>
         <Img>
-          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416efc82bb64.png" alt="" />
+          <img src="https://img01.anzhiy.cn/useruploads/113/2023/04/04/642c40e49fd33.png" alt="" />
         </Img>
         <Container>
           <div className="img-tab" onClick={() => Toast.show('功能待实现')}>

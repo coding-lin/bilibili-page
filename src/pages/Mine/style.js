@@ -29,22 +29,27 @@ export const Wrapper = styled.div`
   }
   .edit-icon {
     position: absolute;
-    top: ${px2rem(10)};
-    left: ${px2rem(212)};
+    top: ${px2rem(50)};
+    left: ${px2rem(230)};
     font-size: ${px2rem(20)};
-    z-index: 99;
+    color: #fff;
+  }
+  .bg-wrapper {
+    height: ${px2rem(240)};
+    background: url('https://img01.anzhiy.cn/useruploads/113/2023/04/04/642c42e76670b.png') no-repeat;
+    background-size: cover;
   }
 `
 
 export const HeaderWrapper = styled.div`
+  width: 100%;
+  position: absolute;
+  top: ${px2rem(40)};
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  height: ${px2rem(90)};
+  color: #fff;
   img {
-    margin-top: ${px2rem(18)};
-    width: ${px2rem(54)};
-    height: ${px2rem(54)};
+    width: ${px2rem(90)};
     border-radius: 50%;
   }
 `
@@ -56,6 +61,7 @@ export const Author = styled.div`
   margin-left: ${px2rem(-35)};
   display: flex;
   flex-direction: column;
+  color: #fff;
   .author-name {
     margin-left: ${px2rem(18)};
     font-size: ${px2rem(17)};
@@ -69,11 +75,12 @@ export const Author = styled.div`
   }
   .is-vip {
     margin-top: ${px2rem(8)};
-    margin-left: ${px2rem(-60)};
+    margin-left: ${px2rem(-58)};
     span {
       font-size: ${px2rem(12)};
       border-radius: ${px2rem(2)};
-      border: ${px2rem(2)} solid pink;
+      border: ${px2rem(2)} solid #fff;
+      padding: 0 ${px2rem(2)};
     }
   }
   .property {
@@ -101,31 +108,11 @@ export const Icon = styled.div`
 
 export const Detail = styled.div`
   width: 100%;
-  position: relative;
+  position: absolute;
+  top: ${px2rem(160)};
   display: flex;
-  height: ${px2rem(60)};
   justify-content: space-around;
-  background-color: #fff;
-  div:first-child:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    left: 33%;
-    top: ${px2rem(14)};
-    width: ${px2rem(1)};
-    height: ${px2rem(30)};
-    background-color: gray;
-  }
-  div:nth-child(2):after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    left: 66%;
-    top: ${px2rem(14)};
-    width: ${px2rem(1)};
-    height: ${px2rem(30)};
-    background-color: gray;
-  }
+  color: #fff;
   span {
     font-size: ${px2rem(18)};
   }
@@ -135,9 +122,9 @@ export const Detail = styled.div`
 `
 
 export const Img = styled.div`
-  width: 100%;
   img {
     width: 100%;
+    height: 100%;
   }
 `
 
