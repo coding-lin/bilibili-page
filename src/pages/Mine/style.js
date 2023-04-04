@@ -27,6 +27,13 @@ export const Wrapper = styled.div`
     transition: all .3s;
     transform: translate3d(100%, 0, 0);
   }
+  .edit-icon {
+    position: absolute;
+    top: ${px2rem(10)};
+    left: ${px2rem(212)};
+    font-size: ${px2rem(20)};
+    z-index: 99;
+  }
 `
 
 export const HeaderWrapper = styled.div`
@@ -45,37 +52,37 @@ export const HeaderWrapper = styled.div`
 export const Author = styled.div`
   width: 40%;
   height: ${px2rem(40)};
-  margin-top: ${px2rem(8)};
+  margin-top: ${px2rem(10)};
+  margin-left: ${px2rem(-35)};
   display: flex;
   flex-direction: column;
   .author-name {
-    font-size: ${px2rem(16)};
+    margin-left: ${px2rem(18)};
+    font-size: ${px2rem(17)};
     span {
-      padding-left: ${px2rem(6)};
       &.level {
-        font-size: ${px2rem(18)};
-        font-family: sans-serif;
-        font-weight: 600;
+        margin-left: ${px2rem(30)};
+        font-size: ${px2rem(17)};
         color: orange;
       }
     }
   }
   .is-vip {
-    margin-top: ${px2rem(4)};
+    margin-top: ${px2rem(8)};
+    margin-left: ${px2rem(-60)};
     span {
       font-size: ${px2rem(12)};
-      font-weight: 300;
-      padding: ${px2rem(2)};
       border-radius: ${px2rem(2)};
       border: ${px2rem(2)} solid pink;
     }
   }
   .property {
-    margin-top: ${px2rem(4)};
+    margin-top: ${px2rem(8)};
+    margin-left: ${px2rem(-20)};
     flex-direction: row;
     span {
-      font-size: ${px2rem(13)};
-      padding-left: ${px2rem(6)};
+      font-size: ${px2rem(12)};
+      padding-left: ${px2rem(25)}
     }
   }
 `

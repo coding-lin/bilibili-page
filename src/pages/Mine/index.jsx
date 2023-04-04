@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
 import { Toast } from 'antd-mobile'
+import { EditSOutline } from "antd-mobile-icons"
 import { avatar } from '@/config'
 import { Wrapper, HeaderWrapper, Author, Icon, Detail, Img, Container } from './style'
 
 export default function Mine() {
   const [show, setShow] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     setShow(true)
@@ -34,7 +36,7 @@ export default function Mine() {
               </div>
               <div className='property'>
                 <span>B币: 0.0</span>
-                <span>硬币: 470</span>
+                <span>硬币: 650</span>
               </div>
             </Author>
             <Icon>
@@ -43,6 +45,7 @@ export default function Mine() {
             </Icon>
           </HeaderWrapper>
         </Link>
+        <EditSOutline className='edit-icon' onClick={() => navigate('/mine/edit')} />
         <Detail>
           <div>
             <span>4</span>
