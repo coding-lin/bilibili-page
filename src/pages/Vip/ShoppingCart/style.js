@@ -43,7 +43,7 @@ export const Empty = styled.div`
     justify-content: center;
     text-align: center;
     img {
-      width: ${px2rem(270)};
+      width: ${px2rem(250)};
       margin: 0 auto;
     }
     p {
