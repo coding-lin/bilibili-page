@@ -36,16 +36,16 @@ const RoutesConfig = () => {
         <Route path="/home/movies" element={<Movies />} />  // 影视
         <Route path="/home/campus" element={<Campus />} />  // 校园
       </Route>
-      <Route path="/search" element={<HomeSearch />} />  // 首页搜索
-      <Route path='/mail-box' element={<MailBox />}></Route>  // 首页邮箱
+      <Route path="/home/search" element={<HomeSearch />} />  // 首页搜索
+      <Route path='/home/mail-box' element={<MailBox />}></Route>  // 首页邮箱
       <Route path="/dynamic" element={<Dynamic />}></Route>  // 动态
       <Route path="/vip" element={<Vip />}></Route>  // 会员购
-      <Route path="/vipsearch" element={<VipSearch />}></Route>  // 会员购搜索页面
-      <Route path='/shopping-cart' element={<ShoppingCart />}></Route>  // 会员购购物车
+      <Route path="/vip/search" element={<VipSearch />}></Route>  // 会员购搜索页面
+      <Route path='/vip/shopping-cart' element={<ShoppingCart />}></Route>  // 会员购购物车
       <Route path="/mine" element={<Mine />}></Route>  // 我的
-      <Route path='/collect' element={<Collect />}></Route>  // 我的收藏
-      <Route path='/wait' element={<Wait />}></Route>  // 稍后再看
-      <Route path='/space' element={<Space />}></Route>  // 我的空间
+      <Route path='/mine/collect' element={<Collect />}></Route>  // 我的收藏
+      <Route path='/mine/wait' element={<Wait />}></Route>  // 稍后再看
+      <Route path='/mine/space' element={<Space />}></Route>  // 我的空间
       <Route path="*" element={<NotFound />}></Route>  // 404
     </Routes>
   )

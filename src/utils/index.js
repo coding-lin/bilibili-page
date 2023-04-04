@@ -13,13 +13,12 @@ export const isPathPartlyExisted = (path) => {
 export const isPath = (path) => {
   let pathRes = path.split('/')
   if (
-    pathRes[1] === 'shopping-cart' ||
-    pathRes[1] === 'mail-box' ||
-    pathRes[1] === 'search' ||
-    pathRes[1] === 'vipsearch' ||
-    pathRes[1] === 'collect' ||
-    pathRes[1] === 'space' ||
-    pathRes[1] === 'wait'
+    pathRes[2] === 'shopping-cart' ||
+    pathRes[2] === 'mail-box' ||
+    pathRes[2] === 'search' ||
+    pathRes[2] === 'collect' ||
+    pathRes[2] === 'space' ||
+    pathRes[2] === 'wait'
   ) return true
   return false
 }

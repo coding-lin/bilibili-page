@@ -12,7 +12,7 @@ export default function Header() {
         <Link to="/mine">
           <img src={avatar} alt="" />
         </Link>
-        <SearchInput onClick={() => navigate("/search")}>
+        <SearchInput onClick={() => navigate("/home/search")}>
           <a>
             <i className='iconfont icon-sousuo'></i>
           </a>
@@ -21,7 +21,7 @@ export default function Header() {
         <Link to="/dynamic">
           <i className='iconfont icon-airudiantubiaohuizhi-zhuanqu_youxi'></i>
         </Link>
-        <Link to="/mail-box">
+        <Link to="/home/mail-box">
           <i className='iconfont icon-youjian'></i>    
         </Link>
       </HeaderWrapper>

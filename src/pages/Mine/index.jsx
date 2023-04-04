@@ -21,7 +21,7 @@ export default function Mine() {
       unmountOnExit
     >
       <Wrapper>
-        <Link to="/space">
+        <Link to="/mine/space">
           <HeaderWrapper>
             <img src={avatar} alt="" />
             <Author>
@@ -67,12 +67,12 @@ export default function Mine() {
           <div className="img-tab" onClick={() => Toast.show('功能待实现')}>
             <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b648a.png" alt="" />
           </div>
-          <Link to="/collect">
+          <Link to="/mine/collect">
             <div className="img-tab">
               <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b5dd2.png" alt="" />
             </div>
           </Link>
-          <Link to="/wait">
+          <Link to="/mine/wait">
             <div className="img-tab">
               <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b621e.png" alt="" />
             </div>

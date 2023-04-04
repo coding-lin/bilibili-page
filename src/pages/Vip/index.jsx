@@ -73,37 +73,37 @@ const Vip = (props) => {
       <>
         <Banners bannersList={bannersList} />
         <ImgTab>
-          <Link to="shouban">
+          <Link to="/vip/shouban">
             <div className='img-tab'>
               <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e64d8.png" alt="" />
               <span>手办</span>
             </div>
           </Link>
-          <Link to="zhoubian">
+          <Link to="/vip/zhoubian">
             <div className='img-tab'>
               <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e9b1f.png" alt="" />
               <span>周边</span>
             </div>
           </Link>
-          <Link to="manzhandianying">
+          <Link to="/vip/manzhandianying">
             <div className='img-tab'>
               <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e6c70.png" alt="" />
               <span>漫展电影</span>
             </div>
           </Link>
-          <Link to="tushumanhua">
+          <Link to="/vip/tushumanhua">
             <div className='img-tab'>
               <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e57fe.png" alt="" />
               <span>图书漫画</span>
             </div>
           </Link>
-          <Link to="shumazhuangbei">
+          <Link to="vip/shumazhuangbei">
             <div className='img-tab'>
               <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e9ce2.png" alt="" />
               <span>数码装备</span>
             </div>
           </Link>
-          <Link to="ciyuanfushi">
+          <Link to="/vip/ciyuanfushi">
             <div className='img-tab'>
               <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e7140.png" alt="" />
               <span>次元服饰</span>
@@ -121,20 +121,20 @@ const Vip = (props) => {
           <span>会员购</span>
           <TextSwiper data={textList} />
           <span>
-            <Link to="/store-house">
+            <Link to="/vip/store-house">
               <i className='iconfont icon-24gl-drawer'></i> 
             </Link>
-            <Link to="/shopping-cart">
+            <Link to="/vip/shopping-cart">
               <i className='iconfont icon-gouwuche'></i>
             </Link>
-            <Link to="/vip-center">
+            <Link to="/vip/vip-center">
               <i className='iconfont icon-gerenzhongxin'></i>
             </Link>
           </span>
         </div>
         <div 
           className="search-bar"
-          onClick={() => navigate(`/vipsearch`)}
+          onClick={() => navigate(`/vip/search`)}
         >
           <i className='iconfont icon-sousuo'></i>
           <input type="text" />

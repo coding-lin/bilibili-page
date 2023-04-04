@@ -19,8 +19,9 @@ export default function Banners({bannersList}) {
   const renderBtnBannersPage1 = () => {
     let items = bannersList.slice(0, 10);
     return items.map((item) => {
+      let pathStr = `/vip/dongman?id=${item.id}`;
       return (
-        <Link to="/dongman/id" className="swiper-item" key={item.id}>
+        <Link to={pathStr} className="swiper-item" key={item.id}>
           <div>
             <p>
               <img src={item.img} alt="" />
@@ -35,8 +36,9 @@ export default function Banners({bannersList}) {
   const renderBtnBannersPage2 = () => {
     let items = bannersList.slice(10);
     return items.map((item) => {
+      let pathStr = `/vip/dongman?id=${item.id}`;
       return (
-        <Link to="/dongman/id" className="swiper-item" key={item.id}>
+        <Link to={pathStr} className="swiper-item" key={item.id}>
           <div>
             <p>
               <img src={item.img} alt="" />
