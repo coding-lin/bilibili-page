@@ -66,12 +66,12 @@ const Wait = (props) => {
         <div className="wait-pop-del" 
           onClick={() =>
             Dialog.confirm({
-              content: '确定移除吗？',
+              content: '确定删除吗？',
               closeOnMaskClick: true,
               onConfirm: async () => {
                 await delAllDispatch()
                 Toast.show({
-                  content: '移除成功',
+                  content: waitVideosList.length > 0 ? '删除成功' : '没有内容可删除哦~',
                   position: 'bottom',
                 })
                 setVisible(false)
@@ -80,7 +80,7 @@ const Wait = (props) => {
           }
         >
           <CloseCircleOutline className="del-icon" />
-          <span>一键移除视频</span>
+          <span>一键删除视频</span>
         </div>
         <div className="wait-pop-cancle" onClick={() => setVisible(false)}>
           <span>取消</span>
