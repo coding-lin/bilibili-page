@@ -12,6 +12,7 @@ const Mine = lazy(() => import('@/pages/Mine'))
 const Collect = lazy(() => import('@/pages/Mine/Collect'))
 const Space = lazy(() => import('@/pages/Mine/Space'))
 const Wait = lazy(() => import('@/pages/Mine/Wait'))
+const Edit = lazy(() => import('@/pages/Mine/Edit'))
 
 const Live = lazy(() => import('@/pages/Home/Live'))
 const Recommend = lazy(() => import('@/pages/Home/Recommend'))
@@ -46,6 +47,7 @@ const RoutesConfig = () => {
       <Route path='/mine/collect' element={<Collect />}></Route>  // 我的收藏
       <Route path='/mine/wait' element={<Wait />}></Route>  // 稍后再看
       <Route path='/mine/space' element={<Space />}></Route>  // 我的空间
+      <Route path='/mine/edit' element={<Edit />}></Route>  // 个人信息编辑页
       <Route path="*" element={<NotFound />}></Route>  // 404
     </Routes>
   )

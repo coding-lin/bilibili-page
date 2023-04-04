@@ -18,7 +18,8 @@ export const isPath = (path) => {
     pathRes[2] === 'search' ||
     pathRes[2] === 'collect' ||
     pathRes[2] === 'space' ||
-    pathRes[2] === 'wait'
+    pathRes[2] === 'wait' ||
+    pathRes[2] === 'edit'
   ) return true
   return false
 }

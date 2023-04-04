@@ -65,7 +65,7 @@ const Space = () => {
             <p>获赞</p>
           </div>
         </div>
-        <div className="edit" onClick={() => Toast.show("暂不支持编辑")}>
+        <div className="edit" onClick={() => navigate("/mine/edit")}>
           <span>编辑资料</span>
         </div>
         <div className="username">
