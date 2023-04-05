@@ -32,7 +32,7 @@ export default function Mine() {
               <User>
                 <div className="user">
                   <span>dafenqi616</span>
-                  <span>Lv4</span>
+                  <img src="https://img01.anzhiy.cn/useruploads/113/2023/04/05/642d2d2327ebe.png" alt="" />
                 </div>
                 <div className="isvip">
                   <span>正式会员</span>

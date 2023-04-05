@@ -30,7 +30,7 @@ export const HeaderWrapper = styled.div`
   }
   .edit-icon {
     position: absolute;
-    top: ${px2rem(32)};
+    top: ${px2rem(50)};
     right: ${px2rem(148)};
     font-size: ${px2rem(20)};
     color: gray;
@@ -41,7 +41,7 @@ export const Space = styled.div`
   position: relative;
   width: 100%;
   height: ${px2rem(90)};
-  margin-top: ${px2rem(30)};
+  margin-top: ${px2rem(50)};
   background: #fff;
   .avatar {
     position: absolute;
@@ -61,14 +61,15 @@ export const User = styled.div`
   width: ${px2rem(150)};
   height: ${px2rem(90)};
   .user {
-    margin-right: ${px2rem(-28)};
+    margin-right: ${px2rem(32)};
     span {
       font-size: ${px2rem(17)};
     }
-    >:nth-child(2) {
-      margin-left: ${px2rem(36)};
-      background: orange;
-      color: #fff;
+    img {
+      position: absolute;
+      top: ${px2rem(2)};
+      right: ${px2rem(110)};
+      height: ${px2rem(20)};
     }
   }
   .isvip {
@@ -103,16 +104,35 @@ export const User = styled.div`
 `
 
 export const Info = styled.div`
+  position: relative;
   width: 100%;
-  margin-top: ${px2rem(20)};
+  margin-top: ${px2rem(10)};
   display: flex;
   justify-content: space-around;
   color: #000;
+  div:first-child:after {
+    content: '';
+    position: absolute;
+    left: 33%;
+    top: ${px2rem(12)};
+    width: ${px2rem(1)};
+    height: ${px2rem(20)};
+    background-color: rgb(220, 220, 220);
+  }
+  div:nth-child(2):after {
+    content: '';
+    position: absolute;
+    left: 66%;
+    top: ${px2rem(12)};
+    width: ${px2rem(1)};
+    height: ${px2rem(20)};
+    background-color: rgb(220, 220, 220);
+  }
   span {
-    font-size: ${px2rem(18)};
+    font-size: ${px2rem(15)};
   }
   p {
-    font-size: ${px2rem(14)};
+    font-size: ${px2rem(12)};
   }
 `
 
