@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { px2rem } from '@/assets/global-style'
 
-export const Wrapper = styled.div`
+export const HeaderWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
+  height: ${px2rem(280)};
   /* CSSTransition 过度类型给children  */
   &.fly-enter,&.fly-appear {
     opacity: 0;
@@ -29,90 +30,84 @@ export const Wrapper = styled.div`
   }
   .edit-icon {
     position: absolute;
-    top: ${px2rem(50)};
-    left: ${px2rem(230)};
+    top: ${px2rem(32)};
+    right: ${px2rem(148)};
     font-size: ${px2rem(20)};
-    color: #fff;
-  }
-  .bg-wrapper {
-    height: ${px2rem(240)};
-    background: url('https://img01.anzhiy.cn/useruploads/113/2023/04/04/642c42e76670b.png') no-repeat;
-    background-size: cover;
+    color: gray;
   }
 `
 
-export const HeaderWrapper = styled.div`
+export const Space = styled.div`
+  position: relative;
   width: 100%;
-  position: absolute;
-  top: ${px2rem(40)};
-  display: flex;
-  justify-content: space-around;
-  color: #fff;
-  img {
-    width: ${px2rem(90)};
-    border-radius: 50%;
-  }
-`
-
-export const Author = styled.div`
-  width: 40%;
-  height: ${px2rem(40)};
-  margin-top: ${px2rem(10)};
-  margin-left: ${px2rem(-35)};
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  .author-name {
-    margin-left: ${px2rem(18)};
-    font-size: ${px2rem(17)};
-    span {
-      &.level {
-        margin-left: ${px2rem(30)};
-        font-size: ${px2rem(17)};
-        color: orange;
-      }
+  height: ${px2rem(90)};
+  margin-top: ${px2rem(30)};
+  background: #fff;
+  .avatar {
+    position: absolute;
+    width: ${px2rem(75)};
+    height: ${px2rem(75)};
+    margin: 0 ${px2rem(10)};
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
     }
   }
-  .is-vip {
-    margin-top: ${px2rem(8)};
-    margin-left: ${px2rem(-58)};
+`
+
+export const User = styled.div`
+  margin-left: ${px2rem(100)};
+  width: ${px2rem(150)};
+  height: ${px2rem(90)};
+  .user {
+    margin-right: ${px2rem(-28)};
     span {
+      font-size: ${px2rem(17)};
+    }
+    >:nth-child(2) {
+      margin-left: ${px2rem(36)};
+      background: orange;
+      color: #fff;
+    }
+  }
+  .isvip {
+    margin-top: ${px2rem(12)};
+    margin-right: ${px2rem(70)};
+    span {
+      padding: 0 ${px2rem(2)};
+      border: 0.05rem solid rgb(232, 138, 173);
       font-size: ${px2rem(12)};
       border-radius: ${px2rem(2)};
-      border: ${px2rem(2)} solid #fff;
-      padding: 0 ${px2rem(2)};
+      color: #000;
     }
   }
-  .property {
-    margin-top: ${px2rem(8)};
-    margin-left: ${px2rem(-20)};
-    flex-direction: row;
+  .coin {
+    margin-top: ${px2rem(12)};
+    span {
+      padding-right: ${px2rem(10)};
+      color: #000;
+    }
+  }
+  .space {
+    position: absolute;
+    right: ${px2rem(14)};
+    top: ${px2rem(36)};
     span {
       font-size: ${px2rem(12)};
-      padding-left: ${px2rem(25)}
+    }
+    i {
+      font-size: ${px2rem(10)};
     }
   }
 `
 
-export const Icon = styled.div`
-  span {
-    padding: ${px2rem(2)};
-    font-size: ${px2rem(15)};
-    line-height: ${px2rem(90)};
-  }
-  i {
-    font-size: ${px2rem(15)};
-    line-height: ${px2rem(90)};
-  }
-`
-
-export const Detail = styled.div`
+export const Info = styled.div`
   width: 100%;
-  position: absolute;
-  top: ${px2rem(160)};
+  margin-top: ${px2rem(20)};
   display: flex;
   justify-content: space-around;
-  color: #fff;
+  color: #000;
   span {
     font-size: ${px2rem(18)};
   }
@@ -121,16 +116,20 @@ export const Detail = styled.div`
   }
 `
 
-export const Img = styled.div`
+export const BigVip = styled.div`
   img {
-    width: 100%;
-    height: 100%;
+    margin: 0 auto;
+    margin-top: ${px2rem(30)};
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: ${px2rem(8)};
   }
 `
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
   width: 100%;
-  margin-top: ${px2rem(10)};
+  margin-top: ${px2rem(290)};
   display: flex;
   justify-content: space-around;
   .img-tab {

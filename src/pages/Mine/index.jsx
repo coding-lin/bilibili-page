@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group'
 import { Toast } from 'antd-mobile'
 import { EditSOutline } from "antd-mobile-icons"
 import { avatar } from '@/config'
-import { Wrapper, HeaderWrapper, Author, Icon, Detail, Img, Container } from './style'
+import { HeaderWrapper, Space, User, Info, BigVip, Wrapper } from './style'
 
 export default function Mine() {
   const [show, setShow] = useState(false)
@@ -15,39 +15,43 @@ export default function Mine() {
   }, [])
 
   return (
-    <CSSTransition
-      in={show}
-      timeout={300}
-      appear={true}
-      classNames="fly"
-      unmountOnExit
-    >
-      <Wrapper>
-        <div className="bg-wrapper">
+    <>
+      <CSSTransition
+        in={show}
+        timeout={300}
+        appear={true}
+        classNames="fly"
+        unmountOnExit
+      >
+        <HeaderWrapper>
           <Link to="/mine/space">
-            <HeaderWrapper>
-              <img src={avatar} alt="" />
-              <Author>
-                <div className='author-name'>
+            <Space>
+              <div className="avatar">
+                <img src={avatar} alt="" />
+              </div>
+              <User>
+                <div className="user">
                   <span>dafenqi616</span>
-                  <span className='level'>Lv4</span>
+                  <span>Lv4</span>
                 </div>
-                <div className='is-vip'>
+                <div className="isvip">
                   <span>正式会员</span>
                 </div>
-                <div className='property'>
-                  <span>B币: 0.0</span>
-                  <span>硬币: 650</span>
+                <div className="coin">
+                  <span>B币：0.0</span>
+                  <span>硬币：652</span>
                 </div>
-              </Author>
-              <Icon>
-                <span>空间</span>
-                <i className='iconfont icon-xiangyoujiantou'></i>
-              </Icon>
-            </HeaderWrapper>
+                <div className="space">
+                  <span>空间 </span>
+                  <i className='iconfont icon-xiangyoujiantou'></i>
+                </div>
+              </User>
+            </Space>
           </Link>
-          <EditSOutline className='edit-icon' onClick={() => navigate('/mine/edit')} />
-          <Detail>
+          <Link to="/mine/edit">
+            <EditSOutline className='edit-icon' />
+          </Link>
+          <Info>
             <div>
               <span>4</span>
               <p>动态</p>
@@ -60,30 +64,30 @@ export default function Mine() {
               <span>1</span>
               <p>粉丝</p>
             </div>
-          </Detail>
+          </Info>
+          <BigVip>
+            <img src="https://img01.anzhiy.cn/useruploads/113/2023/04/05/642d0029c7ca6.png" alt="" />
+          </BigVip>
+        </HeaderWrapper>
+      </CSSTransition>
+      <Wrapper>
+        <div className="img-tab" onClick={() => Toast.show('功能待实现')}>
+          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b5d8e.png" alt="" />
         </div>
-        <Img>
-          <img src="https://img01.anzhiy.cn/useruploads/113/2023/04/04/642c40e49fd33.png" alt="" />
-        </Img>
-        <Container>
-          <div className="img-tab" onClick={() => Toast.show('功能待实现')}>
-            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b5d8e.png" alt="" />
+        <div className="img-tab" onClick={() => Toast.show('功能待实现')}>
+          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b648a.png" alt="" />
+        </div>
+        <Link to="/mine/collect">
+          <div className="img-tab">
+            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b5dd2.png" alt="" />
           </div>
-          <div className="img-tab" onClick={() => Toast.show('功能待实现')}>
-            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b648a.png" alt="" />
+        </Link>
+        <Link to="/mine/wait">
+          <div className="img-tab">
+            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b621e.png" alt="" />
           </div>
-          <Link to="/mine/collect">
-            <div className="img-tab">
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b5dd2.png" alt="" />
-            </div>
-          </Link>
-          <Link to="/mine/wait">
-            <div className="img-tab">
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b621e.png" alt="" />
-            </div>
-          </Link>
-        </Container>
+        </Link>
       </Wrapper>
-    </CSSTransition>
+    </>
   )
 }
