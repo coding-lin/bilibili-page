@@ -35,6 +35,15 @@ export const HeaderWrapper = styled.div`
     font-size: ${px2rem(20)};
     color: gray;
   }
+  .model-icon {
+    position: absolute;
+    top: ${px2rem(10)};
+    right: ${px2rem(10)};
+    width: ${px2rem(20)};
+    img {
+      width: 100%;
+    }
+  }
 `
 
 export const Space = styled.div`

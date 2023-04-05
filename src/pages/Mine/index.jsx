@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
 import { Toast } from 'antd-mobile'
 import { EditSOutline } from "antd-mobile-icons"
 import { avatar } from '@/config'
 import { HeaderWrapper, Space, User, Info, BigVip, Wrapper } from './style'
+import moon from '@/assets/images/moon.png'
+import sun from '@/assets/images/sun.png'
 
 export default function Mine() {
   const [show, setShow] = useState(false)
-  const navigate = useNavigate()
+  const [visiable, setVisiable] = useState(false)
+
+  const changeModel = () => {
+    setVisiable(!visiable)
+    Toast.show({
+      content: '模式切换成功',
+      position: 'bottom',
+    })
+  }
 
   useEffect(() => {
     setShow(true)
@@ -24,6 +34,9 @@ export default function Mine() {
         unmountOnExit
       >
         <HeaderWrapper>
+          <div className="model-icon" onClick={changeModel}>
+            {visiable ? <img src={sun} alt="" /> : <img src={moon} alt="" />}
+          </div>
           <Link to="/mine/space">
             <Space>
               <div className="avatar">
