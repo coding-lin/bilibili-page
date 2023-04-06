@@ -42,11 +42,20 @@ const Collect = (props) => {
     getGoodListDispatch();
   }, []);
 
-  async function mockRequest() {
+  async function mockRequest() {  
     if (count >= 5) return [];
     await sleep(1000);
-    setCount((count) => count + 1);
-    return goodsList;
+    setCount(count => count + 1);
+    return goodsList.map(item => {
+      if (count >= 1) {
+        return {
+          ...item,
+          id: item.id = item.id + goodsList.length  
+        }
+      } else {
+        return {...item}
+      }
+    });
   }
 
   async function loadMore() {
