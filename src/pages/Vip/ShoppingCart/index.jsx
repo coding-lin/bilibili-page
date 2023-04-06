@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { Skeleton, PullToRefresh, Toast, InfiniteScroll, DotLoading } from 'antd-mobile'
+import { Skeleton, PullToRefresh, Toast } from 'antd-mobile'
 import { sleep } from 'antd-mobile/es/utils/sleep'
 import { Wrapper, HeaderWrapper, Empty } from './style'
 import GoodsList from '../GoodsList'
 import ScrollToTop from '@/components/common/scroll-to-top'
+import NewInfiniteScroll from '@/components/InfiniteScroll'
 import { getGoodsList, addCollectGoods, delCollectGoods } from '../store/actionCreators'
 import { statusRecord, empty } from '@/config'
 
@@ -59,23 +60,6 @@ const ShoppingCart = (props) => {
     setGoodData(val => [...val, ...append])
     setHasMore(append.length > 0)
   }
-  
-  const InfiniteScrollContent = ({ hasMore }) => {
-    return (
-      <>
-        {hasMore ? (
-          <div style={{ marginBottom: "2.5rem" }}>
-            <span style={{ fontSize: "0.7rem" }}>一大波信息向你飞奔过来~</span>
-            <DotLoading />
-          </div>
-        ) : (
-          <div style={{ marginBottom: "2.5rem" }}>
-            <span style={{ fontSize: "0.7rem" }}>--- 我是有底线的 ---</span>
-          </div>
-        )}
-      </>
-    )
-  }
 
   return (
     <Wrapper>
@@ -95,9 +79,7 @@ const ShoppingCart = (props) => {
           renderText={status => <div>{statusRecord[status]}</div>}
         >
           <GoodsList goodData={goodData} addDispatch={addDispatch} delDispatch={delDispatch} />
-          <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
-            <InfiniteScrollContent hasMore={hasMore} />
-          </InfiniteScroll>
+          <NewInfiniteScroll loadMore={loadMore} hasMore={hasMore} />
         </PullToRefresh>
       }
       <ScrollToTop top={2000} />

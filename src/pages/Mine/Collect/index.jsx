@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Tabs, InfiniteScroll, Skeleton, DotLoading } from "antd-mobile";
+import { Tabs, Skeleton } from "antd-mobile";
 import { sleep } from 'antd-mobile/es/utils/sleep';
 import { getGoodsList, addCollectGoods, delCollectGoods } from "@/pages/Vip/store/actionCreators";
 import CollectGoods from "@/components/CollectGoods";
+import NewInfiniteScroll from "@/components/InfiniteScroll";
 import GoodsList from "../../Vip/GoodsList";
 import ScrollToTop from '@/components/common/scroll-to-top';
 import { connect } from "react-redux";
@@ -64,23 +65,6 @@ const Collect = (props) => {
     setHasMore(append.length > 0);
   }
 
-  const InfiniteScrollContent = ({ hasMore }) => {
-    return (
-      <>
-        {hasMore ? (
-          <div style={{ marginBottom: "2.5rem" }}>
-            <span style={{ fontSize: "0.7rem" }}>一大波信息向你飞奔过来~</span>
-            <DotLoading />
-          </div>
-        ) : (
-          <div style={{ marginBottom: "2.5rem" }}>
-            <span style={{ fontSize: "0.7rem" }}>--- 我是有底线的 ---</span>
-          </div>
-        )}
-      </>
-    );
-  };
-
   return (
     <div className="collect-container">
       <div className="header">
@@ -119,9 +103,7 @@ const Collect = (props) => {
                 addDispatch={addDispatch}
                 delDispatch={delDispatch}
               />
-              <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
-                <InfiniteScrollContent hasMore={hasMore} />
-              </InfiniteScroll>
+              <NewInfiniteScroll loadMore={loadMore} hasMore={hasMore} />
             </>
           )}
           <ScrollToTop top={2000} />

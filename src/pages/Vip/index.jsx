@@ -3,9 +3,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import Banners from './Banners'
 import GoodsList from './GoodsList'
 import TextSwiper from '@/components/common/text-swiper'
+import NewInfiniteScroll from '@/components/InfiniteScroll'
 import ScrollToTop from '@/components/common/scroll-to-top'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
-import { Skeleton, PullToRefresh, Toast, InfiniteScroll, DotLoading } from 'antd-mobile'
+import { Skeleton, PullToRefresh, Toast } from 'antd-mobile'
 import { sleep } from 'antd-mobile/es/utils/sleep'
 import { connect } from 'react-redux'
 import { getBannersList, getGoodsList, addCollectGoods, delCollectGoods } from './store/actionCreators'
@@ -49,23 +50,6 @@ const Vip = (props) => {
     const append = await mockRequest()
     setGoodData(val => [...val, ...append])
     setHasMore(append.length > 0)
-  }
-
-  const InfiniteScrollContent = ({ hasMore }) => {
-    return (
-      <>
-        {hasMore ? (
-          <div style={{ marginBottom: "2.5rem" }}>
-            <span style={{ fontSize: "0.7rem" }}>一大波信息向你飞奔过来~</span>
-            <DotLoading />
-          </div>
-        ) : (
-          <div style={{ marginBottom: "2.5rem" }}>
-            <span style={{ fontSize: "0.7rem" }}>--- 我是有底线的 ---</span>
-          </div>
-        )}
-      </>
-    )
   }
 
   const renderImg = () => {
@@ -153,9 +137,7 @@ const Vip = (props) => {
             renderText={status => <div>{statusRecord[status]}</div>}
           >
             <GoodsList goodData={goodData} addDispatch={addDispatch} delDispatch={delDispatch} />
-            <InfiniteScroll loadMore={loadMore} hasMore={hasMore}>
-              <InfiniteScrollContent hasMore={hasMore} />
-            </InfiniteScroll>
+            <NewInfiniteScroll loadMore={loadMore} hasMore={hasMore} />
           </PullToRefresh>
         }
         <ScrollToTop top={2000} />
