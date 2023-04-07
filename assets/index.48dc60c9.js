@@ -1,1 +1,0 @@
-import{j as r}from"./index.d3e398d6.js";import{p as e}from"./index.19948997.js";import{W as i,G as m}from"./index.c757f004.js";function t({goodData:p,addDispatch:o,delDispatch:a}){return r(i,{children:r("div",{className:"container",children:p&&p.map(s=>r(m,{good:s,addDispatch:o,delDispatch:a},s.id))})})}t.propTypes={goodData:e.array.isRequired};export{t as G};
