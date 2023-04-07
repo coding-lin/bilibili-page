@@ -73,7 +73,7 @@ const ShoppingCart = (props) => {
       </HeaderWrapper>
       { renderEmpty() }
       { enterLoading ? 
-        <Skeleton.Paragraph lineCount={30} animated /> : 
+        <Skeleton.Paragraph lineCount={20} animated /> : 
         <PullToRefresh
           onRefresh={doRefresh}
           renderText={status => <div>{statusRecord[status]}</div>}
@@ -82,7 +82,7 @@ const ShoppingCart = (props) => {
           <NewInfiniteScroll loadMore={loadMore} hasMore={hasMore} />
         </PullToRefresh>
       }
-      <ScrollToTop top={2000} />
+      <ScrollToTop top={3000} />
     </Wrapper>
   )
 }

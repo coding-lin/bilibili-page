@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Wrapper, HeaderWrapper, ImgTab, Clearance, List } from './styles'
 
 const MailBox = () => {
@@ -16,30 +16,22 @@ const MailBox = () => {
         <span>消息</span>
       </HeaderWrapper> 
       <ImgTab>
-        <Link to="huifu">
-          <div className='img-tab'>
-            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f1422340c.png" alt="" />
-            <span>回复我的</span>
-          </div>
-        </Link>
-        <Link to="@me">
-          <div className='img-tab'>
-            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f142233f4.png" alt="" />
-            <span>@我</span>
-          </div>
-        </Link>
-        <Link to="getzan">
-          <div className='img-tab'>
-            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f142244f1.png" alt="" />
-            <span>收到的赞</span>
-          </div>
-        </Link>
-        <Link to="xitongtongzhi">
-          <div className='img-tab'>
-            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f14224347.png" alt="" />
-            <span>系统通知</span>
-          </div>
-        </Link>
+        <div className='img-tab'>
+          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f1422340c.png" alt="" />
+          <span>回复我的</span>
+        </div>
+        <div className='img-tab'>
+          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f142233f4.png" alt="" />
+          <span>@我</span>
+        </div>
+        <div className='img-tab'>
+          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f142244f1.png" alt="" />
+          <span>收到的赞</span>
+        </div>
+        <div className='img-tab'>
+          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f14224347.png" alt="" />
+          <span>系统通知</span>
+        </div>
       </ImgTab>
       <Clearance />
       <List>

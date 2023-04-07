@@ -52,7 +52,7 @@ const Recommend = (props) => {
           <NewInfiniteScroll loadMore={loadMore} hasMore={hasMore} />
         </>
       }
-      <ScrollToTop top={1800} />
+      <ScrollToTop top={2000} />
     </>
   )
 }

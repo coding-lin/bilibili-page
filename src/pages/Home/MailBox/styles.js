@@ -14,7 +14,7 @@ export const HeaderWrapper = styled.div`
   left: 0;
   right: 0;
   z-index: 999;
-  border-bottom: ${px2rem(1)} solid rgba(50, 50, 50, 0.25);
+  border-bottom: ${px2rem(1)} solid #eee;
   i {
     font-size: ${px2rem(20)};
     position: absolute;
@@ -32,11 +32,11 @@ export const HeaderWrapper = styled.div`
 
 export const ImgTab = styled.div`
   width: 100%;
-  margin-top: ${px2rem(62)};
+  margin-top: ${px2rem(61)};
   height: ${px2rem(75)};
   display: flex;
   justify-content: space-around;
-  border-bottom: ${px2rem(1)} solid rgba(50, 50, 50, 0.08);
+  border-bottom: ${px2rem(1)} solid #eee;
   .img-tab {
     width: ${px2rem(50)};
     height: ${px2rem(50)};

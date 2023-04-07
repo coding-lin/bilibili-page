@@ -140,7 +140,7 @@ const Vip = (props) => {
             <NewInfiniteScroll loadMore={loadMore} hasMore={hasMore} />
           </PullToRefresh>
         }
-        <ScrollToTop top={2000} />
+        <ScrollToTop top={3000} />
       </Wrapper>
     </>
   )

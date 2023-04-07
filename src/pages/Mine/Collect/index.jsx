@@ -95,7 +95,7 @@ const Collect = (props) => {
           )}
           <Other />
           {enterLoading ? (
-            <Skeleton.Paragraph lineCount={30} animated />
+            <Skeleton.Paragraph lineCount={20} animated />
           ) : (
             <>
               <GoodsList
@@ -106,7 +106,7 @@ const Collect = (props) => {
               <NewInfiniteScroll loadMore={loadMore} hasMore={hasMore} />
             </>
           )}
-          <ScrollToTop top={2000} />
+          <ScrollToTop top={3000} />
         </Tabs.Tab>
       </Tabs>
     </div>
