@@ -47,7 +47,7 @@ const ShoppingCart = (props) => {
       if (count >= 1) {
         return {
           ...item,
-          id: item.id = item.id + goodsList.length  
+          id: item.id += goodsList.length
         }
       } else {
         return {...item}

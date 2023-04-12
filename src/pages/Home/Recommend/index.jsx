@@ -28,7 +28,7 @@ const Recommend = (props) => {
       if (count >= 1) {
         return {
           ...item,
-          id: item.id = item.id + videosList.length  
+          id: item.id += videosList.length
         }
       } else {
         return {...item}
