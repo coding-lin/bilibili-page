@@ -10,6 +10,10 @@
 
 ## React + Redux 仿哔哩哔哩 App 首页+会员购页面+我的页面
 
+### 在线体验
+
+[https://coding-lin.github.io/bilibili-page/](https://coding-lin.github.io/bilibili-page/)
+
 ### 亮眼之处
 
 一、bilibili 会员购商品布局方法，使用了 `multi-column` 多栏布局实现瀑布流：
