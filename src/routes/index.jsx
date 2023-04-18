@@ -8,6 +8,7 @@ const Dynamic = lazy(() => import('@/pages/Dynamic'))
 const Vip = lazy(() => import('@/pages/Vip'))
 const VipSearch = lazy(() => import('@/pages/Vip/VipSearch'))
 const ShoppingCart = lazy(() => import('@/pages/Vip/ShoppingCart'))
+const GoodDetail = lazy(() => import('@/pages/Vip/GoodDetail'))
 const Mine = lazy(() => import('@/pages/Mine'))
 const Collect = lazy(() => import('@/pages/Mine/Collect'))
 const Space = lazy(() => import('@/pages/Mine/Space'))
@@ -43,6 +44,7 @@ const RoutesConfig = () => {
       <Route path="/vip" element={<Vip />}></Route>  // 会员购
       <Route path="/vip/search" element={<VipSearch />}></Route>  // 会员购搜索页面
       <Route path='/vip/shopping-cart' element={<ShoppingCart />}></Route>  // 会员购购物车
+      <Route path='/vip/good/:id' element={<GoodDetail />}></Route>  // 会员购商品详情页
       <Route path="/mine" element={<Mine />}></Route>  // 我的
       <Route path='/mine/collect' element={<Collect />}></Route>  // 我的收藏
       <Route path='/mine/wait' element={<Wait />}></Route>  // 稍后再看

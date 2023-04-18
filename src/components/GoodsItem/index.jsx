@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from 'react-router-dom'
 import LazyLoad from 'react-lazyload'
 import { Toast } from "antd-mobile"
 import classnames from 'classnames'
@@ -26,7 +27,8 @@ const GoodsItem = (props) => {
   return (
     <Wrapper>
       <div className="good-box">
-        <div className="good-img">
+        <Link to={`/vip/good/${good.id}`}>
+          <div className="good-img">
           <LazyLoad
             placeholder={
             <img
@@ -38,7 +40,8 @@ const GoodsItem = (props) => {
           >
             <img src={good.img} alt="" />
           </LazyLoad>
-        </div>
+          </div>
+        </Link>
         <div className="title">
           {good.info ? <span>{good.info}</span> : ''}
           <span>{good.title}</span>

@@ -16,6 +16,7 @@ export const isPath = (path) => {
     pathRes[2] === 'shopping-cart' ||
     pathRes[2] === 'mail-box' ||
     pathRes[2] === 'search' ||
+    pathRes[2] === 'good' ||
     pathRes[2] === 'collect' ||
     pathRes[2] === 'space' ||
     pathRes[2] === 'wait' ||
