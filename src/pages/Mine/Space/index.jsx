@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Tabs, Toast, ImageViewer } from "antd-mobile";
+import { Tabs, ImageViewer } from "antd-mobile";
 import { MoreOutline } from "antd-mobile-icons";
 import SharePopup from "@/components/SharePopup";
 import { avatar } from "@/config";

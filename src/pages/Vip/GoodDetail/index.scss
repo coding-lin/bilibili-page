@@ -1,0 +1,81 @@
+.good-detail-wrapper {
+  position: relative;
+  .good-detail-header {
+    .detail-back {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: rgba(40, 40, 40, 0.4);
+      i {
+        position: absolute;
+        top: 0.25rem;
+        left: 0.45rem;        
+        font-size: 1rem;
+        color: #fff;
+      }
+    }
+    .detail-share {
+      position: absolute;
+      right: 0.75rem;
+      top: 0.75rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: rgba(40, 40, 40, 0.4);
+      .share-icon {
+        position: absolute;
+        top: 0.3rem;
+        left: 0.3rem;
+        font-size: 0.85rem;
+        color: #fff;
+      }
+    }
+  }
+  .good-detail-bottom {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    border-top: 0.05rem solid rgb(244, 244, 244);
+    .detail-icon1 {
+      width: 2rem;
+      height: 2rem;
+      line-height: 2rem;
+      background: rgb(244, 244, 244);
+      border-radius: 50%;
+      i {
+        font-size: 1.1rem;
+        color: gray;
+      }
+    }
+    .add-cart {
+      width: 5rem;
+      height: 2.2rem;
+      line-height: 2.2rem;
+      border: 0.05rem solid rgb(232, 75, 135);
+      border-radius: 1.3rem;
+      span {
+        color: rgb(232, 75, 135);
+        font-weight: 500;
+      }
+    }
+    .buy-now {
+      width: 8rem;
+      height: 2.2rem;
+      line-height: 2.2rem;
+      background: rgb(234, 75, 116);
+      border-radius: 1.3rem;
+      span {
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+  }
+}
