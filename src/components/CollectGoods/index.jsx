@@ -25,9 +25,11 @@ const CollectGoods = ({ data, delDispatch }) => {
 
   return (
     <div className="coll-container">
-      <div className="coll-img">
-        <img src={data.img} alt="" />
-      </div>
+      <Link to={`/vip/good/${data.id}`}>
+        <div className="coll-img">
+          <img src={data.img} alt="" />
+        </div>
+      </Link>
       <div className="coll-title">
         {data.info ? <span>{data.info}</span> : ""}
         <span>{data.title}</span>

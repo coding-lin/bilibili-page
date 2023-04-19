@@ -30,6 +30,11 @@ const delCollect = (id) => ({
   id
 })
 
+const getGood = (id) => ({
+  type: actionTypes.CHANGE_GOOD_DETAIL,
+  id
+})
+
 export const getBannersList = () => {
   return (dispatch) => {
     getBannersListRequest().then((data) => {
@@ -56,5 +61,11 @@ export const addCollectGoods = (id) => {
 export const delCollectGoods = (id) => {
   return (dispatch) => {
     dispatch(delCollect(id))
+  }
+}
+
+export const getGoodDetail = (id) => {
+  return (dispatch) => {
+    dispatch(getGood(id))
   }
 }

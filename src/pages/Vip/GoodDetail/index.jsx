@@ -4,23 +4,39 @@ import { connect } from 'react-redux'
 import { Toast, Badge } from 'antd-mobile'
 import { SendOutline } from "antd-mobile-icons"
 import SharePopup from "@/components/SharePopup"
-import { getGoodsList } from '../store/actionCreators'
+import classnames from 'classnames'
+import { getGoodDetail, addCollectGoods, delCollectGoods } from '../store/actionCreators'
 import './index.scss'
 
 const GoodDetail = (props) => {
-  const { goodsList } = props
-  const { getGoodListDispatch } = props
+  const { goodList } = props
+  const { getGoodDetailDispatch, addDispatch, delDispatch } = props
   const navigate = useNavigate()
   const { id } = useParams()
   const [visible, setVisible] = useState(false)
-  console.log(id, '------')
+  const [ isLike, setIsLike ] = useState(false)
+  console.log(goodList, '---');
+
+  const addColl = async (id) => {
+    setIsLike(true)
+    await addDispatch(id)
+    Toast.show({
+      content: '收藏成功',
+      position: 'bottom',
+    })
+  }
+
+  const delColl = (id) => {
+    setIsLike(false)
+    delDispatch(id)
+  }
 
   const addCart = () => {
     Toast.show('加车成功')
   }
 
   useEffect(() => {
-    getGoodListDispatch()
+    getGoodDetailDispatch(id)
   }, [])
 
   return (
@@ -35,6 +51,22 @@ const GoodDetail = (props) => {
         <div className="detail-share">
           <SendOutline className='share-icon' onClick={() => setVisible(true)} />
         </div>
+      </div>
+      <div className="good-detail-img">
+        <img src={goodList.img} alt="" />
+      </div>
+      <div className="good-detail-price">
+        <span>预估到手价 ¥{goodList.price}</span>
+      </div>
+      <div className="good-detail-title">
+        <span>{goodList.title}</span>
+      </div>
+      <div className="good-detail-like">
+        {isLike ? 
+          <i className={classnames('iconfont','icon-aixin1','active')} onClick={() => delColl(goodList.id)} /> : 
+          <i className={classnames('iconfont','icon-aixin3')} onClick={() => addColl(goodList.id)} />
+        }
+        <span>{isLike ? goodList.collection + 1 : goodList.collection}</span>
       </div>
       <div className="good-detail-bottom">
         <Link to="/vip/shopping-cart">
@@ -62,15 +94,21 @@ const GoodDetail = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    goodsList: state.vip.goodsList
+    goodList: state.vip.goodList
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getGoodListDispatch() {
-      dispatch(getGoodsList())
-    }
+    getGoodDetailDispatch(id) {
+      dispatch(getGoodDetail(id))
+    },
+    addDispatch(id) {
+      dispatch(addCollectGoods(id));
+    },
+    delDispatch(id) {
+      dispatch(delCollectGoods(id));
+    },
   }
 }
 

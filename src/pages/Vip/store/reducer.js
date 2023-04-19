@@ -5,6 +5,7 @@ const defaultState = {
   bannersList: [],
   goodsList: [],
   collectGoodsList: [],
+  goodList: [],
   enterLoading: true
 }
 
@@ -43,6 +44,12 @@ const reducer = (state=defaultState, action) => {
       return {
         ...state,
         collectGoodsList: delGoodsList,
+      }
+    case actionTypes.CHANGE_GOOD_DETAIL:
+      let goodDetail = state.goodsList.filter(item => item.id == action.id)[0]
+      return {
+        ...state,
+        goodList: goodDetail
       }
     default:
       return state;
