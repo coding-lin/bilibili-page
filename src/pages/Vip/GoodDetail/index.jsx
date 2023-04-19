@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { Toast, Badge } from 'antd-mobile'
 import { SendOutline } from "antd-mobile-icons"
 import SharePopup from "@/components/SharePopup"
 import './index.scss'
@@ -7,6 +8,10 @@ import './index.scss'
 const GoodDetail = () => {
   const navigate = useNavigate()
   const [visible, setVisible] = useState(false)
+
+  const addCart = () => {
+    Toast.show('加车成功')
+  }
 
   return (
     <div className='good-detail-wrapper'>
@@ -23,11 +28,17 @@ const GoodDetail = () => {
       </div>
       <div className="good-detail-bottom">
         <Link to="/vip/shopping-cart">
-          <div className="detail-icon1">
+          <Badge
+            color='rgb(250, 114, 152)'
+            content="1"
+            style={{ '--right': '18%', '--top': '18%' }}
+          >
+            <div className="detail-icon">
               <i className='iconfont icon-gouwuche'></i>
-          </div>
+            </div>
+          </Badge>
         </Link>
-        <div className="add-cart">
+        <div className="add-cart" onClick={addCart}>
           <span>加购物车</span>
         </div>
         <div className="buy-now">
