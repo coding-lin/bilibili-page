@@ -35,6 +35,11 @@ const getGood = (id) => ({
   id
 })
 
+const addCart = (id) => ({
+  type: actionTypes.ADD_CART_GOODS,
+  id
+})
+
 export const getBannersList = () => {
   return (dispatch) => {
     getBannersListRequest().then((data) => {
@@ -67,5 +72,11 @@ export const delCollectGoods = (id) => {
 export const getGoodDetail = (id) => {
   return (dispatch) => {
     dispatch(getGood(id))
+  }
+}
+
+export const addCartGoods = (id) => {
+  return (dispatch) => {
+    dispatch(addCart(id))
   }
 }

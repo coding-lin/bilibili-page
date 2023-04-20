@@ -5,12 +5,12 @@ import { Toast, Badge } from 'antd-mobile'
 import { SendOutline } from "antd-mobile-icons"
 import SharePopup from "@/components/SharePopup"
 import classnames from 'classnames'
-import { getGoodDetail, addCollectGoods, delCollectGoods } from '../store/actionCreators'
+import { getGoodDetail, addCollectGoods, delCollectGoods, addCartGoods } from '../store/actionCreators'
 import './index.scss'
 
 const GoodDetail = (props) => {
-  const { goodList } = props
-  const { getGoodDetailDispatch, addDispatch, delDispatch } = props
+  const { goodList, cartGoodsList } = props
+  const { getGoodDetailDispatch, addDispatch, delDispatch, addCartDispatch } = props
   const navigate = useNavigate()
   const { id } = useParams()
   const [visible, setVisible] = useState(false)
@@ -30,7 +30,8 @@ const GoodDetail = (props) => {
     delDispatch(id)
   }
 
-  const addCart = () => {
+  const addCart = async (id) => {
+    await addCartDispatch(id)
     Toast.show('加车成功')
   }
 
@@ -78,7 +79,7 @@ const GoodDetail = (props) => {
         <Link to="/vip/shopping-cart">
           <Badge
             color='rgb(250, 114, 152)'
-            content="1"
+            content={cartGoodsList.length > 0 ? cartGoodsList.length : ''}
             style={{ '--right': '18%', '--top': '18%' }}
           >
             <div className="detail-icon">
@@ -86,7 +87,7 @@ const GoodDetail = (props) => {
             </div>
           </Badge>
         </Link>
-        <div className="add-cart" onClick={addCart}>
+        <div className="add-cart" onClick={() => addCart(id)}>
           <span>加购物车</span>
         </div>
         <div className="buy-now">
@@ -100,7 +101,8 @@ const GoodDetail = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    goodList: state.vip.goodList
+    goodList: state.vip.goodList,
+    cartGoodsList: state.vip.cartGoodsList
   }
 }
 
@@ -115,6 +117,9 @@ const mapDispatchToProps = (dispatch) => {
     delDispatch(id) {
       dispatch(delCollectGoods(id))
     },
+    addCartDispatch(id) {
+      dispatch(addCartGoods(id))
+    }
   }
 }
 

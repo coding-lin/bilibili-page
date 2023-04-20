@@ -27,7 +27,7 @@ const ShoppingCart = (props) => {
   const [goodData, setGoodData] = useState([])
   const [count, setCount] = useState(0)
   const navigate = useNavigate()
-  const { goodsList, enterLoading } = props
+  const { goodsList, enterLoading, cartGoodsList } = props
   const { getGoodListDispatch, addDispatch, delDispatch } = props
 
   useEffect(() => {
@@ -69,7 +69,7 @@ const ShoppingCart = (props) => {
           onClick={() => navigate(-1)}
         >
         </i>
-        <h2>购物车</h2>
+        {cartGoodsList.length > 0 ? <span>购物车({cartGoodsList.length})</span> : <span>购物车</span>}
       </HeaderWrapper>
       { renderEmpty() }
       { enterLoading ? 
@@ -91,7 +91,8 @@ const ShoppingCart = (props) => {
 const mapStateToProps = (state) => {
   return {
     enterLoading: state.vip.enterLoading,
-    goodsList: state.vip.goodsList
+    goodsList: state.vip.goodsList,
+    cartGoodsList: state.vip.cartGoodsList
   }
 }
 

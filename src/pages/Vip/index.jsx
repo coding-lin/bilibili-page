@@ -6,7 +6,7 @@ import TextSwiper from '@/components/common/text-swiper'
 import NewInfiniteScroll from '@/components/InfiniteScroll'
 import ScrollToTop from '@/components/common/scroll-to-top'
 import { HeaderWrapper, Wrapper, ImgTab } from './style'
-import { Skeleton, PullToRefresh, Toast } from 'antd-mobile'
+import { Skeleton, PullToRefresh, Toast, Badge } from 'antd-mobile'
 import { sleep } from 'antd-mobile/es/utils/sleep'
 import { connect } from 'react-redux'
 import { getBannersList, getGoodsList, addCollectGoods, delCollectGoods } from './store/actionCreators'
@@ -17,7 +17,7 @@ const Vip = (props) => {
   const [goodData, setGoodData] = useState([])
   const [count, setCount] = useState(0)
   const navigate = useNavigate()
-  const { bannersList, goodsList, enterLoading } = props
+  const { bannersList, goodsList, enterLoading, cartGoodsList } = props
   const { getBannerListDispatch, getGoodListDispatch, addDispatch, delDispatch } = props
 
   useEffect(() => {
@@ -109,7 +109,13 @@ const Vip = (props) => {
               <i className='iconfont icon-24gl-drawer'></i> 
             </Link>
             <Link to="/vip/shopping-cart">
-              <i className='iconfont icon-gouwuche'></i>
+              <Badge
+                color='rgb(250, 114, 152)'
+                content={cartGoodsList.length > 0 ? cartGoodsList.length : ''}
+                style={{ '--right': '18%', '--top': '18%' }}
+              >
+                <i className='iconfont icon-gouwuche'></i>
+              </Badge>
             </Link>
             <Link to="/vip/vip-center">
               <i className='iconfont icon-gerenzhongxin'></i>
@@ -151,7 +157,8 @@ const mapStateToProps = (state) => {
   return {
     enterLoading: state.vip.enterLoading,
     bannersList: state.vip.bannersList,
-    goodsList: state.vip.goodsList
+    goodsList: state.vip.goodsList,
+    cartGoodsList: state.vip.cartGoodsList
   }
 }
 

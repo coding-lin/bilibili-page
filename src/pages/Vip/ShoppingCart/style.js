@@ -21,8 +21,8 @@ export const HeaderWrapper = styled.div`
     top: ${px2rem(20)};
     left: ${px2rem(18)};
   }
-  h2 {
-    font-size: ${px2rem(18)};
+  span {
+    font-size: ${px2rem(16)};
     font-weight: 600;
     line-height: ${px2rem(60)};
   }

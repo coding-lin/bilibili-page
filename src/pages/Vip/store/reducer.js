@@ -6,6 +6,7 @@ const defaultState = {
   goodsList: [],
   collectGoodsList: [],
   goodList: [],
+  cartGoodsList: [],
   enterLoading: true
 }
 
@@ -50,6 +51,17 @@ const reducer = (state=defaultState, action) => {
       return {
         ...state,
         goodList: goodDetail
+      }
+    case actionTypes.ADD_CART_GOODS:
+      let cartList = state.cartGoodsList
+      state.goodsList.map(item => {
+        if (item.id == action.id) {
+          cartList.unshift(item)
+        }
+      })
+      return {
+        ...state,
+        cartGoodsList: unique(cartList)
       }
     default:
       return state;
