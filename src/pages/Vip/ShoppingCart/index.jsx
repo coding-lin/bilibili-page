@@ -3,8 +3,9 @@ import { connect } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { Skeleton, PullToRefresh, Toast } from 'antd-mobile'
 import { sleep } from 'antd-mobile/es/utils/sleep'
-import { Wrapper, HeaderWrapper, Empty } from './style'
+import { Wrapper, HeaderWrapper, Empty, Other } from './style'
 import GoodsList from '../GoodsList'
+import CartGoods from '@/components/CartGoods'
 import ScrollToTop from '@/components/common/scroll-to-top'
 import NewInfiniteScroll from '@/components/InfiniteScroll'
 import { getGoodsList, addCollectGoods, delCollectGoods } from '../store/actionCreators'
@@ -16,9 +17,17 @@ const renderEmpty = () => {
       <div className='info'>
         <img src={empty} alt="" />
         <p>购物车空空如也</p>
-        <span>你可能还喜欢</span>
       </div>
     </Empty>
+  )
+}
+
+const More = () => {
+  return (
+    <Other>
+      <span>你可能还喜欢</span>
+      <p></p>
+    </Other>
   )
 }
 
@@ -29,6 +38,7 @@ const ShoppingCart = (props) => {
   const navigate = useNavigate()
   const { goodsList, enterLoading, cartGoodsList } = props
   const { getGoodListDispatch, addDispatch, delDispatch } = props
+  console.log(cartGoodsList, '-----')
 
   useEffect(() => {
     getGoodListDispatch()
@@ -71,7 +81,19 @@ const ShoppingCart = (props) => {
         </i>
         {cartGoodsList.length > 0 ? <span>购物车({cartGoodsList.length})</span> : <span>购物车</span>}
       </HeaderWrapper>
-      { renderEmpty() }
+      {cartGoodsList.length > 0 ? (
+        <>
+          {cartGoodsList.map((item) => (
+            <CartGoods
+              key={item.id}
+              data={item}
+            />
+          ))}
+        </>
+      ) : (
+        renderEmpty()
+      )}
+      { More() }
       { enterLoading ? 
         <Skeleton.Paragraph lineCount={20} animated /> : 
         <PullToRefresh

@@ -1,0 +1,13 @@
+.cart-good-wrapper {
+  width: 90%;
+  height: 4rem;
+  background: gray;
+  margin: 0 auto;
+  .cart-good-img {
+    float: left;
+    width: 4rem;
+    img {
+      width: 100%;
+    }
+  }
+}

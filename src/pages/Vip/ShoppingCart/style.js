@@ -30,10 +30,9 @@ export const HeaderWrapper = styled.div`
 
 export const Empty = styled.div`
   width: 100%;
-  height: ${px2rem(264)};
+  height: ${px2rem(240)};
   margin-top: ${px2rem(60)};
   margin-bottom: ${px2rem(26)};
-  border-bottom: ${px2rem(1)} solid rgba(100, 100, 100, 0.10);
   .info {
     position: relative;
     width: 100%;
@@ -48,23 +47,35 @@ export const Empty = styled.div`
     }
     p {
       font-size: ${px2rem(14)};
-      left: -50%;
-      right: -50%;
-      bottom: ${px2rem(36)};
     }
-    span {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      right: 50%;
-      width: ${px2rem(110)};
-      height: ${px2rem(26)};
-      line-height: ${px2rem(26)};
-      margin-top: ${px2rem(-55)};
-      margin-left: ${px2rem(-55)};
-      border-radius: ${px2rem(14)};
-      font-size: ${px2rem(14)};
-      background-color: rgba(227, 229, 231);
-    }
+  }
+`
+
+export const Other = styled.div`
+  position: relative;
+  width: 100%;
+  height: ${px2rem(26)};
+  margin-bottom: ${px2rem(10)};
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: ${px2rem(110)};
+    height: ${px2rem(26)};
+    line-height: ${px2rem(26)};
+    border-radius: ${px2rem(14)};
+    font-size: ${px2rem(14)};
+    background: rgba(227, 229, 231);
+    z-index: 10;
+  }
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 0.05rem;
+    background: #eee;
   }
 `
