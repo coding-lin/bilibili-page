@@ -77,11 +77,10 @@
     }
   }
   .good-detail-like {
-    width: 15%;
+    position: absolute;
+    right: 0.55rem;
+    top: 21.3rem;
     i {
-      position: absolute;
-      bottom: 1rem;
-      right: 0.6rem;
       font-size: 1.1rem;
       &.active {
         color: red;
@@ -89,9 +88,25 @@
     }
     span {
       position: absolute;
-      right: 0.5rem;
-      bottom: 0.2rem;
+      right: -0.1rem;
+      bottom: -0.6rem;
       font-size: 0.6rem;
+    }
+  }
+  .good-detail-rank {
+    display: flex;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-bottom: 0.05rem solid #eee;
+    img {
+      margin-left: 0.25rem;
+      margin-top: 0.55rem;
+      width: 4.5rem;
+      height: 1.4rem;
+    }
+    span {
+      font-size: 0.65rem;
+      color: #000;
     }
   }
   .good-detail-bottom {

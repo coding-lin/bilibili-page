@@ -15,7 +15,6 @@ const GoodDetail = (props) => {
   const { id } = useParams()
   const [visible, setVisible] = useState(false)
   const [ isLike, setIsLike ] = useState(false)
-  console.log(goodList, '---');
 
   const addColl = async (id) => {
     setIsLike(true)
@@ -68,6 +67,13 @@ const GoodDetail = (props) => {
         }
         <span>{isLike ? goodList.collection + 1 : goodList.collection}</span>
       </div>
+      {goodList.rank ? 
+        <div className="good-detail-rank">
+          <img src="https://img01.anzhiy.cn/useruploads/113/2023/04/20/6440dada35066.png" alt="" />
+          <span>{goodList.rank}</span>
+        </div> :
+        <></>
+      }
       <div className="good-detail-bottom">
         <Link to="/vip/shopping-cart">
           <Badge
@@ -104,10 +110,10 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(getGoodDetail(id))
     },
     addDispatch(id) {
-      dispatch(addCollectGoods(id));
+      dispatch(addCollectGoods(id))
     },
     delDispatch(id) {
-      dispatch(delCollectGoods(id));
+      dispatch(delCollectGoods(id))
     },
   }
 }
