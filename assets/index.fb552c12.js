@@ -1,1 +1,0 @@
-import{u as i,j as a,d as s}from"./index.120f60a9.js";const t=()=>{const e=i();return a("div",{className:"edit-wrapper",children:s("div",{className:"edit-header",children:[a("i",{className:"iconfont icon-xiangzuojiantou",onClick:()=>e(-1)}),a("span",{children:"\u8D26\u53F7\u8D44\u6599"})]})})};export{t as default};
