@@ -5,7 +5,7 @@ import { Skeleton, PullToRefresh, Toast } from 'antd-mobile'
 import { sleep } from 'antd-mobile/es/utils/sleep'
 import { Wrapper, HeaderWrapper, Empty, Other } from './style'
 import GoodsList from '../GoodsList'
-import CartGoods from '@/components/CartGoods'
+// import CartGoods from '@/components/CartGoods'
 import ScrollToTop from '@/components/common/scroll-to-top'
 import NewInfiniteScroll from '@/components/InfiniteScroll'
 import { getGoodsList, addCollectGoods, delCollectGoods } from '../store/actionCreators'
@@ -81,7 +81,7 @@ const ShoppingCart = (props) => {
         </i>
         {cartGoodsList.length > 0 ? <span>购物车({cartGoodsList.length})</span> : <span>购物车</span>}
       </HeaderWrapper>
-      {cartGoodsList.length > 0 ? (
+      {/* {cartGoodsList.length > 0 ? (
         <>
           {cartGoodsList.map((item) => (
             <CartGoods
@@ -92,7 +92,8 @@ const ShoppingCart = (props) => {
         </>
       ) : (
         renderEmpty()
-      )}
+      )} */}
+      { renderEmpty() }
       { More() }
       { enterLoading ? 
         <Skeleton.Paragraph lineCount={20} animated /> : 
