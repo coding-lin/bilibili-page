@@ -29,7 +29,7 @@ const Space = () => {
         <i className="iconfont icon-sousuo" />
       </div>
       <ImageViewer
-        image="https://img01.anzhiy.cn/useruploads/113/2023/03/31/642688586e8a9.jpg"
+        image="https://img01.anheyu.com/useruploads/113/2023/03/31/642688586e8a9.jpg"
         visible={showImage}
         onClose={() => {
           setShowImage(false);
@@ -43,7 +43,7 @@ const Space = () => {
       />
       <div className="bg-img">
         <img
-          src="https://img01.anzhiy.cn/useruploads/113/2023/03/30/64254aee57d84.jpg"
+          src="https://img01.anheyu.com/useruploads/113/2023/03/30/64254aee57d84.jpg"
           alt=""
         />
       </div>
@@ -73,13 +73,13 @@ const Space = () => {
         </div>
         <div className="vip">
           <img
-            src="https://img01.anzhiy.cn/useruploads/113/2023/03/30/64259d5d149e7.png"
+            src="https://img01.anheyu.com/useruploads/113/2023/03/30/64259d5d149e7.png"
             alt=""
           />
         </div>
         <div className="schlool">
           <img
-            src="https://img01.anzhiy.cn/useruploads/113/2023/03/30/64259ca543116.png"
+            src="https://img01.anheyu.com/useruploads/113/2023/03/30/64259ca543116.png"
             alt=""
           />
           <span onClick={() => setShowDetail(!showDetail)}>

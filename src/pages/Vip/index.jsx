@@ -59,37 +59,37 @@ const Vip = (props) => {
         <ImgTab>
           <Link to="/vip/shouban">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e64d8.png" alt="" />
+              <img src="https://img01.anheyu.com/useruploads/113/2023/03/19/6416ee88e64d8.png" alt="" />
               <span>手办</span>
             </div>
           </Link>
           <Link to="/vip/zhoubian">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e9b1f.png" alt="" />
+              <img src="https://img01.anheyu.com/useruploads/113/2023/03/19/6416ee88e9b1f.png" alt="" />
               <span>周边</span>
             </div>
           </Link>
           <Link to="/vip/manzhandianying">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e6c70.png" alt="" />
+              <img src="https://img01.anheyu.com/useruploads/113/2023/03/19/6416ee88e6c70.png" alt="" />
               <span>漫展电影</span>
             </div>
           </Link>
           <Link to="/vip/tushumanhua">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e57fe.png" alt="" />
+              <img src="https://img01.anheyu.com/useruploads/113/2023/03/19/6416ee88e57fe.png" alt="" />
               <span>图书漫画</span>
             </div>
           </Link>
           <Link to="vip/shumazhuangbei">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e9ce2.png" alt="" />
+              <img src="https://img01.anheyu.com/useruploads/113/2023/03/19/6416ee88e9ce2.png" alt="" />
               <span>数码装备</span>
             </div>
           </Link>
           <Link to="/vip/ciyuanfushi">
             <div className='img-tab'>
-              <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416ee88e7140.png" alt="" />
+              <img src="https://img01.anheyu.com/useruploads/113/2023/03/19/6416ee88e7140.png" alt="" />
               <span>次元服饰</span>
             </div>
           </Link>

@@ -45,7 +45,7 @@ export default function Mine() {
               <User>
                 <div className="user">
                   <span>dafenqi616</span>
-                  <img src="https://img01.anzhiy.cn/useruploads/113/2023/04/05/642d2d2327ebe.png" alt="" />
+                  <img src="https://img01.anheyu.com/useruploads/113/2023/04/05/642d2d2327ebe.png" alt="" />
                 </div>
                 <div className="isvip">
                   <span>正式会员</span>
@@ -79,25 +79,25 @@ export default function Mine() {
             </div>
           </Info>
           <BigVip>
-            <img src="https://img01.anzhiy.cn/useruploads/113/2023/04/05/642d0029c7ca6.png" alt="" />
+            <img src="https://img01.anheyu.com/useruploads/113/2023/04/05/642d0029c7ca6.png" alt="" />
           </BigVip>
         </HeaderWrapper>
       </CSSTransition>
       <Wrapper>
         <div className="img-tab" onClick={() => Toast.show('功能待实现')}>
-          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b5d8e.png" alt="" />
+          <img src="https://img01.anheyu.com/useruploads/113/2023/03/26/641fe563b5d8e.png" alt="" />
         </div>
         <div className="img-tab" onClick={() => Toast.show('功能待实现')}>
-          <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b648a.png" alt="" />
+          <img src="https://img01.anheyu.com/useruploads/113/2023/03/26/641fe563b648a.png" alt="" />
         </div>
         <Link to="/mine/collect">
           <div className="img-tab">
-            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b5dd2.png" alt="" />
+            <img src="https://img01.anheyu.com/useruploads/113/2023/03/26/641fe563b5dd2.png" alt="" />
           </div>
         </Link>
         <Link to="/mine/wait">
           <div className="img-tab">
-            <img src="https://img01.anzhiy.cn/useruploads/113/2023/03/26/641fe563b621e.png" alt="" />
+            <img src="https://img01.anheyu.com/useruploads/113/2023/03/26/641fe563b621e.png" alt="" />
           </div>
         </Link>
       </Wrapper>

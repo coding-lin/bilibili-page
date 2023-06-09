@@ -70,7 +70,7 @@ const GoodDetail = (props) => {
       </div>
       {goodList.rank ? 
         <div className="good-detail-rank">
-          <img src="https://img01.anzhiy.cn/useruploads/113/2023/04/20/6440dada35066.png" alt="" />
+          <img src="https://img01.anheyu.com/useruploads/113/2023/04/20/6440dada35066.png" alt="" />
           <span>{goodList.rank}</span>
         </div> :
         <></>

@@ -1,14 +1,14 @@
 // 头像
 export const avatar =
-  "https://img01.anzhiy.cn/useruploads/113/2023/03/22/641aefb80e38e.gif";
+  "https://img01.anheyu.com/useruploads/113/2023/03/22/641aefb80e38e.gif";
 
 // 搜索为空图片
 export const searchNull =
-  "https://img01.anzhiy.cn/useruploads/113/2023/03/19/6416f016ae5c9.png";
+  "https://img01.anheyu.com/useruploads/113/2023/03/19/6416f016ae5c9.png";
 
 // 购物车及商品收藏为空图片
 export const empty =
-  "https://img01.anzhiy.cn/useruploads/113/2023/04/03/642a5fc0148b7.png";
+  "https://img01.anheyu.com/useruploads/113/2023/04/03/642a5fc0148b7.png";
 
 // 会员购页面轮播文字
 export const textList = [
@@ -62,41 +62,41 @@ export const linkList = [
   {
     id: 1,
     name: "微信",
-    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64258f7bdf210.png",
+    icon: "https://img01.anheyu.com/useruploads/113/2023/03/30/64258f7bdf210.png",
   },
   {
     id: 2,
     name: "朋友圈",
-    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64258f7bdf280.png",
+    icon: "https://img01.anheyu.com/useruploads/113/2023/03/30/64258f7bdf280.png",
   },
   {
     id: 3,
     name: "QQ",
-    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64258f7be7e99.png",
+    icon: "https://img01.anheyu.com/useruploads/113/2023/03/30/64258f7be7e99.png",
   },
   {
     id: 4,
     name: "QQ空间",
-    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64258f7be4350.png",
+    icon: "https://img01.anheyu.com/useruploads/113/2023/03/30/64258f7be4350.png",
   },
   {
     id: 5,
     name: "图片分享",
-    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64258f7be0b66.png",
+    icon: "https://img01.anheyu.com/useruploads/113/2023/03/30/64258f7be0b66.png",
   },
   {
     id: 6,
     name: "微博",
-    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64259165829b6.png",
+    icon: "https://img01.anheyu.com/useruploads/113/2023/03/30/64259165829b6.png",
   },
   {
     id: 7,
     name: "复制链接",
-    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/64259165827d4.png",
+    icon: "https://img01.anheyu.com/useruploads/113/2023/03/30/64259165827d4.png",
   },
   {
     id: 8,
     name: "更多",
-    icon: "https://img01.anzhiy.cn/useruploads/113/2023/03/30/642591657ee21.png",
+    icon: "https://img01.anheyu.com/useruploads/113/2023/03/30/642591657ee21.png",
   },
 ];
