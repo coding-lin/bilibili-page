@@ -15,11 +15,11 @@ export const changeEnterLoading = (data) => ({
 })
 
 export const getSuggestList = (query) => {
-    return (dispatch) => {
-      getSuggestListRequest().then((data) => {
-        let res = data.filter(item => item.title.indexOf(query) != -1)
-        dispatch(changeSuggestList(res))
-        dispatch(changeEnterLoading(false))
-      })
-    }
+  return (dispatch) => {
+    getSuggestListRequest().then((data) => {
+      let res = data.filter(item => item.title.indexOf(query) !== -1)
+      dispatch(changeSuggestList(res))
+      dispatch(changeEnterLoading(false))
+    })
   }
+}
