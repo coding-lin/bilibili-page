@@ -1,0 +1,1 @@
+import{u as i,j as a,d as s}from"./index-1f87f03b.js";const t=()=>{const e=i();return a("div",{className:"edit-wrapper",children:s("div",{className:"edit-header",children:[a("i",{className:"iconfont icon-xiangzuojiantou",onClick:()=>e(-1)}),a("span",{children:"账号资料"})]})})};export{t as default};
