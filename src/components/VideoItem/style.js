@@ -1,10 +1,11 @@
 import styled from "styled-components"
-import { px2rem } from '@/assets/global-style'
+import style, { px2rem } from '@/assets/global-style'
 
 export const Wrapper = styled.div`
   .video-box {
     margin: ${px2rem(5)};
     border-radius: ${px2rem(2)};
+    border: ${px2rem(1)} solid ${style["border-color"]};
     .video-img {
       position: relative;
       img {
